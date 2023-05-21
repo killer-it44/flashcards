@@ -1,0 +1,18 @@
+html {
+    width: min(375px, 100vw);
+    margin: auto;
+    font: 1.5em sans-serif;
+}
+
+button, input {
+    font: inherit;
+}
+
+td:first-child {
+    font-weight: bold;
+    width: 22%;
+}
+
+td :first-child {
+    width: calc(100% - 8px);
+}

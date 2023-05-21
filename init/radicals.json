@@ -1,0 +1,1928 @@
+[
+	{
+		"number": 1,
+		"radical": "一",
+		"simplified": "",
+		"pinyin": "yī",
+		"meaning": "one",
+		"strokes": 1,
+		"frequency": 42
+	},
+	{
+		"number": 2,
+		"radical": "丨",
+		"simplified": "",
+		"pinyin": "gǔn",
+		"meaning": "line",
+		"strokes": 1,
+		"frequency": 21
+	},
+	{
+		"number": 3,
+		"radical": "丶",
+		"simplified": "",
+		"pinyin": "zhǔ",
+		"meaning": "dot",
+		"strokes": 1,
+		"frequency": 10
+	},
+	{
+		"number": 4,
+		"radical": "丿",
+		"simplified": "",
+		"pinyin": "piě",
+		"meaning": "slash",
+		"strokes": 1,
+		"frequency": 33
+	},
+	{
+		"number": 5,
+		"radical": "乙 (⺄, 乚)",
+		"simplified": "",
+		"pinyin": "yǐ",
+		"meaning": "second",
+		"strokes": 1,
+		"frequency": 42
+	},
+	{
+		"number": 6,
+		"radical": "亅",
+		"simplified": "",
+		"pinyin": "jué",
+		"meaning": "hook",
+		"strokes": 1,
+		"frequency": 19
+	},
+	{
+		"number": 7,
+		"radical": "二",
+		"simplified": "",
+		"pinyin": "èr",
+		"meaning": "two",
+		"strokes": 2,
+		"frequency": 29
+	},
+	{
+		"number": 8,
+		"radical": "亠",
+		"simplified": "",
+		"pinyin": "tóu",
+		"meaning": "lid",
+		"strokes": 2,
+		"frequency": 38
+	},
+	{
+		"number": 9,
+		"radical": "人 (亻, 𠆢)",
+		"simplified": "",
+		"pinyin": "rén",
+		"meaning": "man",
+		"strokes": 2,
+		"frequency": 794
+	},
+	{
+		"number": 10,
+		"radical": "儿",
+		"simplified": "",
+		"pinyin": "ér",
+		"meaning": "son, legs",
+		"strokes": 2,
+		"frequency": 52
+	},
+	{
+		"number": 11,
+		"radical": "入",
+		"simplified": "",
+		"pinyin": "rù",
+		"meaning": "enter",
+		"strokes": 2,
+		"frequency": 28
+	},
+	{
+		"number": 12,
+		"radical": "八",
+		"simplified": "",
+		"pinyin": "bā",
+		"meaning": "eight",
+		"strokes": 2,
+		"frequency": 44
+	},
+	{
+		"number": 13,
+		"radical": "冂",
+		"simplified": "",
+		"pinyin": "jiōng",
+		"meaning": "down box",
+		"strokes": 2,
+		"frequency": 50
+	},
+	{
+		"number": 14,
+		"radical": "冖",
+		"simplified": "",
+		"pinyin": "mì",
+		"meaning": "cover",
+		"strokes": 2,
+		"frequency": 30
+	},
+	{
+		"number": 15,
+		"radical": "冫",
+		"simplified": "",
+		"pinyin": "bīng",
+		"meaning": "ice",
+		"strokes": 2,
+		"frequency": 115
+	},
+	{
+		"number": 16,
+		"radical": "几",
+		"simplified": "",
+		"pinyin": "jī",
+		"meaning": "table",
+		"strokes": 2,
+		"frequency": 38
+	},
+	{
+		"number": 17,
+		"radical": "凵",
+		"simplified": "",
+		"pinyin": "qū",
+		"meaning": "open box",
+		"strokes": 2,
+		"frequency": 23
+	},
+	{
+		"number": 18,
+		"radical": "刀 (刂)",
+		"simplified": "",
+		"pinyin": "dāo",
+		"meaning": "knife",
+		"strokes": 2,
+		"frequency": 377
+	},
+	{
+		"number": 19,
+		"radical": "力",
+		"simplified": "",
+		"pinyin": "lì",
+		"meaning": "power",
+		"strokes": 2,
+		"frequency": 163
+	},
+	{
+		"number": 20,
+		"radical": "勹",
+		"simplified": "",
+		"pinyin": "bāo",
+		"meaning": "wrap",
+		"strokes": 2,
+		"frequency": 64
+	},
+	{
+		"number": 21,
+		"radical": "匕",
+		"simplified": "",
+		"pinyin": "bǐ",
+		"meaning": "spoon",
+		"strokes": 2,
+		"frequency": 19
+	},
+	{
+		"number": 22,
+		"radical": "匚",
+		"simplified": "",
+		"pinyin": "fāng",
+		"meaning": "right open box",
+		"strokes": 2,
+		"frequency": 64
+	},
+	{
+		"number": 23,
+		"radical": "匸",
+		"simplified": "",
+		"pinyin": "xǐ/xì",
+		"meaning": "hiding enclosure",
+		"strokes": 2,
+		"frequency": 17
+	},
+	{
+		"number": 24,
+		"radical": "十",
+		"simplified": "",
+		"pinyin": "shí",
+		"meaning": "ten",
+		"strokes": 2,
+		"frequency": 55
+	},
+	{
+		"number": 25,
+		"radical": "卜",
+		"simplified": "",
+		"pinyin": "bǔ",
+		"meaning": "divination",
+		"strokes": 2,
+		"frequency": 45
+	},
+	{
+		"number": 26,
+		"radical": "卩 (㔾)",
+		"simplified": "",
+		"pinyin": "jié",
+		"meaning": "seal",
+		"strokes": 2,
+		"frequency": 40
+	},
+	{
+		"number": 27,
+		"radical": "厂",
+		"simplified": "",
+		"pinyin": "hàn",
+		"meaning": "cliff",
+		"strokes": 2,
+		"frequency": 129
+	},
+	{
+		"number": 28,
+		"radical": "厶",
+		"simplified": "",
+		"pinyin": "sī",
+		"meaning": "private",
+		"strokes": 2,
+		"frequency": 40
+	},
+	{
+		"number": 29,
+		"radical": "又",
+		"simplified": "",
+		"pinyin": "yòu",
+		"meaning": "again",
+		"strokes": 2,
+		"frequency": 91
+	},
+	{
+		"number": 30,
+		"radical": "口",
+		"simplified": "",
+		"pinyin": "kǒu",
+		"meaning": "mouth",
+		"strokes": 3,
+		"frequency": 1146
+	},
+	{
+		"number": 31,
+		"radical": "囗",
+		"simplified": "",
+		"pinyin": "wéi",
+		"meaning": "enclosure",
+		"strokes": 3,
+		"frequency": 118
+	},
+	{
+		"number": 32,
+		"radical": "土",
+		"simplified": "",
+		"pinyin": "tǔ",
+		"meaning": "earth",
+		"strokes": 3,
+		"frequency": 580
+	},
+	{
+		"number": 33,
+		"radical": "士",
+		"simplified": "",
+		"pinyin": "shì",
+		"meaning": "scholar",
+		"strokes": 3,
+		"frequency": 24
+	},
+	{
+		"number": 34,
+		"radical": "夂",
+		"simplified": "",
+		"pinyin": "zhǐ",
+		"meaning": "go",
+		"strokes": 3,
+		"frequency": 11
+	},
+	{
+		"number": 35,
+		"radical": "夊",
+		"simplified": "",
+		"pinyin": "suī",
+		"meaning": "go slowly",
+		"strokes": 3,
+		"frequency": 23
+	},
+	{
+		"number": 36,
+		"radical": "夕",
+		"simplified": "",
+		"pinyin": "xī",
+		"meaning": "evening",
+		"strokes": 3,
+		"frequency": 34
+	},
+	{
+		"number": 37,
+		"radical": "大",
+		"simplified": "",
+		"pinyin": "dà",
+		"meaning": "big",
+		"strokes": 3,
+		"frequency": 132
+	},
+	{
+		"number": 38,
+		"radical": "女",
+		"simplified": "",
+		"pinyin": "nǚ",
+		"meaning": "woman",
+		"strokes": 3,
+		"frequency": 681
+	},
+	{
+		"number": 39,
+		"radical": "子",
+		"simplified": "",
+		"pinyin": "zǐ",
+		"meaning": "child",
+		"strokes": 3,
+		"frequency": 83
+	},
+	{
+		"number": 40,
+		"radical": "宀",
+		"simplified": "",
+		"pinyin": "mián",
+		"meaning": "roof",
+		"strokes": 3,
+		"frequency": 246
+	},
+	{
+		"number": 41,
+		"radical": "寸",
+		"simplified": "",
+		"pinyin": "cùn",
+		"meaning": "inch",
+		"strokes": 3,
+		"frequency": 40
+	},
+	{
+		"number": 42,
+		"radical": "小 (⺌, ⺍)",
+		"simplified": "",
+		"pinyin": "xiǎo",
+		"meaning": "small",
+		"strokes": 3,
+		"frequency": 41
+	},
+	{
+		"number": 43,
+		"radical": "尢 (尣)",
+		"simplified": "",
+		"pinyin": "wāng",
+		"meaning": "lame",
+		"strokes": 3,
+		"frequency": 66
+	},
+	{
+		"number": 44,
+		"radical": "尸",
+		"simplified": "",
+		"pinyin": "shī",
+		"meaning": "corpse",
+		"strokes": 3,
+		"frequency": 148
+	},
+	{
+		"number": 45,
+		"radical": "屮",
+		"simplified": "",
+		"pinyin": "chè",
+		"meaning": "sprout",
+		"strokes": 3,
+		"frequency": 38
+	},
+	{
+		"number": 46,
+		"radical": "山",
+		"simplified": "",
+		"pinyin": "shān",
+		"meaning": "mountain",
+		"strokes": 3,
+		"frequency": 636
+	},
+	{
+		"number": 47,
+		"radical": "巛 (川, 巜)",
+		"simplified": "",
+		"pinyin": "chuān",
+		"meaning": "river",
+		"strokes": 3,
+		"frequency": 26
+	},
+	{
+		"number": 48,
+		"radical": "工",
+		"simplified": "",
+		"pinyin": "gōng",
+		"meaning": "work",
+		"strokes": 3,
+		"frequency": 17
+	},
+	{
+		"number": 49,
+		"radical": "己",
+		"simplified": "",
+		"pinyin": "jǐ",
+		"meaning": "oneself",
+		"strokes": 3,
+		"frequency": 20
+	},
+	{
+		"number": 50,
+		"radical": "巾",
+		"simplified": "",
+		"pinyin": "jīn",
+		"meaning": "turban",
+		"strokes": 3,
+		"frequency": 295
+	},
+	{
+		"number": 51,
+		"radical": "干",
+		"simplified": "",
+		"pinyin": "gān",
+		"meaning": "dry",
+		"strokes": 3,
+		"frequency": 9
+	},
+	{
+		"number": 52,
+		"radical": "幺",
+		"simplified": "",
+		"pinyin": "yāo",
+		"meaning": "short thread",
+		"strokes": 3,
+		"frequency": 50
+	},
+	{
+		"number": 53,
+		"radical": "广",
+		"simplified": "",
+		"pinyin": "guǎng",
+		"meaning": "dotted cliff",
+		"strokes": 3,
+		"frequency": 15
+	},
+	{
+		"number": 54,
+		"radical": "廴",
+		"simplified": "",
+		"pinyin": "yǐn",
+		"meaning": "long stride",
+		"strokes": 3,
+		"frequency": 9
+	},
+	{
+		"number": 55,
+		"radical": "廾",
+		"simplified": "",
+		"pinyin": "gǒng",
+		"meaning": "two hands",
+		"strokes": 3,
+		"frequency": 50
+	},
+	{
+		"number": 56,
+		"radical": "弋",
+		"simplified": "",
+		"pinyin": "yì",
+		"meaning": "shoot",
+		"strokes": 3,
+		"frequency": 15
+	},
+	{
+		"number": 57,
+		"radical": "弓",
+		"simplified": "",
+		"pinyin": "gōng",
+		"meaning": "bow",
+		"strokes": 3,
+		"frequency": 165
+	},
+	{
+		"number": 58,
+		"radical": "彐 (彑)",
+		"simplified": "",
+		"pinyin": "jì",
+		"meaning": "snout",
+		"strokes": 3,
+		"frequency": 25
+	},
+	{
+		"number": 59,
+		"radical": "彡",
+		"simplified": "",
+		"pinyin": "shān",
+		"meaning": "bristle",
+		"strokes": 3,
+		"frequency": 62
+	},
+	{
+		"number": 60,
+		"radical": "彳",
+		"simplified": "",
+		"pinyin": "chì",
+		"meaning": "step",
+		"strokes": 3,
+		"frequency": 215
+	},
+	{
+		"number": 61,
+		"radical": "心 (忄,⺗)",
+		"simplified": "",
+		"pinyin": "xīn",
+		"meaning": "heart",
+		"strokes": 4,
+		"frequency": 1115
+	},
+	{
+		"number": 62,
+		"radical": "戈",
+		"simplified": "",
+		"pinyin": "gē",
+		"meaning": "halberd",
+		"strokes": 4,
+		"frequency": 116
+	},
+	{
+		"number": 63,
+		"radical": "戶 (户,戸)",
+		"simplified": "",
+		"pinyin": "hù",
+		"meaning": "door",
+		"strokes": 4,
+		"frequency": 44
+	},
+	{
+		"number": 64,
+		"radical": "手 (扌,龵)",
+		"simplified": "",
+		"pinyin": "shǒu",
+		"meaning": "hand",
+		"strokes": 4,
+		"frequency": 1203
+	},
+	{
+		"number": 65,
+		"radical": "支",
+		"simplified": "",
+		"pinyin": "zhī",
+		"meaning": "branch",
+		"strokes": 4,
+		"frequency": 26
+	},
+	{
+		"number": 66,
+		"radical": "攴 (攵)",
+		"simplified": "",
+		"pinyin": "pū",
+		"meaning": "rap",
+		"strokes": 4,
+		"frequency": 296
+	},
+	{
+		"number": 67,
+		"radical": "文",
+		"simplified": "",
+		"pinyin": "wén",
+		"meaning": "script",
+		"strokes": 4,
+		"frequency": 26
+	},
+	{
+		"number": 68,
+		"radical": "斗",
+		"simplified": "",
+		"pinyin": "dǒu",
+		"meaning": "dipper",
+		"strokes": 4,
+		"frequency": 32
+	},
+	{
+		"number": 69,
+		"radical": "斤",
+		"simplified": "",
+		"pinyin": "jīn",
+		"meaning": "axe",
+		"strokes": 4,
+		"frequency": 55
+	},
+	{
+		"number": 70,
+		"radical": "方",
+		"simplified": "",
+		"pinyin": "fāng",
+		"meaning": "square",
+		"strokes": 4,
+		"frequency": 92
+	},
+	{
+		"number": 71,
+		"radical": "无 (旡)",
+		"simplified": "",
+		"pinyin": "wú",
+		"meaning": "not",
+		"strokes": 4,
+		"frequency": 12
+	},
+	{
+		"number": 72,
+		"radical": "日",
+		"simplified": "",
+		"pinyin": "rì",
+		"meaning": "sun",
+		"strokes": 4,
+		"frequency": 453
+	},
+	{
+		"number": 73,
+		"radical": "曰",
+		"simplified": "",
+		"pinyin": "yuē",
+		"meaning": "say",
+		"strokes": 4,
+		"frequency": 37
+	},
+	{
+		"number": 74,
+		"radical": "月",
+		"simplified": "",
+		"pinyin": "yuè",
+		"meaning": "moon",
+		"strokes": 4,
+		"frequency": 69
+	},
+	{
+		"number": 75,
+		"radical": "木",
+		"simplified": "",
+		"pinyin": "mù",
+		"meaning": "tree",
+		"strokes": 4,
+		"frequency": 1369
+	},
+	{
+		"number": 76,
+		"radical": "欠",
+		"simplified": "",
+		"pinyin": "qiàn",
+		"meaning": "lack",
+		"strokes": 4,
+		"frequency": 235
+	},
+	{
+		"number": 77,
+		"radical": "止",
+		"simplified": "",
+		"pinyin": "zhǐ",
+		"meaning": "stop",
+		"strokes": 4,
+		"frequency": 99
+	},
+	{
+		"number": 78,
+		"radical": "歹 (歺)",
+		"simplified": "",
+		"pinyin": "dǎi",
+		"meaning": "death",
+		"strokes": 4,
+		"frequency": 231
+	},
+	{
+		"number": 79,
+		"radical": "殳",
+		"simplified": "",
+		"pinyin": "shū",
+		"meaning": "weapon",
+		"strokes": 4,
+		"frequency": 93
+	},
+	{
+		"number": 80,
+		"radical": "毋 (母, ⺟)",
+		"simplified": "",
+		"pinyin": "wú",
+		"meaning": "do not",
+		"strokes": 4,
+		"frequency": 16
+	},
+	{
+		"number": 81,
+		"radical": "比",
+		"simplified": "",
+		"pinyin": "bǐ",
+		"meaning": "compare",
+		"strokes": 4,
+		"frequency": 21
+	},
+	{
+		"number": 82,
+		"radical": "毛",
+		"simplified": "",
+		"pinyin": "máo",
+		"meaning": "fur",
+		"strokes": 4,
+		"frequency": 211
+	},
+	{
+		"number": 83,
+		"radical": "氏",
+		"simplified": "",
+		"pinyin": "shì",
+		"meaning": "clan",
+		"strokes": 4,
+		"frequency": 10
+	},
+	{
+		"number": 84,
+		"radical": "气",
+		"simplified": "",
+		"pinyin": "qì",
+		"meaning": "steam",
+		"strokes": 4,
+		"frequency": 17
+	},
+	{
+		"number": 85,
+		"radical": "水 (氺,氵)",
+		"simplified": "",
+		"pinyin": "shuǐ",
+		"meaning": "water",
+		"strokes": 4,
+		"frequency": 1595
+	},
+	{
+		"number": 86,
+		"radical": "火 (灬)",
+		"simplified": "",
+		"pinyin": "huǒ",
+		"meaning": "fire",
+		"strokes": 4,
+		"frequency": 639
+	},
+	{
+		"number": 87,
+		"radical": "爪 (爫)",
+		"simplified": "",
+		"pinyin": "zhǎo",
+		"meaning": "claw",
+		"strokes": 4,
+		"frequency": 36
+	},
+	{
+		"number": 88,
+		"radical": "父",
+		"simplified": "",
+		"pinyin": "fù",
+		"meaning": "father",
+		"strokes": 4,
+		"frequency": 10
+	},
+	{
+		"number": 89,
+		"radical": "爻",
+		"simplified": "",
+		"pinyin": "yáo",
+		"meaning": "double x",
+		"strokes": 4,
+		"frequency": 16
+	},
+	{
+		"number": 90,
+		"radical": "爿 (丬)",
+		"simplified": "",
+		"pinyin": "qiáng",
+		"meaning": "half tree trunk",
+		"strokes": 4,
+		"frequency": 48
+	},
+	{
+		"number": 91,
+		"radical": "片",
+		"simplified": "",
+		"pinyin": "piàn",
+		"meaning": "slice",
+		"strokes": 4,
+		"frequency": 77
+	},
+	{
+		"number": 92,
+		"radical": "牙",
+		"simplified": "",
+		"pinyin": "yá",
+		"meaning": "fang",
+		"strokes": 4,
+		"frequency": 9
+	},
+	{
+		"number": 93,
+		"radical": "牛 (牜, ⺧)",
+		"simplified": "",
+		"pinyin": "niú",
+		"meaning": "cow",
+		"strokes": 4,
+		"frequency": 233
+	},
+	{
+		"number": 94,
+		"radical": "犬 (犭)",
+		"simplified": "",
+		"pinyin": "quǎn",
+		"meaning": "dog",
+		"strokes": 4,
+		"frequency": 444
+	},
+	{
+		"number": 95,
+		"radical": "玄",
+		"simplified": "",
+		"pinyin": "xuán",
+		"meaning": "profound",
+		"strokes": 5,
+		"frequency": 6
+	},
+	{
+		"number": 96,
+		"radical": "玉 (玊, 王, ⺩)",
+		"simplified": "",
+		"pinyin": "yù",
+		"meaning": "jade",
+		"strokes": 5,
+		"frequency": 473
+	},
+	{
+		"number": 97,
+		"radical": "瓜",
+		"simplified": "",
+		"pinyin": "guā",
+		"meaning": "melon",
+		"strokes": 5,
+		"frequency": 55
+	},
+	{
+		"number": 98,
+		"radical": "瓦",
+		"simplified": "",
+		"pinyin": "wǎ",
+		"meaning": "tile",
+		"strokes": 5,
+		"frequency": 174
+	},
+	{
+		"number": 99,
+		"radical": "甘",
+		"simplified": "",
+		"pinyin": "gān",
+		"meaning": "sweet",
+		"strokes": 5,
+		"frequency": 22
+	},
+	{
+		"number": 100,
+		"radical": "生",
+		"simplified": "",
+		"pinyin": "shēng",
+		"meaning": "life",
+		"strokes": 5,
+		"frequency": 22
+	},
+	{
+		"number": 101,
+		"radical": "用",
+		"simplified": "",
+		"pinyin": "yòng",
+		"meaning": "use",
+		"strokes": 5,
+		"frequency": 10
+	},
+	{
+		"number": 102,
+		"radical": "田",
+		"simplified": "",
+		"pinyin": "tián",
+		"meaning": "field",
+		"strokes": 5,
+		"frequency": 192
+	},
+	{
+		"number": 103,
+		"radical": "疋 (⺪)",
+		"simplified": "",
+		"pinyin": "pǐ",
+		"meaning": "bolt of cloth",
+		"strokes": 5,
+		"frequency": 15
+	},
+	{
+		"number": 104,
+		"radical": "疒",
+		"simplified": "",
+		"pinyin": "nè",
+		"meaning": "sickness",
+		"strokes": 5,
+		"frequency": 526
+	},
+	{
+		"number": 105,
+		"radical": "癶",
+		"simplified": "",
+		"pinyin": "bō",
+		"meaning": "dotted tent, legs",
+		"strokes": 5,
+		"frequency": 15
+	},
+	{
+		"number": 106,
+		"radical": "白",
+		"simplified": "",
+		"pinyin": "bái",
+		"meaning": "white",
+		"strokes": 5,
+		"frequency": 109
+	},
+	{
+		"number": 107,
+		"radical": "皮",
+		"simplified": "",
+		"pinyin": "pí",
+		"meaning": "skin",
+		"strokes": 5,
+		"frequency": 94
+	},
+	{
+		"number": 108,
+		"radical": "皿",
+		"simplified": "",
+		"pinyin": "mǐn",
+		"meaning": "dish",
+		"strokes": 5,
+		"frequency": 129
+	},
+	{
+		"number": 109,
+		"radical": "目",
+		"simplified": "",
+		"pinyin": "mù",
+		"meaning": "eye",
+		"strokes": 5,
+		"frequency": 647
+	},
+	{
+		"number": 110,
+		"radical": "矛",
+		"simplified": "",
+		"pinyin": "máo",
+		"meaning": "spear",
+		"strokes": 5,
+		"frequency": 65
+	},
+	{
+		"number": 111,
+		"radical": "矢",
+		"simplified": "",
+		"pinyin": "shǐ",
+		"meaning": "arrow",
+		"strokes": 5,
+		"frequency": 64
+	},
+	{
+		"number": 112,
+		"radical": "石",
+		"simplified": "",
+		"pinyin": "shí",
+		"meaning": "stone",
+		"strokes": 5,
+		"frequency": 499
+	},
+	{
+		"number": 113,
+		"radical": "示 (礻)",
+		"simplified": "",
+		"pinyin": "shì",
+		"meaning": "spirit",
+		"strokes": 5,
+		"frequency": 213
+	},
+	{
+		"number": 114,
+		"radical": "禸",
+		"simplified": "",
+		"pinyin": "róu",
+		"meaning": "track",
+		"strokes": 5,
+		"frequency": 12
+	},
+	{
+		"number": 115,
+		"radical": "禾",
+		"simplified": "",
+		"pinyin": "hé",
+		"meaning": "grain",
+		"strokes": 5,
+		"frequency": 431
+	},
+	{
+		"number": 116,
+		"radical": "穴",
+		"simplified": "",
+		"pinyin": "xué",
+		"meaning": "cave",
+		"strokes": 5,
+		"frequency": 298
+	},
+	{
+		"number": 117,
+		"radical": "立",
+		"simplified": "",
+		"pinyin": "lì",
+		"meaning": "stand",
+		"strokes": 5,
+		"frequency": 101
+	},
+	{
+		"number": 118,
+		"radical": "竹 (⺮)",
+		"simplified": "",
+		"pinyin": "zhú",
+		"meaning": "bamboo",
+		"strokes": 6,
+		"frequency": 953
+	},
+	{
+		"number": 119,
+		"radical": "米",
+		"simplified": "",
+		"pinyin": "mǐ",
+		"meaning": "rice",
+		"strokes": 6,
+		"frequency": 318
+	},
+	{
+		"number": 120,
+		"radical": "糸 (糹)",
+		"simplified": "纟",
+		"pinyin": "mì",
+		"meaning": "silk",
+		"strokes": 6,
+		"frequency": 823
+	},
+	{
+		"number": 121,
+		"radical": "缶",
+		"simplified": "",
+		"pinyin": "fǒu",
+		"meaning": "jar",
+		"strokes": 6,
+		"frequency": 77
+	},
+	{
+		"number": 122,
+		"radical": "网 (罒,⺲,罓,⺳)",
+		"simplified": "",
+		"pinyin": "wǎng",
+		"meaning": "net",
+		"strokes": 6,
+		"frequency": 163
+	},
+	{
+		"number": 123,
+		"radical": "羊 (⺶,⺷)",
+		"simplified": "",
+		"pinyin": "yáng",
+		"meaning": "sheep",
+		"strokes": 6,
+		"frequency": 156
+	},
+	{
+		"number": 124,
+		"radical": "羽",
+		"simplified": "",
+		"pinyin": "yǔ",
+		"meaning": "feather",
+		"strokes": 6,
+		"frequency": 220
+	},
+	{
+		"number": 125,
+		"radical": "老 (耂)",
+		"simplified": "",
+		"pinyin": "lǎo",
+		"meaning": "old",
+		"strokes": 6,
+		"frequency": 22
+	},
+	{
+		"number": 126,
+		"radical": "而",
+		"simplified": "",
+		"pinyin": "ér",
+		"meaning": "and",
+		"strokes": 6,
+		"frequency": 22
+	},
+	{
+		"number": 127,
+		"radical": "耒",
+		"simplified": "",
+		"pinyin": "lěi",
+		"meaning": "plow",
+		"strokes": 6,
+		"frequency": 84
+	},
+	{
+		"number": 128,
+		"radical": "耳",
+		"simplified": "",
+		"pinyin": "ěr",
+		"meaning": "ear",
+		"strokes": 6,
+		"frequency": 172
+	},
+	{
+		"number": 129,
+		"radical": "聿 (⺻)",
+		"simplified": "",
+		"pinyin": "yù",
+		"meaning": "brush",
+		"strokes": 6,
+		"frequency": 19
+	},
+	{
+		"number": 130,
+		"radical": "肉 (⺼)",
+		"simplified": "",
+		"pinyin": "ròu",
+		"meaning": "meat",
+		"strokes": 6,
+		"frequency": 674
+	},
+	{
+		"number": 131,
+		"radical": "臣",
+		"simplified": "",
+		"pinyin": "chén",
+		"meaning": "minister",
+		"strokes": 6,
+		"frequency": 16
+	},
+	{
+		"number": 132,
+		"radical": "自",
+		"simplified": "",
+		"pinyin": "zì",
+		"meaning": "self",
+		"strokes": 6,
+		"frequency": 34
+	},
+	{
+		"number": 133,
+		"radical": "至",
+		"simplified": "",
+		"pinyin": "zhì",
+		"meaning": "arrive",
+		"strokes": 6,
+		"frequency": 24
+	},
+	{
+		"number": 134,
+		"radical": "臼",
+		"simplified": "",
+		"pinyin": "jiù",
+		"meaning": "mortar",
+		"strokes": 6,
+		"frequency": 71
+	},
+	{
+		"number": 135,
+		"radical": "舌",
+		"simplified": "",
+		"pinyin": "shé",
+		"meaning": "tongue",
+		"strokes": 6,
+		"frequency": 31
+	},
+	{
+		"number": 136,
+		"radical": "舛",
+		"simplified": "",
+		"pinyin": "chuǎn",
+		"meaning": "oppose",
+		"strokes": 6,
+		"frequency": 10
+	},
+	{
+		"number": 137,
+		"radical": "舟",
+		"simplified": "",
+		"pinyin": "zhōu",
+		"meaning": "boat",
+		"strokes": 6,
+		"frequency": 197
+	},
+	{
+		"number": 138,
+		"radical": "艮",
+		"simplified": "",
+		"pinyin": "gēn",
+		"meaning": "stopping",
+		"strokes": 6,
+		"frequency": 5
+	},
+	{
+		"number": 139,
+		"radical": "色",
+		"simplified": "",
+		"pinyin": "sè",
+		"meaning": "color",
+		"strokes": 6,
+		"frequency": 21
+	},
+	{
+		"number": 140,
+		"radical": "艸 (艹)",
+		"simplified": "",
+		"pinyin": "cǎo",
+		"meaning": "grass",
+		"strokes": 6,
+		"frequency": 1902
+	},
+	{
+		"number": 141,
+		"radical": "虍",
+		"simplified": "",
+		"pinyin": "hū",
+		"meaning": "tiger",
+		"strokes": 6,
+		"frequency": 114
+	},
+	{
+		"number": 142,
+		"radical": "虫",
+		"simplified": "",
+		"pinyin": "huǐ",
+		"meaning": "insect",
+		"strokes": 6,
+		"frequency": 1067
+	},
+	{
+		"number": 143,
+		"radical": "血",
+		"simplified": "",
+		"pinyin": "xuè",
+		"meaning": "blood",
+		"strokes": 6,
+		"frequency": 60
+	},
+	{
+		"number": 144,
+		"radical": "行",
+		"simplified": "",
+		"pinyin": "xíng",
+		"meaning": "walk enclosure",
+		"strokes": 6,
+		"frequency": 53
+	},
+	{
+		"number": 145,
+		"radical": "衣 (衤)",
+		"simplified": "",
+		"pinyin": "yī",
+		"meaning": "clothes",
+		"strokes": 6,
+		"frequency": 607
+	},
+	{
+		"number": 146,
+		"radical": "襾 (西,覀)",
+		"simplified": "",
+		"pinyin": "xī",
+		"meaning": "west",
+		"strokes": 6,
+		"frequency": 29
+	},
+	{
+		"number": 147,
+		"radical": "見",
+		"simplified": "见",
+		"pinyin": "jiàn",
+		"meaning": "see",
+		"strokes": 7,
+		"frequency": 161
+	},
+	{
+		"number": 148,
+		"radical": "角",
+		"simplified": "",
+		"pinyin": "jiǎo",
+		"meaning": "horn",
+		"strokes": 7,
+		"frequency": 158
+	},
+	{
+		"number": 149,
+		"radical": "言 (訁)",
+		"simplified": "讠",
+		"pinyin": "yán",
+		"meaning": "speech",
+		"strokes": 7,
+		"frequency": 861
+	},
+	{
+		"number": 150,
+		"radical": "谷",
+		"simplified": "",
+		"pinyin": "gǔ",
+		"meaning": "valley",
+		"strokes": 7,
+		"frequency": 54
+	},
+	{
+		"number": 151,
+		"radical": "豆",
+		"simplified": "",
+		"pinyin": "dòu",
+		"meaning": "bean",
+		"strokes": 7,
+		"frequency": 68
+	},
+	{
+		"number": 152,
+		"radical": "豕",
+		"simplified": "",
+		"pinyin": "shǐ",
+		"meaning": "pig",
+		"strokes": 7,
+		"frequency": 148
+	},
+	{
+		"number": 153,
+		"radical": "豸",
+		"simplified": "",
+		"pinyin": "zhì",
+		"meaning": "badger",
+		"strokes": 7,
+		"frequency": 140
+	},
+	{
+		"number": 154,
+		"radical": "貝",
+		"simplified": "贝",
+		"pinyin": "bèi",
+		"meaning": "shell",
+		"strokes": 7,
+		"frequency": 277
+	},
+	{
+		"number": 155,
+		"radical": "赤",
+		"simplified": "",
+		"pinyin": "chì",
+		"meaning": "red",
+		"strokes": 7,
+		"frequency": 31
+	},
+	{
+		"number": 156,
+		"radical": "走 (赱)",
+		"simplified": "",
+		"pinyin": "zǒu",
+		"meaning": "run",
+		"strokes": 7,
+		"frequency": 285
+	},
+	{
+		"number": 157,
+		"radical": "足 (⻊)",
+		"simplified": "",
+		"pinyin": "zú",
+		"meaning": "foot",
+		"strokes": 7,
+		"frequency": 580
+	},
+	{
+		"number": 158,
+		"radical": "身",
+		"simplified": "",
+		"pinyin": "shēn",
+		"meaning": "body",
+		"strokes": 7,
+		"frequency": 97
+	},
+	{
+		"number": 159,
+		"radical": "車",
+		"simplified": "车",
+		"pinyin": "chē",
+		"meaning": "cart",
+		"strokes": 7,
+		"frequency": 361
+	},
+	{
+		"number": 160,
+		"radical": "辛",
+		"simplified": "",
+		"pinyin": "xīn",
+		"meaning": "bitter",
+		"strokes": 7,
+		"frequency": 36
+	},
+	{
+		"number": 161,
+		"radical": "辰",
+		"simplified": "",
+		"pinyin": "chén",
+		"meaning": "morning",
+		"strokes": 7,
+		"frequency": 15
+	},
+	{
+		"number": 162,
+		"radical": "辵 (辶,⻌,⻍)",
+		"simplified": "",
+		"pinyin": "chuò",
+		"meaning": "walk",
+		"strokes": 7,
+		"frequency": 381
+	},
+	{
+		"number": 163,
+		"radical": "邑 (阝,⻏,⻖)",
+		"simplified": "",
+		"pinyin": "yì",
+		"meaning": "city",
+		"strokes": 7,
+		"frequency": 350
+	},
+	{
+		"number": 164,
+		"radical": "酉",
+		"simplified": "",
+		"pinyin": "yǒu",
+		"meaning": "wine",
+		"strokes": 7,
+		"frequency": 290
+	},
+	{
+		"number": 165,
+		"radical": "釆",
+		"simplified": "",
+		"pinyin": "biàn",
+		"meaning": "distinguish",
+		"strokes": 7,
+		"frequency": 14
+	},
+	{
+		"number": 166,
+		"radical": "里",
+		"simplified": "",
+		"pinyin": "lǐ",
+		"meaning": "village",
+		"strokes": 7,
+		"frequency": 14
+	},
+	{
+		"number": 167,
+		"radical": "金 (釒)",
+		"simplified": "钅",
+		"pinyin": "jīn",
+		"meaning": "gold",
+		"strokes": 8,
+		"frequency": 806
+	},
+	{
+		"number": 168,
+		"radical": "長 (镸)",
+		"simplified": "长",
+		"pinyin": "cháng",
+		"meaning": "long",
+		"strokes": 8,
+		"frequency": 55
+	},
+	{
+		"number": 169,
+		"radical": "門",
+		"simplified": "门",
+		"pinyin": "mén",
+		"meaning": "gate",
+		"strokes": 8,
+		"frequency": 246
+	},
+	{
+		"number": 170,
+		"radical": "阜 (阝)",
+		"simplified": "",
+		"pinyin": "fù",
+		"meaning": "mound",
+		"strokes": 8,
+		"frequency": 348
+	},
+	{
+		"number": 171,
+		"radical": "隶",
+		"simplified": "",
+		"pinyin": "lì",
+		"meaning": "slave",
+		"strokes": 8,
+		"frequency": 12
+	},
+	{
+		"number": 172,
+		"radical": "隹",
+		"simplified": "",
+		"pinyin": "zhuī",
+		"meaning": "short-tailed bird",
+		"strokes": 8,
+		"frequency": 233
+	},
+	{
+		"number": 173,
+		"radical": "雨",
+		"simplified": "",
+		"pinyin": "yǔ",
+		"meaning": "rain",
+		"strokes": 8,
+		"frequency": 298
+	},
+	{
+		"number": 174,
+		"radical": "青 (靑)",
+		"simplified": "",
+		"pinyin": "qīng",
+		"meaning": "blue",
+		"strokes": 8,
+		"frequency": 17
+	},
+	{
+		"number": 175,
+		"radical": "非",
+		"simplified": "",
+		"pinyin": "fēi",
+		"meaning": "wrong",
+		"strokes": 8,
+		"frequency": 25
+	},
+	{
+		"number": 176,
+		"radical": "面 (靣)",
+		"simplified": "",
+		"pinyin": "miàn",
+		"meaning": "face",
+		"strokes": 9,
+		"frequency": 66
+	},
+	{
+		"number": 177,
+		"radical": "革",
+		"simplified": "",
+		"pinyin": "gé",
+		"meaning": "leather",
+		"strokes": 9,
+		"frequency": 305
+	},
+	{
+		"number": 178,
+		"radical": "韋",
+		"simplified": "韦",
+		"pinyin": "wéi",
+		"meaning": "tanned leather",
+		"strokes": 9,
+		"frequency": 100
+	},
+	{
+		"number": 179,
+		"radical": "韭",
+		"simplified": "",
+		"pinyin": "jiǔ",
+		"meaning": "leek",
+		"strokes": 9,
+		"frequency": 20
+	},
+	{
+		"number": 180,
+		"radical": "音",
+		"simplified": "",
+		"pinyin": "yīn",
+		"meaning": "sound",
+		"strokes": 9,
+		"frequency": 43
+	},
+	{
+		"number": 181,
+		"radical": "頁",
+		"simplified": "页",
+		"pinyin": "yè",
+		"meaning": "leaf",
+		"strokes": 9,
+		"frequency": 372
+	},
+	{
+		"number": 182,
+		"radical": "風 (𠘨)",
+		"simplified": "风",
+		"pinyin": "fēng",
+		"meaning": "wind",
+		"strokes": 9,
+		"frequency": 182
+	},
+	{
+		"number": 183,
+		"radical": "飛",
+		"simplified": "飞",
+		"pinyin": "fēi",
+		"meaning": "fly",
+		"strokes": 9,
+		"frequency": 92
+	},
+	{
+		"number": 184,
+		"radical": "食 (飠)",
+		"simplified": "饣",
+		"pinyin": "shí",
+		"meaning": "eat",
+		"strokes": 9,
+		"frequency": 403
+	},
+	{
+		"number": 185,
+		"radical": "首",
+		"simplified": "",
+		"pinyin": "shǒu",
+		"meaning": "head",
+		"strokes": 9,
+		"frequency": 20
+	},
+	{
+		"number": 186,
+		"radical": "香",
+		"simplified": "",
+		"pinyin": "xiāng",
+		"meaning": "fragrant",
+		"strokes": 9,
+		"frequency": 37
+	},
+	{
+		"number": 187,
+		"radical": "馬",
+		"simplified": "马",
+		"pinyin": "mǎ",
+		"meaning": "horse",
+		"strokes": 10,
+		"frequency": 472
+	},
+	{
+		"number": 188,
+		"radical": "骨",
+		"simplified": "",
+		"pinyin": "gǔ",
+		"meaning": "bone",
+		"strokes": 10,
+		"frequency": 185
+	},
+	{
+		"number": 189,
+		"radical": "高 (髙)",
+		"simplified": "",
+		"pinyin": "gāo",
+		"meaning": "tall",
+		"strokes": 10,
+		"frequency": 34
+	},
+	{
+		"number": 190,
+		"radical": "髟",
+		"simplified": "",
+		"pinyin": "biāo",
+		"meaning": "hair",
+		"strokes": 10,
+		"frequency": 243
+	},
+	{
+		"number": 191,
+		"radical": "鬥",
+		"simplified": "",
+		"pinyin": "dòu",
+		"meaning": "fight",
+		"strokes": 10,
+		"frequency": 23
+	},
+	{
+		"number": 192,
+		"radical": "鬯",
+		"simplified": "",
+		"pinyin": "chàng",
+		"meaning": "sacrificial wine",
+		"strokes": 10,
+		"frequency": 8
+	},
+	{
+		"number": 193,
+		"radical": "鬲",
+		"simplified": "",
+		"pinyin": "lì",
+		"meaning": "cauldron",
+		"strokes": 10,
+		"frequency": 73
+	},
+	{
+		"number": 194,
+		"radical": "鬼",
+		"simplified": "",
+		"pinyin": "guǐ",
+		"meaning": "ghost",
+		"strokes": 10,
+		"frequency": 141
+	},
+	{
+		"number": 195,
+		"radical": "魚",
+		"simplified": "鱼",
+		"pinyin": "yú",
+		"meaning": "fish",
+		"strokes": 11,
+		"frequency": 571
+	},
+	{
+		"number": 196,
+		"radical": "鳥",
+		"simplified": "鸟",
+		"pinyin": "niǎo",
+		"meaning": "bird",
+		"strokes": 11,
+		"frequency": 750
+	},
+	{
+		"number": 197,
+		"radical": "鹵",
+		"simplified": "卤",
+		"pinyin": "lǔ",
+		"meaning": "salt",
+		"strokes": 11,
+		"frequency": 44
+	},
+	{
+		"number": 198,
+		"radical": "鹿",
+		"simplified": "",
+		"pinyin": "lù",
+		"meaning": "deer",
+		"strokes": 11,
+		"frequency": 104
+	},
+	{
+		"number": 199,
+		"radical": "麥",
+		"simplified": "麦",
+		"pinyin": "mài",
+		"meaning": "wheat",
+		"strokes": 11,
+		"frequency": 131
+	},
+	{
+		"number": 200,
+		"radical": "麻",
+		"simplified": "",
+		"pinyin": "má",
+		"meaning": "hemp",
+		"strokes": 11,
+		"frequency": 34
+	},
+	{
+		"number": 201,
+		"radical": "黃",
+		"simplified": "",
+		"pinyin": "huáng",
+		"meaning": "yellow",
+		"strokes": 12,
+		"frequency": 42
+	},
+	{
+		"number": 202,
+		"radical": "黍",
+		"simplified": "",
+		"pinyin": "shǔ",
+		"meaning": "millet",
+		"strokes": 12,
+		"frequency": 46
+	},
+	{
+		"number": 203,
+		"radical": "黑",
+		"simplified": "",
+		"pinyin": "hēi",
+		"meaning": "black",
+		"strokes": 12,
+		"frequency": 172
+	},
+	{
+		"number": 204,
+		"radical": "黹",
+		"simplified": "",
+		"pinyin": "zhǐ",
+		"meaning": "embroidery",
+		"strokes": 12,
+		"frequency": 8
+	},
+	{
+		"number": 205,
+		"radical": "黽",
+		"simplified": "黾",
+		"pinyin": "mǐn",
+		"meaning": "frog",
+		"strokes": 13,
+		"frequency": 40
+	},
+	{
+		"number": 206,
+		"radical": "鼎",
+		"simplified": "",
+		"pinyin": "dǐng",
+		"meaning": "tripod",
+		"strokes": 13,
+		"frequency": 14
+	},
+	{
+		"number": 207,
+		"radical": "鼓",
+		"simplified": "",
+		"pinyin": "gǔ",
+		"meaning": "drum",
+		"strokes": 13,
+		"frequency": 46
+	},
+	{
+		"number": 208,
+		"radical": "鼠",
+		"simplified": "",
+		"pinyin": "shǔ",
+		"meaning": "rat",
+		"strokes": 13,
+		"frequency": 92
+	},
+	{
+		"number": 209,
+		"radical": "鼻",
+		"simplified": "",
+		"pinyin": "bí",
+		"meaning": "nose",
+		"strokes": 14,
+		"frequency": 49
+	},
+	{
+		"number": 210,
+		"radical": "齊",
+		"simplified": "齐",
+		"pinyin": "qí",
+		"meaning": "even",
+		"strokes": 14,
+		"frequency": 18
+	},
+	{
+		"number": 211,
+		"radical": "齒",
+		"simplified": "齿",
+		"pinyin": "chǐ",
+		"meaning": "tooth",
+		"strokes": 15,
+		"frequency": 162
+	},
+	{
+		"number": 212,
+		"radical": "龍",
+		"simplified": "龙",
+		"pinyin": "lóng",
+		"meaning": "dragon",
+		"strokes": 16,
+		"frequency": 14
+	},
+	{
+		"number": 213,
+		"radical": "龜",
+		"simplified": "龟",
+		"pinyin": "guī",
+		"meaning": "turtle",
+		"strokes": 16,
+		"frequency": 24
+	},
+	{
+		"number": 214,
+		"radical": "龠",
+		"simplified": "",
+		"pinyin": "yuè",
+		"meaning": "flute",
+		"strokes": 17,
+		"frequency": 19
+	}
+]

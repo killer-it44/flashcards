@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='viewport' content='width=device-width' />
+    <link href='styles.css' rel='stylesheet' />
+</head>
+
+<body>
+    <div style='display: flex; flex-direction: column;'>
+        <div style='display: flex; align-items: center; justify-content: space-around;'>
+            <div id='character' style='font-size: 3.5em;'></div>
+            <div onclick='reveal()' style='font-size: 3.5em;'>👀</div>
+        </div>
+        <div id='revealed'></div>
+
+        <!-- <h3>German</h3>
+        <div style='display: flex; flex-direction: column;'>
+            <div style='width: 100%; display: flex;'>
+                <input style='width: 100%;' placeholder='translation'></input>
+                <button>Audio</button>
+            </div>
+            <input placeholder='similar words (separate by ;)'></input>
+            <input placeholder='expressions (separate by ;)'></input>
+        </div> -->
+
+        <p>
+        <div style='display: flex; justify-content:space-around;'>
+            <button onclick='post(false)' style='font-size: 2.5em; background-color: red;'>👎🏻</button>
+            <button onclick='post(true)' style='font-size: 2.5em; background-color: green;'>👍🏻</button>
+        </div>
+        </p>
+    </div>
+
+
+    <script>
+        let char
+        const post = async (remembered) => {
+            const headers = { 'Content-Type': 'application/json' }
+            const body = JSON.stringify({
+                character: char.character,
+                remembered,
+                meaning: document.getElementById('meaning').value,
+                words: document.getElementById('words').value,
+                related: document.getElementById('related').value
+            })
+            await fetch('/api/submission', { method: 'POST', headers, body })
+            await fetchNext()
+        }
+
+        const reveal = async () => {
+            document.getElementById('revealed').setAttribute('style', 'height: 7em; visibility: visible;')
+        }
+
+        const fetchNext = async () => {
+            char = await (await fetch('/api/char')).json()
+            document.getElementById('character').innerHTML = char.character
+            const rad = char.radical
+            document.getElementById('revealed').setAttribute('style', 'height: 7em; visibility: hidden;')
+            document.getElementById('revealed').innerHTML = `
+                <table style='width: calc(100% - 8px); font-size: .7em;'>
+                    <tr><td>Pinyin</td><td>${char.pinyin}</td></tr>
+                    <tr><td>Radical</td><td>${rad.radical} (${rad.meaning})</td></tr>
+                    <tr><td>Meaning</td><td><input id='meaning' value='${char.meaning}'></input></td></tr>
+                    <tr><td>Words</td><td><input id='words' value='${char.words}'></input></td></tr>
+                    <tr><td>Related</td><td><input id='related' value='${char.related}'></input></td></tr>                
+                </table>`
+        }
+        fetchNext()
+    </script>
+</body>
+
+</html>
