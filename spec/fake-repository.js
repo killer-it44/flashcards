@@ -7,17 +7,36 @@ export default function FakeRepository() {
         "meaning": "one",
         "strokes": 1,
         "frequency": 42
+    },
+	{
+		"number": 7,
+		"radical": "二",
+		"simplified": "",
+		"pinyin": "èr",
+		"meaning": "two",
+		"strokes": 2,
+		"frequency": 29
     }]
     this.characters = [{
         "character": "一",
         "pinyin": "yī",
-        "meaning": "sell; betray; show off",
+        "meaning": "one; a, an; alone",
         "radical": "一 1.0",
         "strokes": 1,
         "hskLevel": 1,
         "standardRank": 1,
         "frequencyRank": 2,
         "related": ""
+    }, {
+		"character": "二",
+		"pinyin": "èr",
+		"meaning": "two; twice",
+		"radical": "二 7.0",
+		"strokes": 2,
+		"hskLevel": 1,
+		"standardRank": 3,
+		"frequencyRank": 157,
+		"related": ""
     }]
     this.words = [{
         "word": "一样",

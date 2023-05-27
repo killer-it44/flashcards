@@ -20,7 +20,14 @@ export default function Server(repo) {
         res.status(201).end()
         repo.save()
     })
-    
+
+    app.get('/api/char/:char', (req, res) => {
+        const cEntry = repo.characters.find(c => c.character === req.params.char)
+        const rEntry = repo.radicals.find(r => r.radical.includes(cEntry.radical.substring(0, 1)))
+        const matchingWords = repo.words.filter(w => w.word.includes(cEntry.character)).map(w => w.word)
+        res.json({ ...cEntry, radical: rEntry, words: matchingWords.join(', ') })
+    })
+
     app.get('/api/char', (req, res) => {
         const chars = repo.characters.filter(c => c.frequencyRank && c.frequencyRank < 1000)
         // const cEntry = chars.find(c => c.character === '你')

@@ -4,7 +4,7 @@ import FakeRepository from './fake-repository.js'
 
 describe('Server', () => {
     let client, server, port
-    
+
     beforeEach(async () => {
         server = new Server(new FakeRepository())
         port = await server.start()
@@ -17,13 +17,13 @@ describe('Server', () => {
         await expectAsync(new Server().start(port)).toBeRejectedWithError(/EADDRINUSE/)
     })
 
-    it('looks up matching radicals and words for the character', async () => {
-        const response = await client.get('/api/char').expect(200)
+    it('returns the details of a specific character including matching radicals and words', async () => {
+        const response = await client.get(`/api/char/${encodeURIComponent('一')}`).expect(200)
 
         expect(response.body).toEqual({
             character: '一',
             pinyin: 'yī',
-            meaning: 'sell; betray; show off',
+            meaning: 'one; a, an; alone',
             radical: {
                 number: 1,
                 radical: '一',
@@ -42,7 +42,7 @@ describe('Server', () => {
         })
     })
 
-    it('can update the data and merge into the existing one', async () => {
+    it('can update the data and merge into existing', async () => {
         await client.post('/api/submission').send({
             character: '一',
             remembered: true,
@@ -51,10 +51,16 @@ describe('Server', () => {
             related: '二'
         }).expect(201)
 
-        const response = await client.get('/api/char').expect(200)
+        const response = await client.get(`/api/char/${encodeURIComponent('一')}`).expect(200)
         expect(response.body.character).toEqual('一')
         expect(response.body.meaning).toEqual('updated meaning')
         expect(response.body.words).toEqual('一样, 一下, 一点儿')
         expect(response.body.related).toEqual('二')
+    })
+
+    it('returns some character from the root URL', async () => {
+        const response = await client.get('/api/char').expect(200)
+        expect(['一', '二']).toContain(response.body.character)
+        expect(['yī', 'èr']).toContain(response.body.pinyin)
     })
 })
