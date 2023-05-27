@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node main.js",
-    "test": "c8 jasmine spec/*.spec.js"
+    "test": "jasmine spec/*.spec.js",
+    "test:cov": "c8 jasmine spec/*.spec.js"
   },
   "type": "module",
   "keywords": [],
