@@ -14,7 +14,7 @@ describe('File System Repository', () => {
         expect(repo.submissions.length).toBe(0)
     })
 
-    it('persists updated that will can be re-loaded correctly', async () => {
+    it('persists updates, and will re-load them correctly', async () => {
         const repo = new FsRepository('spec/tmp')
         expect(repo.characters[0].meaning).not.toBe('test meaning')
 
