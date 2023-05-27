@@ -15,7 +15,8 @@ export default function Server(repo) {
         character.meaning = req.body.meaning
         character.related = req.body.related
         const relatedWords = req.body.words.split(',').map(w => w.trim()).filter(w => w)
-        relatedWords.forEach(w => repo.words.includes(w) ? null : repo.words.push({ word: w, pinyin: '', meaning: '' }))
+        const alreadyExists = (word) => repo.words.find(w => w.word === word)
+        relatedWords.forEach(w => alreadyExists(w) ? null : repo.words.push({ word: w, pinyin: '', meaning: '' }))
     
         res.status(201).end()
         repo.save()

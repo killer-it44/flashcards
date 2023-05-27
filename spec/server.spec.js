@@ -58,6 +58,14 @@ describe('Server', () => {
         expect(response.body.related).toEqual('二')
     })
 
+    it('will not add words which already exist as part of the update', async () => {
+        const updatedData = { character: '一', remembered: true, meaning: 'updated meaning', words: '一下', related: '二' }
+        await client.post('/api/submission').send(updatedData).expect(201)
+        await client.post('/api/submission').send(updatedData).expect(201)
+        const response = await client.get(`/api/char/${encodeURIComponent('一')}`).expect(200)
+        expect(response.body.words).toEqual('一样, 一下')
+    })
+
     it('returns some character from the root URL', async () => {
         const response = await client.get('/api/char').expect(200)
         expect(['一', '二']).toContain(response.body.character)
