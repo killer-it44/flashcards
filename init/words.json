@@ -75,8 +75,1358 @@
 		"meaning": ""
 	},
 	{
-		"word": "坐地铁",
+		"word": "必须",
+		"pinyin": "",
+		"meaning": "must have"
+	},
+	{
+		"word": "熟悉",
 		"pinyin": "",
 		"meaning": ""
+	},
+	{
+		"word": "船",
+		"pinyin": "",
+		"meaning": "boat"
+	},
+	{
+		"word": "暖和",
+		"pinyin": "",
+		"meaning": ""
+	},
+	{
+		"word": "幸福",
+		"pinyin": "",
+		"meaning": "happy; blessed; happiness; well-being"
+	},
+	{
+		"word": "经历",
+		"pinyin": "",
+		"meaning": "experienced; to experience; to undergo; manager"
+	},
+	{
+		"word": "味道",
+		"pinyin": "",
+		"meaning": ""
+	},
+	{
+		"word": "语言",
+		"pinyin": "",
+		"meaning": "language"
+	},
+	{
+		"word": "广告",
+		"pinyin": "",
+		"meaning": "advertisement; ad; commercial"
+	},
+	{
+		"word": "即使",
+		"pinyin": "",
+		"meaning": "even if"
+	},
+	{
+		"word": "流利",
+		"pinyin": "",
+		"meaning": "fluent"
+	},
+	{
+		"word": "减肥",
+		"pinyin": "",
+		"meaning": "loose weight"
+	},
+	{
+		"word": "解释",
+		"pinyin": "",
+		"meaning": "explain"
+	},
+	{
+		"word": "耐心",
+		"pinyin": "",
+		"meaning": "patient; patience"
+	},
+	{
+		"word": "愿意",
+		"pinyin": "",
+		"meaning": "willing; want"
+	},
+	{
+		"word": "否则",
+		"pinyin": "",
+		"meaning": "if not; otherwise; or else"
+	},
+	{
+		"word": "热闹",
+		"pinyin": "",
+		"meaning": ""
+	},
+	{
+		"word": "拒绝",
+		"pinyin": "",
+		"meaning": "refuse; reject; decline"
+	},
+	{
+		"word": "升职",
+		"pinyin": "",
+		"meaning": "get promoted; promotion"
+	},
+	{
+		"word": "饭馆",
+		"pinyin": "",
+		"meaning": "restaurant"
+	},
+	{
+		"word": "激动",
+		"pinyin": "",
+		"meaning": "agitated; worked up; excited; thrilled"
+	},
+	{
+		"word": "树",
+		"pinyin": "",
+		"meaning": "tree"
+	},
+	{
+		"word": "生活",
+		"pinyin": "",
+		"meaning": "to live"
+	},
+	{
+		"word": "淘气",
+		"pinyin": "",
+		"meaning": "naughty; mischievous"
+	},
+	{
+		"word": "节目",
+		"pinyin": "",
+		"meaning": "program; show; item (on a program)"
+	},
+	{
+		"word": "犯",
+		"pinyin": "",
+		"meaning": "to violate; to offend (against a rule); to commit (a mistake, crime)"
+	},
+	{
+		"word": "沿",
+		"pinyin": "",
+		"meaning": "along"
+	},
+	{
+		"word": "奖金",
+		"pinyin": "",
+		"meaning": "bonus"
+	},
+	{
+		"word": "尊重",
+		"pinyin": "",
+		"meaning": "respect; value; esteem"
+	},
+	{
+		"word": "脏",
+		"pinyin": "",
+		"meaning": "dirty; filthy"
+	},
+	{
+		"word": "环境",
+		"pinyin": "",
+		"meaning": "environment; surroundings"
+	},
+	{
+		"word": "原谅",
+		"pinyin": "",
+		"meaning": "forgive; pardon; excuse"
+	},
+	{
+		"word": "越",
+		"pinyin": "",
+		"meaning": "the more"
+	},
+	{
+		"word": "草原",
+		"pinyin": "",
+		"meaning": "grassland; prairie"
+	},
+	{
+		"word": "感动",
+		"pinyin": "",
+		"meaning": "touch emotionally; be moved; moving"
+	},
+	{
+		"word": "讲",
+		"pinyin": "",
+		"meaning": "explain; make clear; interpret; talk"
+	},
+	{
+		"word": "身材",
+		"pinyin": "",
+		"meaning": "statue; figure; build"
+	},
+	{
+		"word": "快餐",
+		"pinyin": "",
+		"meaning": "fast food; quick meal"
+	},
+	{
+		"word": "情况",
+		"pinyin": "",
+		"meaning": "situation; circumstance; state of affairs"
+	},
+	{
+		"word": "批评",
+		"pinyin": "",
+		"meaning": "to critizize"
+	},
+	{
+		"word": "完成",
+		"pinyin": "",
+		"meaning": "accomplish; complete; fulfill, finish"
+	},
+	{
+		"word": "合同",
+		"pinyin": "",
+		"meaning": "contract"
+	},
+	{
+		"word": "趟",
+		"pinyin": "",
+		"meaning": "times (round trips)"
+	},
+	{
+		"word": "难道",
+		"pinyin": "",
+		"meaning": "don't tell me; surely it doesn't mean; could it be"
+	},
+	{
+		"word": "碗",
+		"pinyin": "",
+		"meaning": "bowl"
+	},
+	{
+		"word": "取",
+		"pinyin": "",
+		"meaning": "fetch; take; get"
+	},
+	{
+		"word": "杂志",
+		"pinyin": "",
+		"meaning": "magazine"
+	},
+	{
+		"word": "精彩",
+		"pinyin": "",
+		"meaning": "brilliant; wonderful; marvelous"
+	},
+	{
+		"word": "塑料袋",
+		"pinyin": "",
+		"meaning": "plastic bag"
+	},
+	{
+		"word": "河",
+		"pinyin": "",
+		"meaning": "river"
+	},
+	{
+		"word": "辛苦",
+		"pinyin": "",
+		"meaning": "hard; laborious; toilsome; exhausting"
+	},
+	{
+		"word": "无聊",
+		"pinyin": "",
+		"meaning": "boring; bored"
+	},
+	{
+		"word": "修理",
+		"pinyin": "",
+		"meaning": "repair; fix; perform maintenance"
+	},
+	{
+		"word": "骗",
+		"pinyin": "",
+		"meaning": "cheat; fool; deveive"
+	},
+	{
+		"word": "愉快",
+		"pinyin": "",
+		"meaning": "cheerful; joyful; delightful; pleasant"
+	},
+	{
+		"word": "坚持",
+		"pinyin": "",
+		"meaning": "preserve; persist; insist; stick to"
+	},
+	{
+		"word": "提醒",
+		"pinyin": "",
+		"meaning": "remind"
+	},
+	{
+		"word": "皮肤",
+		"pinyin": "",
+		"meaning": "skin"
+	},
+	{
+		"word": "暗",
+		"pinyin": "",
+		"meaning": "dark; dim"
+	},
+	{
+		"word": "乖",
+		"pinyin": "",
+		"meaning": "well-behaved; good"
+	},
+	{
+		"word": "抽烟",
+		"pinyin": "",
+		"meaning": "smoke (cigarette, pipe, …)"
+	},
+	{
+		"word": "而且",
+		"pinyin": "",
+		"meaning": "but also; furthermore; in addition; moreover"
+	},
+	{
+		"word": "凉快",
+		"pinyin": "",
+		"meaning": "cool; pleasant; nice and cool"
+	},
+	{
+		"word": "规定",
+		"pinyin": "",
+		"meaning": "regulation; rule"
+	},
+	{
+		"word": "故事",
+		"pinyin": "",
+		"meaning": "story"
+	},
+	{
+		"word": "相信",
+		"pinyin": "",
+		"meaning": "trust; believe"
+	},
+	{
+		"word": "植物",
+		"pinyin": "",
+		"meaning": "plant; vegetation; flora"
+	},
+	{
+		"word": "感兴趣",
+		"pinyin": "",
+		"meaning": "interested in"
+	},
+	{
+		"word": "面积",
+		"pinyin": "",
+		"meaning": "area (of floor, piece of land, …)"
+	},
+	{
+		"word": "因此",
+		"pinyin": "",
+		"meaning": "therefore; so; thus; consequently"
+	},
+	{
+		"word": "赚",
+		"pinyin": "",
+		"meaning": "earn (money); make (money)"
+	},
+	{
+		"word": "意见",
+		"pinyin": "",
+		"meaning": "objection; complaint; opinion"
+	},
+	{
+		"word": "改变",
+		"pinyin": "",
+		"meaning": "change; alter"
+	},
+	{
+		"word": "缺点",
+		"pinyin": "",
+		"meaning": "weakness; weak point; shortcoming; drawback; disadvantage"
+	},
+	{
+		"word": "辞职",
+		"pinyin": "",
+		"meaning": "resign"
+	},
+	{
+		"word": "同意",
+		"pinyin": "",
+		"meaning": "agree; approve"
+	},
+	{
+		"word": "晚",
+		"pinyin": "",
+		"meaning": "late"
+	},
+	{
+		"word": "整理",
+		"pinyin": "",
+		"meaning": "tidy up; put in order; arrange; straighten out; sort out"
+	},
+	{
+		"word": "突然",
+		"pinyin": "",
+		"meaning": "suddenly; abruptly"
+	},
+	{
+		"word": "推迟",
+		"pinyin": "",
+		"meaning": "postpone; defer"
+	},
+	{
+		"word": "优点",
+		"pinyin": "",
+		"meaning": "strength; strong point; merit; advantage"
+	},
+	{
+		"word": "地址",
+		"pinyin": "",
+		"meaning": "address"
+	},
+	{
+		"word": "修改",
+		"pinyin": "",
+		"meaning": "modify; revise; amend; alter"
+	},
+	{
+		"word": "考虑",
+		"pinyin": "",
+		"meaning": "consider; think over; take into account"
+	},
+	{
+		"word": "穷",
+		"pinyin": "",
+		"meaning": "poor; poverty-stricken"
+	},
+	{
+		"word": "其实",
+		"pinyin": "",
+		"meaning": "actually; in fact"
+	},
+	{
+		"word": "不但",
+		"pinyin": "",
+		"meaning": "not only"
+	},
+	{
+		"word": "然而",
+		"pinyin": "",
+		"meaning": "however; but; yet; nevertheless"
+	},
+	{
+		"word": "工资",
+		"pinyin": "",
+		"meaning": "wage; pay; salary"
+	},
+	{
+		"word": "说谎",
+		"pinyin": "",
+		"meaning": "lie"
+	},
+	{
+		"word": "难受",
+		"pinyin": "",
+		"meaning": "feel unwell; uncomfortable; feel unhappy"
+	},
+	{
+		"word": "解决",
+		"pinyin": "",
+		"meaning": "solve; settle; resolve"
+	},
+	{
+		"word": "竟然",
+		"pinyin": "",
+		"meaning": "unexpectedly; to one's surprise; surprisingl; actually"
+	},
+	{
+		"word": "优秀",
+		"pinyin": "",
+		"meaning": "excellent; outstanding"
+	},
+	{
+		"word": "赶",
+		"pinyin": "",
+		"meaning": "hurry, rush; try to catch"
+	},
+	{
+		"word": "降落",
+		"pinyin": "",
+		"meaning": "descend; fall"
+	},
+	{
+		"word": "复杂",
+		"pinyin": "",
+		"meaning": "complicated; complex"
+	},
+	{
+		"word": "尽管",
+		"pinyin": "",
+		"meaning": "even though; despite; although"
+	},
+	{
+		"word": "仔细",
+		"pinyin": "",
+		"meaning": "careful; attentive; cautious"
+	},
+	{
+		"word": "承认",
+		"pinyin": "",
+		"meaning": "admit; acknowledge; concede"
+	},
+	{
+		"word": "计划",
+		"pinyin": "",
+		"meaning": "plan; project"
+	},
+	{
+		"word": "既然",
+		"pinyin": "",
+		"meaning": "since; now that"
+	},
+	{
+		"word": "需要",
+		"pinyin": "",
+		"meaning": "need"
+	},
+	{
+		"word": "华",
+		"pinyin": "",
+		"meaning": ""
+	},
+	{
+		"word": "度",
+		"pinyin": "",
+		"meaning": "read"
+	},
+	{
+		"word": "填",
+		"pinyin": "",
+		"meaning": "fill in "
+	},
+	{
+		"word": "表",
+		"pinyin": "",
+		"meaning": "form"
+	},
+	{
+		"word": "土豆",
+		"pinyin": "",
+		"meaning": "potato"
+	},
+	{
+		"word": "青菜",
+		"pinyin": "",
+		"meaning": "cabbage"
+	},
+	{
+		"word": "软",
+		"pinyin": "",
+		"meaning": "soft"
+	},
+	{
+		"word": "脆",
+		"pinyin": "",
+		"meaning": "crisp"
+	},
+	{
+		"word": "听起来",
+		"pinyin": "",
+		"meaning": "sound like"
+	},
+	{
+		"word": "起来",
+		"pinyin": "",
+		"meaning": "seem like"
+	},
+	{
+		"word": "来不及",
+		"pinyin": "",
+		"meaning": "don't have time to"
+	},
+	{
+		"word": "可惜",
+		"pinyin": "",
+		"meaning": "unfortunately; pity"
+	},
+	{
+		"word": "从...到",
+		"pinyin": "",
+		"meaning": "from...to"
+	},
+	{
+		"word": "服务",
+		"pinyin": "",
+		"meaning": "customer service"
+	},
+	{
+		"word": "柜台",
+		"pinyin": "",
+		"meaning": "counter"
+	},
+	{
+		"word": "需要",
+		"pinyin": "",
+		"meaning": "need"
+	},
+	{
+		"word": "中间",
+		"pinyin": "",
+		"meaning": "middle; between"
+	},
+	{
+		"word": "大学",
+		"pinyin": "",
+		"meaning": "university"
+	},
+	{
+		"word": "家庭",
+		"pinyin": "",
+		"meaning": "family"
+	},
+	{
+		"word": "规矩",
+		"pinyin": "",
+		"meaning": "rule"
+	},
+	{
+		"word": "差点儿",
+		"pinyin": "",
+		"meaning": "almost"
+	},
+	{
+		"word": "梨子",
+		"pinyin": "",
+		"meaning": "pear"
+	},
+	{
+		"word": "读音",
+		"pinyin": "",
+		"meaning": "pronounciation"
+	},
+	{
+		"word": "意思",
+		"pinyin": "",
+		"meaning": "meaning"
+	},
+	{
+		"word": "比如说",
+		"pinyin": "",
+		"meaning": "for example"
+	},
+	{
+		"word": "糖果",
+		"pinyin": "",
+		"meaning": "candy"
+	},
+	{
+		"word": "帮忙",
+		"pinyin": "",
+		"meaning": "help"
+	},
+	{
+		"word": "注意",
+		"pinyin": "",
+		"meaning": "idea"
+	},
+	{
+		"word": "点心",
+		"pinyin": "",
+		"meaning": "dessert"
+	},
+	{
+		"word": "流行",
+		"pinyin": "",
+		"meaning": "popular"
+	},
+	{
+		"word": "软件",
+		"pinyin": "",
+		"meaning": "software"
+	},
+	{
+		"word": "功能",
+		"pinyin": "",
+		"meaning": "function"
+	},
+	{
+		"word": "厉害",
+		"pinyin": "",
+		"meaning": "serious"
+	},
+	{
+		"word": "红包",
+		"pinyin": "",
+		"meaning": "red packet"
+	},
+	{
+		"word": "租",
+		"pinyin": "",
+		"meaning": "rent"
+	},
+	{
+		"word": "房子",
+		"pinyin": "",
+		"meaning": "house; apartment"
+	},
+	{
+		"word": "自己",
+		"pinyin": "",
+		"meaning": "oneself"
+	},
+	{
+		"word": "着急",
+		"pinyin": "",
+		"meaning": "anxiety"
+	},
+	{
+		"word": "套",
+		"pinyin": "",
+		"meaning": "set"
+	},
+	{
+		"word": "浏览",
+		"pinyin": "",
+		"meaning": ""
+	},
+	{
+		"word": "信息",
+		"pinyin": "",
+		"meaning": ""
+	},
+	{
+		"word": "静安寺",
+		"pinyin": "",
+		"meaning": "Jing'An temple"
+	},
+	{
+		"word": "租金",
+		"pinyin": "",
+		"meaning": "rental fee"
+	},
+	{
+		"word": "陆家嘴",
+		"pinyin": "",
+		"meaning": "Lujiazui"
+	},
+	{
+		"word": "中山公园",
+		"pinyin": "",
+		"meaning": ""
+	},
+	{
+		"word": "够了",
+		"pinyin": "",
+		"meaning": "to be enough"
+	},
+	{
+		"word": "这样",
+		"pinyin": "",
+		"meaning": "this way"
+	},
+	{
+		"word": "脸色",
+		"pinyin": "",
+		"meaning": "facial color"
+	},
+	{
+		"word": "感觉",
+		"pinyin": "",
+		"meaning": "feel"
+	},
+	{
+		"word": "精神",
+		"pinyin": "",
+		"meaning": "spirit"
+	},
+	{
+		"word": "挺…的",
+		"pinyin": "",
+		"meaning": "quite"
+	},
+	{
+		"word": "紧急",
+		"pinyin": "",
+		"meaning": "urgent"
+	},
+	{
+		"word": "注意",
+		"pinyin": "",
+		"meaning": "pay attention"
+	},
+	{
+		"word": "头晕",
+		"pinyin": "",
+		"meaning": "dizzy"
+	},
+	{
+		"word": "挂号",
+		"pinyin": "",
+		"meaning": "registration"
+	},
+	{
+		"word": "量",
+		"pinyin": "",
+		"meaning": "check"
+	},
+	{
+		"word": "体温",
+		"pinyin": "",
+		"meaning": "body temperature"
+	},
+	{
+		"word": "付费",
+		"pinyin": "",
+		"meaning": "pay"
+	},
+	{
+		"word": "拍片",
+		"pinyin": "",
+		"meaning": "take an X-ray"
+	},
+	{
+		"word": "化验",
+		"pinyin": "",
+		"meaning": "medical test"
+	},
+	{
+		"word": "报告",
+		"pinyin": "",
+		"meaning": "report"
+	},
+	{
+		"word": "肺炎",
+		"pinyin": "",
+		"meaning": "pnenumonia"
+	},
+	{
+		"word": "复查",
+		"pinyin": "",
+		"meaning": "re-check"
+	},
+	{
+		"word": "以为",
+		"pinyin": "",
+		"meaning": "used to think"
+	},
+	{
+		"word": "比较",
+		"pinyin": "",
+		"meaning": "comparatively"
+	},
+	{
+		"word": "健康",
+		"pinyin": "",
+		"meaning": "health"
+	},
+	{
+		"word": "清淡",
+		"pinyin": "",
+		"meaning": "light"
+	},
+	{
+		"word": "过敏史",
+		"pinyin": "",
+		"meaning": "allergic history"
+	},
+	{
+		"word": "机器",
+		"pinyin": "",
+		"meaning": "machine"
+	},
+	{
+		"word": "充值",
+		"pinyin": "",
+		"meaning": "recharge"
+	},
+	{
+		"word": "左下角",
+		"pinyin": "",
+		"meaning": "bottom left"
+	},
+	{
+		"word": "点击",
+		"pinyin": "",
+		"meaning": "click"
+	},
+	{
+		"word": "确认",
+		"pinyin": "",
+		"meaning": "confirm"
+	},
+	{
+		"word": "金额",
+		"pinyin": "",
+		"meaning": "amount"
+	},
+	{
+		"word": "一般",
+		"pinyin": "",
+		"meaning": "generally"
+	},
+	{
+		"word": "扫描",
+		"pinyin": "",
+		"meaning": "scan"
+	},
+	{
+		"word": "二维码",
+		"pinyin": "",
+		"meaning": "QR code"
+	},
+	{
+		"word": "支付",
+		"pinyin": "",
+		"meaning": "pay"
+	},
+	{
+		"word": "凭证",
+		"pinyin": "",
+		"meaning": "receipt"
+	},
+	{
+		"word": "取出",
+		"pinyin": "",
+		"meaning": "take out"
+	},
+	{
+		"word": "右转",
+		"pinyin": "",
+		"meaning": "turn right"
+	},
+	{
+		"word": "安检",
+		"pinyin": "",
+		"meaning": "security check"
+	},
+	{
+		"word": "感谢",
+		"pinyin": "",
+		"meaning": "thanks"
+	},
+	{
+		"word": "病房",
+		"pinyin": "",
+		"meaning": "ward"
+	},
+	{
+		"word": "最后",
+		"pinyin": "",
+		"meaning": "end"
+	},
+	{
+		"word": "度",
+		"pinyin": "",
+		"meaning": "degree (temperature)"
+	},
+	{
+		"word": "一定",
+		"pinyin": "",
+		"meaning": "certainly"
+	},
+	{
+		"word": "违法",
+		"pinyin": "",
+		"meaning": "illegal"
+	},
+	{
+		"word": "停止",
+		"pinyin": "",
+		"meaning": "stop"
+	},
+	{
+		"word": "影响",
+		"pinyin": "",
+		"meaning": "affect"
+	},
+	{
+		"word": "别人",
+		"pinyin": "",
+		"meaning": "others"
+	},
+	{
+		"word": "戒烟",
+		"pinyin": "",
+		"meaning": "give up smoking"
+	},
+	{
+		"word": "停电",
+		"pinyin": "",
+		"meaning": "power cut"
+	},
+	{
+		"word": "亮",
+		"pinyin": "",
+		"meaning": "bright"
+	},
+	{
+		"word": "…死了",
+		"pinyin": "",
+		"meaning": "extremely"
+	},
+	{
+		"word": "物业管理处",
+		"pinyin": "",
+		"meaning": "estate management department"
+	},
+	{
+		"word": "物业",
+		"pinyin": "",
+		"meaning": "estate"
+	},
+	{
+		"word": "管理",
+		"pinyin": "",
+		"meaning": "management"
+	},
+	{
+		"word": "处",
+		"pinyin": "",
+		"meaning": "department"
+	},
+	{
+		"word": "发现",
+		"pinyin": "",
+		"meaning": "find out"
+	},
+	{
+		"word": "师傅",
+		"pinyin": "",
+		"meaning": "master"
+	},
+	{
+		"word": "催",
+		"pinyin": "",
+		"meaning": "urge"
+	},
+	{
+		"word": "趴",
+		"pinyin": "",
+		"meaning": "lay"
+	},
+	{
+		"word": "样子",
+		"pinyin": "",
+		"meaning": "appearance"
+	},
+	{
+		"word": "九",
+		"pinyin": "",
+		"meaning": "long time"
+	},
+	{
+		"word": "放心",
+		"pinyin": "",
+		"meaning": "feel at ease"
+	},
+	{
+		"word": "打扫",
+		"pinyin": "",
+		"meaning": "clean"
+	},
+	{
+		"word": "麻烦",
+		"pinyin": "",
+		"meaning": "trouble"
+	},
+	{
+		"word": "洗手间",
+		"pinyin": "",
+		"meaning": "washroom"
+	},
+	{
+		"word": "咦",
+		"pinyin": "",
+		"meaning": "word when being confused"
+	},
+	{
+		"word": "书桌",
+		"pinyin": "",
+		"meaning": "desk"
+	},
+	{
+		"word": "抽屉",
+		"pinyin": "",
+		"meaning": "drawer"
+	},
+	{
+		"word": "常常",
+		"pinyin": "",
+		"meaning": "often"
+	},
+	{
+		"word": "记住",
+		"pinyin": "",
+		"meaning": "remember"
+	},
+	{
+		"word": "派",
+		"pinyin": "",
+		"meaning": "dispatch"
+	},
+	{
+		"word": "如果...的话",
+		"pinyin": "",
+		"meaning": "if …"
+	},
+	{
+		"word": "顺利",
+		"pinyin": "",
+		"meaning": "smooth"
+	},
+	{
+		"word": "接下去",
+		"pinyin": "",
+		"meaning": "following"
+	},
+	{
+		"word": "擦",
+		"pinyin": "",
+		"meaning": "wipe"
+	},
+	{
+		"word": "通风",
+		"pinyin": "",
+		"meaning": "ventilate"
+	},
+	{
+		"word": "好久不见",
+		"pinyin": "",
+		"meaning": "long time no see"
+	},
+	{
+		"word": "擅长",
+		"pinyin": "",
+		"meaning": "be good at"
+	},
+	{
+		"word": "教练",
+		"pinyin": "",
+		"meaning": "coach"
+	},
+	{
+		"word": "免费",
+		"pinyin": "",
+		"meaning": "free"
+	},
+	{
+		"word": "业余",
+		"pinyin": "",
+		"meaning": "amateur"
+	},
+	{
+		"word": "兴趣",
+		"pinyin": "",
+		"meaning": "interest"
+	},
+	{
+		"word": "比赛",
+		"pinyin": "",
+		"meaning": "match"
+	},
+	{
+		"word": "规则",
+		"pinyin": "",
+		"meaning": "rule"
+	},
+	{
+		"word": "计划",
+		"pinyin": "",
+		"meaning": "plan;project"
+	},
+	{
+		"word": "礼尚往来",
+		"pinyin": "",
+		"meaning": "saying: courtesy demands reciprocity"
+	},
+	{
+		"word": "棒",
+		"pinyin": "",
+		"meaning": "great"
+	},
+	{
+		"word": "帮助",
+		"pinyin": "",
+		"meaning": "help"
+	},
+	{
+		"word": "匹",
+		"pinyin": "",
+		"meaning": "measure word"
+	},
+	{
+		"word": "课程",
+		"pinyin": "",
+		"meaning": "course"
+	},
+	{
+		"word": "顾问",
+		"pinyin": "",
+		"meaning": "consultant"
+	},
+	{
+		"word": "正在",
+		"pinyin": "",
+		"meaning": "be doing"
+	},
+	{
+		"word": "结束",
+		"pinyin": "",
+		"meaning": "finish"
+	},
+	{
+		"word": "马上",
+		"pinyin": "",
+		"meaning": "immediately"
+	},
+	{
+		"word": "校区",
+		"pinyin": "",
+		"meaning": "school"
+	},
+	{
+		"word": "提供",
+		"pinyin": "",
+		"meaning": "provide"
+	},
+	{
+		"word": "教学",
+		"pinyin": "",
+		"meaning": "teaching"
+	},
+	{
+		"word": "平日",
+		"pinyin": "",
+		"meaning": "working day"
+	},
+	{
+		"word": "临时",
+		"pinyin": "",
+		"meaning": "temporary"
+	},
+	{
+		"word": "气氛",
+		"pinyin": "",
+		"meaning": "atmosphere"
+	},
+	{
+		"word": "更加",
+		"pinyin": "",
+		"meaning": "more"
+	},
+	{
+		"word": "路过",
+		"pinyin": "",
+		"meaning": "pass by"
+	},
+	{
+		"word": "广告牌",
+		"pinyin": "",
+		"meaning": "advertising board"
+	},
+	{
+		"word": "信息",
+		"pinyin": "",
+		"meaning": "information"
+	},
+	{
+		"word": "开头",
+		"pinyin": "",
+		"meaning": "beginning"
+	},
+	{
+		"word": "进步",
+		"pinyin": "",
+		"meaning": "progress"
+	},
+	{
+		"word": "句",
+		"pinyin": "",
+		"meaning": "measure word"
+	},
+	{
+		"word": "话",
+		"pinyin": "",
+		"meaning": "sentence"
+	},
+	{
+		"word": "日常",
+		"pinyin": "",
+		"meaning": "daily"
+	},
+	{
+		"word": "会话",
+		"pinyin": "",
+		"meaning": "conversation"
+	},
+	{
+		"word": "尤其",
+		"pinyin": "",
+		"meaning": "especially"
+	},
+	{
+		"word": "理解",
+		"pinyin": "",
+		"meaning": "understand"
+	},
+	{
+		"word": "只要",
+		"pinyin": "",
+		"meaning": "as long as"
+	},
+	{
+		"word": "相信",
+		"pinyin": "",
+		"meaning": "believe"
+	},
+	{
+		"word": "鼓励",
+		"pinyin": "",
+		"meaning": "encourage"
+	},
+	{
+		"word": "贸易",
+		"pinyin": "",
+		"meaning": "trade"
+	},
+	{
+		"word": "销售部",
+		"pinyin": "",
+		"meaning": "sales department"
+	},
+	{
+		"word": "销售",
+		"pinyin": "",
+		"meaning": "sales"
+	},
+	{
+		"word": "部",
+		"pinyin": "",
+		"meaning": "department"
+	},
+	{
+		"word": "大部分",
+		"pinyin": "",
+		"meaning": "majority of"
+	},
+	{
+		"word": "水平",
+		"pinyin": "",
+		"meaning": "level"
+	},
+	{
+		"word": "考试",
+		"pinyin": "",
+		"meaning": "exam"
+	},
+	{
+		"word": "哇",
+		"pinyin": "",
+		"meaning": "sign of excitement / positive surprise"
+	},
+	{
+		"word": "将来",
+		"pinyin": "",
+		"meaning": "future"
 	}
 ]
