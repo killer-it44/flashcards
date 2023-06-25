@@ -39,7 +39,11 @@ export default function FakeRepository() {
 		"related": ""
     }]
     this.words = [{
-        "word": "一样",
+        "word": "一二",
+        "pinyin": "",
+        "meaning": ""
+    }, {
+        "word": "二一",
         "pinyin": "",
         "meaning": ""
     }]

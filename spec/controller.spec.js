@@ -1,0 +1,78 @@
+import FakeRepository from './fake-repository.js'
+import Controller from '../controller.js'
+
+describe('Controller', () => {
+    let controller
+
+    beforeEach(async () => {
+        controller = new Controller(new FakeRepository())
+    })
+
+    it('returns the details of a specific character including matching radicals and words', async () => {
+        expect(controller.get('一')).toEqual({
+            character: '一',
+            pinyin: 'yī',
+            meaning: 'one; a, an; alone',
+            radical: {
+                number: 1,
+                radical: '一',
+                simplified: '',
+                pinyin: 'yī',
+                meaning: 'one',
+                strokes: 1,
+                frequency: 42
+            },
+            strokes: 1,
+            hskLevel: 1,
+            standardRank: 1,
+            frequencyRank: 2,
+            related: '',
+            words: '一二, 二一'
+        })
+    })
+
+    it('returns some next character', async () => {
+        const char = controller.getNext()
+        expect(['一', '二']).toContain(char.character)
+        expect(['yī', 'èr']).toContain(char.pinyin)
+    })
+
+    it('can submit with updated data', async () => {
+        controller.submit({
+            character: '一',
+            remembered: true,
+            meaning: 'updated meaning',
+            words: '一下,一点儿',
+            related: '二'
+        })
+
+        const char = controller.get('一')
+        expect(char.character).toEqual('一')
+        expect(char.meaning).toEqual('updated meaning')
+        expect(char.words).toEqual('一二, 二一, 一下, 一点儿')
+        expect(char.related).toEqual('二')
+    })
+
+    it('will not add words which already exist as part of the update', async () => {
+        const updatedData = { character: '一', remembered: true, meaning: '', words: '一下', related: '' }
+        controller.submit(updatedData)
+        controller.submit(updatedData)
+        expect(controller.get('一').words).toEqual('一二, 二一, 一下')
+    })
+
+    it('will return the characters first that are least remembered', async () => {
+        const updatedData = { character: '一', remembered: false, meaning: '', words: '', related: '' }
+        controller.submit(updatedData)
+        expect(controller.getNext().character).toContain('一')
+    })
+
+    it('returns the word including the details', async () => {
+        const w = controller.getWord('一二')
+        expect(w.word).toBe('一二')
+        expect(w.pinyin).toBe('yīèr')
+    })
+
+    it('returns some next word', async () => {
+        expect(['一二', '二一']).toContain(controller.getNextWord().word)
+    })
+})

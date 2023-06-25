@@ -1,41 +1,30 @@
 import express from 'express'
 
-export default function Server(repo) {
+export default function Server(controller) {
     let httpServer
     const app = express()
 
     app.use('/', express.static('web-content'))
     
     app.post('/api/submission', express.json(), async (req, res) => {
-        const user = '野色'
-        repo.submissions.push({ user, character: req.body.character, remembered: req.body.remembered, timestamp: Date.now() })
-        
-        // process updated meaning, related characters or related words if provided
-        const character = repo.characters.find(c => c.character === req.body.character)
-        character.meaning = req.body.meaning
-        character.related = req.body.related
-        const relatedWords = req.body.words.split(',').map(w => w.trim()).filter(w => w)
-        const alreadyExists = (word) => repo.words.find(w => w.word === word)
-        relatedWords.forEach(w => alreadyExists(w) ? null : repo.words.push({ word: w, pinyin: '', meaning: '' }))
-    
+        await controller.submit(req.body)
         res.status(201).end()
-        repo.save()
     })
 
     app.get('/api/char/:char', (req, res) => {
-        const cEntry = repo.characters.find(c => c.character === req.params.char)
-        const rEntry = repo.radicals.find(r => r.radical.includes(cEntry.radical.substring(0, 1)))
-        const matchingWords = repo.words.filter(w => w.word.includes(cEntry.character)).map(w => w.word)
-        res.json({ ...cEntry, radical: rEntry, words: matchingWords.join(', ') })
+        res.json(controller.get(req.params.char))
     })
 
     app.get('/api/char', (req, res) => {
-        const chars = repo.characters.filter(c => c.frequencyRank && c.frequencyRank < 1000)
-        // const cEntry = chars.find(c => c.character === '你')
-        const cEntry = chars[Math.floor(chars.length * Math.random())]
-        const rEntry = repo.radicals.find(r => r.radical.includes(cEntry.radical.substring(0, 1)))
-        const matchingWords = repo.words.filter(w => w.word.includes(cEntry.character)).map(w => w.word)
-        res.json({ ...cEntry, radical: rEntry, words: matchingWords.join(', ') })
+        res.json(controller.getNext())
+    })
+
+    app.get('/api/word/:word', (req, res) => {
+        res.json(controller.getWord(req.params.word))
+    })
+
+    app.get('/api/word', (req, res) => {
+        res.json(controller.getNextWord())
     })
 
     this.start = (port) => {
@@ -46,6 +35,6 @@ export default function Server(repo) {
 
     this.stop = async () => {
         httpServer.close()
-        await repo.save()
+        controller.stop()
     }
 }
