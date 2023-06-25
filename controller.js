@@ -40,7 +40,8 @@ export default function Controller(repo) {
                 pinyin += char ? char.pinyin : wEntry.word.charAt(i)
             }
         }
-        return { ...wEntry, pinyin }
+        const sentences = repo.sentences.filter(s => s.hanzi.includes(word)).map(s => s.hanzi).join(';')
+        return { ...wEntry, pinyin, sentences }
     }
 
     this.getNextWord = () => {

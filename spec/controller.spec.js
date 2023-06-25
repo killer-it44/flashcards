@@ -66,11 +66,12 @@ describe('Controller', () => {
         expect(controller.getNext().character).toBe('一')
     })
 
-    it('returns the word including the details, and pinyin is looked up', async () => {
+    it('returns the word and meaning, pinyin is looked up, as well as related sentences', async () => {
         const w = controller.getWord('一二')
         expect(w.word).toBe('一二')
         expect(w.pinyin).toBe('yīèr')
         expect(w.meaning).toBe('one two')
+        expect(w.sentences).toBe('一二可乐')
     })
 
     it('returns some next word, and pinyin is looked up', async () => {
@@ -85,7 +86,8 @@ describe('Controller', () => {
         expect(controller.getWord('一二')).toEqual({
             word: '一二',
             pinyin: 'yīēr',
-            meaning: 'updated meaning'
+            meaning: 'updated meaning',
+            sentences: '一二可乐'
         })
     })
 

@@ -7,15 +7,14 @@ export default function FakeRepository() {
         "meaning": "one",
         "strokes": 1,
         "frequency": 42
-    },
-	{
-		"number": 7,
-		"radical": "二",
-		"simplified": "",
-		"pinyin": "èr",
-		"meaning": "two",
-		"strokes": 2,
-		"frequency": 29
+    }, {
+        "number": 7,
+        "radical": "二",
+        "simplified": "",
+        "pinyin": "èr",
+        "meaning": "two",
+        "strokes": 2,
+        "frequency": 29
     }]
     this.characters = [{
         "character": "一",
@@ -28,15 +27,15 @@ export default function FakeRepository() {
         "frequencyRank": 2,
         "related": ""
     }, {
-		"character": "二",
-		"pinyin": "èr",
-		"meaning": "two; twice",
-		"radical": "二 7.0",
-		"strokes": 2,
-		"hskLevel": 1,
-		"standardRank": 3,
-		"frequencyRank": 157,
-		"related": ""
+        "character": "二",
+        "pinyin": "èr",
+        "meaning": "two; twice",
+        "radical": "二 7.0",
+        "strokes": 2,
+        "hskLevel": 1,
+        "standardRank": 3,
+        "frequencyRank": 157,
+        "related": ""
     }]
     this.words = [{
         "word": "一二",
@@ -46,6 +45,11 @@ export default function FakeRepository() {
         "word": "一...二",
         "pinyin": "",
         "meaning": "one...two"
+    }]
+    this.sentences = [{
+        "hanzi": "一二可乐"
+    }, {
+        "hanzi": "一个还是二"
     }]
     this.submissions = []
     this.save = () => null

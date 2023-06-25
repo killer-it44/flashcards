@@ -11,6 +11,7 @@ export default function FsRepository(dataDir) {
         fs.copyFileSync('init/radicals.json', `${dataDir}/radicals.json`)
         fs.copyFileSync('init/characters.json', `${dataDir}/characters.json`)
         fs.copyFileSync('init/words.json', `${dataDir}/words.json`)
+        fs.copyFileSync('init/sentences.json', `${dataDir}/sentences.json`)
         fs.writeFileSync(`${dataDir}/submissions.json`, '[]')
         logger.info(`Data initialized in ${Date.now() - t0} ms`)
     }
@@ -20,6 +21,7 @@ export default function FsRepository(dataDir) {
     this.radicals = JSON.parse(fs.readFileSync(`${dataDir}/radicals.json`).toString())
     this.characters = JSON.parse(fs.readFileSync(`${dataDir}/characters.json`).toString())
     this.words = JSON.parse(fs.readFileSync(`${dataDir}/words.json`).toString())
+    this.sentences = JSON.parse(fs.readFileSync(`${dataDir}/sentences.json`).toString())
     this.submissions = JSON.parse(fs.readFileSync(`${dataDir}/submissions.json`).toString())
     logger.info(`Loaded ${this.characters.length} characters, ${this.radicals.length} radicals, ${this.words.length} words and ${this.submissions.length} submissions in ${Date.now() - t0} ms`)
 
@@ -31,6 +33,7 @@ export default function FsRepository(dataDir) {
             await fs.promises.writeFile(`${dataDir}/radicals.json`, JSON.stringify(this.radicals, null, '\t'))
             await fs.promises.writeFile(`${dataDir}/characters.json`, JSON.stringify(this.characters, null, '\t'))
             await fs.promises.writeFile(`${dataDir}/words.json`, JSON.stringify(this.words, null, '\t'))
+            await fs.promises.writeFile(`${dataDir}/sentences.json`, JSON.stringify(this.sentences, null, '\t'))
             await fs.promises.writeFile(`${dataDir}/submissions.json`, JSON.stringify(this.submissions, null, '\t'))
             logger.info(`Data saved in ${Date.now() - t0} ms`)
             savingInProgress = false

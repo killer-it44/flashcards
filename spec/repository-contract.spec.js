@@ -29,10 +29,17 @@ describe('Repository API and data structure contract', () => {
 
         expect(fakeRepo.characters[0]).toEqual(fsRepo.characters.find(c => c.character === fakeRepo.characters[0].character))        
         expect(fakeRepo.radicals[0]).toEqual(fsRepo.radicals.find(r => r.radical === fakeRepo.radicals[0].radical))
+
         expect(Object.keys(fakeRepo.words[0])).toEqual(Object.keys(fsRepo.words[0]))
         Object.keys(fakeRepo.words[0]).forEach(key => {
             expect(typeof fakeRepo.words[0][key]).toBe(typeof fsRepo.words[0][key])
         })
+
+        expect(Object.keys(fakeRepo.sentences[0])).toEqual(Object.keys(fsRepo.sentences[0]))
+        Object.keys(fakeRepo.sentences[0]).forEach(key => {
+            expect(typeof fakeRepo.sentences[0][key]).toBe(typeof fsRepo.sentences[0][key])
+        })
+
         expect(fsRepo.submissions).toBeInstanceOf(Array)
 
         expect(fsRepo.save.length).toBe(fakeRepo.save.length)

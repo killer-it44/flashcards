@@ -11,6 +11,7 @@ describe('File System Repository', () => {
         expect(repo.characters.length).toBe(8105)
         expect(repo.radicals.length).toBe(214)
         expect(repo.words).toBeInstanceOf(Array)
+        expect(repo.sentences).toBeInstanceOf(Array)
         expect(repo.submissions.length).toBe(0)
     })
 
