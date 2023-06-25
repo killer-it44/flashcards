@@ -85,6 +85,9 @@ describe('Controller', () => {
         expect(w.pinyin).toBe('yīèr')
         expect(w.meaning).toBe('one two')
         expect(w.sentences).toBe('一二三')
+
+        const w2 = controller.getWord('一...二')
+        expect(w2.sentences).toBe('一还是二')
     })
 
     it('returns some next word, and pinyin is looked up', async () => {
@@ -119,10 +122,10 @@ describe('Controller', () => {
             / 3. still, both may be picked
             / 4. wait the other half of the time, not it should definitely be the first one
             */
-            controller.submitWord({ word: '一二', remembered: false })
+            controller.submitWord({ word: '一二', remembered: false, sentences: '' })
             expect(['一二', '一...二']).toContain(controller.getNextWord().word)
             jasmine.clock().tick(1000 * 60 * 1)
-            controller.submitWord({ word: '一...二', remembered: false })
+            controller.submitWord({ word: '一...二', remembered: false, sentences: '' })
             expect(['一二', '一...二']).toContain(controller.getNextWord().word)
             jasmine.clock().tick(1000 * 60 * 1)
             expect(controller.getNextWord().word).toBe('一二')

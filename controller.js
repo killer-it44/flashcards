@@ -42,7 +42,11 @@ export default function Controller(repo) {
                 pinyin += char ? char.pinyin : wEntry.word.charAt(i)
             }
         }
-        const sentences = repo.sentences.filter(s => s.hanzi.includes(word)).map(s => s.hanzi).join('; ')
+
+        const sentences = wEntry.word.includes('...')
+            ? repo.sentences.filter(s => s.hanzi.match(wEntry.word.replace('...', '.+'))).map(s => s.hanzi).join('; ')
+            : repo.sentences.filter(s => s.hanzi.includes(word)).map(s => s.hanzi).join('; ')
+
         return { ...wEntry, pinyin, sentences }
     }
 
