@@ -41,7 +41,8 @@
                 word: currentWord.word,
                 remembered,
                 pinyin: document.getElementById('pinyin').value,
-                meaning: document.getElementById('meaning').value
+                meaning: document.getElementById('meaning').value,
+                sentences: document.getElementById('sentences').value
             })
             await fetch('/api/submission', { method: 'POST', headers, body })
             await fetchNext()
@@ -63,6 +64,7 @@
                 <table style='width: calc(100% - 8px); font-size: .7em;'>
                     <tr><td>Pinyin</td><td><input id='pinyin' value='${currentWord.pinyin}'></input></td></tr>
                     <tr><td>Meaning</td><td><input id='meaning' value='${currentWord.meaning}'></input></td></tr>
+                    <tr><td>Sentences</td><td><input id='sentences' value='${currentWord.sentences}'></input></td></tr>
                 </table>`
         }
         fetchNext()
