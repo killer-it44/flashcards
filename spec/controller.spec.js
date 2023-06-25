@@ -63,7 +63,7 @@ describe('Controller', () => {
     it('will return the characters first that are least remembered', async () => {
         const updatedData = { character: '一', remembered: false, meaning: '', words: '', related: '' }
         controller.submit(updatedData)
-        expect(controller.getNext().character).toContain('一')
+        expect(controller.getNext().character).toBe('一')
     })
 
     it('returns the word including the details, and pinyin is looked up', async () => {
@@ -85,5 +85,10 @@ describe('Controller', () => {
             pinyin: 'yīēr',
             meaning: 'updated meaning'
         })
+    })
+
+    it('will return the words first that are least remembered', async () => {
+        controller.submitWord({ word: '一二', remembered: false })
+        expect(controller.getNextWord().word).toBe('一二')
     })
 })
