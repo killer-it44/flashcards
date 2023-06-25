@@ -47,17 +47,17 @@ describe('Controller', () => {
         })
 
         const char = controller.get('一')
-        expect(char.character).toEqual('一')
-        expect(char.meaning).toEqual('updated meaning')
-        expect(char.words).toEqual('一二, 二一, 一下, 一点儿')
-        expect(char.related).toEqual('二')
+        expect(char.character).toBe('一')
+        expect(char.meaning).toBe('updated meaning')
+        expect(char.words).toBe('一二, 二一, 一下, 一点儿')
+        expect(char.related).toBe('二')
     })
 
     it('will not add words which already exist as part of the update', async () => {
         const updatedData = { character: '一', remembered: true, meaning: '', words: '一下', related: '' }
         controller.submit(updatedData)
         controller.submit(updatedData)
-        expect(controller.get('一').words).toEqual('一二, 二一, 一下')
+        expect(controller.get('一').words).toBe('一二, 二一, 一下')
     })
 
     it('will return the characters first that are least remembered', async () => {
@@ -66,13 +66,24 @@ describe('Controller', () => {
         expect(controller.getNext().character).toContain('一')
     })
 
-    it('returns the word including the details', async () => {
+    it('returns the word including the details, and pinyin is looked up', async () => {
         const w = controller.getWord('一二')
         expect(w.word).toBe('一二')
         expect(w.pinyin).toBe('yīèr')
+        expect(w.meaning).toBe('one two')
     })
 
     it('returns some next word', async () => {
         expect(['一二', '二一']).toContain(controller.getNextWord().word)
+    })
+
+    it('can submit words with updated data, and a specific pinyin can override the lookup value', async () => {
+        controller.submitWord({ word: '一二', remembered: true, pinyin: 'yīēr', meaning: 'updated meaning' })
+
+        expect(controller.getWord('一二')).toEqual({
+            word: '一二',
+            pinyin: 'yīēr',
+            meaning: 'updated meaning'
+        })
     })
 })

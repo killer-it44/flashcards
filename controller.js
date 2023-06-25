@@ -33,9 +33,11 @@ export default function Controller(repo) {
 
     this.getWord = (word) => {
         const wEntry = repo.words.find(w => w.word === word)
-        let pinyin = ''
-        for (let i = 0; i < wEntry.word.length; i++) {
-            pinyin += repo.characters.find(c => c.character == wEntry.word.charAt(i)).pinyin
+        let pinyin = wEntry.pinyin
+        if (!wEntry.pinyin) {
+            for (let i = 0; i < wEntry.word.length; i++) {
+                pinyin += repo.characters.find(c => c.character == wEntry.word.charAt(i)).pinyin
+            }
         }
         return { ...wEntry, pinyin }
     }
@@ -64,13 +66,25 @@ export default function Controller(repo) {
         const user = '野色'
         repo.submissions.push({ user, character: data.character, remembered: data.remembered, timestamp: Date.now() })
 
-        // process updated meaning, related characters or related words if provided
+        // process updated meaning, related characters or related words
         const character = repo.characters.find(c => c.character === data.character)
         character.meaning = data.meaning
         character.related = data.related
         const relatedWords = data.words.split(',').map(w => w.trim()).filter(w => w)
         const alreadyExists = word => repo.words.find(w => w.word === word)
         relatedWords.forEach(w => alreadyExists(w) ? null : repo.words.push({ word: w, pinyin: '', meaning: '' }))
+
+        await repo.save()
+    }
+
+    this.submitWord = async (data) => {
+        const user = '野色'
+        repo.submissions.push({ user, word: data.word, remembered: data.remembered, timestamp: Date.now() })
+
+        // process updated meaning or pinyin
+        const word = repo.words.find(w => w.word === data.word)
+        word.pinyin = data.pinyin
+        word.meaning = data.meaning
 
         await repo.save()
     }

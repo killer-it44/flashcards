@@ -41,11 +41,11 @@ export default function FakeRepository() {
     this.words = [{
         "word": "一二",
         "pinyin": "",
-        "meaning": ""
+        "meaning": "one two"
     }, {
         "word": "二一",
         "pinyin": "",
-        "meaning": ""
+        "meaning": "two one"
     }]
     this.submissions = []
     this.save = () => null
