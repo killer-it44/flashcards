@@ -84,7 +84,7 @@ describe('Controller', () => {
         expect(w.word).toBe('一二')
         expect(w.pinyin).toBe('yīèr')
         expect(w.meaning).toBe('one two')
-        expect(w.sentences).toBe('一二可乐')
+        expect(w.sentences).toBe('一二三')
     })
 
     it('returns some next word, and pinyin is looked up', async () => {
@@ -93,14 +93,20 @@ describe('Controller', () => {
         expect(['yīèr', 'yī...èr']).toContain(word.pinyin)
     })
 
-    it('can submit words with updated data, and a specific pinyin can override the lookup value', async () => {
-        controller.submitWord({ word: '一二', remembered: true, pinyin: 'yīēr', meaning: 'updated meaning' })
+    it('can submit words with updated data', async () => {
+        controller.submitWord({
+            word: '一二',
+            remembered: true,
+            pinyin: 'yīēr',
+            meaning: 'updated meaning',
+            sentences: '一二四'
+        })
 
         expect(controller.getWord('一二')).toEqual({
             word: '一二',
             pinyin: 'yīēr',
             meaning: 'updated meaning',
-            sentences: '一二可乐'
+            sentences: '一二三; 一二四'
         })
     })
 

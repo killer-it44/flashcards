@@ -48,7 +48,7 @@ describe('Server', () => {
     })
 
     it('can submit words with updated data', async () => {
-        const updatedData = { word: '一二', remembered: true, pinyin: 'yīēr', meaning: 'updated meaning' }
+        const updatedData = { word: '一二', remembered: true, pinyin: 'yīēr', meaning: 'updated meaning', sentences: '' }
         await client.post('/api/submission').send(updatedData).expect(201)
 
         const response = await client.get(`/api/word/${encodeURIComponent('一二')}`).expect(200)

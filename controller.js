@@ -42,7 +42,7 @@ export default function Controller(repo) {
                 pinyin += char ? char.pinyin : wEntry.word.charAt(i)
             }
         }
-        const sentences = repo.sentences.filter(s => s.hanzi.includes(word)).map(s => s.hanzi).join(';')
+        const sentences = repo.sentences.filter(s => s.hanzi.includes(word)).map(s => s.hanzi).join('; ')
         return { ...wEntry, pinyin, sentences }
     }
 
@@ -91,6 +91,12 @@ export default function Controller(repo) {
         const word = repo.words.find(w => w.word === data.word)
         word.pinyin = data.pinyin
         word.meaning = data.meaning
+
+        const relatedSentences = data.sentences.split(';').map(s => s.trim()).filter(s => s)
+        const alreadyExists = sentence => repo.sentences.find(s => {
+            return s.hanzi === sentence
+        })
+        relatedSentences.forEach(s => alreadyExists(s) ? null : repo.sentences.push({ hanzi: s }))
 
         await repo.save()
     }
