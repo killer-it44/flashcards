@@ -60,10 +60,23 @@ describe('Controller', () => {
         expect(controller.get('一').words).toBe('一二, 一...二, 一下')
     })
 
-    it('will return the characters first that are least remembered', async () => {
-        const updatedData = { character: '一', remembered: false, meaning: '', words: '', related: '' }
-        controller.submit(updatedData)
-        expect(controller.getNext().character).toBe('一')
+    it('will return the characters first that are least remembered, but only after a certain time', async () => {
+        jasmine.clock().mockDate(new Date())
+        jasmine.clock().withMock(() => {
+            /*
+            / 1. directly after submission, both may be picked, cause time has not yet elapsed
+            / 2. submit another one after half the time
+            / 3. still, both may be picked
+            / 4. wait the other half of the time, not it should definitely be the first one
+            */
+            controller.submit({ character: '一', remembered: false, meaning: '', words: '', related: '' })
+            expect(['一', '二']).toContain(controller.getNext().character)
+            jasmine.clock().tick(1000 * 60 * 1)
+            controller.submit({ character: '二', remembered: false, meaning: '', words: '', related: '' })
+            expect(['一', '二']).toContain(controller.getNext().character)
+            jasmine.clock().tick(1000 * 60 * 1)
+            expect(controller.getNext().character).toBe('一')
+        })
     })
 
     it('returns the word and meaning, pinyin is looked up, as well as related sentences', async () => {
@@ -91,8 +104,22 @@ describe('Controller', () => {
         })
     })
 
-    it('will return the words first that are least remembered', async () => {
-        controller.submitWord({ word: '一二', remembered: false })
-        expect(controller.getNextWord().word).toBe('一二')
+    it('will return the words first that are least remembered, but only after a certain time', async () => {
+        jasmine.clock().mockDate(new Date())
+        jasmine.clock().withMock(() => {
+            /*
+            / 1. directly after submission, both may be picked, cause time has not yet elapsed
+            / 2. submit another one after half the time
+            / 3. still, both may be picked
+            / 4. wait the other half of the time, not it should definitely be the first one
+            */
+            controller.submitWord({ word: '一二', remembered: false })
+            expect(['一二', '一...二']).toContain(controller.getNextWord().word)
+            jasmine.clock().tick(1000 * 60 * 1)
+            controller.submitWord({ word: '一...二', remembered: false })
+            expect(['一二', '一...二']).toContain(controller.getNextWord().word)
+            jasmine.clock().tick(1000 * 60 * 1)
+            expect(controller.getNextWord().word).toBe('一二')
+        })
     })
 })

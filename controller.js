@@ -12,8 +12,10 @@ export default function Controller(repo) {
 
         chars = chars.map(c => {
             const cSubmissions = repo.submissions.filter(s => s.character === c.character)
-            const correctSubmissions = cSubmissions.filter(s => s.remembered).length
-            const incorrectSubmissions = cSubmissions.filter(s => !s.remembered).length
+            const correctSubmissions
+                = cSubmissions.filter(s => s.remembered).length
+            const incorrectSubmissions
+                = cSubmissions.filter(s => !s.remembered && (Date.now() - s.timestamp >= 1000 * 60 * 2)).length
             const score = (correctSubmissions + incorrectSubmissions === 0)
                 ? 0
                 : (correctSubmissions - incorrectSubmissions) / (correctSubmissions + incorrectSubmissions)
@@ -47,8 +49,10 @@ export default function Controller(repo) {
     this.getNextWord = () => {
         let words = repo.words.map(w => {
             const wSubmissions = repo.submissions.filter(s => s.word === w.word)
-            const correctSubmissions = wSubmissions.filter(s => s.remembered).length
-            const incorrectSubmissions = wSubmissions.filter(s => !s.remembered).length
+            const correctSubmissions
+                = wSubmissions.filter(s => s.remembered).length
+            const incorrectSubmissions
+                = wSubmissions.filter(s => !s.remembered && (Date.now() - s.timestamp >= 1000 * 60 * 2)).length
             const score = (correctSubmissions + incorrectSubmissions === 0)
                 ? 0
                 : (correctSubmissions - incorrectSubmissions) / (correctSubmissions + incorrectSubmissions)
