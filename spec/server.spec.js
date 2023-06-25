@@ -46,4 +46,13 @@ describe('Server', () => {
         const response = await client.get('/api/word').expect(200)
         expect(response.body.word).toBeInstanceOf(String)
     })
+
+    it('can submit words with updated data', async () => {
+        const updatedData = { word: '一二', remembered: true, pinyin: 'yīēr', meaning: 'updated meaning' }
+        await client.post('/api/submission').send(updatedData).expect(201)
+
+        const response = await client.get(`/api/word/${encodeURIComponent('一二')}`).expect(200)
+        expect(response.body.word).toEqual('一二')
+        expect(response.body.meaning).toEqual('updated meaning')
+    })
 })

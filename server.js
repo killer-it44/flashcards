@@ -7,7 +7,11 @@ export default function Server(controller) {
     app.use('/', express.static('web-content'))
     
     app.post('/api/submission', express.json(), async (req, res) => {
-        await controller.submit(req.body)
+        if (req.body.character) {
+            await controller.submit(req.body)
+        } else {
+            await controller.submitWord(req.body)
+        }
         res.status(201).end()
     })
 
