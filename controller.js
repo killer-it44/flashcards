@@ -36,7 +36,8 @@ export default function Controller(repo) {
         let pinyin = wEntry.pinyin
         if (!wEntry.pinyin) {
             for (let i = 0; i < wEntry.word.length; i++) {
-                pinyin += repo.characters.find(c => c.character == wEntry.word.charAt(i)).pinyin
+                const char = repo.characters.find(c => c.character == wEntry.word.charAt(i))
+                pinyin += char ? char.pinyin : wEntry.word.charAt(i)
             }
         }
         return { ...wEntry, pinyin }
@@ -59,7 +60,7 @@ export default function Controller(repo) {
         words = words.filter(w => w.score === indexScore)
 
         const wEntry = words[Math.floor(words.length * Math.random())]
-        return { ...wEntry }
+        return this.getWord(wEntry.word)
     }
 
     this.submit = async (data) => {

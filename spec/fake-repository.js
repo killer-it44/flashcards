@@ -43,9 +43,9 @@ export default function FakeRepository() {
         "pinyin": "",
         "meaning": "one two"
     }, {
-        "word": "二一",
+        "word": "一...二",
         "pinyin": "",
-        "meaning": "two one"
+        "meaning": "one...two"
     }]
     this.submissions = []
     this.save = () => null
