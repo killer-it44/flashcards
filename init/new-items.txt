@@ -1,0 +1,681 @@
+步行街 pedestrian street
+天空飘着下雨 drizzling
+很奇怪 very weird
+变成下小雨 change to light rain
+本来 originally
+这个路不平，很抖 this road is not flat, it's very bumpy
+小区 community
+小区里有别墅 the community has villas
+普通的高楼大厦 normal/standard buildings
+普通 normal/standard
+普通话 standard chinese
+住得起 can afford to live
+住不起 cannot afford to live
+适合 fits (personality, circumstances)
+合适 fits (size)
+风吹在脸很舒服 the wind blowing in your face is comfortable
+吹风机 hair dryer
+吹泡泡 blow soap bubbles
+躲雨 hide from the rain
+避雨 hide from the rain
+躲避 to hide
+习惯 to be used to
+我习惯右手汽车 I'm used to ride biycle with the right hand
+偶尔 occassionally
+毕竟 after all
+偶尔有一些人，今天毕竟是周日 occassionally there are some people, after all it's sunday
+到处 everywhere
+上海到处都是人 in Shanghai there are people everywhere
+到处都是湿哒哒的 it's dripping wet everywhere
+湿哒哒 wet (哒 is not really a word, it's more the sound of water dropping)
+路过 passing
+刹车 brake
+坏了 broken
+上坡 uphill
+万一 in case
+明明说 clearly say (meaning there will be a "but, ...")
+返回 go back (to do something)
+各种 all kinds (of something)
+各种运动 all kinds of sports/activities
+比较 comparably/rather
+比较安全 rather peaceful
+还好 Luckily
+还好我备了一把雨伞 Luckily I prepared an umbrella
+准备 Prepare
+把 Counting word for things with a handle
+家长 Parents/adults
+要不 otherwise
+要不然 otherwise
+速度 speed
+加快速度 go faster (add speed)
+凳子 bench
+逛街 shopping
+口音 accent
+大多数 vast majority
+少数 minority
+挑战 challenge
+主要 reason
+地方 place; location
+特意 for a particular reason
+讲 speak
+标准 standard, accurate
+甚至 even
+语法 grammar
+或 or
+逻辑 logic
+而 but; however
+之间 between (people)
+互相 mutual
+却 but; still
+对于...来说 （as far as ... is/are concerned)
+老百姓 civilians
+唯一的方法 the only way
+并且 also; furthermore
+在...的过程中 during (the process of) ...
+注意 pay attention
+注意安全 pay attention to safety
+不同的... different ...
+以及 and; as well as
+表达 expression
+渐渐的 gradually
+方式 pattern, ways
+频道 channel
+系列 series
+看法 opinion
+事物 things (general, not only for things to do)
+目的 purpose
+练习 practice
+...的同时... ...and at the same time...
+稍微 little bit
+稍微复杂 a little bit complicated
+稍微复杂想法的词汇 a little bit more complicated words
+分享 share
+未来 future
+婚姻 marriage
+算是 considered (count as...)
+省略 leave out
+省掉 drop
+研究 research
+研究生 master's student
+博士生 doctor's student
+编程 programming
+标志 sign
+好久不见 long time no see
+视频 video
+醒来 wake up
+发现 discover
+竟然 unexpectedly
+刮 to blow
+刮风 the wind blows
+强 strong; powerful
+影响 to affect
+整个 whole; complete
+到处 everywhere
+根本 essentially; at all
+办法 choice
+那么 therefore; so; consequently
+进入 enter
+之前 before
+严重 serious
+多么 how; so much
+电动车 e-scooter
+单车 bicycle
+拍照 license plate
+车牌号 license plate number
+充电器 charger
+汽油 gasoline
+插板 plug board
+插座 power socket
+插头 power plug
+草地 grass field
+一棵树 a tree
+停车场 parking lot
+比亚迪 BYD
+工地 construction site
+摄像头 surveillance camera
+监控器 monitor
+路灯 street light
+照明 illumination
+提供 supply; provide
+猛烈 violent
+属于 to belong to
+流行 popular
+共享单车 shared bike
+下载 download
+定金 deposit
+二维码 QR code
+扫码骑走 scan code to ride
+试过 tried
+没有试过 haven't tried
+树枝 branch
+满 full
+保安 security
+保安岗亭 guard booth
+全部 full, entire
+慈善 charity
+慈善机构 charity
+捐 donate
+台 container
+不同 different
+三轮车 tricycle
+轮子 wheel
+瓷砖 ceramic tile
+装 pack, install
+毁 destroy
+毁掉 destroy
+快递员 delivery man
+柜子 locker
+取件码 pickup code
+输入 enter
+进去 go in
+总共 altogether
+游泳池 swimming pool
+婴儿车 stroller
+推婴儿车 push a stroller
+楼梯 staircase
+爬楼梯 climb up the stairs
+遛狗 walk the dog、
+溜达 walk
+居民 residents
+稍微 a little
+追 chase
+咬 bite
+屁股 butt
+幸运 lucky
+牛仔裤 jeans
+层 layer
+并 and
+叫声 bark
+一座桥 a bridge
+临时 temporary
+搭 take
+铁皮 iron sheet
+吓人 scary; terrifying
+啥 what
+广告牌 billboard
+喇叭 horn
+按喇叭 to honk
+撞 collide; hit
+乱七八糟 mess
+乱 chaos
+糟 bad
+编辑 edit
+剪辑 clip
+翻 turn
+翻到 turn over
+压倒 overwhelm
+压 to press
+遇难 to get killed
+不幸 unlucky
+保险 insurance
+的话 in case
+现在的话 right now
+主要 main; major
+主要目的 main purpose
+拍摄 record; capture (a picture or video)
+风光 nice scenery/landscape
+能够 can
+顺便 by the way, at the same time
+顺便一提 by the way
+享受 enjoy
+美景 beautiful scenery
+利用 use; take
+机会 chance; opportunity
+强烈 strong
+建议 recommend
+一定 surely; certainly; without doubt
+出发 to depart
+喂 feed
+总是 every time; all the time; always
+跟着 follow
+平时 usually
+平时的话 usually (if it's usual time)
+好过 good life
+确实 really; surely; truly
+身在 in the middle of
+乡村 village
+插座 socket (for electric plug)
+插口 socket (for smaller devices/plugs)
+负一楼 basement (minus one floor)
+有趣 interesting
+兴趣 interesting
+满 full
+停满 fully parked
+动物 animals
+流浪 vagabond
+流浪汗 vagabond
+小区 community
+小区居民 community residents
+总开关 central switch
+待收货 in the delivery (waiting for receiving)
+使用 to use
+水龙头 water tap
+浴室 bathroom (only at home)
+卫生间 bathroom (at home or in public)
+售后 after sales service
+快递状态 delivery status
+更新 update
+运输中 transport
+点 click
+点击 click
+物流 logistics
+客服 customer service
+加载中 loading
+国内 domestic
+承运人 carrier
+运单号 delivery number
+商家 seller
+投诉 to complain
+按钮 button
+账户 account
+查询 inquire; check
+包裹 package
+退款 refund
+钱款 money
+付款 to pay
+麻烦 to trouble (used to politely ask s.o. to do s.th.)
+申请 to apply
+评价 comments
+搜索 search
+搜一下 search
+首页 homepage
+首 first
+首先 first
+逛街 to stroll
+新品 new products
+产品 product
+购物车 shopping cart
+购买 purchase; buy
+购物 to shop; shopping
+全部 all orders; all products
+已完成 completed
+已取消 cancelled
+待评价 waiting for comments
+退换 return or change
+优惠券 coupon
+券 ticket
+收藏 to collect
+商品收藏 favorite products
+店铺 shop; store
+关注 to pay attention to s.th. or s.o., to follow
+店铺关注 followed shops
+浏览 browse
+记录 record; history
+浏览记录 browse history
+浏览器 browser
+食物 food
+零食 snacks
+饮品 drinks
+超市便利 convenience store
+馄饨 wonton
+意面 italian noodles / pasta
+披萨 pizza
+粥 porridge
+便当 lunchbox (usually Japanese)
+销量 sales volume
+综合 general
+排序 ranking
+优先 descending order (highest to lowest)
+距离 distance
+速度 speed
+评分 comments
+评价分数 comment score; comment grade
+起送价 minimum delivery price (start price)
+起步价 minimum transport price (start price)
+起...价 minumum price (of something)
+最低 lowest
+最高 highest
+配送费 delivery fee
+人均 average
+费率 fee
+菜市场 wet market
+摊子 stand
+水果摊 fruit display
+老板娘 female boss
+红提 red globe (a kind of grape)
+称 to weigh
+称一斤 weigh me 1 pound
+串 measure word for something on a stick
+桔子 tangerines
+季节 season
+榴莲 durian
+营养 nutritious
+李子 plum
+梨子 pear
+黑布林 black plum
+青 not ripe yet
+熟 ripe; ready; finished
+柿子 persimmon (kaki)
+枣子 date (fruit)
+圣女果 cherry tomato
+反正 anyhow, anyway
+算术 counting
+数学 math
+推荐 recommend
+水蜜桃 water honey peach
+油桃 nectarine
+过季了 out of season
+特产 specialty
+首先 at first
+皮剥掉 to peel
+拿一扎 grab one bunch
+石榴 pomegranate
+一粒米 grain of rice
+虫子 insects; bugs
+切开 to cut open
+刀子 knife
+生意 business
+生意还可以 business is going well
+红宝石 ruby
+蓝宝石 sapphire
+黄宝石 topas
+绿宝石 emerald
+荔枝 lychee
+计算器 calculator
+竞争 competition
+情况 situation
+一般情况 generally; it depends
+看情况 we'll see; let's see
+继续 continue
+不好做 not easy (to do)
+批发 wholesale
+批 batch; charge
+零售 retail
+一箱 a box
+卖不掉 cannot sell
+亏本 to lose (refers to money)
+处理 to deal; to handle
+处理掉 get rid of
+清货 clear the stock; clear the goods
+清理货物 clear the stock; clear the goods
+货物 goods; products
+清理 to clear up
+顾客 customer (who buys something)
+基本 basically
+基本上 basically
+肯定 definitely
+直接 direct, straightforward
+老是 always
+散钱 change (money)
+滑 slippery
+摔跤 to wrestle; to fall
+杀 to kill
+剥豆 to peel beans
+西兰花 broccoli
+胡萝卜 carrot
+茄子 eggplant
+搞得怎么样 how is it going?
+总共 in total
+熟人 acquaintances
+照顾 to look after
+样子 thing
+刮 to scrape, to shave
+鱼鳞 fish scale
+熟食 ready meal, convenience food
+两班倒 shift work
+轮流 to take turns
+地道 authentic
+真正 for real
+其他的 others (than him)
+课本上 in the textbook
+用不到 useless
+内脏 intestine
+去掉 get rid of
+利索 skilled (with hands)
+歇 rest
+歇一会儿 take a rest
+划不来 not worth it
+而已 a little, nothing more, small
+利润 profit
+情愿 to be willing to
+电视台 TV station
+生姜 ginger
+渣子 pulp
+嫩 tender
+洋葱 onion
+地瓜 yam
+姑娘 girl
+红薯 sweet potato
+拖鞋 flip flops
+价格 price
+价钱 price
+背包 backpack
+书包 bag
+浅紫 light purple
+深紫 dark purple
+体验 experience
+拉链 zipper
+调节 to adjust
+所有 everything we want
+大使馆 embassy
+领事馆 consulate
+感情 feeling; emotion
+答案 answer
+素材 material
+所有 all
+变成 change to
+家乡 hometown
+温馨 cosy
+感动 moved
+陌生 unfamiliar
+对我来说 in my opinion
+关键 crucial
+初恋 first love
+尴尬 awkward
+环 circle
+胡同 alley
+特色 special feature
+蹭 join (for free)
+打断一下 I'm gonna pause you here
+资格 to be qualified, to be entitled
+代表 to represent
+整体 the whole
+平均 average
+水平 level
+世界 world
+以色列 Israel
+能够 can
+呼吸 breathe
+思考 think
+压力 stress
+墨尔本 Melbourne
+退休 retire
+蛮 quite
+前提 if (on the premise of s.th.)
+区域 space; area; district
+暖气 heating
+阿根廷 Argentina
+留言 to leave a comment
+期待 to look forward
+微博 Weibo
+粉丝 fans; glass noodle
+思想 thoughts
+性格 personality
+狭隘 narrow minded
+宽容 tolerant
+好奇 curious
+生活方式 lifestyle
+不停的 nonstop
+特点 special point
+口味 taste
+根据 according to
+交界 next to; neighboring
+算半个 count as half
+外地人 people from foreign province/place inside the country
+珠三角 pearl river delta
+三角 river delta
+居多 more than
+五湖四海 everywhere
+地区 area
+两广 guangdong and guangxi
+偏 inclined to; tend towards
+少不了 not be able to do without
+以...为主 ...majorly
+客人 guest
+主人 host
+征求 to ask for
+意见 opinion
+齐全 everything
+到处 to different places (referring to walking around, searching around)
+改天 another day
+采访 interview
+亲自 to do personally
+烹调 to cook
+菲律宾 Philippines
+感叹 to be touched
+熟悉 to be familiar with
+顺溜 to be fluent
+使用 to use
+支付 to pay
+地球村 global village
+能够 can
+交流 to exchange; to communicate
+属于 to belong to
+过季 international
+说不上 cannot say (that...), not worth mentioning
+赏脸 to show appreciation
+好几个 quite a few
+来来往往 come and go
+回头客 returning customer
+认可 approval
+质量 quality
+娴熟 skilled
+熟能生巧 practice makes perfect
+成语 idiom
+从事 engage in
+行业 profession; industry
+带动 to lead, drive
+之下 passive form
+利润 profit
+可观 considerable
+工厂 factory
+打工 labor work
+流水线 assembly line
+枯燥无味 boring
+枯燥 boring
+职业 job; occupation
+确实 indeed
+心态 attitude; mindset
+那必须的 must (meaning having no choice)
+母亲 mother
+闲不住 to kill some time (cannot be idle)
+家族 family; clan
+年代 period of time
+姐妹 sisters
+步入 walk towards
+不如 less than
+小伙子 young man
+陆陆续续 one after another; continuously
+陆续 one after another; continuously
+凌晨 midnight
+白天 daytime
+加工 to process
+购置 to purchase
+体育馆 sports arena
+博物馆 museum
+大使馆 embassy
+宾馆 hotel
+校园 campus
+校区 campus
+体育设施 sports facility
+设施 facility
+健身房 gym
+学生证 students certificate
+只要...就行 as long as..., it's ok
+费用 fee
+福利 benefits
+公司福利 company benefits
+补贴 allowance
+午饭补贴 food allowance
+交通补贴 transportation allowance
+住房补贴 housing allowance
+剩菜 leftover food
+拉面 pulled noodles
+刀削面 cut noodles
+力量 strength
+重量 weight
+教练 trainer
+瑜伽 yoga
+跑步机 running machine
+操场 sports field
+运动会 sports event
+证书 certificate
+奖牌 medal
+奖杯 cup; trophy
+选择 choice; to choose
+白跑 to come for nothing
+一趟 one time
+百忙 to be busy for nothing
+白说 to talk for nothing
+此外 in addition
+另外 in addition
+大巴 bus (not public)
+海鲜 seafood
+浮潜 snorkeling
+选择 choice
+购物 shopping
+称呼 call; form of address
+叔叔 uncle
+丢脸 disgraceful; lost face
+出错 make a mistake
+主持人 host
+不见得 not likely; may not
+官职 official position; government position
+难怪 no wonder
+才怪 it's strange if
+奇怪 strange
+厂长 factory directory; factory manager
+总 general
+打交道 have dealings with
+恐怕 afraid
+一声 sound; measure word for sounc
+直接 directly
+职业 occupation
+这可不好说 hard to say
+有知识的人 knowledgeable people
+知识 knowledgeable
+反正 anyway; anyhow
+另外 in addition; moreover
+副厂长 deputy director
+合适 suitable
+将来 future
+复杂 complicated; confusing
+叫法 way to call
+集合 assemble; gather
+建议 suggest; advise
+入乡随俗 When in Rome, do as the Romans do
+成语 idiom
+遵守 observe, abide by
+风俗 tradition; custom
+记住 remember; learn by heart
+吸引 attract
+字幕 subtitle; caption
+熬夜 stay up late
+偶尔 once in a while; occassionally
+你怎么才来啊？ Why you come so late?
+室友 roommate
+舍友 roommate (students, in dormitory)
+进步 progress
+展览 exhibition
+只是 just; only
+比如 because
+标准 standard
+规定的保准 required standard
+行为 behavior
+吸烟 smoking
+错误 mistake
+打扮 dress up
+不过 however (soft "but")
+博士 doctor (academic degree)
+硕士 master (academic degree)
+玻璃 glass
+部分 part of
+删除 delete; remove
+视频 video
+参观 visit (for learning)
+博物馆 museum
+手套 gloves
+耳环 earrings
+项链 necklace
+开药 prescribe medicine
+导出 export

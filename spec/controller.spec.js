@@ -120,7 +120,7 @@ describe('Controller', () => {
             / 1. directly after submission, both may be picked, cause time has not yet elapsed
             / 2. submit another one after half the time
             / 3. still, both may be picked
-            / 4. wait the other half of the time, not it should definitely be the first one
+            / 4. wait the other half of the time, now it should definitely be the first one
             */
             controller.submitWord({ word: '一二', remembered: false, sentences: '' })
             expect(['一二', '一...二']).toContain(controller.getNextWord().word)

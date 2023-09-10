@@ -82,7 +82,7 @@
 	{
 		"word": "熟悉",
 		"pinyin": "",
-		"meaning": ""
+		"meaning": "; to be familiar with"
 	},
 	{
 		"word": "船",
@@ -557,7 +557,7 @@
 	{
 		"word": "复杂",
 		"pinyin": "",
-		"meaning": "complicated; complex"
+		"meaning": "complicated; complex; confusing"
 	},
 	{
 		"word": "尽管",
@@ -727,7 +727,7 @@
 	{
 		"word": "注意",
 		"pinyin": "",
-		"meaning": "idea"
+		"meaning": "idea; pay attention"
 	},
 	{
 		"word": "点心",
@@ -787,7 +787,7 @@
 	{
 		"word": "浏览",
 		"pinyin": "",
-		"meaning": ""
+		"meaning": "; browse"
 	},
 	{
 		"word": "信息",
@@ -912,7 +912,7 @@
 	{
 		"word": "比较",
 		"pinyin": "",
-		"meaning": "comparatively"
+		"meaning": "comparatively; comparably/rather"
 	},
 	{
 		"word": "健康",
@@ -977,7 +977,7 @@
 	{
 		"word": "支付",
 		"pinyin": "",
-		"meaning": "pay"
+		"meaning": "pay; to pay"
 	},
 	{
 		"word": "凭证",
@@ -1022,7 +1022,7 @@
 	{
 		"word": "一定",
 		"pinyin": "",
-		"meaning": "certainly"
+		"meaning": "certainly; surely; without doubt"
 	},
 	{
 		"word": "违法",
@@ -1037,7 +1037,7 @@
 	{
 		"word": "影响",
 		"pinyin": "",
-		"meaning": "affect"
+		"meaning": "affect; to affect"
 	},
 	{
 		"word": "别人",
@@ -1087,7 +1087,7 @@
 	{
 		"word": "发现",
 		"pinyin": "",
-		"meaning": "find out"
+		"meaning": "find out; discover"
 	},
 	{
 		"word": "师傅",
@@ -1107,7 +1107,7 @@
 	{
 		"word": "样子",
 		"pinyin": "",
-		"meaning": "appearance"
+		"meaning": "appearance; thing"
 	},
 	{
 		"word": "九",
@@ -1127,7 +1127,7 @@
 	{
 		"word": "麻烦",
 		"pinyin": "",
-		"meaning": "trouble"
+		"meaning": "trouble; to trouble (used to politely ask s.o. to do s.th.)"
 	},
 	{
 		"word": "洗手间",
@@ -1157,7 +1157,7 @@
 	{
 		"word": "记住",
 		"pinyin": "",
-		"meaning": "remember"
+		"meaning": "remember; learn by heart"
 	},
 	{
 		"word": "派",
@@ -1202,7 +1202,7 @@
 	{
 		"word": "教练",
 		"pinyin": "",
-		"meaning": "coach"
+		"meaning": "coach; trainer"
 	},
 	{
 		"word": "免费",
@@ -1217,7 +1217,7 @@
 	{
 		"word": "兴趣",
 		"pinyin": "",
-		"meaning": "interest"
+		"meaning": "interest; interesting"
 	},
 	{
 		"word": "比赛",
@@ -1282,12 +1282,12 @@
 	{
 		"word": "校区",
 		"pinyin": "",
-		"meaning": "school"
+		"meaning": "school; campus"
 	},
 	{
 		"word": "提供",
 		"pinyin": "",
-		"meaning": "provide"
+		"meaning": "provide; supply"
 	},
 	{
 		"word": "教学",
@@ -1317,12 +1317,12 @@
 	{
 		"word": "路过",
 		"pinyin": "",
-		"meaning": "pass by"
+		"meaning": "pass by; passing"
 	},
 	{
 		"word": "广告牌",
 		"pinyin": "",
-		"meaning": "advertising board"
+		"meaning": "advertising board; billboard"
 	},
 	{
 		"word": "信息",
@@ -1428,5 +1428,2301 @@
 		"word": "将来",
 		"pinyin": "",
 		"meaning": "future"
+	},
+	{
+		"word": "步行街",
+		"meaning": "pedestrian street"
+	},
+	{
+		"word": "天空飘着下雨",
+		"meaning": "drizzling"
+	},
+	{
+		"word": "很奇怪",
+		"meaning": "very weird"
+	},
+	{
+		"word": "变成下小雨",
+		"meaning": "change to light rain"
+	},
+	{
+		"word": "本来",
+		"meaning": "originally"
+	},
+	{
+		"word": "这个路不平，很抖",
+		"meaning": "this road is not flat, it's very bumpy"
+	},
+	{
+		"word": "小区",
+		"meaning": "community"
+	},
+	{
+		"word": "小区里有别墅",
+		"meaning": "the community has villas"
+	},
+	{
+		"word": "普通的高楼大厦",
+		"meaning": "normal/standard buildings"
+	},
+	{
+		"word": "普通",
+		"meaning": "normal/standard"
+	},
+	{
+		"word": "普通话",
+		"meaning": "standard chinese"
+	},
+	{
+		"word": "住得起",
+		"meaning": "can afford to live"
+	},
+	{
+		"word": "住不起",
+		"meaning": "cannot afford to live"
+	},
+	{
+		"word": "适合",
+		"meaning": "fits (personality, circumstances)"
+	},
+	{
+		"word": "合适",
+		"meaning": "fits (size); suitable"
+	},
+	{
+		"word": "风吹在脸很舒服",
+		"meaning": "the wind blowing in your face is comfortable"
+	},
+	{
+		"word": "吹风机",
+		"meaning": "hair dryer"
+	},
+	{
+		"word": "吹泡泡",
+		"meaning": "blow soap bubbles"
+	},
+	{
+		"word": "躲雨",
+		"meaning": "hide from the rain"
+	},
+	{
+		"word": "避雨",
+		"meaning": "hide from the rain"
+	},
+	{
+		"word": "躲避",
+		"meaning": "to hide"
+	},
+	{
+		"word": "习惯",
+		"meaning": "to be used to"
+	},
+	{
+		"word": "我习惯右手汽车",
+		"meaning": "I'm used to ride biycle with the right hand"
+	},
+	{
+		"word": "偶尔",
+		"meaning": "occassionally; once in a while"
+	},
+	{
+		"word": "毕竟",
+		"meaning": "after all"
+	},
+	{
+		"word": "偶尔有一些人，今天毕竟是周日",
+		"meaning": "occassionally there are some people, after all it's sunday"
+	},
+	{
+		"word": "到处",
+		"meaning": "everywhere; to different places (referring to walking around, searching around)"
+	},
+	{
+		"word": "上海到处都是人",
+		"meaning": "in Shanghai there are people everywhere"
+	},
+	{
+		"word": "到处都是湿哒哒的",
+		"meaning": "it's dripping wet everywhere"
+	},
+	{
+		"word": "湿哒哒",
+		"meaning": "wet (哒 is not really a word, it's more the sound of water dropping)"
+	},
+	{
+		"word": "刹车",
+		"meaning": "brake"
+	},
+	{
+		"word": "坏了",
+		"meaning": "broken"
+	},
+	{
+		"word": "上坡",
+		"meaning": "uphill"
+	},
+	{
+		"word": "万一",
+		"meaning": "in case"
+	},
+	{
+		"word": "明明说",
+		"meaning": "clearly say (meaning there will be a \"but, ...\")"
+	},
+	{
+		"word": "返回",
+		"meaning": "go back (to do something)"
+	},
+	{
+		"word": "各种",
+		"meaning": "all kinds (of something)"
+	},
+	{
+		"word": "各种运动",
+		"meaning": "all kinds of sports/activities"
+	},
+	{
+		"word": "比较安全",
+		"meaning": "rather peaceful"
+	},
+	{
+		"word": "还好",
+		"meaning": "Luckily"
+	},
+	{
+		"word": "还好我备了一把雨伞",
+		"meaning": "Luckily I prepared an umbrella"
+	},
+	{
+		"word": "准备",
+		"meaning": "Prepare"
+	},
+	{
+		"word": "家长",
+		"meaning": "Parents/adults"
+	},
+	{
+		"word": "要不",
+		"meaning": "otherwise"
+	},
+	{
+		"word": "要不然",
+		"meaning": "otherwise"
+	},
+	{
+		"word": "速度",
+		"meaning": "speed"
+	},
+	{
+		"word": "加快速度",
+		"meaning": "go faster (add speed)"
+	},
+	{
+		"word": "凳子",
+		"meaning": "bench"
+	},
+	{
+		"word": "逛街",
+		"meaning": "shopping; to stroll"
+	},
+	{
+		"word": "口音",
+		"meaning": "accent"
+	},
+	{
+		"word": "大多数",
+		"meaning": "vast majority"
+	},
+	{
+		"word": "少数",
+		"meaning": "minority"
+	},
+	{
+		"word": "挑战",
+		"meaning": "challenge"
+	},
+	{
+		"word": "主要",
+		"meaning": "reason; main; major"
+	},
+	{
+		"word": "地方",
+		"meaning": "place; location"
+	},
+	{
+		"word": "特意",
+		"meaning": "for a particular reason"
+	},
+	{
+		"word": "标准",
+		"meaning": "standard, accurate"
+	},
+	{
+		"word": "甚至",
+		"meaning": "even"
+	},
+	{
+		"word": "语法",
+		"meaning": "grammar"
+	},
+	{
+		"word": "逻辑",
+		"meaning": "logic"
+	},
+	{
+		"word": "之间",
+		"meaning": "between (people)"
+	},
+	{
+		"word": "互相",
+		"meaning": "mutual"
+	},
+	{
+		"word": "对于...来说",
+		"meaning": "（as far as ... is/are concerned)"
+	},
+	{
+		"word": "老百姓",
+		"meaning": "civilians"
+	},
+	{
+		"word": "唯一的方法",
+		"meaning": "the only way"
+	},
+	{
+		"word": "并且",
+		"meaning": "also; furthermore"
+	},
+	{
+		"word": "在...的过程中",
+		"meaning": "during (the process of) ..."
+	},
+	{
+		"word": "注意安全",
+		"meaning": "pay attention to safety"
+	},
+	{
+		"word": "不同的...",
+		"meaning": "different ..."
+	},
+	{
+		"word": "以及",
+		"meaning": "and; as well as"
+	},
+	{
+		"word": "表达",
+		"meaning": "expression"
+	},
+	{
+		"word": "渐渐的",
+		"meaning": "gradually"
+	},
+	{
+		"word": "方式",
+		"meaning": "pattern, ways"
+	},
+	{
+		"word": "频道",
+		"meaning": "channel"
+	},
+	{
+		"word": "系列",
+		"meaning": "series"
+	},
+	{
+		"word": "看法",
+		"meaning": "opinion"
+	},
+	{
+		"word": "事物",
+		"meaning": "things (general, not only for things to do)"
+	},
+	{
+		"word": "目的",
+		"meaning": "purpose"
+	},
+	{
+		"word": "练习",
+		"meaning": "practice"
+	},
+	{
+		"word": "...的同时...",
+		"meaning": "...and at the same time..."
+	},
+	{
+		"word": "稍微",
+		"meaning": "little bit; a little"
+	},
+	{
+		"word": "稍微复杂",
+		"meaning": "a little bit complicated"
+	},
+	{
+		"word": "稍微复杂想法的词汇",
+		"meaning": "a little bit more complicated words"
+	},
+	{
+		"word": "分享",
+		"meaning": "share"
+	},
+	{
+		"word": "未来",
+		"meaning": "future"
+	},
+	{
+		"word": "婚姻",
+		"meaning": "marriage"
+	},
+	{
+		"word": "算是",
+		"meaning": "considered (count as...)"
+	},
+	{
+		"word": "省略",
+		"meaning": "leave out"
+	},
+	{
+		"word": "省掉",
+		"meaning": "drop"
+	},
+	{
+		"word": "研究",
+		"meaning": "research"
+	},
+	{
+		"word": "研究生",
+		"meaning": "master's student"
+	},
+	{
+		"word": "博士生",
+		"meaning": "doctor's student"
+	},
+	{
+		"word": "编程",
+		"meaning": "programming"
+	},
+	{
+		"word": "标志",
+		"meaning": "sign"
+	},
+	{
+		"word": "视频",
+		"meaning": "video"
+	},
+	{
+		"word": "醒来",
+		"meaning": "wake up"
+	},
+	{
+		"word": "刮风",
+		"meaning": "the wind blows"
+	},
+	{
+		"word": "整个",
+		"meaning": "whole; complete"
+	},
+	{
+		"word": "根本",
+		"meaning": "essentially; at all"
+	},
+	{
+		"word": "办法",
+		"meaning": "choice"
+	},
+	{
+		"word": "那么",
+		"meaning": "therefore; so; consequently"
+	},
+	{
+		"word": "进入",
+		"meaning": "enter"
+	},
+	{
+		"word": "之前",
+		"meaning": "before"
+	},
+	{
+		"word": "严重",
+		"meaning": "serious"
+	},
+	{
+		"word": "多么",
+		"meaning": "how; so much"
+	},
+	{
+		"word": "电动车",
+		"meaning": "e-scooter"
+	},
+	{
+		"word": "单车",
+		"meaning": "bicycle"
+	},
+	{
+		"word": "拍照",
+		"meaning": "license plate"
+	},
+	{
+		"word": "车牌号",
+		"meaning": "license plate number"
+	},
+	{
+		"word": "充电器",
+		"meaning": "charger"
+	},
+	{
+		"word": "汽油",
+		"meaning": "gasoline"
+	},
+	{
+		"word": "插板",
+		"meaning": "plug board"
+	},
+	{
+		"word": "插座",
+		"meaning": "power socket; socket (for electric plug)"
+	},
+	{
+		"word": "插头",
+		"meaning": "power plug"
+	},
+	{
+		"word": "草地",
+		"meaning": "grass field"
+	},
+	{
+		"word": "一棵树",
+		"meaning": "a tree"
+	},
+	{
+		"word": "停车场",
+		"meaning": "parking lot"
+	},
+	{
+		"word": "比亚迪",
+		"meaning": "BYD"
+	},
+	{
+		"word": "工地",
+		"meaning": "construction site"
+	},
+	{
+		"word": "摄像头",
+		"meaning": "surveillance camera"
+	},
+	{
+		"word": "监控器",
+		"meaning": "monitor"
+	},
+	{
+		"word": "路灯",
+		"meaning": "street light"
+	},
+	{
+		"word": "照明",
+		"meaning": "illumination"
+	},
+	{
+		"word": "猛烈",
+		"meaning": "violent"
+	},
+	{
+		"word": "属于",
+		"meaning": "to belong to"
+	},
+	{
+		"word": "共享单车",
+		"meaning": "shared bike"
+	},
+	{
+		"word": "下载",
+		"meaning": "download"
+	},
+	{
+		"word": "定金",
+		"meaning": "deposit"
+	},
+	{
+		"word": "扫码骑走",
+		"meaning": "scan code to ride"
+	},
+	{
+		"word": "试过",
+		"meaning": "tried"
+	},
+	{
+		"word": "没有试过",
+		"meaning": "haven't tried"
+	},
+	{
+		"word": "树枝",
+		"meaning": "branch"
+	},
+	{
+		"word": "保安",
+		"meaning": "security"
+	},
+	{
+		"word": "保安岗亭",
+		"meaning": "guard booth"
+	},
+	{
+		"word": "全部",
+		"meaning": "full, entire; all orders; all products"
+	},
+	{
+		"word": "慈善",
+		"meaning": "charity"
+	},
+	{
+		"word": "慈善机构",
+		"meaning": "charity"
+	},
+	{
+		"word": "不同",
+		"meaning": "different"
+	},
+	{
+		"word": "三轮车",
+		"meaning": "tricycle"
+	},
+	{
+		"word": "轮子",
+		"meaning": "wheel"
+	},
+	{
+		"word": "瓷砖",
+		"meaning": "ceramic tile"
+	},
+	{
+		"word": "毁掉",
+		"meaning": "destroy"
+	},
+	{
+		"word": "快递员",
+		"meaning": "delivery man"
+	},
+	{
+		"word": "柜子",
+		"meaning": "locker"
+	},
+	{
+		"word": "取件码",
+		"meaning": "pickup code"
+	},
+	{
+		"word": "输入",
+		"meaning": "enter"
+	},
+	{
+		"word": "进去",
+		"meaning": "go in"
+	},
+	{
+		"word": "总共",
+		"meaning": "altogether; in total"
+	},
+	{
+		"word": "游泳池",
+		"meaning": "swimming pool"
+	},
+	{
+		"word": "婴儿车",
+		"meaning": "stroller"
+	},
+	{
+		"word": "推婴儿车",
+		"meaning": "push a stroller"
+	},
+	{
+		"word": "楼梯",
+		"meaning": "staircase"
+	},
+	{
+		"word": "爬楼梯",
+		"meaning": "climb up the stairs"
+	},
+	{
+		"word": "遛狗",
+		"meaning": "walk the dog、"
+	},
+	{
+		"word": "溜达",
+		"meaning": "walk"
+	},
+	{
+		"word": "居民",
+		"meaning": "residents"
+	},
+	{
+		"word": "屁股",
+		"meaning": "butt"
+	},
+	{
+		"word": "幸运",
+		"meaning": "lucky"
+	},
+	{
+		"word": "牛仔裤",
+		"meaning": "jeans"
+	},
+	{
+		"word": "叫声",
+		"meaning": "bark"
+	},
+	{
+		"word": "一座桥",
+		"meaning": "a bridge"
+	},
+	{
+		"word": "铁皮",
+		"meaning": "iron sheet"
+	},
+	{
+		"word": "吓人",
+		"meaning": "scary; terrifying"
+	},
+	{
+		"word": "喇叭",
+		"meaning": "horn"
+	},
+	{
+		"word": "按喇叭",
+		"meaning": "to honk"
+	},
+	{
+		"word": "乱七八糟",
+		"meaning": "mess"
+	},
+	{
+		"word": "编辑",
+		"meaning": "edit"
+	},
+	{
+		"word": "剪辑",
+		"meaning": "clip"
+	},
+	{
+		"word": "翻到",
+		"meaning": "turn over"
+	},
+	{
+		"word": "压倒",
+		"meaning": "overwhelm"
+	},
+	{
+		"word": "遇难",
+		"meaning": "to get killed"
+	},
+	{
+		"word": "不幸",
+		"meaning": "unlucky"
+	},
+	{
+		"word": "保险",
+		"meaning": "insurance"
+	},
+	{
+		"word": "的话",
+		"meaning": "in case"
+	},
+	{
+		"word": "现在的话",
+		"meaning": "right now"
+	},
+	{
+		"word": "主要目的",
+		"meaning": "main purpose"
+	},
+	{
+		"word": "拍摄",
+		"meaning": "record; capture (a picture or video)"
+	},
+	{
+		"word": "风光",
+		"meaning": "nice scenery/landscape"
+	},
+	{
+		"word": "能够",
+		"meaning": "can"
+	},
+	{
+		"word": "顺便",
+		"meaning": "by the way, at the same time"
+	},
+	{
+		"word": "顺便一提",
+		"meaning": "by the way"
+	},
+	{
+		"word": "享受",
+		"meaning": "enjoy"
+	},
+	{
+		"word": "美景",
+		"meaning": "beautiful scenery"
+	},
+	{
+		"word": "利用",
+		"meaning": "use; take"
+	},
+	{
+		"word": "机会",
+		"meaning": "chance; opportunity"
+	},
+	{
+		"word": "强烈",
+		"meaning": "strong"
+	},
+	{
+		"word": "建议",
+		"meaning": "recommend; suggest; advise"
+	},
+	{
+		"word": "出发",
+		"meaning": "to depart"
+	},
+	{
+		"word": "总是",
+		"meaning": "every time; all the time; always"
+	},
+	{
+		"word": "跟着",
+		"meaning": "follow"
+	},
+	{
+		"word": "平时",
+		"meaning": "usually"
+	},
+	{
+		"word": "平时的话",
+		"meaning": "usually (if it's usual time)"
+	},
+	{
+		"word": "好过",
+		"meaning": "good life"
+	},
+	{
+		"word": "确实",
+		"meaning": "really; surely; truly; indeed"
+	},
+	{
+		"word": "身在",
+		"meaning": "in the middle of"
+	},
+	{
+		"word": "乡村",
+		"meaning": "village"
+	},
+	{
+		"word": "插口",
+		"meaning": "socket (for smaller devices/plugs)"
+	},
+	{
+		"word": "负一楼",
+		"meaning": "basement (minus one floor)"
+	},
+	{
+		"word": "有趣",
+		"meaning": "interesting"
+	},
+	{
+		"word": "停满",
+		"meaning": "fully parked"
+	},
+	{
+		"word": "动物",
+		"meaning": "animals"
+	},
+	{
+		"word": "流浪",
+		"meaning": "vagabond"
+	},
+	{
+		"word": "流浪汗",
+		"meaning": "vagabond"
+	},
+	{
+		"word": "小区居民",
+		"meaning": "community residents"
+	},
+	{
+		"word": "总开关",
+		"meaning": "central switch"
+	},
+	{
+		"word": "待收货",
+		"meaning": "in the delivery (waiting for receiving)"
+	},
+	{
+		"word": "使用",
+		"meaning": "to use"
+	},
+	{
+		"word": "水龙头",
+		"meaning": "water tap"
+	},
+	{
+		"word": "浴室",
+		"meaning": "bathroom (only at home)"
+	},
+	{
+		"word": "卫生间",
+		"meaning": "bathroom (at home or in public)"
+	},
+	{
+		"word": "售后",
+		"meaning": "after sales service"
+	},
+	{
+		"word": "快递状态",
+		"meaning": "delivery status"
+	},
+	{
+		"word": "更新",
+		"meaning": "update"
+	},
+	{
+		"word": "运输中",
+		"meaning": "transport"
+	},
+	{
+		"word": "物流",
+		"meaning": "logistics"
+	},
+	{
+		"word": "客服",
+		"meaning": "customer service"
+	},
+	{
+		"word": "加载中",
+		"meaning": "loading"
+	},
+	{
+		"word": "国内",
+		"meaning": "domestic"
+	},
+	{
+		"word": "承运人",
+		"meaning": "carrier"
+	},
+	{
+		"word": "运单号",
+		"meaning": "delivery number"
+	},
+	{
+		"word": "商家",
+		"meaning": "seller"
+	},
+	{
+		"word": "投诉",
+		"meaning": "to complain"
+	},
+	{
+		"word": "按钮",
+		"meaning": "button"
+	},
+	{
+		"word": "账户",
+		"meaning": "account"
+	},
+	{
+		"word": "查询",
+		"meaning": "inquire; check"
+	},
+	{
+		"word": "包裹",
+		"meaning": "package"
+	},
+	{
+		"word": "退款",
+		"meaning": "refund"
+	},
+	{
+		"word": "钱款",
+		"meaning": "money"
+	},
+	{
+		"word": "付款",
+		"meaning": "to pay"
+	},
+	{
+		"word": "申请",
+		"meaning": "to apply"
+	},
+	{
+		"word": "评价",
+		"meaning": "comments"
+	},
+	{
+		"word": "搜索",
+		"meaning": "search"
+	},
+	{
+		"word": "搜一下",
+		"meaning": "search"
+	},
+	{
+		"word": "首页",
+		"meaning": "homepage"
+	},
+	{
+		"word": "首先",
+		"meaning": "first; at first"
+	},
+	{
+		"word": "新品",
+		"meaning": "new products"
+	},
+	{
+		"word": "产品",
+		"meaning": "product"
+	},
+	{
+		"word": "购物车",
+		"meaning": "shopping cart"
+	},
+	{
+		"word": "购买",
+		"meaning": "purchase; buy"
+	},
+	{
+		"word": "购物",
+		"meaning": "to shop; shopping"
+	},
+	{
+		"word": "已完成",
+		"meaning": "completed"
+	},
+	{
+		"word": "已取消",
+		"meaning": "cancelled"
+	},
+	{
+		"word": "待评价",
+		"meaning": "waiting for comments"
+	},
+	{
+		"word": "退换",
+		"meaning": "return or change"
+	},
+	{
+		"word": "优惠券",
+		"meaning": "coupon"
+	},
+	{
+		"word": "收藏",
+		"meaning": "to collect"
+	},
+	{
+		"word": "商品收藏",
+		"meaning": "favorite products"
+	},
+	{
+		"word": "店铺",
+		"meaning": "shop; store"
+	},
+	{
+		"word": "关注",
+		"meaning": "to pay attention to s.th. or s.o., to follow"
+	},
+	{
+		"word": "店铺关注",
+		"meaning": "followed shops"
+	},
+	{
+		"word": "记录",
+		"meaning": "record; history"
+	},
+	{
+		"word": "浏览记录",
+		"meaning": "browse history"
+	},
+	{
+		"word": "浏览器",
+		"meaning": "browser"
+	},
+	{
+		"word": "食物",
+		"meaning": "food"
+	},
+	{
+		"word": "零食",
+		"meaning": "snacks"
+	},
+	{
+		"word": "饮品",
+		"meaning": "drinks"
+	},
+	{
+		"word": "超市便利",
+		"meaning": "convenience store"
+	},
+	{
+		"word": "馄饨",
+		"meaning": "wonton"
+	},
+	{
+		"word": "意面",
+		"meaning": "italian noodles / pasta"
+	},
+	{
+		"word": "披萨",
+		"meaning": "pizza"
+	},
+	{
+		"word": "便当",
+		"meaning": "lunchbox (usually Japanese)"
+	},
+	{
+		"word": "销量",
+		"meaning": "sales volume"
+	},
+	{
+		"word": "综合",
+		"meaning": "general"
+	},
+	{
+		"word": "排序",
+		"meaning": "ranking"
+	},
+	{
+		"word": "优先",
+		"meaning": "descending order (highest to lowest)"
+	},
+	{
+		"word": "距离",
+		"meaning": "distance"
+	},
+	{
+		"word": "评分",
+		"meaning": "comments"
+	},
+	{
+		"word": "评价分数",
+		"meaning": "comment score; comment grade"
+	},
+	{
+		"word": "起送价",
+		"meaning": "minimum delivery price (start price)"
+	},
+	{
+		"word": "起步价",
+		"meaning": "minimum transport price (start price)"
+	},
+	{
+		"word": "起...价",
+		"meaning": "minumum price (of something)"
+	},
+	{
+		"word": "最低",
+		"meaning": "lowest"
+	},
+	{
+		"word": "最高",
+		"meaning": "highest"
+	},
+	{
+		"word": "配送费",
+		"meaning": "delivery fee"
+	},
+	{
+		"word": "人均",
+		"meaning": "average"
+	},
+	{
+		"word": "费率",
+		"meaning": "fee"
+	},
+	{
+		"word": "菜市场",
+		"meaning": "wet market"
+	},
+	{
+		"word": "摊子",
+		"meaning": "stand"
+	},
+	{
+		"word": "水果摊",
+		"meaning": "fruit display"
+	},
+	{
+		"word": "老板娘",
+		"meaning": "female boss"
+	},
+	{
+		"word": "红提",
+		"meaning": "red globe (a kind of grape)"
+	},
+	{
+		"word": "称一斤",
+		"meaning": "weigh me 1 pound"
+	},
+	{
+		"word": "桔子",
+		"meaning": "tangerines"
+	},
+	{
+		"word": "季节",
+		"meaning": "season"
+	},
+	{
+		"word": "榴莲",
+		"meaning": "durian"
+	},
+	{
+		"word": "营养",
+		"meaning": "nutritious"
+	},
+	{
+		"word": "李子",
+		"meaning": "plum"
+	},
+	{
+		"word": "黑布林",
+		"meaning": "black plum"
+	},
+	{
+		"word": "柿子",
+		"meaning": "persimmon (kaki)"
+	},
+	{
+		"word": "枣子",
+		"meaning": "date (fruit)"
+	},
+	{
+		"word": "圣女果",
+		"meaning": "cherry tomato"
+	},
+	{
+		"word": "反正",
+		"meaning": "anyhow, anyway"
+	},
+	{
+		"word": "算术",
+		"meaning": "counting"
+	},
+	{
+		"word": "数学",
+		"meaning": "math"
+	},
+	{
+		"word": "推荐",
+		"meaning": "recommend"
+	},
+	{
+		"word": "水蜜桃",
+		"meaning": "water honey peach"
+	},
+	{
+		"word": "油桃",
+		"meaning": "nectarine"
+	},
+	{
+		"word": "过季了",
+		"meaning": "out of season"
+	},
+	{
+		"word": "特产",
+		"meaning": "specialty"
+	},
+	{
+		"word": "皮剥掉",
+		"meaning": "to peel"
+	},
+	{
+		"word": "拿一扎",
+		"meaning": "grab one bunch"
+	},
+	{
+		"word": "石榴",
+		"meaning": "pomegranate"
+	},
+	{
+		"word": "一粒米",
+		"meaning": "grain of rice"
+	},
+	{
+		"word": "虫子",
+		"meaning": "insects; bugs"
+	},
+	{
+		"word": "切开",
+		"meaning": "to cut open"
+	},
+	{
+		"word": "刀子",
+		"meaning": "knife"
+	},
+	{
+		"word": "生意",
+		"meaning": "business"
+	},
+	{
+		"word": "生意还可以",
+		"meaning": "business is going well"
+	},
+	{
+		"word": "红宝石",
+		"meaning": "ruby"
+	},
+	{
+		"word": "蓝宝石",
+		"meaning": "sapphire"
+	},
+	{
+		"word": "黄宝石",
+		"meaning": "topas"
+	},
+	{
+		"word": "绿宝石",
+		"meaning": "emerald"
+	},
+	{
+		"word": "荔枝",
+		"meaning": "lychee"
+	},
+	{
+		"word": "计算器",
+		"meaning": "calculator"
+	},
+	{
+		"word": "竞争",
+		"meaning": "competition"
+	},
+	{
+		"word": "一般情况",
+		"meaning": "generally; it depends"
+	},
+	{
+		"word": "看情况",
+		"meaning": "we'll see; let's see"
+	},
+	{
+		"word": "继续",
+		"meaning": "continue"
+	},
+	{
+		"word": "不好做",
+		"meaning": "not easy (to do)"
+	},
+	{
+		"word": "批发",
+		"meaning": "wholesale"
+	},
+	{
+		"word": "零售",
+		"meaning": "retail"
+	},
+	{
+		"word": "一箱",
+		"meaning": "a box"
+	},
+	{
+		"word": "卖不掉",
+		"meaning": "cannot sell"
+	},
+	{
+		"word": "亏本",
+		"meaning": "to lose (refers to money)"
+	},
+	{
+		"word": "处理",
+		"meaning": "to deal; to handle"
+	},
+	{
+		"word": "处理掉",
+		"meaning": "get rid of"
+	},
+	{
+		"word": "清货",
+		"meaning": "clear the stock; clear the goods"
+	},
+	{
+		"word": "清理货物",
+		"meaning": "clear the stock; clear the goods"
+	},
+	{
+		"word": "货物",
+		"meaning": "goods; products"
+	},
+	{
+		"word": "清理",
+		"meaning": "to clear up"
+	},
+	{
+		"word": "顾客",
+		"meaning": "customer (who buys something)"
+	},
+	{
+		"word": "基本",
+		"meaning": "basically"
+	},
+	{
+		"word": "基本上",
+		"meaning": "basically"
+	},
+	{
+		"word": "肯定",
+		"meaning": "definitely"
+	},
+	{
+		"word": "直接",
+		"meaning": "direct, straightforward; directly"
+	},
+	{
+		"word": "老是",
+		"meaning": "always"
+	},
+	{
+		"word": "散钱",
+		"meaning": "change (money)"
+	},
+	{
+		"word": "摔跤",
+		"meaning": "to wrestle; to fall"
+	},
+	{
+		"word": "剥豆",
+		"meaning": "to peel beans"
+	},
+	{
+		"word": "西兰花",
+		"meaning": "broccoli"
+	},
+	{
+		"word": "胡萝卜",
+		"meaning": "carrot"
+	},
+	{
+		"word": "茄子",
+		"meaning": "eggplant"
+	},
+	{
+		"word": "搞得怎么样",
+		"meaning": "how is it going?"
+	},
+	{
+		"word": "熟人",
+		"meaning": "acquaintances"
+	},
+	{
+		"word": "照顾",
+		"meaning": "to look after"
+	},
+	{
+		"word": "鱼鳞",
+		"meaning": "fish scale"
+	},
+	{
+		"word": "熟食",
+		"meaning": "ready meal, convenience food"
+	},
+	{
+		"word": "两班倒",
+		"meaning": "shift work"
+	},
+	{
+		"word": "轮流",
+		"meaning": "to take turns"
+	},
+	{
+		"word": "地道",
+		"meaning": "authentic"
+	},
+	{
+		"word": "真正",
+		"meaning": "for real"
+	},
+	{
+		"word": "其他的",
+		"meaning": "others (than him)"
+	},
+	{
+		"word": "课本上",
+		"meaning": "in the textbook"
+	},
+	{
+		"word": "用不到",
+		"meaning": "useless"
+	},
+	{
+		"word": "内脏",
+		"meaning": "intestine"
+	},
+	{
+		"word": "去掉",
+		"meaning": "get rid of"
+	},
+	{
+		"word": "利索",
+		"meaning": "skilled (with hands)"
+	},
+	{
+		"word": "歇一会儿",
+		"meaning": "take a rest"
+	},
+	{
+		"word": "划不来",
+		"meaning": "not worth it"
+	},
+	{
+		"word": "而已",
+		"meaning": "a little, nothing more, small"
+	},
+	{
+		"word": "利润",
+		"meaning": "profit"
+	},
+	{
+		"word": "情愿",
+		"meaning": "to be willing to"
+	},
+	{
+		"word": "电视台",
+		"meaning": "TV station"
+	},
+	{
+		"word": "生姜",
+		"meaning": "ginger"
+	},
+	{
+		"word": "渣子",
+		"meaning": "pulp"
+	},
+	{
+		"word": "洋葱",
+		"meaning": "onion"
+	},
+	{
+		"word": "地瓜",
+		"meaning": "yam"
+	},
+	{
+		"word": "姑娘",
+		"meaning": "girl"
+	},
+	{
+		"word": "红薯",
+		"meaning": "sweet potato"
+	},
+	{
+		"word": "拖鞋",
+		"meaning": "flip flops"
+	},
+	{
+		"word": "价格",
+		"meaning": "price"
+	},
+	{
+		"word": "价钱",
+		"meaning": "price"
+	},
+	{
+		"word": "背包",
+		"meaning": "backpack"
+	},
+	{
+		"word": "书包",
+		"meaning": "bag"
+	},
+	{
+		"word": "浅紫",
+		"meaning": "light purple"
+	},
+	{
+		"word": "深紫",
+		"meaning": "dark purple"
+	},
+	{
+		"word": "体验",
+		"meaning": "experience"
+	},
+	{
+		"word": "拉链",
+		"meaning": "zipper"
+	},
+	{
+		"word": "调节",
+		"meaning": "to adjust"
+	},
+	{
+		"word": "所有",
+		"meaning": "everything we want; all"
+	},
+	{
+		"word": "大使馆",
+		"meaning": "embassy"
+	},
+	{
+		"word": "领事馆",
+		"meaning": "consulate"
+	},
+	{
+		"word": "感情",
+		"meaning": "feeling; emotion"
+	},
+	{
+		"word": "答案",
+		"meaning": "answer"
+	},
+	{
+		"word": "素材",
+		"meaning": "material"
+	},
+	{
+		"word": "变成",
+		"meaning": "change to"
+	},
+	{
+		"word": "家乡",
+		"meaning": "hometown"
+	},
+	{
+		"word": "温馨",
+		"meaning": "cosy"
+	},
+	{
+		"word": "陌生",
+		"meaning": "unfamiliar"
+	},
+	{
+		"word": "对我来说",
+		"meaning": "in my opinion"
+	},
+	{
+		"word": "关键",
+		"meaning": "crucial"
+	},
+	{
+		"word": "初恋",
+		"meaning": "first love"
+	},
+	{
+		"word": "尴尬",
+		"meaning": "awkward"
+	},
+	{
+		"word": "胡同",
+		"meaning": "alley"
+	},
+	{
+		"word": "特色",
+		"meaning": "special feature"
+	},
+	{
+		"word": "打断一下",
+		"meaning": "I'm gonna pause you here"
+	},
+	{
+		"word": "资格",
+		"meaning": "to be qualified, to be entitled"
+	},
+	{
+		"word": "代表",
+		"meaning": "to represent"
+	},
+	{
+		"word": "整体",
+		"meaning": "the whole"
+	},
+	{
+		"word": "平均",
+		"meaning": "average"
+	},
+	{
+		"word": "世界",
+		"meaning": "world"
+	},
+	{
+		"word": "以色列",
+		"meaning": "Israel"
+	},
+	{
+		"word": "呼吸",
+		"meaning": "breathe"
+	},
+	{
+		"word": "思考",
+		"meaning": "think"
+	},
+	{
+		"word": "压力",
+		"meaning": "stress"
+	},
+	{
+		"word": "墨尔本",
+		"meaning": "Melbourne"
+	},
+	{
+		"word": "退休",
+		"meaning": "retire"
+	},
+	{
+		"word": "前提",
+		"meaning": "if (on the premise of s.th.)"
+	},
+	{
+		"word": "区域",
+		"meaning": "space; area; district"
+	},
+	{
+		"word": "暖气",
+		"meaning": "heating"
+	},
+	{
+		"word": "阿根廷",
+		"meaning": "Argentina"
+	},
+	{
+		"word": "留言",
+		"meaning": "to leave a comment"
+	},
+	{
+		"word": "期待",
+		"meaning": "to look forward"
+	},
+	{
+		"word": "微博",
+		"meaning": "Weibo"
+	},
+	{
+		"word": "粉丝",
+		"meaning": "fans; glass noodle"
+	},
+	{
+		"word": "思想",
+		"meaning": "thoughts"
+	},
+	{
+		"word": "性格",
+		"meaning": "personality"
+	},
+	{
+		"word": "狭隘",
+		"meaning": "narrow minded"
+	},
+	{
+		"word": "宽容",
+		"meaning": "tolerant"
+	},
+	{
+		"word": "好奇",
+		"meaning": "curious"
+	},
+	{
+		"word": "生活方式",
+		"meaning": "lifestyle"
+	},
+	{
+		"word": "不停的",
+		"meaning": "nonstop"
+	},
+	{
+		"word": "特点",
+		"meaning": "special point"
+	},
+	{
+		"word": "口味",
+		"meaning": "taste"
+	},
+	{
+		"word": "根据",
+		"meaning": "according to"
+	},
+	{
+		"word": "交界",
+		"meaning": "next to; neighboring"
+	},
+	{
+		"word": "算半个",
+		"meaning": "count as half"
+	},
+	{
+		"word": "外地人",
+		"meaning": "people from foreign province/place inside the country"
+	},
+	{
+		"word": "珠三角",
+		"meaning": "pearl river delta"
+	},
+	{
+		"word": "三角",
+		"meaning": "river delta"
+	},
+	{
+		"word": "居多",
+		"meaning": "more than"
+	},
+	{
+		"word": "五湖四海",
+		"meaning": "everywhere"
+	},
+	{
+		"word": "地区",
+		"meaning": "area"
+	},
+	{
+		"word": "两广",
+		"meaning": "guangdong and guangxi"
+	},
+	{
+		"word": "少不了",
+		"meaning": "not be able to do without"
+	},
+	{
+		"word": "以...为主",
+		"meaning": "...majorly"
+	},
+	{
+		"word": "客人",
+		"meaning": "guest"
+	},
+	{
+		"word": "主人",
+		"meaning": "host"
+	},
+	{
+		"word": "征求",
+		"meaning": "to ask for"
+	},
+	{
+		"word": "齐全",
+		"meaning": "everything"
+	},
+	{
+		"word": "改天",
+		"meaning": "another day"
+	},
+	{
+		"word": "采访",
+		"meaning": "interview"
+	},
+	{
+		"word": "亲自",
+		"meaning": "to do personally"
+	},
+	{
+		"word": "烹调",
+		"meaning": "to cook"
+	},
+	{
+		"word": "菲律宾",
+		"meaning": "Philippines"
+	},
+	{
+		"word": "感叹",
+		"meaning": "to be touched"
+	},
+	{
+		"word": "顺溜",
+		"meaning": "to be fluent"
+	},
+	{
+		"word": "地球村",
+		"meaning": "global village"
+	},
+	{
+		"word": "交流",
+		"meaning": "to exchange; to communicate"
+	},
+	{
+		"word": "过季",
+		"meaning": "international"
+	},
+	{
+		"word": "说不上",
+		"meaning": "cannot say (that...), not worth mentioning"
+	},
+	{
+		"word": "赏脸",
+		"meaning": "to show appreciation"
+	},
+	{
+		"word": "好几个",
+		"meaning": "quite a few"
+	},
+	{
+		"word": "来来往往",
+		"meaning": "come and go"
+	},
+	{
+		"word": "回头客",
+		"meaning": "returning customer"
+	},
+	{
+		"word": "认可",
+		"meaning": "approval"
+	},
+	{
+		"word": "质量",
+		"meaning": "quality"
+	},
+	{
+		"word": "娴熟",
+		"meaning": "skilled"
+	},
+	{
+		"word": "熟能生巧",
+		"meaning": "practice makes perfect"
+	},
+	{
+		"word": "成语",
+		"meaning": "idiom"
+	},
+	{
+		"word": "从事",
+		"meaning": "engage in"
+	},
+	{
+		"word": "行业",
+		"meaning": "profession; industry"
+	},
+	{
+		"word": "带动",
+		"meaning": "to lead, drive"
+	},
+	{
+		"word": "之下",
+		"meaning": "passive form"
+	},
+	{
+		"word": "可观",
+		"meaning": "considerable"
+	},
+	{
+		"word": "工厂",
+		"meaning": "factory"
+	},
+	{
+		"word": "打工",
+		"meaning": "labor work"
+	},
+	{
+		"word": "流水线",
+		"meaning": "assembly line"
+	},
+	{
+		"word": "枯燥无味",
+		"meaning": "boring"
+	},
+	{
+		"word": "枯燥",
+		"meaning": "boring"
+	},
+	{
+		"word": "职业",
+		"meaning": "job; occupation"
+	},
+	{
+		"word": "心态",
+		"meaning": "attitude; mindset"
+	},
+	{
+		"word": "那必须的",
+		"meaning": "must (meaning having no choice)"
+	},
+	{
+		"word": "母亲",
+		"meaning": "mother"
+	},
+	{
+		"word": "闲不住",
+		"meaning": "to kill some time (cannot be idle)"
+	},
+	{
+		"word": "家族",
+		"meaning": "family; clan"
+	},
+	{
+		"word": "年代",
+		"meaning": "period of time"
+	},
+	{
+		"word": "姐妹",
+		"meaning": "sisters"
+	},
+	{
+		"word": "步入",
+		"meaning": "walk towards"
+	},
+	{
+		"word": "不如",
+		"meaning": "less than"
+	},
+	{
+		"word": "小伙子",
+		"meaning": "young man"
+	},
+	{
+		"word": "陆陆续续",
+		"meaning": "one after another; continuously"
+	},
+	{
+		"word": "陆续",
+		"meaning": "one after another; continuously"
+	},
+	{
+		"word": "凌晨",
+		"meaning": "midnight"
+	},
+	{
+		"word": "白天",
+		"meaning": "daytime"
+	},
+	{
+		"word": "加工",
+		"meaning": "to process"
+	},
+	{
+		"word": "购置",
+		"meaning": "to purchase"
+	},
+	{
+		"word": "体育馆",
+		"meaning": "sports arena"
+	},
+	{
+		"word": "博物馆",
+		"meaning": "museum"
+	},
+	{
+		"word": "宾馆",
+		"meaning": "hotel"
+	},
+	{
+		"word": "校园",
+		"meaning": "campus"
+	},
+	{
+		"word": "体育设施",
+		"meaning": "sports facility"
+	},
+	{
+		"word": "设施",
+		"meaning": "facility"
+	},
+	{
+		"word": "健身房",
+		"meaning": "gym"
+	},
+	{
+		"word": "学生证",
+		"meaning": "students certificate"
+	},
+	{
+		"word": "只要...就行",
+		"meaning": "as long as..., it's ok"
+	},
+	{
+		"word": "费用",
+		"meaning": "fee"
+	},
+	{
+		"word": "福利",
+		"meaning": "benefits"
+	},
+	{
+		"word": "公司福利",
+		"meaning": "company benefits"
+	},
+	{
+		"word": "补贴",
+		"meaning": "allowance"
+	},
+	{
+		"word": "午饭补贴",
+		"meaning": "food allowance"
+	},
+	{
+		"word": "交通补贴",
+		"meaning": "transportation allowance"
+	},
+	{
+		"word": "住房补贴",
+		"meaning": "housing allowance"
+	},
+	{
+		"word": "剩菜",
+		"meaning": "leftover food"
+	},
+	{
+		"word": "拉面",
+		"meaning": "pulled noodles"
+	},
+	{
+		"word": "刀削面",
+		"meaning": "cut noodles"
+	},
+	{
+		"word": "力量",
+		"meaning": "strength"
+	},
+	{
+		"word": "重量",
+		"meaning": "weight"
+	},
+	{
+		"word": "瑜伽",
+		"meaning": "yoga"
+	},
+	{
+		"word": "跑步机",
+		"meaning": "running machine"
+	},
+	{
+		"word": "操场",
+		"meaning": "sports field"
+	},
+	{
+		"word": "运动会",
+		"meaning": "sports event"
+	},
+	{
+		"word": "证书",
+		"meaning": "certificate"
+	},
+	{
+		"word": "奖牌",
+		"meaning": "medal"
+	},
+	{
+		"word": "奖杯",
+		"meaning": "cup; trophy"
+	},
+	{
+		"word": "选择",
+		"meaning": "choice; to choose"
+	},
+	{
+		"word": "白跑",
+		"meaning": "to come for nothing"
+	},
+	{
+		"word": "一趟",
+		"meaning": "one time"
+	},
+	{
+		"word": "百忙",
+		"meaning": "to be busy for nothing"
+	},
+	{
+		"word": "白说",
+		"meaning": "to talk for nothing"
+	},
+	{
+		"word": "此外",
+		"meaning": "in addition"
+	},
+	{
+		"word": "另外",
+		"meaning": "in addition; moreover"
+	},
+	{
+		"word": "大巴",
+		"meaning": "bus (not public)"
+	},
+	{
+		"word": "海鲜",
+		"meaning": "seafood"
+	},
+	{
+		"word": "浮潜",
+		"meaning": "snorkeling"
+	},
+	{
+		"word": "称呼",
+		"meaning": "call; form of address"
+	},
+	{
+		"word": "叔叔",
+		"meaning": "uncle"
+	},
+	{
+		"word": "丢脸",
+		"meaning": "disgraceful; lost face"
+	},
+	{
+		"word": "出错",
+		"meaning": "make a mistake"
+	},
+	{
+		"word": "主持人",
+		"meaning": "host"
+	},
+	{
+		"word": "不见得",
+		"meaning": "not likely; may not"
+	},
+	{
+		"word": "官职",
+		"meaning": "official position; government position"
+	},
+	{
+		"word": "难怪",
+		"meaning": "no wonder"
+	},
+	{
+		"word": "才怪",
+		"meaning": "it's strange if"
+	},
+	{
+		"word": "奇怪",
+		"meaning": "strange"
+	},
+	{
+		"word": "厂长",
+		"meaning": "factory directory; factory manager"
+	},
+	{
+		"word": "打交道",
+		"meaning": "have dealings with"
+	},
+	{
+		"word": "恐怕",
+		"meaning": "afraid"
+	},
+	{
+		"word": "一声",
+		"meaning": "sound; measure word for sounc"
+	},
+	{
+		"word": "这可不好说",
+		"meaning": "hard to say"
+	},
+	{
+		"word": "有知识的人",
+		"meaning": "knowledgeable people"
+	},
+	{
+		"word": "知识",
+		"meaning": "knowledgeable"
+	},
+	{
+		"word": "副厂长",
+		"meaning": "deputy director"
+	},
+	{
+		"word": "叫法",
+		"meaning": "way to call"
+	},
+	{
+		"word": "集合",
+		"meaning": "assemble; gather"
+	},
+	{
+		"word": "入乡随俗",
+		"meaning": "When in Rome, do as the Romans do"
+	},
+	{
+		"word": "遵守",
+		"meaning": "observe, abide by"
+	},
+	{
+		"word": "风俗",
+		"meaning": "tradition; custom"
+	},
+	{
+		"word": "吸引",
+		"meaning": "attract"
+	},
+	{
+		"word": "字幕",
+		"meaning": "subtitle; caption"
+	},
+	{
+		"word": "熬夜",
+		"meaning": "stay up late"
+	},
+	{
+		"word": "你怎么才来啊？",
+		"meaning": "Why you come so late?"
+	},
+	{
+		"word": "室友",
+		"meaning": "roommate"
+	},
+	{
+		"word": "舍友",
+		"meaning": "roommate (students, in dormitory)"
+	},
+	{
+		"word": "展览",
+		"meaning": "exhibition"
+	},
+	{
+		"word": "只是",
+		"meaning": "just; only"
+	},
+	{
+		"word": "比如",
+		"meaning": "because"
+	},
+	{
+		"word": "规定的保准",
+		"meaning": "required standard"
+	},
+	{
+		"word": "行为",
+		"meaning": "behavior"
+	},
+	{
+		"word": "吸烟",
+		"meaning": "smoking"
+	},
+	{
+		"word": "错误",
+		"meaning": "mistake"
+	},
+	{
+		"word": "打扮",
+		"meaning": "dress up"
+	},
+	{
+		"word": "不过",
+		"meaning": "however (soft \"but\")"
+	},
+	{
+		"word": "博士",
+		"meaning": "doctor (academic degree)"
+	},
+	{
+		"word": "硕士",
+		"meaning": "master (academic degree)"
+	},
+	{
+		"word": "玻璃",
+		"meaning": "glass"
+	},
+	{
+		"word": "部分",
+		"meaning": "part of"
+	},
+	{
+		"word": "删除",
+		"meaning": "delete; remove"
+	},
+	{
+		"word": "参观",
+		"meaning": "visit (for learning)"
+	},
+	{
+		"word": "手套",
+		"meaning": "gloves"
+	},
+	{
+		"word": "耳环",
+		"meaning": "earrings"
+	},
+	{
+		"word": "项链",
+		"meaning": "necklace"
+	},
+	{
+		"word": "开药",
+		"meaning": "prescribe medicine"
+	},
+	{
+		"word": "导出",
+		"meaning": "export"
 	}
 ]

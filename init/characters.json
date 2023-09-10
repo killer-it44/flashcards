@@ -3753,7 +3753,7 @@
 	{
 		"character": "台",
 		"pinyin": "tái",
-		"meaning": "platform; unit; term of address",
+		"meaning": "platform; unit; term of address; container",
 		"radical": "口 30.2",
 		"strokes": 5,
 		"hskLevel": 4,
@@ -4226,7 +4226,7 @@
 	{
 		"character": "压",
 		"pinyin": "yā",
-		"meaning": "press; oppress; crush; pressure",
+		"meaning": "press; oppress; crush; pressure; to press",
 		"radical": "厂 27.4",
 		"strokes": 6,
 		"hskLevel": 4,
@@ -4303,7 +4303,7 @@
 	{
 		"character": "而",
 		"pinyin": "ér",
-		"meaning": "and; and then; and yet; but",
+		"meaning": "and; and then; and yet; but; however",
 		"radical": "而 126.0",
 		"strokes": 6,
 		"hskLevel": 3,
@@ -5348,7 +5348,7 @@
 	{
 		"character": "杀",
 		"pinyin": "shā",
-		"meaning": "kill, slaughter, murder; hurt",
+		"meaning": "kill, slaughter, murder; hurt; to kill",
 		"radical": "木 75.2",
 		"strokes": 6,
 		"hskLevel": 5,
@@ -6041,7 +6041,7 @@
 	{
 		"character": "讲",
 		"pinyin": "jiǎng",
-		"meaning": "explain; discuss; talk",
+		"meaning": "explain; discuss; talk; speak",
 		"radical": "言 149.4",
 		"strokes": 6,
 		"hskLevel": 3,
@@ -6833,7 +6833,7 @@
 	{
 		"character": "批",
 		"pinyin": "pī",
-		"meaning": "comment, criticize; wholesale",
+		"meaning": "comment, criticize; wholesale; batch; charge",
 		"radical": "手 64.4",
 		"strokes": 7,
 		"hskLevel": 4,
@@ -7196,7 +7196,7 @@
 	{
 		"character": "把",
 		"pinyin": "bǎ",
-		"meaning": "hold, take; guard; regard as",
+		"meaning": "hold, take; guard; regard as; Counting word for things with a handle",
 		"radical": "手 64.4",
 		"strokes": 7,
 		"hskLevel": 3,
@@ -8087,7 +8087,7 @@
 	{
 		"character": "串",
 		"pinyin": "chuàn",
-		"meaning": "string; relatives; conspire",
+		"meaning": "string; relatives; conspire; measure word for something on a stick",
 		"radical": "丨 2.6",
 		"strokes": 7,
 		"hskLevel": 6,
@@ -10386,7 +10386,7 @@
 	{
 		"character": "环",
 		"pinyin": "huán",
-		"meaning": "jade ring or bracelet; ring",
+		"meaning": "jade ring or bracelet; ring; circle",
 		"radical": "玉 96.4",
 		"strokes": 8,
 		"hskLevel": 3,
@@ -10408,7 +10408,7 @@
 	{
 		"character": "青",
 		"pinyin": "qīng",
-		"meaning": "blue, green, black; young",
+		"meaning": "blue, green, black; young; not ripe yet",
 		"radical": "青 174.0",
 		"strokes": 8,
 		"hskLevel": 5,
@@ -12410,7 +12410,7 @@
 	{
 		"character": "刮",
 		"pinyin": "guā",
-		"meaning": "shave, pare off, scrape",
+		"meaning": "shave, pare off, scrape; to blow; to scrape, to shave",
 		"radical": "刀 18.6",
 		"strokes": 8,
 		"hskLevel": 3,
@@ -16150,7 +16150,7 @@
 	{
 		"character": "点",
 		"pinyin": "diǎn",
-		"meaning": "dot, speck, spot; point, degree",
+		"meaning": "dot, speck, spot; point, degree; click",
 		"radical": "火 86.5",
 		"strokes": 9,
 		"hskLevel": 1,
@@ -18185,7 +18185,7 @@
 	{
 		"character": "总",
 		"pinyin": "zǒng",
-		"meaning": "collect; overall, altogether",
+		"meaning": "collect; overall, altogether; general",
 		"radical": "八 12.7",
 		"strokes": 9,
 		"hskLevel": 3,
@@ -19758,7 +19758,7 @@
 	{
 		"character": "捐",
 		"pinyin": "juān",
-		"meaning": "contribute; give up, renounce",
+		"meaning": "contribute; give up, renounce; donate",
 		"radical": "手 64.7",
 		"strokes": 10,
 		"hskLevel": 5,
@@ -21419,7 +21419,7 @@
 	{
 		"character": "称",
 		"pinyin": "chēng",
-		"meaning": "call; name, brand; address; say",
+		"meaning": "call; name, brand; address; say; to weigh",
 		"radical": "禾 115.5",
 		"strokes": 10,
 		"hskLevel": 5,
@@ -25665,7 +25665,7 @@
 	{
 		"character": "偏",
 		"pinyin": "piān",
-		"meaning": "inclined one side; slanting",
+		"meaning": "inclined one side; slanting; inclined to; tend towards",
 		"radical": "人 9.9",
 		"strokes": 11,
 		"hskLevel": 6,
@@ -27612,7 +27612,7 @@
 	{
 		"character": "搭",
 		"pinyin": "dā",
-		"meaning": "join together, attach to; add to",
+		"meaning": "join together, attach to; add to; take",
 		"radical": "手 64.10",
 		"strokes": 12,
 		"hskLevel": 6,
@@ -29042,7 +29042,7 @@
 	{
 		"character": "喂",
 		"pinyin": "wèi",
-		"meaning": "interjection to call attention",
+		"meaning": "interjection to call attention; feed",
 		"radical": "口 30.9",
 		"strokes": 12,
 		"hskLevel": 1,
@@ -29977,7 +29977,7 @@
 	{
 		"character": "装",
 		"pinyin": "zhuāng",
-		"meaning": "dress, clothes, attire; fill",
+		"meaning": "dress, clothes, attire; fill; pack, install",
 		"radical": "衣 145.6",
 		"strokes": 12,
 		"hskLevel": 5,
@@ -29988,7 +29988,7 @@
 	{
 		"character": "蛮",
 		"pinyin": "mán",
-		"meaning": "barbarians; barbarous, savage",
+		"meaning": "barbarians; barbarous, savage; quite",
 		"radical": "虫 142.6",
 		"strokes": 12,
 		"hskLevel": 6,
@@ -30824,7 +30824,7 @@
 	{
 		"character": "粥",
 		"pinyin": "zhōu",
-		"meaning": "rice gruel, congee",
+		"meaning": "rice gruel, congee; porridge",
 		"radical": "米 119.6",
 		"strokes": 12,
 		"hskLevel": 6,
@@ -35213,7 +35213,7 @@
 	{
 		"character": "撞",
 		"pinyin": "zhuàng",
-		"meaning": "knock against, bump into, collide",
+		"meaning": "knock against, bump into, collide; hit",
 		"radical": "手 64.12",
 		"strokes": 15,
 		"hskLevel": 5,
@@ -36049,7 +36049,7 @@
 	{
 		"character": "熟",
 		"pinyin": "shú",
-		"meaning": "well-cooked; ripe; familiar with",
+		"meaning": "well-cooked; ripe; familiar with; ready; finished",
 		"radical": "火 86.11",
 		"strokes": 15,
 		"hskLevel": 4,
@@ -37699,7 +37699,7 @@
 	{
 		"character": "糟",
 		"pinyin": "zāo",
-		"meaning": "sediment, dregs; pickle",
+		"meaning": "sediment, dregs; pickle; bad",
 		"radical": "米 119.11",
 		"strokes": 17,
 		"hskLevel": 5,
@@ -37886,7 +37886,7 @@
 	{
 		"character": "翻",
 		"pinyin": "fān",
-		"meaning": "flip over, upset, capsize",
+		"meaning": "flip over, upset, capsize; turn",
 		"radical": "羽 124.12",
 		"strokes": 18,
 		"hskLevel": 4,
@@ -38040,7 +38040,7 @@
 	{
 		"character": "蹭",
 		"pinyin": "cèng",
-		"meaning": "to shuffle, procrastinate, dilly-dally",
+		"meaning": "to shuffle, procrastinate, dilly-dally; join (for free)",
 		"radical": "足 157.12",
 		"strokes": 19,
 		"hskLevel": 0,
