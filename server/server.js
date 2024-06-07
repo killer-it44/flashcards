@@ -7,8 +7,9 @@ export default function Server(controller) {
     app.use('/', express.static('web-content'))
     
     app.post('/api/submission', express.json(), async (req, res) => {
+        // TODO weird and inconsistent API design (the GET APIs work differently)
         if (req.body.character) {
-            await controller.submit(req.body)
+            await controller.submitCharacter(req.body)
         } else {
             await controller.submitWord(req.body)
         }
@@ -16,11 +17,11 @@ export default function Server(controller) {
     })
 
     app.get('/api/char/:char', (req, res) => {
-        res.json(controller.get(req.params.char))
+        res.json(controller.getCharacter(req.params.char))
     })
 
     app.get('/api/char', (req, res) => {
-        res.json(controller.getNext())
+        res.json(controller.getNextCharacter())
     })
 
     app.get('/api/word/:word', (req, res) => {

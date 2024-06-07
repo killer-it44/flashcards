@@ -14,12 +14,12 @@ describe('Winston Logger', () => {
     })
 
     it('will write warnings to stdout and format the message', () => {
-        logger.warn('message %s', 'test')        
+        logger.warn('message %s', 'test')
         expect(stdOutSpy).toHaveBeenCalledOnceWith('warn: message test\n')
     })
 
     it('will write errors to stderr and format the message', () => {
-        logger.error('message %s', 'test')        
+        logger.error('message %s', 'test')
         expect(stdOutSpy).toHaveBeenCalledOnceWith('error: message test\n')
     })
 })

@@ -9,18 +9,17 @@
 // 3. Adjust the server accordingly to adhere to the new data structures / APIs
 // 4. IMPORTANT: committing and merging your code, be EXTRA sure that this will not caus trouble in production during update (the old version might run in parallel!)
 
-import fs from 'fs'
+import fs from 'fs/promises'
 import FakeRepository from './fake-repository.js'
 import FsRepository from '../fs-repository.js'
-import Logger from '../winston-logger.js'
 
 describe('Repository API and data structure contract', () => {
-    beforeEach(() => fs.rmSync('spec/tmp', { recursive: true, force: true }))
-    beforeAll(() => global.logger = spyOnAllFunctions(new Logger()))
+    beforeEach(() => fs.rm('spec/tmp', { recursive: true, force: true }))
+    afterAll(() => fs.rm('spec/tmp', { recursive: true, force: true }))
 
     it('assures that the repo API and data structure is in sync with the fake api and data used for testing', () => {
         const fakeRepo = new FakeRepository()
-        const fsRepo = new FsRepository('spec/tmp')
+        const fsRepo = new FsRepository('server/spec/tmp')
 
         expect(fakeRepo.radicals.length).toBeGreaterThan(0)
         expect(fakeRepo.characters.length).toBeGreaterThan(0)

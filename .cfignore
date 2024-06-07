@@ -1,7 +1,6 @@
-node_modules
-data
 .DS_Store
-*.tmp
-spec
-tmp
 coverage
+data
+node_modules
+server/init
+server/spec

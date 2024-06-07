@@ -1,7 +1,7 @@
 [
 	{
 		"number": 1,
-		"radical": "一",
+		"hanzi": "一",
 		"simplified": "",
 		"pinyin": "yī",
 		"meaning": "one",
@@ -10,7 +10,7 @@
 	},
 	{
 		"number": 2,
-		"radical": "丨",
+		"hanzi": "丨",
 		"simplified": "",
 		"pinyin": "gǔn",
 		"meaning": "line",
@@ -19,7 +19,7 @@
 	},
 	{
 		"number": 3,
-		"radical": "丶",
+		"hanzi": "丶",
 		"simplified": "",
 		"pinyin": "zhǔ",
 		"meaning": "dot",
@@ -28,7 +28,7 @@
 	},
 	{
 		"number": 4,
-		"radical": "丿",
+		"hanzi": "丿",
 		"simplified": "",
 		"pinyin": "piě",
 		"meaning": "slash",
@@ -37,7 +37,7 @@
 	},
 	{
 		"number": 5,
-		"radical": "乙 (⺄, 乚)",
+		"hanzi": "乙 (⺄, 乚)",
 		"simplified": "",
 		"pinyin": "yǐ",
 		"meaning": "second",
@@ -46,7 +46,7 @@
 	},
 	{
 		"number": 6,
-		"radical": "亅",
+		"hanzi": "亅",
 		"simplified": "",
 		"pinyin": "jué",
 		"meaning": "hook",
@@ -55,7 +55,7 @@
 	},
 	{
 		"number": 7,
-		"radical": "二",
+		"hanzi": "二",
 		"simplified": "",
 		"pinyin": "èr",
 		"meaning": "two",
@@ -64,7 +64,7 @@
 	},
 	{
 		"number": 8,
-		"radical": "亠",
+		"hanzi": "亠",
 		"simplified": "",
 		"pinyin": "tóu",
 		"meaning": "lid",
@@ -73,7 +73,7 @@
 	},
 	{
 		"number": 9,
-		"radical": "人 (亻, 𠆢)",
+		"hanzi": "人 (亻, 𠆢)",
 		"simplified": "",
 		"pinyin": "rén",
 		"meaning": "man",
@@ -82,7 +82,7 @@
 	},
 	{
 		"number": 10,
-		"radical": "儿",
+		"hanzi": "儿",
 		"simplified": "",
 		"pinyin": "ér",
 		"meaning": "son, legs",
@@ -91,7 +91,7 @@
 	},
 	{
 		"number": 11,
-		"radical": "入",
+		"hanzi": "入",
 		"simplified": "",
 		"pinyin": "rù",
 		"meaning": "enter",
@@ -100,7 +100,7 @@
 	},
 	{
 		"number": 12,
-		"radical": "八",
+		"hanzi": "八",
 		"simplified": "",
 		"pinyin": "bā",
 		"meaning": "eight",
@@ -109,7 +109,7 @@
 	},
 	{
 		"number": 13,
-		"radical": "冂",
+		"hanzi": "冂",
 		"simplified": "",
 		"pinyin": "jiōng",
 		"meaning": "down box",
@@ -118,7 +118,7 @@
 	},
 	{
 		"number": 14,
-		"radical": "冖",
+		"hanzi": "冖",
 		"simplified": "",
 		"pinyin": "mì",
 		"meaning": "cover",
@@ -127,7 +127,7 @@
 	},
 	{
 		"number": 15,
-		"radical": "冫",
+		"hanzi": "冫",
 		"simplified": "",
 		"pinyin": "bīng",
 		"meaning": "ice",
@@ -136,7 +136,7 @@
 	},
 	{
 		"number": 16,
-		"radical": "几",
+		"hanzi": "几",
 		"simplified": "",
 		"pinyin": "jī",
 		"meaning": "table",
@@ -145,7 +145,7 @@
 	},
 	{
 		"number": 17,
-		"radical": "凵",
+		"hanzi": "凵",
 		"simplified": "",
 		"pinyin": "qū",
 		"meaning": "open box",
@@ -154,7 +154,7 @@
 	},
 	{
 		"number": 18,
-		"radical": "刀 (刂)",
+		"hanzi": "刀 (刂)",
 		"simplified": "",
 		"pinyin": "dāo",
 		"meaning": "knife",
@@ -163,7 +163,7 @@
 	},
 	{
 		"number": 19,
-		"radical": "力",
+		"hanzi": "力",
 		"simplified": "",
 		"pinyin": "lì",
 		"meaning": "power",
@@ -172,7 +172,7 @@
 	},
 	{
 		"number": 20,
-		"radical": "勹",
+		"hanzi": "勹",
 		"simplified": "",
 		"pinyin": "bāo",
 		"meaning": "wrap",
@@ -181,7 +181,7 @@
 	},
 	{
 		"number": 21,
-		"radical": "匕",
+		"hanzi": "匕",
 		"simplified": "",
 		"pinyin": "bǐ",
 		"meaning": "spoon",
@@ -190,7 +190,7 @@
 	},
 	{
 		"number": 22,
-		"radical": "匚",
+		"hanzi": "匚",
 		"simplified": "",
 		"pinyin": "fāng",
 		"meaning": "right open box",
@@ -199,7 +199,7 @@
 	},
 	{
 		"number": 23,
-		"radical": "匸",
+		"hanzi": "匸",
 		"simplified": "",
 		"pinyin": "xǐ/xì",
 		"meaning": "hiding enclosure",
@@ -208,7 +208,7 @@
 	},
 	{
 		"number": 24,
-		"radical": "十",
+		"hanzi": "十",
 		"simplified": "",
 		"pinyin": "shí",
 		"meaning": "ten",
@@ -217,7 +217,7 @@
 	},
 	{
 		"number": 25,
-		"radical": "卜",
+		"hanzi": "卜",
 		"simplified": "",
 		"pinyin": "bǔ",
 		"meaning": "divination",
@@ -226,7 +226,7 @@
 	},
 	{
 		"number": 26,
-		"radical": "卩 (㔾)",
+		"hanzi": "卩 (㔾)",
 		"simplified": "",
 		"pinyin": "jié",
 		"meaning": "seal",
@@ -235,7 +235,7 @@
 	},
 	{
 		"number": 27,
-		"radical": "厂",
+		"hanzi": "厂",
 		"simplified": "",
 		"pinyin": "hàn",
 		"meaning": "cliff",
@@ -244,7 +244,7 @@
 	},
 	{
 		"number": 28,
-		"radical": "厶",
+		"hanzi": "厶",
 		"simplified": "",
 		"pinyin": "sī",
 		"meaning": "private",
@@ -253,7 +253,7 @@
 	},
 	{
 		"number": 29,
-		"radical": "又",
+		"hanzi": "又",
 		"simplified": "",
 		"pinyin": "yòu",
 		"meaning": "again",
@@ -262,7 +262,7 @@
 	},
 	{
 		"number": 30,
-		"radical": "口",
+		"hanzi": "口",
 		"simplified": "",
 		"pinyin": "kǒu",
 		"meaning": "mouth",
@@ -271,7 +271,7 @@
 	},
 	{
 		"number": 31,
-		"radical": "囗",
+		"hanzi": "囗",
 		"simplified": "",
 		"pinyin": "wéi",
 		"meaning": "enclosure",
@@ -280,7 +280,7 @@
 	},
 	{
 		"number": 32,
-		"radical": "土",
+		"hanzi": "土",
 		"simplified": "",
 		"pinyin": "tǔ",
 		"meaning": "earth",
@@ -289,7 +289,7 @@
 	},
 	{
 		"number": 33,
-		"radical": "士",
+		"hanzi": "士",
 		"simplified": "",
 		"pinyin": "shì",
 		"meaning": "scholar",
@@ -298,7 +298,7 @@
 	},
 	{
 		"number": 34,
-		"radical": "夂",
+		"hanzi": "夂",
 		"simplified": "",
 		"pinyin": "zhǐ",
 		"meaning": "go",
@@ -307,7 +307,7 @@
 	},
 	{
 		"number": 35,
-		"radical": "夊",
+		"hanzi": "夊",
 		"simplified": "",
 		"pinyin": "suī",
 		"meaning": "go slowly",
@@ -316,7 +316,7 @@
 	},
 	{
 		"number": 36,
-		"radical": "夕",
+		"hanzi": "夕",
 		"simplified": "",
 		"pinyin": "xī",
 		"meaning": "evening",
@@ -325,7 +325,7 @@
 	},
 	{
 		"number": 37,
-		"radical": "大",
+		"hanzi": "大",
 		"simplified": "",
 		"pinyin": "dà",
 		"meaning": "big",
@@ -334,7 +334,7 @@
 	},
 	{
 		"number": 38,
-		"radical": "女",
+		"hanzi": "女",
 		"simplified": "",
 		"pinyin": "nǚ",
 		"meaning": "woman",
@@ -343,7 +343,7 @@
 	},
 	{
 		"number": 39,
-		"radical": "子",
+		"hanzi": "子",
 		"simplified": "",
 		"pinyin": "zǐ",
 		"meaning": "child",
@@ -352,7 +352,7 @@
 	},
 	{
 		"number": 40,
-		"radical": "宀",
+		"hanzi": "宀",
 		"simplified": "",
 		"pinyin": "mián",
 		"meaning": "roof",
@@ -361,7 +361,7 @@
 	},
 	{
 		"number": 41,
-		"radical": "寸",
+		"hanzi": "寸",
 		"simplified": "",
 		"pinyin": "cùn",
 		"meaning": "inch",
@@ -370,7 +370,7 @@
 	},
 	{
 		"number": 42,
-		"radical": "小 (⺌, ⺍)",
+		"hanzi": "小 (⺌, ⺍)",
 		"simplified": "",
 		"pinyin": "xiǎo",
 		"meaning": "small",
@@ -379,7 +379,7 @@
 	},
 	{
 		"number": 43,
-		"radical": "尢 (尣)",
+		"hanzi": "尢 (尣)",
 		"simplified": "",
 		"pinyin": "wāng",
 		"meaning": "lame",
@@ -388,7 +388,7 @@
 	},
 	{
 		"number": 44,
-		"radical": "尸",
+		"hanzi": "尸",
 		"simplified": "",
 		"pinyin": "shī",
 		"meaning": "corpse",
@@ -397,7 +397,7 @@
 	},
 	{
 		"number": 45,
-		"radical": "屮",
+		"hanzi": "屮",
 		"simplified": "",
 		"pinyin": "chè",
 		"meaning": "sprout",
@@ -406,7 +406,7 @@
 	},
 	{
 		"number": 46,
-		"radical": "山",
+		"hanzi": "山",
 		"simplified": "",
 		"pinyin": "shān",
 		"meaning": "mountain",
@@ -415,7 +415,7 @@
 	},
 	{
 		"number": 47,
-		"radical": "巛 (川, 巜)",
+		"hanzi": "巛 (川, 巜)",
 		"simplified": "",
 		"pinyin": "chuān",
 		"meaning": "river",
@@ -424,7 +424,7 @@
 	},
 	{
 		"number": 48,
-		"radical": "工",
+		"hanzi": "工",
 		"simplified": "",
 		"pinyin": "gōng",
 		"meaning": "work",
@@ -433,7 +433,7 @@
 	},
 	{
 		"number": 49,
-		"radical": "己",
+		"hanzi": "己",
 		"simplified": "",
 		"pinyin": "jǐ",
 		"meaning": "oneself",
@@ -442,7 +442,7 @@
 	},
 	{
 		"number": 50,
-		"radical": "巾",
+		"hanzi": "巾",
 		"simplified": "",
 		"pinyin": "jīn",
 		"meaning": "turban",
@@ -451,7 +451,7 @@
 	},
 	{
 		"number": 51,
-		"radical": "干",
+		"hanzi": "干",
 		"simplified": "",
 		"pinyin": "gān",
 		"meaning": "dry",
@@ -460,7 +460,7 @@
 	},
 	{
 		"number": 52,
-		"radical": "幺",
+		"hanzi": "幺",
 		"simplified": "",
 		"pinyin": "yāo",
 		"meaning": "short thread",
@@ -469,7 +469,7 @@
 	},
 	{
 		"number": 53,
-		"radical": "广",
+		"hanzi": "广",
 		"simplified": "",
 		"pinyin": "guǎng",
 		"meaning": "dotted cliff",
@@ -478,7 +478,7 @@
 	},
 	{
 		"number": 54,
-		"radical": "廴",
+		"hanzi": "廴",
 		"simplified": "",
 		"pinyin": "yǐn",
 		"meaning": "long stride",
@@ -487,7 +487,7 @@
 	},
 	{
 		"number": 55,
-		"radical": "廾",
+		"hanzi": "廾",
 		"simplified": "",
 		"pinyin": "gǒng",
 		"meaning": "two hands",
@@ -496,7 +496,7 @@
 	},
 	{
 		"number": 56,
-		"radical": "弋",
+		"hanzi": "弋",
 		"simplified": "",
 		"pinyin": "yì",
 		"meaning": "shoot",
@@ -505,7 +505,7 @@
 	},
 	{
 		"number": 57,
-		"radical": "弓",
+		"hanzi": "弓",
 		"simplified": "",
 		"pinyin": "gōng",
 		"meaning": "bow",
@@ -514,7 +514,7 @@
 	},
 	{
 		"number": 58,
-		"radical": "彐 (彑)",
+		"hanzi": "彐 (彑)",
 		"simplified": "",
 		"pinyin": "jì",
 		"meaning": "snout",
@@ -523,7 +523,7 @@
 	},
 	{
 		"number": 59,
-		"radical": "彡",
+		"hanzi": "彡",
 		"simplified": "",
 		"pinyin": "shān",
 		"meaning": "bristle",
@@ -532,7 +532,7 @@
 	},
 	{
 		"number": 60,
-		"radical": "彳",
+		"hanzi": "彳",
 		"simplified": "",
 		"pinyin": "chì",
 		"meaning": "step",
@@ -541,7 +541,7 @@
 	},
 	{
 		"number": 61,
-		"radical": "心 (忄,⺗)",
+		"hanzi": "心 (忄,⺗)",
 		"simplified": "",
 		"pinyin": "xīn",
 		"meaning": "heart",
@@ -550,7 +550,7 @@
 	},
 	{
 		"number": 62,
-		"radical": "戈",
+		"hanzi": "戈",
 		"simplified": "",
 		"pinyin": "gē",
 		"meaning": "halberd",
@@ -559,7 +559,7 @@
 	},
 	{
 		"number": 63,
-		"radical": "戶 (户,戸)",
+		"hanzi": "戶 (户,戸)",
 		"simplified": "",
 		"pinyin": "hù",
 		"meaning": "door",
@@ -568,7 +568,7 @@
 	},
 	{
 		"number": 64,
-		"radical": "手 (扌,龵)",
+		"hanzi": "手 (扌,龵)",
 		"simplified": "",
 		"pinyin": "shǒu",
 		"meaning": "hand",
@@ -577,7 +577,7 @@
 	},
 	{
 		"number": 65,
-		"radical": "支",
+		"hanzi": "支",
 		"simplified": "",
 		"pinyin": "zhī",
 		"meaning": "branch",
@@ -586,7 +586,7 @@
 	},
 	{
 		"number": 66,
-		"radical": "攴 (攵)",
+		"hanzi": "攴 (攵)",
 		"simplified": "",
 		"pinyin": "pū",
 		"meaning": "rap",
@@ -595,7 +595,7 @@
 	},
 	{
 		"number": 67,
-		"radical": "文",
+		"hanzi": "文",
 		"simplified": "",
 		"pinyin": "wén",
 		"meaning": "script",
@@ -604,7 +604,7 @@
 	},
 	{
 		"number": 68,
-		"radical": "斗",
+		"hanzi": "斗",
 		"simplified": "",
 		"pinyin": "dǒu",
 		"meaning": "dipper",
@@ -613,7 +613,7 @@
 	},
 	{
 		"number": 69,
-		"radical": "斤",
+		"hanzi": "斤",
 		"simplified": "",
 		"pinyin": "jīn",
 		"meaning": "axe",
@@ -622,7 +622,7 @@
 	},
 	{
 		"number": 70,
-		"radical": "方",
+		"hanzi": "方",
 		"simplified": "",
 		"pinyin": "fāng",
 		"meaning": "square",
@@ -631,7 +631,7 @@
 	},
 	{
 		"number": 71,
-		"radical": "无 (旡)",
+		"hanzi": "无 (旡)",
 		"simplified": "",
 		"pinyin": "wú",
 		"meaning": "not",
@@ -640,7 +640,7 @@
 	},
 	{
 		"number": 72,
-		"radical": "日",
+		"hanzi": "日",
 		"simplified": "",
 		"pinyin": "rì",
 		"meaning": "sun",
@@ -649,7 +649,7 @@
 	},
 	{
 		"number": 73,
-		"radical": "曰",
+		"hanzi": "曰",
 		"simplified": "",
 		"pinyin": "yuē",
 		"meaning": "say",
@@ -658,7 +658,7 @@
 	},
 	{
 		"number": 74,
-		"radical": "月",
+		"hanzi": "月",
 		"simplified": "",
 		"pinyin": "yuè",
 		"meaning": "moon",
@@ -667,7 +667,7 @@
 	},
 	{
 		"number": 75,
-		"radical": "木",
+		"hanzi": "木",
 		"simplified": "",
 		"pinyin": "mù",
 		"meaning": "tree",
@@ -676,7 +676,7 @@
 	},
 	{
 		"number": 76,
-		"radical": "欠",
+		"hanzi": "欠",
 		"simplified": "",
 		"pinyin": "qiàn",
 		"meaning": "lack",
@@ -685,7 +685,7 @@
 	},
 	{
 		"number": 77,
-		"radical": "止",
+		"hanzi": "止",
 		"simplified": "",
 		"pinyin": "zhǐ",
 		"meaning": "stop",
@@ -694,7 +694,7 @@
 	},
 	{
 		"number": 78,
-		"radical": "歹 (歺)",
+		"hanzi": "歹 (歺)",
 		"simplified": "",
 		"pinyin": "dǎi",
 		"meaning": "death",
@@ -703,7 +703,7 @@
 	},
 	{
 		"number": 79,
-		"radical": "殳",
+		"hanzi": "殳",
 		"simplified": "",
 		"pinyin": "shū",
 		"meaning": "weapon",
@@ -712,7 +712,7 @@
 	},
 	{
 		"number": 80,
-		"radical": "毋 (母, ⺟)",
+		"hanzi": "毋 (母, ⺟)",
 		"simplified": "",
 		"pinyin": "wú",
 		"meaning": "do not",
@@ -721,7 +721,7 @@
 	},
 	{
 		"number": 81,
-		"radical": "比",
+		"hanzi": "比",
 		"simplified": "",
 		"pinyin": "bǐ",
 		"meaning": "compare",
@@ -730,7 +730,7 @@
 	},
 	{
 		"number": 82,
-		"radical": "毛",
+		"hanzi": "毛",
 		"simplified": "",
 		"pinyin": "máo",
 		"meaning": "fur",
@@ -739,7 +739,7 @@
 	},
 	{
 		"number": 83,
-		"radical": "氏",
+		"hanzi": "氏",
 		"simplified": "",
 		"pinyin": "shì",
 		"meaning": "clan",
@@ -748,7 +748,7 @@
 	},
 	{
 		"number": 84,
-		"radical": "气",
+		"hanzi": "气",
 		"simplified": "",
 		"pinyin": "qì",
 		"meaning": "steam",
@@ -757,7 +757,7 @@
 	},
 	{
 		"number": 85,
-		"radical": "水 (氺,氵)",
+		"hanzi": "水 (氺,氵)",
 		"simplified": "",
 		"pinyin": "shuǐ",
 		"meaning": "water",
@@ -766,7 +766,7 @@
 	},
 	{
 		"number": 86,
-		"radical": "火 (灬)",
+		"hanzi": "火 (灬)",
 		"simplified": "",
 		"pinyin": "huǒ",
 		"meaning": "fire",
@@ -775,7 +775,7 @@
 	},
 	{
 		"number": 87,
-		"radical": "爪 (爫)",
+		"hanzi": "爪 (爫)",
 		"simplified": "",
 		"pinyin": "zhǎo",
 		"meaning": "claw",
@@ -784,7 +784,7 @@
 	},
 	{
 		"number": 88,
-		"radical": "父",
+		"hanzi": "父",
 		"simplified": "",
 		"pinyin": "fù",
 		"meaning": "father",
@@ -793,7 +793,7 @@
 	},
 	{
 		"number": 89,
-		"radical": "爻",
+		"hanzi": "爻",
 		"simplified": "",
 		"pinyin": "yáo",
 		"meaning": "double x",
@@ -802,7 +802,7 @@
 	},
 	{
 		"number": 90,
-		"radical": "爿 (丬)",
+		"hanzi": "爿 (丬)",
 		"simplified": "",
 		"pinyin": "qiáng",
 		"meaning": "half tree trunk",
@@ -811,7 +811,7 @@
 	},
 	{
 		"number": 91,
-		"radical": "片",
+		"hanzi": "片",
 		"simplified": "",
 		"pinyin": "piàn",
 		"meaning": "slice",
@@ -820,7 +820,7 @@
 	},
 	{
 		"number": 92,
-		"radical": "牙",
+		"hanzi": "牙",
 		"simplified": "",
 		"pinyin": "yá",
 		"meaning": "fang",
@@ -829,7 +829,7 @@
 	},
 	{
 		"number": 93,
-		"radical": "牛 (牜, ⺧)",
+		"hanzi": "牛 (牜, ⺧)",
 		"simplified": "",
 		"pinyin": "niú",
 		"meaning": "cow",
@@ -838,7 +838,7 @@
 	},
 	{
 		"number": 94,
-		"radical": "犬 (犭)",
+		"hanzi": "犬 (犭)",
 		"simplified": "",
 		"pinyin": "quǎn",
 		"meaning": "dog",
@@ -847,7 +847,7 @@
 	},
 	{
 		"number": 95,
-		"radical": "玄",
+		"hanzi": "玄",
 		"simplified": "",
 		"pinyin": "xuán",
 		"meaning": "profound",
@@ -856,7 +856,7 @@
 	},
 	{
 		"number": 96,
-		"radical": "玉 (玊, 王, ⺩)",
+		"hanzi": "玉 (玊, 王, ⺩)",
 		"simplified": "",
 		"pinyin": "yù",
 		"meaning": "jade",
@@ -865,7 +865,7 @@
 	},
 	{
 		"number": 97,
-		"radical": "瓜",
+		"hanzi": "瓜",
 		"simplified": "",
 		"pinyin": "guā",
 		"meaning": "melon",
@@ -874,7 +874,7 @@
 	},
 	{
 		"number": 98,
-		"radical": "瓦",
+		"hanzi": "瓦",
 		"simplified": "",
 		"pinyin": "wǎ",
 		"meaning": "tile",
@@ -883,7 +883,7 @@
 	},
 	{
 		"number": 99,
-		"radical": "甘",
+		"hanzi": "甘",
 		"simplified": "",
 		"pinyin": "gān",
 		"meaning": "sweet",
@@ -892,7 +892,7 @@
 	},
 	{
 		"number": 100,
-		"radical": "生",
+		"hanzi": "生",
 		"simplified": "",
 		"pinyin": "shēng",
 		"meaning": "life",
@@ -901,7 +901,7 @@
 	},
 	{
 		"number": 101,
-		"radical": "用",
+		"hanzi": "用",
 		"simplified": "",
 		"pinyin": "yòng",
 		"meaning": "use",
@@ -910,7 +910,7 @@
 	},
 	{
 		"number": 102,
-		"radical": "田",
+		"hanzi": "田",
 		"simplified": "",
 		"pinyin": "tián",
 		"meaning": "field",
@@ -919,7 +919,7 @@
 	},
 	{
 		"number": 103,
-		"radical": "疋 (⺪)",
+		"hanzi": "疋 (⺪)",
 		"simplified": "",
 		"pinyin": "pǐ",
 		"meaning": "bolt of cloth",
@@ -928,7 +928,7 @@
 	},
 	{
 		"number": 104,
-		"radical": "疒",
+		"hanzi": "疒",
 		"simplified": "",
 		"pinyin": "nè",
 		"meaning": "sickness",
@@ -937,7 +937,7 @@
 	},
 	{
 		"number": 105,
-		"radical": "癶",
+		"hanzi": "癶",
 		"simplified": "",
 		"pinyin": "bō",
 		"meaning": "dotted tent, legs",
@@ -946,7 +946,7 @@
 	},
 	{
 		"number": 106,
-		"radical": "白",
+		"hanzi": "白",
 		"simplified": "",
 		"pinyin": "bái",
 		"meaning": "white",
@@ -955,7 +955,7 @@
 	},
 	{
 		"number": 107,
-		"radical": "皮",
+		"hanzi": "皮",
 		"simplified": "",
 		"pinyin": "pí",
 		"meaning": "skin",
@@ -964,7 +964,7 @@
 	},
 	{
 		"number": 108,
-		"radical": "皿",
+		"hanzi": "皿",
 		"simplified": "",
 		"pinyin": "mǐn",
 		"meaning": "dish",
@@ -973,7 +973,7 @@
 	},
 	{
 		"number": 109,
-		"radical": "目",
+		"hanzi": "目",
 		"simplified": "",
 		"pinyin": "mù",
 		"meaning": "eye",
@@ -982,7 +982,7 @@
 	},
 	{
 		"number": 110,
-		"radical": "矛",
+		"hanzi": "矛",
 		"simplified": "",
 		"pinyin": "máo",
 		"meaning": "spear",
@@ -991,7 +991,7 @@
 	},
 	{
 		"number": 111,
-		"radical": "矢",
+		"hanzi": "矢",
 		"simplified": "",
 		"pinyin": "shǐ",
 		"meaning": "arrow",
@@ -1000,7 +1000,7 @@
 	},
 	{
 		"number": 112,
-		"radical": "石",
+		"hanzi": "石",
 		"simplified": "",
 		"pinyin": "shí",
 		"meaning": "stone",
@@ -1009,7 +1009,7 @@
 	},
 	{
 		"number": 113,
-		"radical": "示 (礻)",
+		"hanzi": "示 (礻)",
 		"simplified": "",
 		"pinyin": "shì",
 		"meaning": "spirit",
@@ -1018,7 +1018,7 @@
 	},
 	{
 		"number": 114,
-		"radical": "禸",
+		"hanzi": "禸",
 		"simplified": "",
 		"pinyin": "róu",
 		"meaning": "track",
@@ -1027,7 +1027,7 @@
 	},
 	{
 		"number": 115,
-		"radical": "禾",
+		"hanzi": "禾",
 		"simplified": "",
 		"pinyin": "hé",
 		"meaning": "grain",
@@ -1036,7 +1036,7 @@
 	},
 	{
 		"number": 116,
-		"radical": "穴",
+		"hanzi": "穴",
 		"simplified": "",
 		"pinyin": "xué",
 		"meaning": "cave",
@@ -1045,7 +1045,7 @@
 	},
 	{
 		"number": 117,
-		"radical": "立",
+		"hanzi": "立",
 		"simplified": "",
 		"pinyin": "lì",
 		"meaning": "stand",
@@ -1054,7 +1054,7 @@
 	},
 	{
 		"number": 118,
-		"radical": "竹 (⺮)",
+		"hanzi": "竹 (⺮)",
 		"simplified": "",
 		"pinyin": "zhú",
 		"meaning": "bamboo",
@@ -1063,7 +1063,7 @@
 	},
 	{
 		"number": 119,
-		"radical": "米",
+		"hanzi": "米",
 		"simplified": "",
 		"pinyin": "mǐ",
 		"meaning": "rice",
@@ -1072,7 +1072,7 @@
 	},
 	{
 		"number": 120,
-		"radical": "糸 (糹)",
+		"hanzi": "糸 (糹)",
 		"simplified": "纟",
 		"pinyin": "mì",
 		"meaning": "silk",
@@ -1081,7 +1081,7 @@
 	},
 	{
 		"number": 121,
-		"radical": "缶",
+		"hanzi": "缶",
 		"simplified": "",
 		"pinyin": "fǒu",
 		"meaning": "jar",
@@ -1090,7 +1090,7 @@
 	},
 	{
 		"number": 122,
-		"radical": "网 (罒,⺲,罓,⺳)",
+		"hanzi": "网 (罒,⺲,罓,⺳)",
 		"simplified": "",
 		"pinyin": "wǎng",
 		"meaning": "net",
@@ -1099,7 +1099,7 @@
 	},
 	{
 		"number": 123,
-		"radical": "羊 (⺶,⺷)",
+		"hanzi": "羊 (⺶,⺷)",
 		"simplified": "",
 		"pinyin": "yáng",
 		"meaning": "sheep",
@@ -1108,7 +1108,7 @@
 	},
 	{
 		"number": 124,
-		"radical": "羽",
+		"hanzi": "羽",
 		"simplified": "",
 		"pinyin": "yǔ",
 		"meaning": "feather",
@@ -1117,7 +1117,7 @@
 	},
 	{
 		"number": 125,
-		"radical": "老 (耂)",
+		"hanzi": "老 (耂)",
 		"simplified": "",
 		"pinyin": "lǎo",
 		"meaning": "old",
@@ -1126,7 +1126,7 @@
 	},
 	{
 		"number": 126,
-		"radical": "而",
+		"hanzi": "而",
 		"simplified": "",
 		"pinyin": "ér",
 		"meaning": "and",
@@ -1135,7 +1135,7 @@
 	},
 	{
 		"number": 127,
-		"radical": "耒",
+		"hanzi": "耒",
 		"simplified": "",
 		"pinyin": "lěi",
 		"meaning": "plow",
@@ -1144,7 +1144,7 @@
 	},
 	{
 		"number": 128,
-		"radical": "耳",
+		"hanzi": "耳",
 		"simplified": "",
 		"pinyin": "ěr",
 		"meaning": "ear",
@@ -1153,7 +1153,7 @@
 	},
 	{
 		"number": 129,
-		"radical": "聿 (⺻)",
+		"hanzi": "聿 (⺻)",
 		"simplified": "",
 		"pinyin": "yù",
 		"meaning": "brush",
@@ -1162,7 +1162,7 @@
 	},
 	{
 		"number": 130,
-		"radical": "肉 (⺼)",
+		"hanzi": "肉 (⺼)",
 		"simplified": "",
 		"pinyin": "ròu",
 		"meaning": "meat",
@@ -1171,7 +1171,7 @@
 	},
 	{
 		"number": 131,
-		"radical": "臣",
+		"hanzi": "臣",
 		"simplified": "",
 		"pinyin": "chén",
 		"meaning": "minister",
@@ -1180,7 +1180,7 @@
 	},
 	{
 		"number": 132,
-		"radical": "自",
+		"hanzi": "自",
 		"simplified": "",
 		"pinyin": "zì",
 		"meaning": "self",
@@ -1189,7 +1189,7 @@
 	},
 	{
 		"number": 133,
-		"radical": "至",
+		"hanzi": "至",
 		"simplified": "",
 		"pinyin": "zhì",
 		"meaning": "arrive",
@@ -1198,7 +1198,7 @@
 	},
 	{
 		"number": 134,
-		"radical": "臼",
+		"hanzi": "臼",
 		"simplified": "",
 		"pinyin": "jiù",
 		"meaning": "mortar",
@@ -1207,7 +1207,7 @@
 	},
 	{
 		"number": 135,
-		"radical": "舌",
+		"hanzi": "舌",
 		"simplified": "",
 		"pinyin": "shé",
 		"meaning": "tongue",
@@ -1216,7 +1216,7 @@
 	},
 	{
 		"number": 136,
-		"radical": "舛",
+		"hanzi": "舛",
 		"simplified": "",
 		"pinyin": "chuǎn",
 		"meaning": "oppose",
@@ -1225,7 +1225,7 @@
 	},
 	{
 		"number": 137,
-		"radical": "舟",
+		"hanzi": "舟",
 		"simplified": "",
 		"pinyin": "zhōu",
 		"meaning": "boat",
@@ -1234,7 +1234,7 @@
 	},
 	{
 		"number": 138,
-		"radical": "艮",
+		"hanzi": "艮",
 		"simplified": "",
 		"pinyin": "gēn",
 		"meaning": "stopping",
@@ -1243,7 +1243,7 @@
 	},
 	{
 		"number": 139,
-		"radical": "色",
+		"hanzi": "色",
 		"simplified": "",
 		"pinyin": "sè",
 		"meaning": "color",
@@ -1252,7 +1252,7 @@
 	},
 	{
 		"number": 140,
-		"radical": "艸 (艹)",
+		"hanzi": "艸 (艹)",
 		"simplified": "",
 		"pinyin": "cǎo",
 		"meaning": "grass",
@@ -1261,7 +1261,7 @@
 	},
 	{
 		"number": 141,
-		"radical": "虍",
+		"hanzi": "虍",
 		"simplified": "",
 		"pinyin": "hū",
 		"meaning": "tiger",
@@ -1270,7 +1270,7 @@
 	},
 	{
 		"number": 142,
-		"radical": "虫",
+		"hanzi": "虫",
 		"simplified": "",
 		"pinyin": "huǐ",
 		"meaning": "insect",
@@ -1279,7 +1279,7 @@
 	},
 	{
 		"number": 143,
-		"radical": "血",
+		"hanzi": "血",
 		"simplified": "",
 		"pinyin": "xuè",
 		"meaning": "blood",
@@ -1288,7 +1288,7 @@
 	},
 	{
 		"number": 144,
-		"radical": "行",
+		"hanzi": "行",
 		"simplified": "",
 		"pinyin": "xíng",
 		"meaning": "walk enclosure",
@@ -1297,7 +1297,7 @@
 	},
 	{
 		"number": 145,
-		"radical": "衣 (衤)",
+		"hanzi": "衣 (衤)",
 		"simplified": "",
 		"pinyin": "yī",
 		"meaning": "clothes",
@@ -1306,7 +1306,7 @@
 	},
 	{
 		"number": 146,
-		"radical": "襾 (西,覀)",
+		"hanzi": "襾 (西,覀)",
 		"simplified": "",
 		"pinyin": "xī",
 		"meaning": "west",
@@ -1315,7 +1315,7 @@
 	},
 	{
 		"number": 147,
-		"radical": "見",
+		"hanzi": "見",
 		"simplified": "见",
 		"pinyin": "jiàn",
 		"meaning": "see",
@@ -1324,7 +1324,7 @@
 	},
 	{
 		"number": 148,
-		"radical": "角",
+		"hanzi": "角",
 		"simplified": "",
 		"pinyin": "jiǎo",
 		"meaning": "horn",
@@ -1333,7 +1333,7 @@
 	},
 	{
 		"number": 149,
-		"radical": "言 (訁)",
+		"hanzi": "言 (訁)",
 		"simplified": "讠",
 		"pinyin": "yán",
 		"meaning": "speech",
@@ -1342,7 +1342,7 @@
 	},
 	{
 		"number": 150,
-		"radical": "谷",
+		"hanzi": "谷",
 		"simplified": "",
 		"pinyin": "gǔ",
 		"meaning": "valley",
@@ -1351,7 +1351,7 @@
 	},
 	{
 		"number": 151,
-		"radical": "豆",
+		"hanzi": "豆",
 		"simplified": "",
 		"pinyin": "dòu",
 		"meaning": "bean",
@@ -1360,7 +1360,7 @@
 	},
 	{
 		"number": 152,
-		"radical": "豕",
+		"hanzi": "豕",
 		"simplified": "",
 		"pinyin": "shǐ",
 		"meaning": "pig",
@@ -1369,7 +1369,7 @@
 	},
 	{
 		"number": 153,
-		"radical": "豸",
+		"hanzi": "豸",
 		"simplified": "",
 		"pinyin": "zhì",
 		"meaning": "badger",
@@ -1378,7 +1378,7 @@
 	},
 	{
 		"number": 154,
-		"radical": "貝",
+		"hanzi": "貝",
 		"simplified": "贝",
 		"pinyin": "bèi",
 		"meaning": "shell",
@@ -1387,7 +1387,7 @@
 	},
 	{
 		"number": 155,
-		"radical": "赤",
+		"hanzi": "赤",
 		"simplified": "",
 		"pinyin": "chì",
 		"meaning": "red",
@@ -1396,7 +1396,7 @@
 	},
 	{
 		"number": 156,
-		"radical": "走 (赱)",
+		"hanzi": "走 (赱)",
 		"simplified": "",
 		"pinyin": "zǒu",
 		"meaning": "run",
@@ -1405,7 +1405,7 @@
 	},
 	{
 		"number": 157,
-		"radical": "足 (⻊)",
+		"hanzi": "足 (⻊)",
 		"simplified": "",
 		"pinyin": "zú",
 		"meaning": "foot",
@@ -1414,7 +1414,7 @@
 	},
 	{
 		"number": 158,
-		"radical": "身",
+		"hanzi": "身",
 		"simplified": "",
 		"pinyin": "shēn",
 		"meaning": "body",
@@ -1423,7 +1423,7 @@
 	},
 	{
 		"number": 159,
-		"radical": "車",
+		"hanzi": "車",
 		"simplified": "车",
 		"pinyin": "chē",
 		"meaning": "cart",
@@ -1432,7 +1432,7 @@
 	},
 	{
 		"number": 160,
-		"radical": "辛",
+		"hanzi": "辛",
 		"simplified": "",
 		"pinyin": "xīn",
 		"meaning": "bitter",
@@ -1441,7 +1441,7 @@
 	},
 	{
 		"number": 161,
-		"radical": "辰",
+		"hanzi": "辰",
 		"simplified": "",
 		"pinyin": "chén",
 		"meaning": "morning",
@@ -1450,7 +1450,7 @@
 	},
 	{
 		"number": 162,
-		"radical": "辵 (辶,⻌,⻍)",
+		"hanzi": "辵 (辶,⻌,⻍)",
 		"simplified": "",
 		"pinyin": "chuò",
 		"meaning": "walk",
@@ -1459,7 +1459,7 @@
 	},
 	{
 		"number": 163,
-		"radical": "邑 (阝,⻏,⻖)",
+		"hanzi": "邑 (阝,⻏,⻖)",
 		"simplified": "",
 		"pinyin": "yì",
 		"meaning": "city",
@@ -1468,7 +1468,7 @@
 	},
 	{
 		"number": 164,
-		"radical": "酉",
+		"hanzi": "酉",
 		"simplified": "",
 		"pinyin": "yǒu",
 		"meaning": "wine",
@@ -1477,7 +1477,7 @@
 	},
 	{
 		"number": 165,
-		"radical": "釆",
+		"hanzi": "釆",
 		"simplified": "",
 		"pinyin": "biàn",
 		"meaning": "distinguish",
@@ -1486,7 +1486,7 @@
 	},
 	{
 		"number": 166,
-		"radical": "里",
+		"hanzi": "里",
 		"simplified": "",
 		"pinyin": "lǐ",
 		"meaning": "village",
@@ -1495,7 +1495,7 @@
 	},
 	{
 		"number": 167,
-		"radical": "金 (釒)",
+		"hanzi": "金 (釒)",
 		"simplified": "钅",
 		"pinyin": "jīn",
 		"meaning": "gold",
@@ -1504,7 +1504,7 @@
 	},
 	{
 		"number": 168,
-		"radical": "長 (镸)",
+		"hanzi": "長 (镸)",
 		"simplified": "长",
 		"pinyin": "cháng",
 		"meaning": "long",
@@ -1513,7 +1513,7 @@
 	},
 	{
 		"number": 169,
-		"radical": "門",
+		"hanzi": "門",
 		"simplified": "门",
 		"pinyin": "mén",
 		"meaning": "gate",
@@ -1522,7 +1522,7 @@
 	},
 	{
 		"number": 170,
-		"radical": "阜 (阝)",
+		"hanzi": "阜 (阝)",
 		"simplified": "",
 		"pinyin": "fù",
 		"meaning": "mound",
@@ -1531,7 +1531,7 @@
 	},
 	{
 		"number": 171,
-		"radical": "隶",
+		"hanzi": "隶",
 		"simplified": "",
 		"pinyin": "lì",
 		"meaning": "slave",
@@ -1540,7 +1540,7 @@
 	},
 	{
 		"number": 172,
-		"radical": "隹",
+		"hanzi": "隹",
 		"simplified": "",
 		"pinyin": "zhuī",
 		"meaning": "short-tailed bird",
@@ -1549,7 +1549,7 @@
 	},
 	{
 		"number": 173,
-		"radical": "雨",
+		"hanzi": "雨",
 		"simplified": "",
 		"pinyin": "yǔ",
 		"meaning": "rain",
@@ -1558,7 +1558,7 @@
 	},
 	{
 		"number": 174,
-		"radical": "青 (靑)",
+		"hanzi": "青 (靑)",
 		"simplified": "",
 		"pinyin": "qīng",
 		"meaning": "blue",
@@ -1567,7 +1567,7 @@
 	},
 	{
 		"number": 175,
-		"radical": "非",
+		"hanzi": "非",
 		"simplified": "",
 		"pinyin": "fēi",
 		"meaning": "wrong",
@@ -1576,7 +1576,7 @@
 	},
 	{
 		"number": 176,
-		"radical": "面 (靣)",
+		"hanzi": "面 (靣)",
 		"simplified": "",
 		"pinyin": "miàn",
 		"meaning": "face",
@@ -1585,7 +1585,7 @@
 	},
 	{
 		"number": 177,
-		"radical": "革",
+		"hanzi": "革",
 		"simplified": "",
 		"pinyin": "gé",
 		"meaning": "leather",
@@ -1594,7 +1594,7 @@
 	},
 	{
 		"number": 178,
-		"radical": "韋",
+		"hanzi": "韋",
 		"simplified": "韦",
 		"pinyin": "wéi",
 		"meaning": "tanned leather",
@@ -1603,7 +1603,7 @@
 	},
 	{
 		"number": 179,
-		"radical": "韭",
+		"hanzi": "韭",
 		"simplified": "",
 		"pinyin": "jiǔ",
 		"meaning": "leek",
@@ -1612,7 +1612,7 @@
 	},
 	{
 		"number": 180,
-		"radical": "音",
+		"hanzi": "音",
 		"simplified": "",
 		"pinyin": "yīn",
 		"meaning": "sound",
@@ -1621,7 +1621,7 @@
 	},
 	{
 		"number": 181,
-		"radical": "頁",
+		"hanzi": "頁",
 		"simplified": "页",
 		"pinyin": "yè",
 		"meaning": "leaf",
@@ -1630,7 +1630,7 @@
 	},
 	{
 		"number": 182,
-		"radical": "風 (𠘨)",
+		"hanzi": "風 (𠘨)",
 		"simplified": "风",
 		"pinyin": "fēng",
 		"meaning": "wind",
@@ -1639,7 +1639,7 @@
 	},
 	{
 		"number": 183,
-		"radical": "飛",
+		"hanzi": "飛",
 		"simplified": "飞",
 		"pinyin": "fēi",
 		"meaning": "fly",
@@ -1648,7 +1648,7 @@
 	},
 	{
 		"number": 184,
-		"radical": "食 (飠)",
+		"hanzi": "食 (飠)",
 		"simplified": "饣",
 		"pinyin": "shí",
 		"meaning": "eat",
@@ -1657,7 +1657,7 @@
 	},
 	{
 		"number": 185,
-		"radical": "首",
+		"hanzi": "首",
 		"simplified": "",
 		"pinyin": "shǒu",
 		"meaning": "head",
@@ -1666,7 +1666,7 @@
 	},
 	{
 		"number": 186,
-		"radical": "香",
+		"hanzi": "香",
 		"simplified": "",
 		"pinyin": "xiāng",
 		"meaning": "fragrant",
@@ -1675,7 +1675,7 @@
 	},
 	{
 		"number": 187,
-		"radical": "馬",
+		"hanzi": "馬",
 		"simplified": "马",
 		"pinyin": "mǎ",
 		"meaning": "horse",
@@ -1684,7 +1684,7 @@
 	},
 	{
 		"number": 188,
-		"radical": "骨",
+		"hanzi": "骨",
 		"simplified": "",
 		"pinyin": "gǔ",
 		"meaning": "bone",
@@ -1693,7 +1693,7 @@
 	},
 	{
 		"number": 189,
-		"radical": "高 (髙)",
+		"hanzi": "高 (髙)",
 		"simplified": "",
 		"pinyin": "gāo",
 		"meaning": "tall",
@@ -1702,7 +1702,7 @@
 	},
 	{
 		"number": 190,
-		"radical": "髟",
+		"hanzi": "髟",
 		"simplified": "",
 		"pinyin": "biāo",
 		"meaning": "hair",
@@ -1711,7 +1711,7 @@
 	},
 	{
 		"number": 191,
-		"radical": "鬥",
+		"hanzi": "鬥",
 		"simplified": "",
 		"pinyin": "dòu",
 		"meaning": "fight",
@@ -1720,7 +1720,7 @@
 	},
 	{
 		"number": 192,
-		"radical": "鬯",
+		"hanzi": "鬯",
 		"simplified": "",
 		"pinyin": "chàng",
 		"meaning": "sacrificial wine",
@@ -1729,7 +1729,7 @@
 	},
 	{
 		"number": 193,
-		"radical": "鬲",
+		"hanzi": "鬲",
 		"simplified": "",
 		"pinyin": "lì",
 		"meaning": "cauldron",
@@ -1738,7 +1738,7 @@
 	},
 	{
 		"number": 194,
-		"radical": "鬼",
+		"hanzi": "鬼",
 		"simplified": "",
 		"pinyin": "guǐ",
 		"meaning": "ghost",
@@ -1747,7 +1747,7 @@
 	},
 	{
 		"number": 195,
-		"radical": "魚",
+		"hanzi": "魚",
 		"simplified": "鱼",
 		"pinyin": "yú",
 		"meaning": "fish",
@@ -1756,7 +1756,7 @@
 	},
 	{
 		"number": 196,
-		"radical": "鳥",
+		"hanzi": "鳥",
 		"simplified": "鸟",
 		"pinyin": "niǎo",
 		"meaning": "bird",
@@ -1765,7 +1765,7 @@
 	},
 	{
 		"number": 197,
-		"radical": "鹵",
+		"hanzi": "鹵",
 		"simplified": "卤",
 		"pinyin": "lǔ",
 		"meaning": "salt",
@@ -1774,7 +1774,7 @@
 	},
 	{
 		"number": 198,
-		"radical": "鹿",
+		"hanzi": "鹿",
 		"simplified": "",
 		"pinyin": "lù",
 		"meaning": "deer",
@@ -1783,7 +1783,7 @@
 	},
 	{
 		"number": 199,
-		"radical": "麥",
+		"hanzi": "麥",
 		"simplified": "麦",
 		"pinyin": "mài",
 		"meaning": "wheat",
@@ -1792,7 +1792,7 @@
 	},
 	{
 		"number": 200,
-		"radical": "麻",
+		"hanzi": "麻",
 		"simplified": "",
 		"pinyin": "má",
 		"meaning": "hemp",
@@ -1801,7 +1801,7 @@
 	},
 	{
 		"number": 201,
-		"radical": "黃",
+		"hanzi": "黃",
 		"simplified": "",
 		"pinyin": "huáng",
 		"meaning": "yellow",
@@ -1810,7 +1810,7 @@
 	},
 	{
 		"number": 202,
-		"radical": "黍",
+		"hanzi": "黍",
 		"simplified": "",
 		"pinyin": "shǔ",
 		"meaning": "millet",
@@ -1819,7 +1819,7 @@
 	},
 	{
 		"number": 203,
-		"radical": "黑",
+		"hanzi": "黑",
 		"simplified": "",
 		"pinyin": "hēi",
 		"meaning": "black",
@@ -1828,7 +1828,7 @@
 	},
 	{
 		"number": 204,
-		"radical": "黹",
+		"hanzi": "黹",
 		"simplified": "",
 		"pinyin": "zhǐ",
 		"meaning": "embroidery",
@@ -1837,7 +1837,7 @@
 	},
 	{
 		"number": 205,
-		"radical": "黽",
+		"hanzi": "黽",
 		"simplified": "黾",
 		"pinyin": "mǐn",
 		"meaning": "frog",
@@ -1846,7 +1846,7 @@
 	},
 	{
 		"number": 206,
-		"radical": "鼎",
+		"hanzi": "鼎",
 		"simplified": "",
 		"pinyin": "dǐng",
 		"meaning": "tripod",
@@ -1855,7 +1855,7 @@
 	},
 	{
 		"number": 207,
-		"radical": "鼓",
+		"hanzi": "鼓",
 		"simplified": "",
 		"pinyin": "gǔ",
 		"meaning": "drum",
@@ -1864,7 +1864,7 @@
 	},
 	{
 		"number": 208,
-		"radical": "鼠",
+		"hanzi": "鼠",
 		"simplified": "",
 		"pinyin": "shǔ",
 		"meaning": "rat",
@@ -1873,7 +1873,7 @@
 	},
 	{
 		"number": 209,
-		"radical": "鼻",
+		"hanzi": "鼻",
 		"simplified": "",
 		"pinyin": "bí",
 		"meaning": "nose",
@@ -1882,7 +1882,7 @@
 	},
 	{
 		"number": 210,
-		"radical": "齊",
+		"hanzi": "齊",
 		"simplified": "齐",
 		"pinyin": "qí",
 		"meaning": "even",
@@ -1891,7 +1891,7 @@
 	},
 	{
 		"number": 211,
-		"radical": "齒",
+		"hanzi": "齒",
 		"simplified": "齿",
 		"pinyin": "chǐ",
 		"meaning": "tooth",
@@ -1900,7 +1900,7 @@
 	},
 	{
 		"number": 212,
-		"radical": "龍",
+		"hanzi": "龍",
 		"simplified": "龙",
 		"pinyin": "lóng",
 		"meaning": "dragon",
@@ -1909,7 +1909,7 @@
 	},
 	{
 		"number": 213,
-		"radical": "龜",
+		"hanzi": "龜",
 		"simplified": "龟",
 		"pinyin": "guī",
 		"meaning": "turtle",
@@ -1918,7 +1918,7 @@
 	},
 	{
 		"number": 214,
-		"radical": "龠",
+		"hanzi": "龠",
 		"simplified": "",
 		"pinyin": "yuè",
 		"meaning": "flute",

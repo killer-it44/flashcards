@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node main.js",
-    "test": "jasmine spec/*.spec.js",
-    "test:cov": "c8 jasmine spec/*.spec.js"
+    "start": "node server/main.js",
+    "test": "jasmine server/spec/*.spec.js",
+    "test:cov": "c8 jasmine server/spec/*.spec.js"
   },
   "type": "module",
   "keywords": [],

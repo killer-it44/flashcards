@@ -1,6 +1,6 @@
-node_modules
-data
 .DS_Store
+coverage
+data
+node_modules
 *.tmp
 tmp
-coverage

@@ -1,7 +1,7 @@
 export default function FakeRepository() {
     this.radicals = [{
         "number": 1,
-        "radical": "一",
+        "hanzi": "一",
         "simplified": "",
         "pinyin": "yī",
         "meaning": "one",
@@ -9,7 +9,7 @@ export default function FakeRepository() {
         "frequency": 42
     }, {
         "number": 7,
-        "radical": "二",
+        "hanzi": "二",
         "simplified": "",
         "pinyin": "èr",
         "meaning": "two",
@@ -17,7 +17,7 @@ export default function FakeRepository() {
         "frequency": 29
     }]
     this.characters = [{
-        "character": "一",
+        "hanzi": "一",
         "pinyin": "yī",
         "meaning": "one; a, an; alone",
         "radical": "一 1.0",
@@ -27,7 +27,7 @@ export default function FakeRepository() {
         "frequencyRank": 2,
         "related": ""
     }, {
-        "character": "二",
+        "hanzi": "二",
         "pinyin": "èr",
         "meaning": "two; twice",
         "radical": "二 7.0",
@@ -38,11 +38,11 @@ export default function FakeRepository() {
         "related": ""
     }]
     this.words = [{
-        "word": "一二",
+        "hanzi": "一二",
         "pinyin": "",
         "meaning": "one two"
     }, {
-        "word": "一...二",
+        "hanzi": "一...二",
         "pinyin": "",
         "meaning": "one...two"
     }]

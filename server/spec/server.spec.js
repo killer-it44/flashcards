@@ -20,31 +20,31 @@ describe('Server', () => {
 
     it('returns the details of a specific character', async () => {
         const response = await client.get(`/api/char/${encodeURIComponent('一')}`).expect(200)
-        expect(response.body.character).toEqual('一')
+        expect(response.body.hanzi).toEqual('一')
     })
 
     it('returns some next character', async () => {
         const response = await client.get('/api/char').expect(200)
-        expect(response.body.character).toBeInstanceOf(String)
+        expect(response.body.hanzi).toBeInstanceOf(String)
     })
 
     it('can submit with updated data', async () => {
-        const updatedData = {character: '一', remembered: true, meaning: 'updated meaning', words: '', related: ''}
+        const updatedData = { character: '一', remembered: true, meaning: 'updated meaning', words: '', related: '' }
         await client.post('/api/submission').send(updatedData).expect(201)
 
         const response = await client.get(`/api/char/${encodeURIComponent('一')}`).expect(200)
-        expect(response.body.character).toEqual('一')
+        expect(response.body.hanzi).toEqual('一')
         expect(response.body.meaning).toEqual('updated meaning')
     })
 
     it('returns the details of a specific word', async () => {
         const response = await client.get(`/api/word/${encodeURIComponent('一二')}`).expect(200)
-        expect(response.body.word).toBe('一二')
+        expect(response.body.hanzi).toBe('一二')
     })
 
     it('returns some next word', async () => {
         const response = await client.get('/api/word').expect(200)
-        expect(response.body.word).toBeInstanceOf(String)
+        expect(response.body.hanzi).toBeInstanceOf(String)
     })
 
     it('can submit words with updated data', async () => {
@@ -52,7 +52,7 @@ describe('Server', () => {
         await client.post('/api/submission').send(updatedData).expect(201)
 
         const response = await client.get(`/api/word/${encodeURIComponent('一二')}`).expect(200)
-        expect(response.body.word).toEqual('一二')
+        expect(response.body.hanzi).toEqual('一二')
         expect(response.body.meaning).toEqual('updated meaning')
     })
 })
