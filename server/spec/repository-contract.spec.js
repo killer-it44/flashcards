@@ -26,8 +26,8 @@ describe('Repository API and data structure contract', () => {
         expect(fakeRepo.words.length).toBeGreaterThan(0)
         expect(fakeRepo.submissions).toBeInstanceOf(Array)
 
-        expect(fakeRepo.characters[0]).toEqual(fsRepo.characters.find(c => c.character === fakeRepo.characters[0].character))        
-        expect(fakeRepo.radicals[0]).toEqual(fsRepo.radicals.find(r => r.radical === fakeRepo.radicals[0].radical))
+        expect(fakeRepo.characters[0]).toEqual(fsRepo.characters.find(c => c.hanzi === fakeRepo.characters[0].hanzi))        
+        expect(fakeRepo.radicals[0]).toEqual(fsRepo.radicals.find(r => r.hanzi === fakeRepo.radicals[0].hanzi))
 
         expect(Object.keys(fakeRepo.words[0])).toEqual(Object.keys(fsRepo.words[0]))
         Object.keys(fakeRepo.words[0]).forEach(key => {

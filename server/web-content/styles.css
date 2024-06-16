@@ -1,18 +1,22 @@
-html {
-    width: min(375px, 100vw);
-    margin: auto;
+body {
     font: 1.5em sans-serif;
 }
 
-button, input {
+a {
+    text-decoration: none;
+}
+
+button {
     font: inherit;
+    border: none;
+    background: transparent;
+}
+
+table tr td {
+    /* vertical-align: top; */
 }
 
 td:first-child {
     font-weight: bold;
-    width: 22%;
-}
-
-td :first-child {
-    width: calc(100% - 8px);
+    width: 10%;
 }

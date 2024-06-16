@@ -18,28 +18,40 @@ describe('Server', () => {
         await expectAsync(new Server().start(port)).toBeRejectedWithError(/EADDRINUSE/)
     })
 
-    it('returns the details of a specific character', async () => {
-        const response = await client.get(`/api/char/${encodeURIComponent('一')}`).expect(200)
+    it('supports GET for individual characters', async () => {
+        const response = await client.get(`/api/character/${encodeURIComponent('一')}`).expect(200)
         expect(response.body.hanzi).toEqual('一')
+    })
+
+    it('responds with 404 if character does not exist', async () => {
+        await client.get(`/api/character/does-not-exist}`).expect(404)
     })
 
     it('returns some next character', async () => {
-        const response = await client.get('/api/char').expect(200)
+        const response = await client.get('/api/character').expect(200)
         expect(response.body.hanzi).toBeInstanceOf(String)
     })
 
-    it('can submit with updated data', async () => {
-        const updatedData = { character: '一', remembered: true, meaning: 'updated meaning', words: '', related: '' }
+    it('can submit characters', async () => {
+        const updatedData = { character: '一', remembered: true }
         await client.post('/api/submission').send(updatedData).expect(201)
+        // TODO what's the test now? or is expecting HTTP 201 sufficient?
+    })
 
-        const response = await client.get(`/api/char/${encodeURIComponent('一')}`).expect(200)
-        expect(response.body.hanzi).toEqual('一')
-        expect(response.body.meaning).toEqual('updated meaning')
+    it('can update data', async () => {
+        await client.put(`/api/character/${encodeURIComponent('一')}`).send({ meaning: 'updated meaning' }).expect(200)
+        const response = await client.get(`/api/character/${encodeURIComponent('一')}`)
+        expect(response.body).toEqual(jasmine.objectContaining({ hanzi: '一', meaning: 'updated meaning' }))
     })
 
     it('returns the details of a specific word', async () => {
+        // REVISE extract a specific API client class that can be used by the tests and the frontend
         const response = await client.get(`/api/word/${encodeURIComponent('一二')}`).expect(200)
         expect(response.body.hanzi).toBe('一二')
+    })
+
+    it('responds with 404 if word does not exist', async () => {
+        await client.get(`/api/word/does-not-exist}`).expect(404)
     })
 
     it('returns some next word', async () => {
@@ -47,12 +59,9 @@ describe('Server', () => {
         expect(response.body.hanzi).toBeInstanceOf(String)
     })
 
-    it('can submit words with updated data', async () => {
-        const updatedData = { word: '一二', remembered: true, pinyin: 'yīēr', meaning: 'updated meaning', sentences: '' }
+    it('can submit words', async () => {
+        const updatedData = { word: '一二', remembered: true }
         await client.post('/api/submission').send(updatedData).expect(201)
-
-        const response = await client.get(`/api/word/${encodeURIComponent('一二')}`).expect(200)
-        expect(response.body.hanzi).toEqual('一二')
-        expect(response.body.meaning).toEqual('updated meaning')
+        // TODO what's the test now? or is expecting HTTP 201 sufficient?
     })
 })

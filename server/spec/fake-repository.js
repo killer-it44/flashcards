@@ -25,7 +25,7 @@ export default function FakeRepository() {
         "hskLevel": 1,
         "standardRank": 1,
         "frequencyRank": 2,
-        "related": ""
+        "related": [""]
     }, {
         "hanzi": "二",
         "pinyin": "èr",
@@ -35,7 +35,7 @@ export default function FakeRepository() {
         "hskLevel": 1,
         "standardRank": 3,
         "frequencyRank": 157,
-        "related": ""
+        "related": [""]
     }]
     this.words = [{
         "hanzi": "一二",

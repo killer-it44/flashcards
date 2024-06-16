@@ -23,7 +23,7 @@ describe('Performance', () => {
         for (let i = 0; i < 20000; i++) {
             const character = repo.characters[Math.floor(repo.characters.length * Math.random())].hanzi
             const remembered = Boolean(Math.floor(2 * Math.random()))
-            await controller.submitCharacter({ character, remembered, meaning: '', words: '', related: '' })
+            await controller.submitCharacter({ character, remembered })
         }
 
         const t0 = Date.now()

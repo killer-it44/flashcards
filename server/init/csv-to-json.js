@@ -42,7 +42,7 @@ cContent.split('\n').forEach((line, i) => {
         hskLevel: Number(segments[5]),
         standardRank: Number(segments[6]),
         frequencyRank: Number(segments[7]),
-        related: ''
+        related: ['']
     })
 })
 console.log(`Loaded ${characters.length} characters`)

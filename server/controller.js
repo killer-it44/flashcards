@@ -1,10 +1,12 @@
-export default function Controller(repo) {
+import NotFound from './not-found.js'
 
-    this.getCharacter = (char) => {
-        const cEntry = repo.characters.find(c => c.hanzi === char)
-        const rEntry = repo.radicals.find(r => r.hanzi.includes(cEntry.radical.substring(0, 1)))
-        const matchingWords = repo.words.filter(w => w.hanzi.includes(cEntry.hanzi)).map(w => w.hanzi)
-        return { ...cEntry, radical: rEntry, words: matchingWords.join(', ') }
+export default function Controller(repo) {
+    this.getCharacter = (hanzi) => {
+        const character = repo.characters.find(c => c.hanzi === hanzi)
+        if (!character) throw new NotFound()
+        const radical = repo.radicals.find(r => r.hanzi.includes(character.radical.substring(0, 1)))
+        const words = repo.words.filter(w => w.hanzi.includes(character.hanzi)).map(w => w.hanzi)
+        return { ...character, radical, words }
     }
 
     this.getNextCharacter = () => {
@@ -15,21 +17,22 @@ export default function Controller(repo) {
         return this.getCharacter(nextCharacter)
     }
 
-    this.getWord = (word) => {
-        const wEntry = repo.words.find(w => w.hanzi === word)
-        let pinyin = wEntry.pinyin
-        if (!wEntry.pinyin) {
-            for (let i = 0; i < wEntry.hanzi.length; i++) {
-                const char = repo.characters.find(c => c.hanzi == wEntry.hanzi.charAt(i))
-                pinyin += char ? char.pinyin : wEntry.hanzi.charAt(i)
+    this.getWord = (hanzi) => {
+        const word = repo.words.find(w => w.hanzi === hanzi)
+        if (!word) throw new NotFound()
+        let pinyin = word.pinyin
+        if (!word.pinyin) {
+            for (let i = 0; i < word.hanzi.length; i++) {
+                const char = repo.characters.find(c => c.hanzi == word.hanzi.charAt(i))
+                pinyin += char ? char.pinyin : word.hanzi.charAt(i)
             }
         }
 
-        const sentences = wEntry.hanzi.includes('...')
-            ? repo.sentences.filter(s => s.hanzi.match(wEntry.hanzi.replace('...', '.+'))).map(s => s.hanzi).join('; ')
-            : repo.sentences.filter(s => s.hanzi.includes(word)).map(s => s.hanzi).join('; ')
+        const sentences = word.hanzi.includes('...')
+            ? repo.sentences.filter(s => s.hanzi.match(word.hanzi.replace('...', '.+'))).map(s => s.hanzi)
+            : repo.sentences.filter(s => s.hanzi.includes(hanzi)).map(s => s.hanzi)
 
-        return { ...wEntry, pinyin, sentences }
+        return { ...word, pinyin, sentences }
     }
 
     this.getNextWord = () => {
@@ -40,40 +43,50 @@ export default function Controller(repo) {
         return this.getWord(nextWord)
     }
 
+    // REVISE new submission structure should better contain a type field, so the entire structure should be
+    // { user: string,  type: 'radical' | 'character' | 'word' | 'sentence', hanzi: string, remembered: boolean, timestamp: Date }
     this.submitCharacter = async (data) => {
+        // TODO user handling
         const user = '野色'
         repo.submissions.push({ user, character: data.character, remembered: data.remembered, timestamp: Date.now() })
+        await repo.save()
+    }
 
-        // process updated meaning, related characters or related words
+    // TODO should we make it an "upsert"?
+    this.updateCharacter = async (data) => {
         const character = repo.characters.find(c => c.hanzi === data.character)
         character.meaning = data.meaning
         character.related = data.related
+        await repo.save()
+    }
 
-        // REVISE find a better way, also the UX is not great
-        const relatedWords = data.words.split(',').map(w => w.trim()).filter(w => w)
-        const alreadyExists = word => repo.words.find(w => w.hanzi === word)
-        relatedWords.forEach(w => alreadyExists(w) ? null : repo.words.push({ hanzi: w, pinyin: '', meaning: '' }))
-
+    this.addWord = async (word) => {
+        if (!repo.words.find(w => w.hanzi === word.hanzi)) {
+            repo.words.push(word)
+        }
         await repo.save()
     }
 
     // REVISE new submission structure should better contain a type field, so the entire structure should be
     // { user: string,  type: 'radical' | 'character' | 'word' | 'sentence', hanzi: string, remembered: boolean, timestamp: Date }
     this.submitWord = async (data) => {
+        // TODO user handling
         const user = '野色'
         repo.submissions.push({ user, word: data.word, remembered: data.remembered, timestamp: Date.now() })
+        await repo.save()
+    }
 
-        // process updated meaning or pinyin
+    this.updateWord = async (data) => {
         const word = repo.words.find(w => w.hanzi === data.word)
         word.pinyin = data.pinyin
         word.meaning = data.meaning
+        await repo.save()
+    }
 
-        const relatedSentences = data.sentences.split(';').map(s => s.trim()).filter(s => s)
-        const alreadyExists = sentence => repo.sentences.find(s => {
-            return s.hanzi === sentence
-        })
-        relatedSentences.forEach(s => alreadyExists(s) ? null : repo.sentences.push({ hanzi: s }))
-
+    this.addSentence = async (sentence) => {
+        if (!repo.sentences.find(s => s.hanzi === sentence.hanzi)) {
+            repo.sentences.push(sentence)
+        }
         await repo.save()
     }
 

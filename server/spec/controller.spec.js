@@ -1,5 +1,6 @@
 import FakeRepository from './fake-repository.js'
 import Controller from '../controller.js'
+import NotFound from '../not-found.js'
 
 describe('Controller', () => {
     let controller
@@ -28,45 +29,43 @@ describe('Controller', () => {
             hskLevel: 1,
             standardRank: 1,
             frequencyRank: 2,
-            related: '',
-            words: '一二, 一...二'
+            related: [''],
+            words: ['一二', '一...二']
         })
+    })
+
+    it('throws an error if character does not exist', async () => {
+        expect(() => controller.getCharacter('not-existing')).toThrowError(NotFound)
     })
 
     it('returns some next character', async () => {
         const character = controller.getNextCharacter()
         expect(['一', '二']).toContain(character.hanzi)
         expect(['yī', 'èr']).toContain(character.pinyin)
-        expect(character.words).toBe('一二, 一...二')
+        expect(character.words).toEqual(['一二', '一...二'])
         expect(character.radical.hanzi).not.toBe('')
     })
 
-    it('can submit characters with updated data', async () => {
-        controller.submitCharacter({
-            character: '一',
-            remembered: true,
-            meaning: 'updated meaning',
-            words: '一下,一点儿',
-            related: '二'
-        })
+    it('can submit characters', async () => {
+        await controller.submitCharacter({ character: '一', remembered: true })
 
-        const character = controller.getCharacter('一')
-        expect(character.hanzi).toBe('一')
-        expect(character.meaning).toBe('updated meaning')
-        expect(character.words).toBe('一二, 一...二, 一下, 一点儿')
-        expect(character.related).toBe('二')
+        // TODO what's the test now?
     })
 
-    it('will not add words which already exist as part of the update', async () => {
-        const updatedData = { character: '一', remembered: true, meaning: '', words: '一下', related: '' }
-        controller.submitCharacter(updatedData)
-        controller.submitCharacter(updatedData)
-        expect(controller.getCharacter('一').words).toBe('一二, 一...二, 一下')
+    it('can update an existing character', async () => {
+        await controller.updateCharacter({ character: '一', meaning: 'updated meaning', related: ['二'] })
+        const character = controller.getCharacter('一')
+        expect(character).toEqual(jasmine.objectContaining({ hanzi: '一', meaning: 'updated meaning', related: ['二'] }))
+    })
+
+    it('can add new words, which are also looked up', async () => {
+        await controller.addWord({ hanzi: '一下', meaning: 'a little' })
+        expect(controller.getWord('一下').meaning).toBe('a little')
+        expect(controller.getCharacter('一').words).toContain('一下')
     })
 
     it('will return the characters that are least remembered with a higher probability', async () => {
-        // REVISE feels weird that we're "forced" to pass some "words" property
-        await controller.submitCharacter({ character: '一', remembered: false, words: '' })
+        await controller.submitCharacter({ character: '一', remembered: false })
         const characters = []
         for (let i = 0; i < 1000; i++) {
             characters.push(controller.getNextCharacter())
@@ -80,10 +79,22 @@ describe('Controller', () => {
         expect(word.hanzi).toBe('一二')
         expect(word.pinyin).toBe('yīèr')
         expect(word.meaning).toBe('one two')
-        expect(word.sentences).toBe('一二三')
+        expect(word.sentences).toEqual(['一二三'])
 
         const word2 = controller.getWord('一...二')
-        expect(word2.sentences).toBe('一还是二')
+        expect(word2.sentences).toEqual(['一还是二'])
+    })
+
+    it('will lookup the pinyin of a word from the individual characters, unless explicitly set ', async () => {
+        await controller.updateWord({ word: '一二', pinyin: '' })
+        expect(controller.getWord('一二').pinyin).toBe('yīèr')
+
+        await controller.updateWord({ word: '一二', pinyin: 'yìèr' })
+        expect(controller.getWord('一二').pinyin).toBe('yìèr')
+    })
+
+    it('throws an error if word does not exist', async () => {
+        expect(() => controller.getWord('not-existing')).toThrowError(NotFound)
     })
 
     it('returns some next word, and pinyin is looked up', async () => {
@@ -92,31 +103,30 @@ describe('Controller', () => {
         expect(['yīèr', 'yī...èr']).toContain(word.pinyin)
     })
 
-    it('can submit words with updated data', async () => {
-        controller.submitWord({
-            word: '一二',
-            remembered: true,
-            pinyin: 'yīēr',
-            meaning: 'updated meaning',
-            sentences: '一二四'
-        })
+    it('can submit words', async () => {
+        controller.submitWord({ word: '一二', remembered: true })
 
-        expect(controller.getWord('一二')).toEqual({
-            hanzi: '一二',
-            pinyin: 'yīēr',
-            meaning: 'updated meaning',
-            sentences: '一二三; 一二四'
-        })
+        // TODO what's the test now?
     })
 
     it('will return the words that are least remembered with a higher probability', async () => {
-        // REVISE feels weird that we're "forced" to pass some "sentences" property
-        await controller.submitWord({ word: '一二', remembered: false, sentences: '' })
+        await controller.submitWord({ word: '一二', remembered: false })
         const words = []
         for (let i = 0; i < 1000; i++) {
             words.push(controller.getNextWord())
         }
         expect(words.filter(c => c.hanzi === '一二').length).toBeGreaterThan(600)
         expect(words.filter(c => c.hanzi === '一...二').length).toBeLessThan(400)
+    })
+
+    it('can update an existing word', async () => {
+        await controller.updateWord({ word: '一二', pinyin: 'yìèr', meaning: 'updated meaning' })
+        const word = controller.getWord('一二')
+        expect(word).toEqual(jasmine.objectContaining({ hanzi: '一二', pinyin: 'yìèr', meaning: 'updated meaning' }))
+    })
+
+    it('can add new sentences, which are then looked up', async () => {
+        await controller.addSentence({ hanzi: '一不是二', meaning: 'one is not two' })
+        expect(controller.getWord('一...二').sentences).toContain('一不是二')
     })
 })

@@ -3,74 +3,95 @@
 
 <head>
     <meta name='viewport' content='width=device-width' />
+    <title>Flashcards</title>
+    <link rel='icon' href='favicon.svg' />
     <link href='styles.css' rel='stylesheet' />
 </head>
 
 <body>
-    <div style='display: flex; flex-direction: column;'>
-        <div style='display: flex; align-items: center; justify-content: space-around;'>
-            <input id='character' onfocusout='fetchSelected()' style='font-size: 3.5em; width: 1em;'></input>
-            <div onclick='reveal()' style='font-size: 3.5em;'>👀</div>
+    <div style='display: flex; flex-direction: column; margin-top: 8px;'>
+        <div style='display: flex; justify-content: center;'>
+            <input id='character' onkeypress='getSelected(event)' style='font-size: 3.5em; width: 100%;'></input>
+            <button onclick='toggleVisibility()' style='font-size: 3.5em;'>👀</button>
         </div>
-        <div id='revealed'></div>
 
-        <!-- <h3>German</h3>
-        <div style='display: flex; flex-direction: column;'>
-            <div style='width: 100%; display: flex;'>
-                <input style='width: 100%;' placeholder='translation'></input>
-                <button>Audio</button>
-            </div>
-            <input placeholder='similar words (separate by ;)'></input>
-            <input placeholder='expressions (separate by ;)'></input>
-        </div> -->
+        <div id='info'></div>
 
-        <p>
-        <div style='display: flex; justify-content:space-around;'>
-            <button onclick='post(false)' style='font-size: 2.5em; background-color: red;'>👎🏻</button>
-            <button onclick='post(true)' style='font-size: 2.5em; background-color: green;'>👍🏻</button>
+        <div style='display: flex; position: fixed; bottom: 0; left: 0; width: 100%;'>
+            <button onclick='post(false)'
+                style='width: 50%; border: none; background-color: red; font-size: 2.5em;'>👎🏻</button>
+            <button onclick='post(true)'
+                style='width: 50%; border: none; background-color: green; font-size: 2.5em;'>👍🏻</button>
         </div>
-        </p>
     </div>
 
 
     <script>
-        let currentChar
+        let currentCharacter = '', infoVisible = false
+
         const post = async (remembered) => {
             const headers = { 'Content-Type': 'application/json' }
-            const body = JSON.stringify({
-                character: currentChar.character,
-                remembered,
-                meaning: document.getElementById('meaning').value,
-                words: document.getElementById('words').value,
-                related: document.getElementById('related').value
-            })
+            const body = JSON.stringify({ character: currentCharacter.hanzi, remembered })
             await fetch('/api/submission', { method: 'POST', headers, body })
-            await fetchNext()
+            infoVisible = false
+            await get('')
+            history.pushState(currentCharacter.hanzi, '', `/#/${currentCharacter.hanzi}`)
         }
 
-        const reveal = async () => {
-            document.getElementById('revealed').setAttribute('style', 'height: 7em; visibility: visible;')
+        const getSelected = (event) => {
+            if (event.key === 'Enter') {
+                get(document.getElementById('character').value)
+            }
         }
 
-        const fetchSelected = () => {
-            fetchNext(document.getElementById('character').value)
+        const get = async (character) => {
+            const response = await fetch(`/api/character/${character}`)
+            if (response.status === 200) {
+                currentCharacter = await response.json()
+                render()
+            } else {
+                alert('Error while loading')
+            }
         }
 
-        const fetchNext = async (char) => {
-            currentChar = await (await fetch(`/api/char/${char || ''}`)).json()
-            document.getElementById('character').value = currentChar.character
-            const rad = currentChar.radical
-            document.getElementById('revealed').setAttribute('style', 'height: 7em; visibility: hidden;')
-            document.getElementById('revealed').innerHTML = `
-                <table style='width: calc(100% - 8px); font-size: .7em;'>
-                    <tr><td>Pinyin</td><td>${currentChar.pinyin}</td></tr>
-                    <tr><td>Radical</td><td>${rad.radical} (${rad.meaning})</td></tr>
-                    <tr><td>Meaning</td><td><input id='meaning' value='${currentChar.meaning}'></input></td></tr>
-                    <tr><td>Words</td><td><input id='words' value='${currentChar.words}'></input></td></tr>
-                    <tr><td>Related</td><td><input id='related' value='${currentChar.related}'></input></td></tr>                
-                </table>`
+        const renderInfoVisibility = () => {
+            const setVisibility = (v) => document.getElementById('info').setAttribute('style', `visibility: ${v};`)
+            return infoVisible ? setVisibility('visible') : setVisibility('hidden')
         }
-        fetchNext()
+
+        const render = () => {
+            document.getElementById('character').value = currentCharacter.hanzi
+            const words = currentCharacter.words.map(w => `<a href=/words/#/${encodeURIComponent(w)}>${w}</a>`)
+            const related = currentCharacter.related.map(w => `<a href=/#/${encodeURIComponent(w)}>${w}</a>`)
+            renderInfoVisibility()
+            // TODO support for other languages
+            document.getElementById('info').innerHTML = `
+                <table style='width: calc(100% - 8px);'>
+                    <tr><td>Pinyin</td><td>${currentCharacter.pinyin}</td></tr>
+                    <tr><td>Radical</td><td>${currentCharacter.radical.hanzi} (${currentCharacter.radical.meaning})</td></tr>
+                    <tr><td>Meaning</td><td>${currentCharacter.meaning}</td></tr>
+                    <tr><td>Words</td><td>${words}</td><td><button onclick='edit()'>➕</button></td></tr>
+                    <tr><td>Related</td><td>${related}</td><td><button onclick='edit()'>✎</button></td></tr>                
+                </table>
+            `
+        }
+
+        const toggleVisibility = () => {
+            infoVisible = !infoVisible
+            renderInfoVisibility()
+        }
+
+        window.onload = () => {
+            window.addEventListener('hashchange', () => {
+                get(window.location.hash.substring(2))
+            })
+        }
+
+        if (window.location.hash.length > 0) {
+            get(window.location.hash.substring(2))
+        } else {
+            get('')
+        }
     </script>
 </body>
 
