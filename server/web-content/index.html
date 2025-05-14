@@ -27,7 +27,7 @@
 
 
     <script>
-        let currentCharacter = '', infoVisible = false
+        let currentCharacter = '', infoVisible = false, isEditingSentence = false, isEditingWords = false
 
         const post = async (remembered) => {
             const headers = { 'Content-Type': 'application/json' }
@@ -59,26 +59,97 @@
             return infoVisible ? setVisibility('visible') : setVisibility('hidden')
         }
 
+        const tokenizerHtml = () => `<div class='tokenizer'><input type='text' id='tokenInput' onkeydown='createToken(event)' placeholder='Type and press ";" to create a token'></div>`
+
         const render = () => {
             document.getElementById('character').value = currentCharacter.hanzi
-            const words = currentCharacter.words.map(w => `<a href=/words/#/${encodeURIComponent(w)}>${w}</a>`)
+            const wordsLink = currentCharacter.words.map(w => `<a href=/words/#/${encodeURIComponent(w)}>${w}</a>`)
+            const wordsTxt = currentCharacter.words
             const related = currentCharacter.related.map(w => `<a href=/#/${encodeURIComponent(w)}>${w}</a>`)
             renderInfoVisibility()
             // TODO support for other languages
+
+            const sentencesHtmlDisplay = `<tr><td>Sentences</td><td style='color: red;''>不支持 (待定)<button onclick='edit_sentences()'>✎</button></td></tr>`
+            // const sentencesHtmlEdit = `<tr><td>Sentences</td><td><input value='test'></input><button onclick='save_sentences()'>💾</button></td></tr>`
+            const sentencesHtmlEdit = `<tr><td>Sentences</td><td>${tokenizerHtml()}<button onclick='save_sentences()'>💾</button></td></tr>`
+
+            
+            const sentencesHtml = isEditingSentence ? sentencesHtmlEdit : sentencesHtmlDisplay
+            
+            const wordsHtmlDisplay = `<tr><td>Words</td><td>${wordsLink}<button onclick='edit_words()'>✎</button></td></tr>`
+            const wordsHtmlEdit = `<tr><td>Words</td><td><input value='${wordsTxt}'></input><button onclick='save_words()'>💾</button></td></tr>`
+            const wordsHtml = isEditingWords ? wordsHtmlEdit : wordsHtmlDisplay
+
             document.getElementById('info').innerHTML = `
                 <table style='width: calc(100% - 8px);'>
                     <tr><td>Pinyin</td><td>${currentCharacter.pinyin}</td></tr>
                     <tr><td>Radical</td><td>${currentCharacter.radical.hanzi} (${currentCharacter.radical.meaning})</td></tr>
                     <tr><td>Meaning</td><td>${currentCharacter.meaning}</td></tr>
-                    <tr><td>Words</td><td>${words}</td><td><button onclick='edit()'>➕</button></td></tr>
-                    <tr><td>Related</td><td>${related}</td><td><button onclick='edit()'>✎</button></td></tr>                
+                    ${wordsHtml}
+                    ${sentencesHtml}
+                    <tr><td>Related</td><td>${related}<button onclick='count()'>✎</button></td></tr>
                 </table>
             `
         }
 
+        function edit_sentences() {
+            isEditingSentence=true
+            render()
+        }
+
+        function save_sentences() {
+            isEditingSentence=false
+            render()
+        }
+
+        function edit_words() {
+            isEditingWords=true
+            render()
+        }
+
+        function save_words() {
+            //TODO ... we need to save the words            
+            isEditingWords=false 
+            render()
+        }
+        
         const toggleVisibility = () => {
             infoVisible = !infoVisible
             renderInfoVisibility()
+        }
+
+        function createToken(event) {
+            const tokenizer = event.target.parentElement
+            if (event.key === ';') {
+                event.preventDefault()
+                const value = tokenInput.value.trim()
+                if (value) {
+                    appendTokenElementFor(value, tokenizer)
+                    tokenInput.value = ''
+                }
+            } else if (event.key === 'Backspace' && tokenInput.selectionStart === 0) {
+                const tokens = tokenizer.querySelectorAll('.token')
+                if (tokens.length > 0) {
+                    const lastToken = tokens[tokens.length - 1]
+                    tokenizer.removeChild(lastToken)
+                }
+            }
+        }
+
+        function appendTokenElementFor(value, tokenizer) {
+            const token = document.createElement('div')
+            token.className = 'token'
+            token.textContent = value
+
+            const removeButton = document.createElement('span')
+            removeButton.className = 'remove'
+            removeButton.textContent = 'x'
+            removeButton.addEventListener('click', () => {
+                tokenizer.removeChild(token)
+            })
+
+            token.appendChild(removeButton)
+            tokenizer.insertBefore(token, tokenInput)
         }
 
         window.onload = () => {
