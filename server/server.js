@@ -8,7 +8,7 @@ export default function Server(controller) {
     app.use('/', express.static('server/web-content'))
 
     // REVISE ought to be called submissions (plural)
-    app.post('/api/submission', express.json(), async (req, res) => {
+    app.post('/api/submissions', express.json(), async (req, res) => {
         // REVISE weird and inconsistent API design (the GET APIs work differently)
         if (req.body.character) {
             await controller.submitCharacter(req.body)
@@ -18,9 +18,9 @@ export default function Server(controller) {
         res.status(201).end()
     })
 
-    app.get('/api/character/:char', (req, res) => {
+    app.get('/api/characters/:hanzi', (req, res) => {
         try {
-            res.json(controller.getCharacter(req.params.char))
+            res.json(controller.getCharacter(req.params.hanzi))
         } catch (error) {
             if (error instanceof NotFound) {
                 res.status(404).end()
@@ -30,16 +30,16 @@ export default function Server(controller) {
         }
     })
 
-    app.put('/api/character/:char', express.json(), async (req, res) => {
-        await controller.updateCharacter({ character: req.params.char, ...req.body })
+    app.put('/api/characters/:hanzi', express.json(), async (req, res) => {
+        await controller.updateCharacter({ character: req.params.hanzi, ...req.body })
         res.status(200).end()
     })
 
-    app.get('/api/character', (req, res) => {
+    app.get('/api/characters', (req, res) => {
         res.json(controller.getNextCharacter())
     })
 
-    app.get('/api/word/:word', (req, res) => {
+    app.get('/api/words/:word', (req, res) => {
         try {
             res.json(controller.getWord(req.params.word))
         } catch (error) {

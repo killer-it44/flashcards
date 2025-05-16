@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .tokenizer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            gap: 5px;
+        }
+
+        .token {
+            display: flex;
+            align-items: center;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+        .token .remove {
+            margin-left: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #888;
+        }
+
+        .token .remove:hover {
+            color: #000;
+        }
+
+        .tokenizer input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        function createToken(event) {
+            if (event.key === ';') {
+                event.preventDefault()
+                const value = tokenInput.value.trim()
+                if (value) {
+                    appendTokenElementFor(value)
+                    tokenInput.value = ''
+                }
+            } else if (event.key === 'Backspace' && tokenInput.selectionStart === 0) {
+                const tokens = tokenizer.querySelectorAll('.token')
+                if (tokens.length > 0) {
+                    const lastToken = tokens[tokens.length - 1]
+                    tokenizer.removeChild(lastToken)
+                }
+            }
+        }
+
+        function appendTokenElementFor(value) {
+            const token = document.createElement('div')
+            token.className = 'token'
+            token.textContent = value
+
+            const removeButton = document.createElement('span')
+            removeButton.className = 'remove'
+            removeButton.textContent = 'x'
+            removeButton.addEventListener('click', () => {
+                tokenizer.removeChild(token)
+            })
+
+            token.appendChild(removeButton)
+            tokenizer.insertBefore(token, tokenInput)
+        }
+    </script>
+</head>
+
+<body>
+    <div style='display: flex; flex-direction: column;'>
+        hello from norah
+        <table>
+            <tr>
+                <td>cell A1</td>
+                <td>cell B1</td>
+            </tr>
+            <tr>
+                <td>cell A2</td>
+                <td>cell B2</td>
+            </tr>
+        </table>
+
+        <button>click me!</button>
+
+        <div class='tokenizer' id='tokenizer'>
+            <input type='text' id='tokenInput' onkeydown='createToken(event)'
+                placeholder='Type and press ";" to create a token'>
+        </div>
+    </div>
+</body>
+
+</html>

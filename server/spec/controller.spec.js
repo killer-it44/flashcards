@@ -29,7 +29,7 @@ describe('Controller', () => {
             hskLevel: 1,
             standardRank: 1,
             frequencyRank: 2,
-            related: [''],
+            related: '',
             words: ['一二', '一...二']
         })
     })
@@ -53,9 +53,9 @@ describe('Controller', () => {
     })
 
     it('can update an existing character', async () => {
-        await controller.updateCharacter({ character: '一', meaning: 'updated meaning', related: ['二'] })
+        await controller.updateCharacter({ character: '一', meaning: 'updated meaning', related: '二' })
         const character = controller.getCharacter('一')
-        expect(character).toEqual(jasmine.objectContaining({ hanzi: '一', meaning: 'updated meaning', related: ['二'] }))
+        expect(character).toEqual(jasmine.objectContaining({ hanzi: '一', meaning: 'updated meaning', related: '二' }))
     })
 
     it('can add new words, which are also looked up', async () => {
