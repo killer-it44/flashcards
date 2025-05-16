@@ -47,9 +47,13 @@ export default function FakeRepository() {
         "meaning": "one...two"
     }]
     this.sentences = [{
-        "hanzi": "一二三"
+        "hanzi": "一二三",
+        "pinyin": "yī èr sān",
+        "meaning": "one two three"
     }, {
-        "hanzi": "一还是二"
+        "hanzi": "一还是二",
+        "pinyin": "yī hái shì èr",
+        "meaning": "one or two"
     }]
     this.submissions = []
     this.save = () => null

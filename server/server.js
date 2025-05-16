@@ -51,7 +51,7 @@ export default function Server(controller) {
         }
     })
 
-    app.get('/api/word', (req, res) => {
+    app.get('/api/words', (req, res) => {
         res.json(controller.getNextWord())
     })
 
