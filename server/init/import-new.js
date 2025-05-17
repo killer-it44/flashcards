@@ -4,10 +4,10 @@ const dir = process.env.DATA_DIR || 'init'
 
 const content = (await fs.readFile('init/new-items.txt')).toString()
 
-const words = JSON.parse((await fs.readFile(`${dir}/words.json`)).toString())
+const expressions = JSON.parse((await fs.readFile(`${dir}/expressions.json`)).toString())
 const characters = JSON.parse((await fs.readFile(`${dir}/characters.json`)).toString())
 
-let newWords = 0, updatedMeanings = 0, ignored = 0
+let newExpressions = 0, updatedMeanings = 0, ignored = 0
 
 content.split('\n').forEach((line, i) => {
     const segments = line.split(' ')
@@ -33,31 +33,31 @@ content.split('\n').forEach((line, i) => {
             throw new Error(`line ${i + 1}: character ${segments[0]} not found`)
         }
     } else {
-        const existingWordEntry = words.find(w => w.word === segments[0])
-        if (existingWordEntry) {            
-            const newMeanings = meanings.filter(m => existingWordEntry.meaning.indexOf(m) === -1)
+        const existingExpressionEntry = expressions.find(w => w.expression === segments[0])
+        if (existingExpressionEntry) {            
+            const newMeanings = meanings.filter(m => existingExpressionEntry.meaning.indexOf(m) === -1)
             if (newMeanings.length === 0) {
-                console.log(`line ${i + 1}: meanings of word ${segments[0]} already existed, ignoring`)
+                console.log(`line ${i + 1}: meanings of expression ${segments[0]} already existed, ignoring`)
                 ignored++
             } else {
                 console.log(`line ${i + 1}: added meanings ${newMeanings.join('; ')}`)
-                existingWordEntry.meaning += `; ${newMeanings.join('; ')}`
+                existingExpressionEntry.meaning += `; ${newMeanings.join('; ')}`
                 updatedMeanings++
             }
         } else {
-            words.push({
-                word: segments[0],
+            expressions.push({
+                expression: segments[0],
                 meaning: segments.slice(1).join(' '),
                 pinyin: ''
             })
-            newWords++
+            newExpressions++
         }
     }
 })
 
 await fs.writeFile(`${dir}/characters.json`, JSON.stringify(characters, null, '\t'))
-await fs.writeFile(`${dir}/words.json`, JSON.stringify(words, null, '\t'))
+await fs.writeFile(`${dir}/expressions.json`, JSON.stringify(expressions, null, '\t'))
 
-console.log(`${newWords} new words`)
+console.log(`${newExpressions} new expressions`)
 console.log(`${updatedMeanings} updated meanings`)
 console.log(`${ignored} duplicates ignored`)

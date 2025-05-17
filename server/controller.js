@@ -5,8 +5,8 @@ export default function Controller(repo) {
         const character = repo.characters.find(c => c.hanzi === hanzi)
         if (!character) throw new NotFound()
         const radical = repo.radicals.find(r => r.hanzi.includes(character.radical.substring(0, 1)))
-        const words = repo.words.filter(w => w.hanzi.includes(character.hanzi)).map(w => w.hanzi)
-        return { ...character, radical, words }
+        const expressions = repo.expressions.filter(w => w.hanzi.includes(character.hanzi)).map(w => w.hanzi)
+        return { ...character, radical, expressions }
     }
 
     this.getNextCharacter = () => {
@@ -17,34 +17,30 @@ export default function Controller(repo) {
         return this.getCharacter(nextCharacter)
     }
 
-    this.getWord = (hanzi) => {
-        const word = repo.words.find(w => w.hanzi === hanzi)
-        if (!word) throw new NotFound()
-        let pinyin = word.pinyin
-        if (!word.pinyin) {
-            for (let i = 0; i < word.hanzi.length; i++) {
-                const char = repo.characters.find(c => c.hanzi == word.hanzi.charAt(i))
-                pinyin += char ? char.pinyin : word.hanzi.charAt(i)
+    this.getExpression = (hanzi) => {
+        const expression = repo.expressions.find(w => w.hanzi === hanzi)
+        if (!expression) throw new NotFound()
+        let pinyin = expression.pinyin
+        if (!expression.pinyin) {
+            for (let i = 0; i < expression.hanzi.length; i++) {
+                const char = repo.characters.find(c => c.hanzi == expression.hanzi.charAt(i))
+                pinyin += char ? char.pinyin : expression.hanzi.charAt(i)
             }
         }
 
-        const sentences = word.hanzi.includes('...')
-            ? repo.sentences.filter(s => s.hanzi.match(word.hanzi.replace('...', '.+'))).map(s => s.hanzi)
-            : repo.sentences.filter(s => s.hanzi.includes(hanzi)).map(s => s.hanzi)
-
-        return { ...word, pinyin, sentences }
+        return { ...expression, pinyin }
     }
 
-    this.getNextWord = () => {
-        const defaultWords = repo.words.map(w => w.hanzi)
-        const wordsNotRemembered = repo.submissions.filter(s => s.word && !s.remembered).map(s => s.word)
-        const words = [...defaultWords, ...wordsNotRemembered]
-        const nextWord = words[Math.floor(Math.random() * words.length)]
-        return this.getWord(nextWord)
+    this.getNextExpression = () => {
+        const defaultExpressions = repo.expressions.map(w => w.hanzi)
+        const expressionsNotRemembered = repo.submissions.filter(s => s.expression && !s.remembered).map(s => s.expression)
+        const expressions = [...defaultExpressions, ...expressionsNotRemembered]
+        const nextExpression = expressions[Math.floor(Math.random() * expressions.length)]
+        return this.getExpression(nextExpression)
     }
 
     // REVISE new submission structure should better contain a type field, so the entire structure should be
-    // { user: string,  type: 'radical' | 'character' | 'word' | 'sentence', hanzi: string, remembered: boolean, timestamp: Date }
+    // { user: string,  type: 'radical' | 'character' | 'expression', hanzi: string, remembered: boolean, timestamp: Date }
     this.submitCharacter = async (data) => {
         // TODO user handling
         const user = '野色'
@@ -60,33 +56,26 @@ export default function Controller(repo) {
         await repo.save()
     }
 
-    this.addWord = async (word) => {
-        if (!repo.words.find(w => w.hanzi === word.hanzi)) {
-            repo.words.push(word)
+    this.addExpression = async (expression) => {
+        if (!repo.expressions.find(e => e.hanzi === expression.hanzi)) {
+            repo.expressions.push(expression)
         }
         await repo.save()
     }
 
     // REVISE new submission structure should better contain a type field, so the entire structure should be
-    // { user: string,  type: 'radical' | 'character' | 'word' | 'sentence', hanzi: string, remembered: boolean, timestamp: Date }
-    this.submitWord = async (data) => {
+    // { user: string,  type: 'radical' | 'character' | 'expression', hanzi: string, remembered: boolean, timestamp: Date }
+    this.submitExpression = async (data) => {
         // TODO user handling
         const user = '野色'
-        repo.submissions.push({ user, word: data.word, remembered: data.remembered, timestamp: Date.now() })
+        repo.submissions.push({ user, expression: data.expression, remembered: data.remembered, timestamp: Date.now() })
         await repo.save()
     }
 
-    this.updateWord = async (data) => {
-        const word = repo.words.find(w => w.hanzi === data.word)
-        word.pinyin = data.pinyin
-        word.meaning = data.meaning
-        await repo.save()
-    }
-
-    this.addSentence = async (sentence) => {
-        if (!repo.sentences.find(s => s.hanzi === sentence.hanzi)) {
-            repo.sentences.push(sentence)
-        }
+    this.updateExpression = async (data) => {
+        const expression = repo.expressions.find(e => e.hanzi === data.expression)
+        expression.pinyin = data.pinyin
+        expression.meaning = data.meaning
         await repo.save()
     }
 

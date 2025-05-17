@@ -44,23 +44,23 @@ describe('Server', () => {
         expect(response.body).toEqual(jasmine.objectContaining({ hanzi: '一', meaning: 'updated meaning' }))
     })
 
-    it('returns the details of a specific word', async () => {
+    it('returns the details of a specific expression', async () => {
         // REVISE extract a specific API client class that can be used by the tests and the frontend
-        const response = await client.get(`/api/words/${encodeURIComponent('一二')}`).expect(200)
+        const response = await client.get(`/api/expressions/${encodeURIComponent('一二')}`).expect(200)
         expect(response.body.hanzi).toBe('一二')
     })
 
-    it('responds with 404 if word does not exist', async () => {
-        await client.get(`/api/words/does-not-exist}`).expect(404)
+    it('responds with 404 if expression does not exist', async () => {
+        await client.get(`/api/expressions/does-not-exist}`).expect(404)
     })
 
-    it('returns some next word', async () => {
-        const response = await client.get('/api/words').expect(200)
+    it('returns some next expression', async () => {
+        const response = await client.get('/api/expressions').expect(200)
         expect(response.body.hanzi).toBeInstanceOf(String)
     })
 
-    it('can submit words', async () => {
-        const updatedData = { word: '一二', remembered: true }
+    it('can submit expressions', async () => {
+        const updatedData = { expression: '一二', remembered: true }
         await client.post('/api/submissions').send(updatedData).expect(201)
         // TODO what's the test now? or is expecting HTTP 201 sufficient?
     })

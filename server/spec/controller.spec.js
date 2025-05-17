@@ -11,7 +11,7 @@ describe('Controller', () => {
 
     // TODO anything to consider the frequencyRank?
 
-    it('returns the details of a specific character including matching radicals and words', async () => {
+    it('returns the details of a specific character including matching radicals and expressions', async () => {
         expect(controller.getCharacter('一')).toEqual({
             hanzi: '一',
             pinyin: 'yī',
@@ -30,7 +30,7 @@ describe('Controller', () => {
             standardRank: 1,
             frequencyRank: 2,
             related: '',
-            words: ['一二', '一...二']
+            expressions: ['一二', '一...二']
         })
     })
 
@@ -42,7 +42,7 @@ describe('Controller', () => {
         const character = controller.getNextCharacter()
         expect(['一', '二']).toContain(character.hanzi)
         expect(['yī', 'èr']).toContain(character.pinyin)
-        expect(character.words).toEqual(['一二', '一...二'])
+        expect(character.expressions).toEqual(['一二', '一...二'])
         expect(character.radical.hanzi).not.toBe('')
     })
 
@@ -58,10 +58,10 @@ describe('Controller', () => {
         expect(character).toEqual(jasmine.objectContaining({ hanzi: '一', meaning: 'updated meaning', related: '二' }))
     })
 
-    it('can add new words, which are also looked up', async () => {
-        await controller.addWord({ hanzi: '一下', meaning: 'a little' })
-        expect(controller.getWord('一下').meaning).toBe('a little')
-        expect(controller.getCharacter('一').words).toContain('一下')
+    it('can add new expressions, which are also looked up', async () => {
+        await controller.addExpression({ hanzi: '一下', meaning: 'a little' })
+        expect(controller.getExpression('一下').meaning).toBe('a little')
+        expect(controller.getCharacter('一').expressions).toContain('一下')
     })
 
     it('will return the characters that are least remembered with a higher probability', async () => {
@@ -74,59 +74,50 @@ describe('Controller', () => {
         expect(characters.filter(c => c.hanzi === '二').length).toBeLessThan(400)
     })
 
-    it('returns the word and meaning, pinyin is looked up, as well as related sentences', async () => {
-        const word = controller.getWord('一二')
-        expect(word.hanzi).toBe('一二')
-        expect(word.pinyin).toBe('yīèr')
-        expect(word.meaning).toBe('one two')
-        expect(word.sentences).toEqual(['一二三'])
-
-        const word2 = controller.getWord('一...二')
-        expect(word2.sentences).toEqual(['一还是二'])
+    it('returns the expression and meaning, pinyin is looked up', async () => {
+        const expression = controller.getExpression('一二')
+        expect(expression.hanzi).toBe('一二')
+        expect(expression.pinyin).toBe('yīèr')
+        expect(expression.meaning).toBe('one two')
     })
 
-    it('will lookup the pinyin of a word from the individual characters, unless explicitly set ', async () => {
-        await controller.updateWord({ word: '一二', pinyin: '' })
-        expect(controller.getWord('一二').pinyin).toBe('yīèr')
+    it('will lookup the pinyin of a expression from the individual characters, unless explicitly set ', async () => {
+        await controller.updateExpression({ expression: '一二', pinyin: '' })
+        expect(controller.getExpression('一二').pinyin).toBe('yīèr')
 
-        await controller.updateWord({ word: '一二', pinyin: 'yìèr' })
-        expect(controller.getWord('一二').pinyin).toBe('yìèr')
+        await controller.updateExpression({ expression: '一二', pinyin: 'yìèr' })
+        expect(controller.getExpression('一二').pinyin).toBe('yìèr')
     })
 
-    it('throws an error if word does not exist', async () => {
-        expect(() => controller.getWord('not-existing')).toThrowError(NotFound)
+    it('throws an error if expression does not exist', async () => {
+        expect(() => controller.getExpression('not-existing')).toThrowError(NotFound)
     })
 
-    it('returns some next word, and pinyin is looked up', async () => {
-        const word = controller.getNextWord()
-        expect(['一二', '一...二']).toContain(word.hanzi)
-        expect(['yīèr', 'yī...èr']).toContain(word.pinyin)
+    it('returns some next expression, and pinyin is looked up', async () => {
+        const expression = controller.getNextExpression()
+        expect(['一二', '一...二']).toContain(expression.hanzi)
+        expect(['yīèr', 'yī...èr']).toContain(expression.pinyin)
     })
 
-    it('can submit words', async () => {
-        controller.submitWord({ word: '一二', remembered: true })
+    it('can submit expressions', async () => {
+        controller.submitExpression({ expression: '一二', remembered: true })
 
         // TODO what's the test now?
     })
 
-    it('will return the words that are least remembered with a higher probability', async () => {
-        await controller.submitWord({ word: '一二', remembered: false })
-        const words = []
+    it('will return the expressions that are least remembered with a higher probability', async () => {
+        await controller.submitExpression({ expression: '一二', remembered: false })
+        const expressions = []
         for (let i = 0; i < 1000; i++) {
-            words.push(controller.getNextWord())
+            expressions.push(controller.getNextExpression())
         }
-        expect(words.filter(c => c.hanzi === '一二').length).toBeGreaterThan(600)
-        expect(words.filter(c => c.hanzi === '一...二').length).toBeLessThan(400)
+        expect(expressions.filter(c => c.hanzi === '一二').length).toBeGreaterThan(600)
+        expect(expressions.filter(c => c.hanzi === '一...二').length).toBeLessThan(400)
     })
 
-    it('can update an existing word', async () => {
-        await controller.updateWord({ word: '一二', pinyin: 'yìèr', meaning: 'updated meaning' })
-        const word = controller.getWord('一二')
-        expect(word).toEqual(jasmine.objectContaining({ hanzi: '一二', pinyin: 'yìèr', meaning: 'updated meaning' }))
-    })
-
-    it('can add new sentences, which are then looked up', async () => {
-        await controller.addSentence({ hanzi: '一不是二', meaning: 'one is not two' })
-        expect(controller.getWord('一...二').sentences).toContain('一不是二')
+    it('can update an existing expression', async () => {
+        await controller.updateExpression({ expression: '一二', pinyin: 'yìèr', meaning: 'updated meaning' })
+        const expression = controller.getExpression('一二')
+        expect(expression).toEqual(jasmine.objectContaining({ hanzi: '一二', pinyin: 'yìèr', meaning: 'updated meaning' }))
     })
 })

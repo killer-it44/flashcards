@@ -13,7 +13,7 @@ export default function Server(controller) {
         if (req.body.character) {
             await controller.submitCharacter(req.body)
         } else {
-            await controller.submitWord(req.body)
+            await controller.submitExpression(req.body)
         }
         res.status(201).end()
     })
@@ -39,9 +39,9 @@ export default function Server(controller) {
         res.json(controller.getNextCharacter())
     })
 
-    app.get('/api/words/:word', (req, res) => {
+    app.get('/api/expressions/:expression', (req, res) => {
         try {
-            res.json(controller.getWord(req.params.word))
+            res.json(controller.getExpression(req.params.expression))
         } catch (error) {
             if (error instanceof NotFound) {
                 res.status(404).end()
@@ -51,8 +51,8 @@ export default function Server(controller) {
         }
     })
 
-    app.get('/api/words', (req, res) => {
-        res.json(controller.getNextWord())
+    app.get('/api/expressions', (req, res) => {
+        res.json(controller.getNextExpression())
     })
 
     this.start = (port) => {

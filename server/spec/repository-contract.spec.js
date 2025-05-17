@@ -23,20 +23,15 @@ describe('Repository API and data structure contract', () => {
 
         expect(fakeRepo.radicals.length).toBeGreaterThan(0)
         expect(fakeRepo.characters.length).toBeGreaterThan(0)
-        expect(fakeRepo.words.length).toBeGreaterThan(0)
+        expect(fakeRepo.expressions.length).toBeGreaterThan(0)
         expect(fakeRepo.submissions).toBeInstanceOf(Array)
 
         expect(fakeRepo.characters[0]).toEqual(fsRepo.characters.find(c => c.hanzi === fakeRepo.characters[0].hanzi))        
         expect(fakeRepo.radicals[0]).toEqual(fsRepo.radicals.find(r => r.hanzi === fakeRepo.radicals[0].hanzi))
 
-        expect(Object.keys(fakeRepo.words[0])).toEqual(Object.keys(fsRepo.words[0]))
-        Object.keys(fakeRepo.words[0]).forEach(key => {
-            expect(typeof fakeRepo.words[0][key]).toBe(typeof fsRepo.words[0][key])
-        })
-
-        expect(Object.keys(fakeRepo.sentences[0])).toEqual(Object.keys(fsRepo.sentences[0]))
-        Object.keys(fakeRepo.sentences[0]).forEach(key => {
-            expect(typeof fakeRepo.sentences[0][key]).toBe(typeof fsRepo.sentences[0][key])
+        expect(Object.keys(fakeRepo.expressions[0])).toEqual(Object.keys(fsRepo.expressions[0]))
+        Object.keys(fakeRepo.expressions[0]).forEach(key => {
+            expect(typeof fakeRepo.expressions[0][key]).toBe(typeof fsRepo.expressions[0][key])
         })
 
         expect(fsRepo.submissions).toBeInstanceOf(Array)
