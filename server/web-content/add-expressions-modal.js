@@ -1,7 +1,7 @@
 import { html, useState, useEffect } from './preact-htm-standalone.js'
 
 export default function AddExpressionsModal(props) {
-    const [expressions, setExpressions] = useState([{ expression: '', meaning: '' }])
+    const [expressions, setExpressions] = useState([{ hanzi: '', meaning: '' }])
 
     useEffect(() => {
         const firstInput = document.querySelector('.modal-content input[type="text"]')
@@ -14,10 +14,10 @@ export default function AddExpressionsModal(props) {
         setExpressions(updatedExpressions)
 
         // Add a new row if the current row is fully filled
-        if (field === 'meaning' && value && updatedExpressions[index].expression) {
-            const hasEmptyRow = updatedExpressions.some(e => !e.expression && !e.meaning)
+        if (field === 'meaning' && value && updatedExpressions[index].hanzi) {
+            const hasEmptyRow = updatedExpressions.some(e => !e.hanzi && !e.meaning)
             if (!hasEmptyRow) {
-                setExpressions([...updatedExpressions, { expression: '', meaning: '' }])
+                setExpressions([...updatedExpressions, { hanzi: '', meaning: '' }])
             }
         }
     }
@@ -65,12 +65,12 @@ export default function AddExpressionsModal(props) {
                 <table>
                     ${expressions.map((entry, index) => html`
                     <tr>
-                        <td><input type='text' placeholder='Expression' value=${entry.expression || ''} oninput=${(e) => handleInputChange(index, 'expression', e.target.value)} /></td>
+                        <td><input type='text' placeholder='Hanzi' value=${entry.hanzi || ''} oninput=${(e) => handleInputChange(index, 'hanzi', e.target.value)} /></td>
                         <td><input type='text' placeholder='Meaning' value=${entry.meaning || ''} oninput=${(e) => handleInputChange(index, 'meaning', e.target.value)} /></td>
                     </tr>
                     `)}
                 </table>
-                <button onclick=${() => props.onSave(expressions.filter(e => e.expression && e.meaning))}>Save</button>
+                <button onclick=${() => props.onSave(expressions.filter(e => e.hanzi && e.meaning))}>Save</button>
             </div>
         </div>
     `

@@ -10,7 +10,11 @@ export default function App() {
 
     const getSelectedChar = (e) => (e.key === 'Enter') ? getChar(e.target.value) : null
 
-    const getChar = async (hanzi) => setCurrentCharacter(await (await fetch(`/api/characters/${hanzi}`)).json())
+    const getChar = async (hanzi) => {
+        const response = await fetch(`/api/characters/${hanzi}`)
+        const json = await response.json()
+        setCurrentCharacter(json)
+    }
 
     const toggleInfo = () => setInfoVisible(!isInfoVisible)
 
@@ -18,7 +22,7 @@ export default function App() {
         const headers = { 'Content-Type': 'application/json' }
         const body = JSON.stringify({ ...currentCharacter, related: newRelated })
         await fetch(`/api/characters/${currentCharacter.hanzi}`, { method: 'PUT', headers, body })
-        await getChar(props.currentCharacter.hanzi)
+        await getChar(currentCharacter.hanzi)
     }
 
     const saveExpressions = async (newExpressions) => {

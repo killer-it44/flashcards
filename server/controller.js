@@ -63,6 +63,11 @@ export default function Controller(repo) {
         await repo.save()
     }
 
+    this.addExpressions = async (expressions) => {
+        repo.expressions.push(...expressions.filter(expression => !repo.expressions.find(e => e.hanzi === expression.hanzi)))
+        await repo.save()
+    }
+
     // REVISE new submission structure should better contain a type field, so the entire structure should be
     // { user: string,  type: 'radical' | 'character' | 'expression', hanzi: string, remembered: boolean, timestamp: Date }
     this.submitExpression = async (data) => {

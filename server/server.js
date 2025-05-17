@@ -55,6 +55,11 @@ export default function Server(controller) {
         res.json(controller.getNextExpression())
     })
 
+    app.post('/api/expressions', express.json(), async (req, res) => {
+        await controller.addExpressions(req.body)
+        res.status(204).end()
+    })
+
     this.start = (port) => {
         return new Promise((resolve, reject) => {
             httpServer = app.listen(port, () => resolve(httpServer.address().port)).on('error', reject)
