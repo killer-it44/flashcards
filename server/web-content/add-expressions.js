@@ -1,6 +1,6 @@
 import { html, useState, useEffect } from './preact-htm-standalone.js'
 
-export default function AddExpressionsModal(props) {
+export default function AddExpressions(props) {
     const [expressions, setExpressions] = useState([{ hanzi: '', meaning: '' }])
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export default function AddExpressionsModal(props) {
     }
 
     return html`
-        <div class="modal-overlay" onclick=${props.onClose}>
+        <div class='modal-overlay' onclick=${(e) => {e.stopPropagation(); props.onClose();}}>
             <style>
                 .modal-overlay {
                     position: fixed;
@@ -60,7 +60,7 @@ export default function AddExpressionsModal(props) {
                     background: #45a049;
                 }
             </style>
-            <div class="modal-content" onclick=${(e) => e.stopPropagation()}>
+            <div class='modal-content' onclick=${(e) => e.stopPropagation()}>
                 <h3>Add Expressions</h3>
                 <table>
                     ${expressions.map((entry, index) => html`
@@ -70,7 +70,7 @@ export default function AddExpressionsModal(props) {
                     </tr>
                     `)}
                 </table>
-                <button onclick=${() => props.onSave(expressions.filter(e => e.hanzi && e.meaning))}>Save</button>
+                <button onclick=${(e) => {e.stopPropagation(); props.onSave(expressions.filter(e => e.hanzi && e.meaning))}}>Save</button>
             </div>
         </div>
     `
