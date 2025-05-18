@@ -1,6 +1,6 @@
 import { html, useState, useEffect, useRef } from './preact-htm-standalone.js'
 
-export default function SwitchCharDialog({ onClose }) {
+export default function SwitchChar({ onClose }) {
     const [newCharacter, setNewCharacter] = useState('')
     const inputRef = useRef(null)
 

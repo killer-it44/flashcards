@@ -1,19 +1,16 @@
 import { html, useState, useRef } from './preact-htm-standalone.js'
 import AddExpressions from './add-expressions.js'
+import EditRelated from './edit-related.js'
 
 export default function CharacterInfo(props) {
     const [isAddingExpressions, setAddingExpressions] = useState(false)
     const [isEditingRelated, setEditingRelated] = useState(false)
-    const relatedInput = useRef()
 
     const expressionsLinks = props.currentCharacter.expressions.map(w => html`<a href=/expressions/#/${encodeURIComponent(w)}>${w}</a>`)
-    // const expressionsLinksList = expressionsLinks.length > 0 ? expressionsLinks.reduce((prev, curr) => html`${prev}, ${curr}`) : html``
-    const expressionsLinksList = expressionsLinks.length > 0 
-    ? expressionsLinks.map(link => html`<div>${link}</div>`) 
-    : html``;
+    const expressionsLinksList = expressionsLinks.length > 0 ? expressionsLinks.map(link => html`<div>${link}</div>`) : html``;
 
-    const saveRelated = async () => {
-        await props.saveRelated(relatedInput.current.value)
+    const closeEditRelated = async (newRelated) => {
+        if (newRelated !== null) props.saveRelated(newRelated)
         setEditingRelated(false)
     }
 
@@ -23,16 +20,14 @@ export default function CharacterInfo(props) {
     }
 
     return html`
-        <div class="character-card">
+        <div class="character-card" style='font-size: 1em;'>
             <style>
                 .character-card {
                     padding: 16px;
-                    margin: 16px 0;
+                    margin: 1em 1em;
                     display: flex;
                     flex-direction: column;
-                    gap: 16px;
-                    width: 100%;
-                    box-sizing: border-box;
+                    gap: .4em;
                 }
 
                 .character-section {
@@ -42,7 +37,6 @@ export default function CharacterInfo(props) {
 
                 .section-title {
                     font-weight: bold;
-                    margin-bottom: 4px;
                     color: #333;
                 }
 
@@ -50,7 +44,7 @@ export default function CharacterInfo(props) {
                     color: #555;
                 }
 
-                button {
+                .highlighted-button {
                     margin-left: 8px;
                     padding: 4px 8px;
                     border: none;
@@ -60,13 +54,12 @@ export default function CharacterInfo(props) {
                     cursor: pointer;
                 }
 
-                button:hover {
+                .highlighted-button:hover {
                     background-color: #0056b3;
                 }
             </style>
-            <div style='display: flex; justify-content: center; font-size: 3.5em; margin-bottom: 16px;'>
+            <div style='display: flex; justify-content: center; font-size: 2.5em; margin-bottom: 8px;'>
                 <div>${props.currentCharacter.hanzi}</div>
-                <button onclick=${(e) => {e.stopPropagation(); switchChar()}} style='margin-left: 10px;'>🔄</button>
             </div>
             <section class='character-section'>
                 <div class="section-title">Pinyin</div>
@@ -81,20 +74,17 @@ export default function CharacterInfo(props) {
                 <div class="section-content">${props.currentCharacter.meaning}</div>
             </section>
             <section class='character-section'>
-                <div class="section-title">Expressions<button onclick=${(e) => {e.stopPropagation(); setAddingExpressions(true);}}>＋</button></div>
-                <div class="section-content">${expressionsLinksList}</div>
+                <div class="section-title">Expressions<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setAddingExpressions(true);}}>+</button></div>
+                <div class="section-content" style='max-height: 4em; overflow: auto;'>${expressionsLinksList}</div>
             </section>
             <section class='character-section'>
-                <div class="section-title">Related${!isEditingRelated ?  html`<button onclick=${(e) => {e.stopPropagation(); setEditingRelated(true);}}>✎</button>` : ''}</div>
+                <div class="section-title">Related${!isEditingRelated ?  html`<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setEditingRelated(true);}}>✎</button>` : ''}</div>
                 <div class="section-content">
-                    ${isEditingRelated
-                    ? html`<input ref=${relatedInput} value=${props.currentCharacter.related} />
-                            <button onclick=${(e) => {e.stopPropagation(); saveRelated();}}>💾</button>
-                            <button onclick=${(e) => {e.stopPropagation(); setEditingRelated(false);}}>❌</button>`
-                    : props.currentCharacter.related.split(' ').map(w => html`<a href=/#/${encodeURIComponent(w)}>${w}</a>`)}
+                    ${props.currentCharacter.related.split(' ').map(w => html`<a href=/#/${encodeURIComponent(w)}>${w}</a>`)}
                 </div>
             </section>
             ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
+            ${isEditingRelated ? html`<${EditRelated} onClose=${closeEditRelated} />` : ''}
         </div>
     `
 }

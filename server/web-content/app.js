@@ -4,7 +4,7 @@ import CharacterInfo from './character-info.js'
 export default function App() {
     // TODO support for other languages
     const [isInfoVisible, setInfoVisible] = useState(false)
-    const [currentCharacter, setCurrentCharacter] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: [] })
+    const [currentCharacter, setCurrentCharacter] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
 
     useEffect(() => getChar(''), [])
 
