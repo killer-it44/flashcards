@@ -62,14 +62,12 @@ export default function AddExpressions(props) {
             </style>
             <div class='modal-content' onclick=${(e) => e.stopPropagation()}>
                 <h3>Add Expressions</h3>
-                <table>
                     ${expressions.map((entry, index) => html`
-                    <tr>
-                        <td><input type='text' placeholder='Hanzi' value=${entry.hanzi || ''} oninput=${(e) => handleInputChange(index, 'hanzi', e.target.value)} /></td>
-                        <td><input type='text' placeholder='Meaning' value=${entry.meaning || ''} oninput=${(e) => handleInputChange(index, 'meaning', e.target.value)} /></td>
-                    </tr>
+                    <div style='display: flex; gap: 10px; margin-bottom: 10px;'>
+                        <input style='width: 50%; box-sizing: border-box;' type='text' placeholder='Hanzi' value=${entry.hanzi || ''} oninput=${(e) => handleInputChange(index, 'hanzi', e.target.value)} />
+                        <input style='width: 50%; box-sizing: border-box;' type='text' placeholder='Meaning' value=${entry.meaning || ''} oninput=${(e) => handleInputChange(index, 'meaning', e.target.value)} />
+                    </div>
                     `)}
-                </table>
                 <button onclick=${(e) => {e.stopPropagation(); props.onSave(expressions.filter(e => e.hanzi && e.meaning))}}>Save</button>
             </div>
         </div>

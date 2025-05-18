@@ -84,7 +84,7 @@ export default function CharacterInfo(props) {
                 </div>
             </section>
             ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
-            ${isEditingRelated ? html`<${EditRelated} onClose=${closeEditRelated} />` : ''}
+            ${isEditingRelated ? html`<${EditRelated} value=${props.currentCharacter.related} onClose=${closeEditRelated} />` : ''}
         </div>
     `
 }
