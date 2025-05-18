@@ -1,10 +1,13 @@
-import { html, useState, useEffect } from './preact-htm-standalone.js'
+import { html, useState, useEffect, useRef } from './preact-htm-standalone.js'
 import CharacterInfo from './character-info.js'
+import ChangeCharacter from './change-character.js'
 
 export default function App() {
-    // TODO support for other languages
-    const [isInfoVisible, setInfoVisible] = useState(false)
+    // TODO support hash
+    const [isFlipped, setFlipped] = useState(false)
+    const [isChangingCharacter, setChangingCharacter] = useState(false)
     const [currentCharacter, setCurrentCharacter] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
+    const card = useRef()
 
     useEffect(() => getChar(''), [])
 
@@ -16,7 +19,10 @@ export default function App() {
         setCurrentCharacter(json)
     }
 
-    const toggleInfo = () => setInfoVisible(!isInfoVisible)
+    const changeCharacter = async (newCharacter) => {
+        newCharacter ? await getChar(newCharacter) : null
+        setChangingCharacter(false)
+    }
 
     const saveRelated = async (newRelated) => {
         const headers = { 'Content-Type': 'application/json' }
@@ -42,16 +48,22 @@ export default function App() {
     // }
 
     return html`
-        <div style='display: flex; flex-direction: column; margin-top: 8px;'>
-            <div style='display: flex; justify-content: center;'>
-                <input value=${currentCharacter.hanzi} onkeypress=${getSelectedChar} style='font-size: 3.5em; width: 100%;'></input>
-                <button onclick=${toggleInfo} style='font-size: 3.5em;'>👀</button>
+        <div style='display: flex; flex-direction: column; margin-top: 8px; align-items: center; justify-content: center; height: calc(100vh - 4em);'>
+            <button onclick=${(e) => {e.stopPropagation(); setChangingCharacter(true);}} style='font-size: 3.5em; position: absolute; right: 0; top: 0; margin: 10px;'>🔄</button>
+            <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; justify-content: center; align-items: center; height: min(85vh, 85vw * 1.5); aspect-ratio: 2 / 3; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
+                <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em; margin-bottom: 16px;'>
+                    <div>${currentCharacter.hanzi}</div>
+                </div>
+                <div class='card-back' style='display: flex; align-items: center; justify-content: center; margin-bottom: 16px;'>
+                    <${CharacterInfo} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />
+                </div>
             </div>
-            ${isInfoVisible ? html`<${CharacterInfo} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />` : ''}
             <div style='display: flex; position: fixed; bottom: 0; left: 0; width: 100%;'>
-                <button onclick='post(false)' style='width: 50%; border: none; background-color: red; font-size: 2.5em;'>👎🏻</button>
-                <button onclick='post(true)' style='width: 50%; border: none; background-color: green; font-size: 2.5em;'>👍🏻</button>
+                <button style='width: 33%; border: none; background-color: red; font-size: 2.5em;'>🤯</button>
+                <button style='width: 34%; border: none; background-color: orange; font-size: 2.5em;'>🤔</button>
+                <button style='width: 33%; border: none; background-color: green; font-size: 2.5em;'>🤓</button>
             </div>
+            ${isChangingCharacter ? html`<${ChangeCharacter} onClose=${changeCharacter} />` : ''}
         </div>
     `
 }

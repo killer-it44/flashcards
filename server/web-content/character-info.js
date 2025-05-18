@@ -1,22 +1,16 @@
 import { html, useState, useRef } from './preact-htm-standalone.js'
 import AddExpressions from './add-expressions.js'
+import EditRelated from './edit-related.js'
 
 export default function CharacterInfo(props) {
     const [isAddingExpressions, setAddingExpressions] = useState(false)
     const [isEditingRelated, setEditingRelated] = useState(false)
-    const relatedInput = useRef()
 
     const expressionsLinks = props.currentCharacter.expressions.map(w => html`<a href=/expressions/#/${encodeURIComponent(w)}>${w}</a>`)
-    // const expressionsLinksList = expressionsLinks.length > 0 ? expressionsLinks.reduce((prev, curr) => html`${prev}, ${curr}`) : html``
-    const expressionsLinksList = expressionsLinks.length > 0 
-    ? expressionsLinks.map(link => html`<div>${link}</div>`) 
-    : html``;
+    const expressionsLinksList = expressionsLinks.length > 0 ? expressionsLinks.map(link => html`<div>${link}</div>`) : html``;
 
-    const relatedLinks = props.currentCharacter.related.split(' ').map(w => html`<a href=/#/${encodeURIComponent(w)}>${w}</a>`)
-    const relatedLinksList = relatedLinks.length > 0 ? relatedLinks.reduce((prev, curr) => html`${prev}, ${curr}`) : html``
-
-    const saveRelated = async () => {
-        await props.saveRelated(relatedInput.current.value)
+    const closeEditRelated = async (newRelated) => {
+        if (newRelated !== null) props.saveRelated(newRelated)
         setEditingRelated(false)
     }
 
@@ -26,37 +20,31 @@ export default function CharacterInfo(props) {
     }
 
     return html`
-        <div class="character-card">
+        <div class='character-info' style='font-size: 1em;'>
             <style>
-                .character-card {
-                    background: #fff;
-                    border-radius: 8px;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                .character-info {
                     padding: 16px;
-                    margin: 16px 0;
+                    margin: 1em 1em;
                     display: flex;
                     flex-direction: column;
-                    gap: 16px;
-                    width: 100%;
-                    box-sizing: border-box;
+                    gap: .4em;
                 }
 
-                .character-section {
+                .character-info .section {
                     display: flex;
                     flex-direction: column;
                 }
 
-                .section-title {
+                .character-info .section-title {
                     font-weight: bold;
-                    margin-bottom: 4px;
                     color: #333;
                 }
 
-                .section-content {
+                .character-info .section-content {
                     color: #555;
                 }
 
-                button {
+                .character-info .highlighted-button {
                     margin-left: 8px;
                     padding: 4px 8px;
                     border: none;
@@ -66,47 +54,35 @@ export default function CharacterInfo(props) {
                     cursor: pointer;
                 }
 
-                button:hover {
+                .character-info .highlighted-button:hover {
                     background-color: #0056b3;
                 }
-
-                @media (max-width: 768px) {
-                    .character-card {
-                        width: 100%;
-                    }
-                }
             </style>
-            <div class="character-section">
-                <div class="section-title">Pinyin</div>
-                <div class="section-content">${props.currentCharacter.pinyin}</div>
+            <div style='display: flex; justify-content: center; font-size: 2.5em; margin-bottom: 8px;'>
+                <div>${props.currentCharacter.hanzi}</div>
             </div>
-            <div class="character-section">
-                <div class="section-title">Radical</div>
-                <div class="section-content">${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
-            </div>
-            <div class="character-section">
-                <div class="section-title">Meaning</div>
-                <div class="section-content">${props.currentCharacter.meaning}</div>
-            </div>
-            <div class="character-section">
-                <div class="section-title">Expressions</div>
-                <div class="section-content">
-                    ${expressionsLinksList}
-                    <button onclick=${() => setAddingExpressions(true)}>＋</button>
-                </div>
-            </div>
-            <div class="character-section">
-                <div class="section-title">Related</div>
-                <div class="section-content">
-                    ${isEditingRelated
-                    ? html`<input ref=${relatedInput} value=${props.currentCharacter.related} />
-                            <button onclick=${saveRelated}>💾</button>
-                            <button onclick=${() => setEditingRelated(false)}>❌</button>`
-                    : html`${relatedLinksList}
-                            <button onclick=${() => setEditingRelated(true)}>✎</button>`}
-                </div>
-            </div>
+            <section class=character-section>
+                <div class=section-title>Pinyin</div>
+                <div class=section-content>${props.currentCharacter.pinyin}</div>
+            </section>
+            <section class=character-section>
+                <div class=section-title>Radical</div>
+                <div class=section-content>${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
+            </section>
+            <section class=character-section>
+                <div class=section-title>Meaning</div>
+                <div class=section-content>${props.currentCharacter.meaning}</div>
+            </section>
+            <section class=character-section>
+                <div class=section-title>Expressions<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setAddingExpressions(true);}}>+</button></div>
+                <div class=section-content style='max-height: 4em; overflow: auto;'>${expressionsLinksList}</div>
+            </section>
+            <section class=character-section>
+                <div class=section-title>Related${!isEditingRelated ?  html`<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setEditingRelated(true);}}>✎</button>` : ''}</div>
+                <div class=section-content>${props.currentCharacter.related.split(' ').map(w => html`<a href=/#/${encodeURIComponent(w)}>${w}</a>`)}</div>
+            </section>
             ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
+            ${isEditingRelated ? html`<${EditRelated} value=${props.currentCharacter.related} onClose=${closeEditRelated} />` : ''}
         </div>
     `
 }
