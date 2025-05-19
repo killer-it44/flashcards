@@ -35,7 +35,7 @@ export default function App() {
         const headers = { 'Content-Type': 'application/json' }
         const body = JSON.stringify(newExpressions)
         await fetch(`/api/expressions`, { method: 'POST', headers, body })
-        await getChar(props.currentCharacter.hanzi)
+        await getChar(currentCharacter.hanzi)
     }
 
     // const submit = async (remembered) => {

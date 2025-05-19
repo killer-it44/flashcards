@@ -10,6 +10,16 @@ export default function Controller(repo) {
     }
 
     this.getNextCharacter = () => {
+        // TODO new algorithm: hard, medium, easy - with weights, new cards should be in medium category
+        // category_probabilities = {
+        //     1: 0.6,  # 60% chance for Category 1
+        //     2: 0.3,  # 30% chance for Category 2
+        //     3: 0.1   # 10% chance for Category 3
+        // }
+        // this could be called a "strategy" - other strategies could be based on "due date", "last seen", "how often forgotten", "number of strokes", "frequency rank", etc.
+        
+        // TODO introduce a concept of named decks
+        
         const defaultChars = repo.characters.filter(c => c.frequencyRank && c.frequencyRank < 1000).map(c => c.hanzi)
         const charsNotRemembered = repo.submissions.filter(s => s.character && !s.remembered).map(s => s.character)
         const chars = [...defaultChars, ...charsNotRemembered]
