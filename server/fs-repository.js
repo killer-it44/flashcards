@@ -10,11 +10,13 @@ export default function FsRepository(dataDir) {
             fs.copyFileSync('server/init/characters.json', `${dataDir}/characters.json`)
             fs.copyFileSync('server/init/expressions.json', `${dataDir}/expressions.json`)
             fs.copyFileSync('server/init/submissions.json', `${dataDir}/submissions.json`)
+            fs.copyFileSync('server/init/decks.json', `${dataDir}/decks.json`)
         }
         this.radicals = JSON.parse(fs.readFileSync(`${dataDir}/radicals.json`).toString())
         this.characters = JSON.parse(fs.readFileSync(`${dataDir}/characters.json`).toString())
         this.expressions = JSON.parse(fs.readFileSync(`${dataDir}/expressions.json`).toString())
         this.submissions = JSON.parse(fs.readFileSync(`${dataDir}/submissions.json`).toString())
+        this.decks = JSON.parse(fs.readFileSync(`${dataDir}/decks.json`).toString())
     }
 
     this.save = async () => {

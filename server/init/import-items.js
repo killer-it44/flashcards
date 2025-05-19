@@ -18,7 +18,7 @@ content.split('\n').forEach((line, i) => {
     const meanings = segments.slice(1).join(' ').split(';').map(m => m.trim())
 
     if (segments[0].length === 1) {
-        const existingCharEntry = characters.find(c => c.character === segments[0])
+        const existingCharEntry = characters.find(c => c.hanzi === segments[0])
         if (existingCharEntry) {            
             const newMeanings = meanings.filter(m => existingCharEntry.meaning.indexOf(m) === -1)
             if (newMeanings.length === 0) {
@@ -33,7 +33,7 @@ content.split('\n').forEach((line, i) => {
             throw new Error(`line ${i + 1}: character ${segments[0]} not found`)
         }
     } else {
-        const existingExpressionEntry = expressions.find(w => w.expression === segments[0])
+        const existingExpressionEntry = expressions.find(e => e.hanzi === segments[0])
         if (existingExpressionEntry) {            
             const newMeanings = meanings.filter(m => existingExpressionEntry.meaning.indexOf(m) === -1)
             if (newMeanings.length === 0) {
@@ -46,7 +46,7 @@ content.split('\n').forEach((line, i) => {
             }
         } else {
             expressions.push({
-                expression: segments[0],
+                hanzi: segments[0],
                 meaning: segments.slice(1).join(' '),
                 pinyin: ''
             })
@@ -55,8 +55,8 @@ content.split('\n').forEach((line, i) => {
     }
 })
 
-// await fs.writeFile(`${dir}/characters.json`, JSON.stringify(characters, null, '\t'))
-// await fs.writeFile(`${dir}/expressions.json`, JSON.stringify(expressions, null, '\t'))
+await fs.writeFile(`${dir}/characters.json`, JSON.stringify(characters, null, '\t'))
+await fs.writeFile(`${dir}/expressions.json`, JSON.stringify(expressions, null, '\t'))
 
 console.log(`${newExpressions} new expressions`)
 console.log(`${updatedMeanings} updated meanings`)

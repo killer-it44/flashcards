@@ -310,7 +310,7 @@
 	{
 		"hanzi": "才",
 		"pinyin": "cái",
-		"meaning": "talent, ability; just, only",
+		"meaning": "talent, ability; just, only; first; right now",
 		"radical": "手 64.0",
 		"strokes": 3,
 		"hskLevel": 3,
@@ -1289,7 +1289,7 @@
 	{
 		"hanzi": "见",
 		"pinyin": "jiàn",
-		"meaning": "see, observe, behold; perceive",
+		"meaning": "see, observe, behold; perceive; to see; to appear; to meet",
 		"radical": "見 147.0",
 		"strokes": 4,
 		"hskLevel": 1,
@@ -1630,7 +1630,7 @@
 	{
 		"hanzi": "仓",
 		"pinyin": "cāng",
-		"meaning": "granary; berth; sea",
+		"meaning": "granary; berth; sea; cabin",
 		"radical": "人 9.2",
 		"strokes": 4,
 		"hskLevel": 6,
@@ -4699,7 +4699,7 @@
 	{
 		"hanzi": "吊",
 		"pinyin": "diào",
-		"meaning": "condole, mourn, pity; hang",
+		"meaning": "condole, mourn, pity; hang; to hang (on the ceiling)",
 		"radical": "口 30.3",
 		"strokes": 6,
 		"hskLevel": 6,
@@ -5271,7 +5271,7 @@
 	{
 		"hanzi": "向",
 		"pinyin": "xiàng",
-		"meaning": "toward, direction, trend",
+		"meaning": "toward, direction, trend; forward",
 		"radical": "口 30.3",
 		"strokes": 6,
 		"hskLevel": 3,
@@ -5722,7 +5722,7 @@
 	{
 		"hanzi": "次",
 		"pinyin": "cì",
-		"meaning": "order, sequence; next",
+		"meaning": "order, sequence; next; times (counting)",
 		"radical": "欠 76.2",
 		"strokes": 6,
 		"hskLevel": 2,
@@ -5744,7 +5744,7 @@
 	{
 		"hanzi": "决",
 		"pinyin": "jué",
-		"meaning": "decide, determine, judge",
+		"meaning": "decide, determine, judge; to decide",
 		"radical": "冫 15.4",
 		"strokes": 6,
 		"hskLevel": 3,
@@ -5788,7 +5788,7 @@
 	{
 		"hanzi": "闭",
 		"pinyin": "bì",
-		"meaning": "shut, close; obstruct, block up",
+		"meaning": "shut, close; obstruct, block up; mute/cancel",
 		"radical": "門 169.3",
 		"strokes": 6,
 		"hskLevel": 5,
@@ -5799,7 +5799,7 @@
 	{
 		"hanzi": "问",
 		"pinyin": "wèn",
-		"meaning": "ask about, inquire after",
+		"meaning": "ask about, inquire after; question",
 		"radical": "門 169.3",
 		"strokes": 6,
 		"hskLevel": 2,
@@ -6294,7 +6294,7 @@
 	{
 		"hanzi": "收",
 		"pinyin": "shōu",
-		"meaning": "gather together, collect; harvest",
+		"meaning": "gather together, collect; harvest; receive; to receive",
 		"radical": "攴 66.2",
 		"strokes": 6,
 		"hskLevel": 4,
@@ -6327,7 +6327,7 @@
 	{
 		"hanzi": "防",
 		"pinyin": "fáng",
-		"meaning": "defend; prevent; embankment",
+		"meaning": "defend; prevent; embankment; to resist; to protect",
 		"radical": "阜 170.4",
 		"strokes": 6,
 		"hskLevel": 5,
@@ -7559,7 +7559,7 @@
 	{
 		"hanzi": "李",
 		"pinyin": "lǐ",
-		"meaning": "plum; judge; surname",
+		"meaning": "plum; judge; surname; Li (name)",
 		"radical": "木 75.3",
 		"strokes": 7,
 		"hskLevel": 3,
@@ -7581,7 +7581,7 @@
 	{
 		"hanzi": "求",
 		"pinyin": "qiú",
-		"meaning": "seek; demand, request; beseech",
+		"meaning": "seek; demand, request; beseech; beg",
 		"radical": "水 85.2",
 		"strokes": 7,
 		"hskLevel": 3,
@@ -7735,7 +7735,7 @@
 	{
 		"hanzi": "还",
 		"pinyin": "hái",
-		"meaning": "still, yet, also, besides",
+		"meaning": "still, yet, also, besides; return; to give back",
 		"radical": "辵 162.4",
 		"strokes": 7,
 		"hskLevel": 2,
@@ -8175,7 +8175,7 @@
 	{
 		"hanzi": "吹",
 		"pinyin": "chuī",
-		"meaning": "blow; puff; brag, boast",
+		"meaning": "blow; puff; brag, boast; to blow; to whistle",
 		"radical": "口 30.4",
 		"strokes": 7,
 		"hskLevel": 5,
@@ -8945,7 +8945,7 @@
 	{
 		"hanzi": "角",
 		"pinyin": "jiǎo",
-		"meaning": "horn; angle, corner; point",
+		"meaning": "horn; angle, corner; point; Jiao (currency)",
 		"radical": "角 148.0",
 		"strokes": 7,
 		"hskLevel": 3,
@@ -9979,7 +9979,7 @@
 	{
 		"hanzi": "改",
 		"pinyin": "gǎi",
-		"meaning": "change, alter; improve, remodel",
+		"meaning": "change, alter; improve, remodel; to change; to transform; to alter",
 		"radical": "攴 66.3",
 		"strokes": 7,
 		"hskLevel": 4,
@@ -10430,7 +10430,7 @@
 	{
 		"hanzi": "现",
 		"pinyin": "xiàn",
-		"meaning": "appear, manifest, become visible",
+		"meaning": "appear, manifest, become visible; now; at the moment",
 		"radical": "玉 96.4",
 		"strokes": 8,
 		"hskLevel": 1,
@@ -10639,7 +10639,7 @@
 	{
 		"hanzi": "拖",
 		"pinyin": "tuō",
-		"meaning": "drag, tow, haul; delay, prolong",
+		"meaning": "drag, tow, haul; delay, prolong; to pull",
 		"radical": "手 64.5",
 		"strokes": 8,
 		"hskLevel": 6,
@@ -10958,7 +10958,7 @@
 	{
 		"hanzi": "取",
 		"pinyin": "qǔ",
-		"meaning": "take, receive, obtain; select",
+		"meaning": "take, receive, obtain; select; to pickup",
 		"radical": "又 29.6",
 		"strokes": 8,
 		"hskLevel": 4,
@@ -12146,7 +12146,7 @@
 	{
 		"hanzi": "岸",
 		"pinyin": "àn",
-		"meaning": "bank, shore; beach, coast",
+		"meaning": "bank, shore; beach, coast; river bank; river lake",
 		"radical": "山 46.5",
 		"strokes": 8,
 		"hskLevel": 5,
@@ -12751,7 +12751,7 @@
 	{
 		"hanzi": "往",
 		"pinyin": "wǎng",
-		"meaning": "go, depart; past, formerly",
+		"meaning": "go, depart; past, formerly; walk; towards; to",
 		"radical": "彳 60.5",
 		"strokes": 8,
 		"hskLevel": 2,
@@ -12938,7 +12938,7 @@
 	{
 		"hanzi": "念",
 		"pinyin": "niàn",
-		"meaning": "think of, recall, study",
+		"meaning": "think of, recall, study; read",
 		"radical": "心 61.4",
 		"strokes": 8,
 		"hskLevel": 5,
@@ -13235,7 +13235,7 @@
 	{
 		"hanzi": "变",
 		"pinyin": "biàn",
-		"meaning": "change, transform, alter; rebel",
+		"meaning": "change, transform, alter; rebel; to change; to transform",
 		"radical": "又 29.6",
 		"strokes": 8,
 		"hskLevel": 3,
@@ -13444,7 +13444,7 @@
 	{
 		"hanzi": "放",
 		"pinyin": "fàng",
-		"meaning": "put, release, free, liberate",
+		"meaning": "put, release, free, liberate; to put",
 		"radical": "攴 66.4",
 		"strokes": 8,
 		"hskLevel": 3,
@@ -13939,7 +13939,7 @@
 	{
 		"hanzi": "性",
 		"pinyin": "xìng",
-		"meaning": "nature, character, sex",
+		"meaning": "nature, character, sex; quality; gender",
 		"radical": "心 61.5",
 		"strokes": 8,
 		"hskLevel": 4,
@@ -15006,7 +15006,7 @@
 	{
 		"hanzi": "挂",
 		"pinyin": "guà",
-		"meaning": "hang, suspend; suspense",
+		"meaning": "hang, suspend; suspense; to hang (on the wall)",
 		"radical": "手 64.6",
 		"strokes": 9,
 		"hskLevel": 4,
@@ -15314,7 +15314,7 @@
 	{
 		"hanzi": "拼",
 		"pinyin": "pīn",
-		"meaning": "join together, link, incorporate",
+		"meaning": "join together, link, incorporate; blend",
 		"radical": "手 64.6",
 		"strokes": 9,
 		"hskLevel": 5,
@@ -15336,7 +15336,7 @@
 	{
 		"hanzi": "按",
 		"pinyin": "àn",
-		"meaning": "put hand on, press down with hand",
+		"meaning": "put hand on, press down with hand; to push; to press",
 		"radical": "手 64.6",
 		"strokes": 9,
 		"hskLevel": 4,
@@ -15424,7 +15424,7 @@
 	{
 		"hanzi": "革",
 		"pinyin": "gé",
-		"meaning": "leather, animal hides; rad. 177",
+		"meaning": "leather, animal hides; rad. 177; animal skin",
 		"radical": "革 177.0",
 		"strokes": 9,
 		"hskLevel": 5,
@@ -15490,7 +15490,7 @@
 	{
 		"hanzi": "茧",
 		"pinyin": "jiǎn",
-		"meaning": "cocoon; callus, blister",
+		"meaning": "cocoon; callus, blister; protection",
 		"radical": "艸 140.6",
 		"strokes": 9,
 		"hskLevel": 0,
@@ -17074,7 +17074,7 @@
 	{
 		"hanzi": "复",
 		"pinyin": "fù",
-		"meaning": "return; repeat; repeatedly",
+		"meaning": "return; repeat; repeatedly; out of many; recurring",
 		"radical": "夊 35.6",
 		"strokes": 9,
 		"hskLevel": 3,
@@ -17096,7 +17096,7 @@
 	{
 		"hanzi": "段",
 		"pinyin": "duàn",
-		"meaning": "section, piece, division",
+		"meaning": "section, piece, division; segment; paragraph",
 		"radical": "殳 79.5",
 		"strokes": 9,
 		"hskLevel": 3,
@@ -17107,7 +17107,7 @@
 	{
 		"hanzi": "便",
 		"pinyin": "biàn",
-		"meaning": "convenience, ease; expedient",
+		"meaning": "convenience, ease; expedient; comfortable; cheap",
 		"radical": "人 9.7",
 		"strokes": 9,
 		"hskLevel": 2,
@@ -17151,7 +17151,7 @@
 	{
 		"hanzi": "修",
 		"pinyin": "xiū",
-		"meaning": "study; repair; cultivate",
+		"meaning": "study; repair; cultivate; to fix; to repair",
 		"radical": "人 9.8",
 		"strokes": 9,
 		"hskLevel": 4,
@@ -17789,7 +17789,7 @@
 	{
 		"hanzi": "奖",
 		"pinyin": "jiǎng",
-		"meaning": "prize, reward; give award to",
+		"meaning": "prize, reward; give award to; medal",
 		"radical": "大 37.6",
 		"strokes": 9,
 		"hskLevel": 4,
@@ -18097,7 +18097,7 @@
 	{
 		"hanzi": "类",
 		"pinyin": "lèi",
-		"meaning": "class, group, kind, category",
+		"meaning": "class, group, kind, category; type/sort",
 		"radical": "大 37.6",
 		"strokes": 9,
 		"hskLevel": 5,
@@ -18251,7 +18251,7 @@
 	{
 		"hanzi": "烂",
 		"pinyin": "làn",
-		"meaning": "rotten, spoiled, decayed",
+		"meaning": "rotten, spoiled, decayed; to foul; to rot",
 		"radical": "火 86.5",
 		"strokes": 9,
 		"hskLevel": 5,
@@ -18922,7 +18922,7 @@
 	{
 		"hanzi": "既",
 		"pinyin": "jì",
-		"meaning": "already; de facto; since; then",
+		"meaning": "already; de facto; since; then; determined; and; too",
 		"radical": "无 71.5",
 		"strokes": 9,
 		"hskLevel": 4,
@@ -19659,7 +19659,7 @@
 	{
 		"hanzi": "赶",
 		"pinyin": "gǎn",
-		"meaning": "pursue, follow; expel, drive away",
+		"meaning": "pursue, follow; expel, drive away; to hurry; to catch up",
 		"radical": "走 156.3",
 		"strokes": 10,
 		"hskLevel": 4,
@@ -19857,7 +19857,7 @@
 	{
 		"hanzi": "换",
 		"pinyin": "huàn",
-		"meaning": "change",
+		"meaning": "change; to change",
 		"radical": "手 64.7",
 		"strokes": 10,
 		"hskLevel": 3,
@@ -20341,7 +20341,7 @@
 	{
 		"hanzi": "根",
 		"pinyin": "gēn",
-		"meaning": "root, base(d on); foundation",
+		"meaning": "root, base(d on); foundation; counting word for something long and thin",
 		"radical": "木 75.6",
 		"strokes": 10,
 		"hskLevel": 3,
@@ -20704,7 +20704,7 @@
 	{
 		"hanzi": "监",
 		"pinyin": "jiān",
-		"meaning": "supervise, control, direct",
+		"meaning": "supervise, control, direct; jail",
 		"radical": "皿 108.5",
 		"strokes": 10,
 		"hskLevel": 6,
@@ -20748,7 +20748,7 @@
 	{
 		"hanzi": "晒",
 		"pinyin": "shài",
-		"meaning": "dry in sun, expose to sun",
+		"meaning": "dry in sun, expose to sun; blendend",
 		"radical": "日 72.6",
 		"strokes": 10,
 		"hskLevel": 5,
@@ -21067,7 +21067,7 @@
 	{
 		"hanzi": "唉",
 		"pinyin": "āi",
-		"meaning": "alas, exclamation of surprise or pain",
+		"meaning": "alas, exclamation of surprise or pain; disappointment",
 		"radical": "口 30.7",
 		"strokes": 10,
 		"hskLevel": 5,
@@ -21496,7 +21496,7 @@
 	{
 		"hanzi": "借",
 		"pinyin": "jiè",
-		"meaning": "borrow; lend; make pretext of",
+		"meaning": "borrow; lend; make pretext of; to rent",
 		"radical": "人 9.8",
 		"strokes": 10,
 		"hskLevel": 3,
@@ -22090,7 +22090,7 @@
 	{
 		"hanzi": "留",
 		"pinyin": "liú",
-		"meaning": "stop, halt; stay, detain, keep",
+		"meaning": "stop, halt; stay, detain, keep; to stay",
 		"radical": "田 102.5",
 		"strokes": 10,
 		"hskLevel": 3,
@@ -22640,7 +22640,7 @@
 	{
 		"hanzi": "烦",
 		"pinyin": "fán",
-		"meaning": "bother, vex, trouble; troublesome",
+		"meaning": "bother, vex, trouble; troublesome; annoying",
 		"radical": "火 86.6",
 		"strokes": 10,
 		"hskLevel": 4,
@@ -23223,7 +23223,7 @@
 	{
 		"hanzi": "读",
 		"pinyin": "dú",
-		"meaning": "read, study; pronounce",
+		"meaning": "read, study; pronounce; to read",
 		"radical": "言 149.8",
 		"strokes": 10,
 		"hskLevel": 1,
@@ -23344,7 +23344,7 @@
 	{
 		"hanzi": "调",
 		"pinyin": "diào",
-		"meaning": "transfer, move, change; tune",
+		"meaning": "transfer, move, change; tune; adjust; mix; configure",
 		"radical": "言 149.8",
 		"strokes": 10,
 		"hskLevel": 3,
@@ -23619,7 +23619,7 @@
 	{
 		"hanzi": "预",
 		"pinyin": "yù",
-		"meaning": "prepare, arrange; in advance",
+		"meaning": "prepare, arrange; in advance; before",
 		"radical": "頁 181.4",
 		"strokes": 10,
 		"hskLevel": 4,
@@ -23663,7 +23663,7 @@
 	{
 		"hanzi": "验",
 		"pinyin": "yàn",
-		"meaning": "test, examine, inspect; verify",
+		"meaning": "test, examine, inspect; verify; check",
 		"radical": "馬 187.7",
 		"strokes": 10,
 		"hskLevel": 4,
@@ -23894,7 +23894,7 @@
 	{
 		"hanzi": "堆",
 		"pinyin": "duī",
-		"meaning": "heap, pile, crowd; pile up",
+		"meaning": "heap, pile, crowd; pile up; build",
 		"radical": "土 32.8",
 		"strokes": 11,
 		"hskLevel": 5,
@@ -24048,7 +24048,7 @@
 	{
 		"hanzi": "控",
 		"pinyin": "kòng",
-		"meaning": "accuse, charge; control",
+		"meaning": "accuse, charge; control; to control",
 		"radical": "手 64.8",
 		"strokes": 11,
 		"hskLevel": 5,
@@ -24862,7 +24862,7 @@
 	{
 		"hanzi": "睁",
 		"pinyin": "zhēng",
-		"meaning": "open eyes; stare",
+		"meaning": "open eyes; stare; to open",
 		"radical": "目 109.6",
 		"strokes": 11,
 		"hskLevel": 5,
@@ -27711,7 +27711,7 @@
 	{
 		"hanzi": "提",
 		"pinyin": "tí",
-		"meaning": "hold in hand; lift in hand",
+		"meaning": "hold in hand; lift in hand; to carry",
 		"radical": "手 64.9",
 		"strokes": 12,
 		"hskLevel": 3,
@@ -28382,7 +28382,7 @@
 	{
 		"hanzi": "惑",
 		"pinyin": "huò",
-		"meaning": "confuse, mislead, baffle; doubt",
+		"meaning": "confuse, mislead, baffle; doubt; to be confused",
 		"radical": "心 61.8",
 		"strokes": 12,
 		"hskLevel": 6,
@@ -28470,7 +28470,7 @@
 	{
 		"hanzi": "硬",
 		"pinyin": "yìng",
-		"meaning": "hard, firm, strong; obstinate",
+		"meaning": "hard, firm, strong; obstinate; solid",
 		"radical": "石 112.7",
 		"strokes": 12,
 		"hskLevel": 5,
@@ -29119,7 +29119,7 @@
 	{
 		"hanzi": "幅",
 		"pinyin": "fú",
-		"meaning": "piece, strip, breadth of, hem",
+		"meaning": "piece, strip, breadth of, hem; counting word",
 		"radical": "巾 50.9",
 		"strokes": 12,
 		"hskLevel": 5,
@@ -31209,7 +31209,7 @@
 	{
 		"hanzi": "摆",
 		"pinyin": "bǎi",
-		"meaning": "put, place; display; swing, sway",
+		"meaning": "put, place; display; swing, sway; to place; to set in an orderly fashion",
 		"radical": "手 64.10",
 		"strokes": 13,
 		"hskLevel": 5,
@@ -31561,7 +31561,7 @@
 	{
 		"hanzi": "楼",
 		"pinyin": "lóu",
-		"meaning": "building of two or more stories",
+		"meaning": "building of two or more stories; floor",
 		"radical": "木 75.9",
 		"strokes": 13,
 		"hskLevel": 3,
@@ -31616,7 +31616,7 @@
 	{
 		"hanzi": "感",
 		"pinyin": "gǎn",
-		"meaning": "feel, perceive, emotion",
+		"meaning": "feel, perceive, emotion; to feel",
 		"radical": "心 61.9",
 		"strokes": 13,
 		"hskLevel": 3,
@@ -31990,7 +31990,7 @@
 	{
 		"hanzi": "暗",
 		"pinyin": "àn",
-		"meaning": "dark; obscure; in secret, covert",
+		"meaning": "dark; obscure; in secret, covert; dim",
 		"radical": "日 72.9",
 		"strokes": 13,
 		"hskLevel": 5,
@@ -32364,7 +32364,7 @@
 	{
 		"hanzi": "键",
 		"pinyin": "jiàn",
-		"meaning": "door bolt, lock bolt; key",
+		"meaning": "door bolt, lock bolt; key; button",
 		"radical": "金 167.8",
 		"strokes": 13,
 		"hskLevel": 4,
@@ -32562,7 +32562,7 @@
 	{
 		"hanzi": "像",
 		"pinyin": "xiàng",
-		"meaning": "a picture, image, figure; to resemble",
+		"meaning": "a picture, image, figure; to resemble; statue",
 		"radical": "人 9.12",
 		"strokes": 13,
 		"hskLevel": 3,
@@ -32782,7 +32782,7 @@
 	{
 		"hanzi": "解",
 		"pinyin": "jiě",
-		"meaning": "loosen, unfasten, untie; explain",
+		"meaning": "loosen, unfasten, untie; explain; to explain",
 		"radical": "角 148.6",
 		"strokes": 13,
 		"hskLevel": 3,
@@ -33948,7 +33948,7 @@
 	{
 		"hanzi": "酷",
 		"pinyin": "kù",
-		"meaning": "strong, stimulating; very",
+		"meaning": "strong, stimulating; very; cool",
 		"radical": "酉 164.7",
 		"strokes": 14,
 		"hskLevel": 6,
@@ -34201,7 +34201,7 @@
 	{
 		"hanzi": "嘛",
 		"pinyin": "ma",
-		"meaning": "final exclamatory particle",
+		"meaning": "final exclamatory particle; suffix (no meaning); uh",
 		"radical": "口 30.11",
 		"strokes": 14,
 		"hskLevel": 6,
@@ -35554,7 +35554,7 @@
 	{
 		"hanzi": "题",
 		"pinyin": "tí",
-		"meaning": "forehead; title, headline; theme",
+		"meaning": "forehead; title, headline; theme; question",
 		"radical": "頁 181.9",
 		"strokes": 15,
 		"hskLevel": 2,
@@ -38359,7 +38359,7 @@
 	{
 		"hanzi": "蠢",
 		"pinyin": "chǔn",
-		"meaning": "wriggle; stupid; silly; fat",
+		"meaning": "wriggle; stupid; silly; fat; stupid (swearing)",
 		"radical": "虫 142.15",
 		"strokes": 21,
 		"hskLevel": 6,
@@ -38535,7 +38535,7 @@
 	{
 		"hanzi": "弋",
 		"pinyin": "yì",
-		"meaning": "catch, arrest; shoot with bow",
+		"meaning": "catch, arrest; shoot with bow; arrow",
 		"radical": "弋 56.0",
 		"strokes": 3,
 		"hskLevel": 0,
@@ -60106,7 +60106,7 @@
 	{
 		"hanzi": "蛹",
 		"pinyin": "yǒng",
-		"meaning": "chrysalis, larva",
+		"meaning": "chrysalis, larva; pupa",
 		"radical": "虫 142.7",
 		"strokes": 13,
 		"hskLevel": 0,

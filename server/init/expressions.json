@@ -127,7 +127,7 @@
 	{
 		"hanzi": "减肥",
 		"pinyin": "",
-		"meaning": "loose weight"
+		"meaning": "loose weight; to lose weight"
 	},
 	{
 		"hanzi": "解释",
@@ -232,7 +232,7 @@
 	{
 		"hanzi": "情况",
 		"pinyin": "",
-		"meaning": "situation; circumstance; state of affairs"
+		"meaning": "situation; circumstance; state of affairs; situation (as in current situation)"
 	},
 	{
 		"hanzi": "批评",
@@ -307,7 +307,7 @@
 	{
 		"hanzi": "抽烟",
 		"pinyin": "",
-		"meaning": "smoke (cigarette, pipe, …)"
+		"meaning": "smoke (cigarette, pipe, ...)"
 	},
 	{
 		"hanzi": "而且",
@@ -322,7 +322,7 @@
 	{
 		"hanzi": "规定",
 		"pinyin": "",
-		"meaning": "regulation; rule"
+		"meaning": "regulation; rule; rule (less strict)"
 	},
 	{
 		"hanzi": "故事",
@@ -332,7 +332,7 @@
 	{
 		"hanzi": "相信",
 		"pinyin": "",
-		"meaning": "trust; believe"
+		"meaning": "trust; believe; to believe"
 	},
 	{
 		"hanzi": "植物",
@@ -342,12 +342,12 @@
 	{
 		"hanzi": "感兴趣",
 		"pinyin": "",
-		"meaning": "interested in"
+		"meaning": "interested in; to be interested in"
 	},
 	{
 		"hanzi": "面积",
 		"pinyin": "",
-		"meaning": "area (of floor, piece of land, …)"
+		"meaning": "area (of floor, piece of land, ...)"
 	},
 	{
 		"hanzi": "因此",
@@ -432,7 +432,7 @@
 	{
 		"hanzi": "工资",
 		"pinyin": "",
-		"meaning": "wage; pay; salary"
+		"meaning": "wage; pay; salary; salary/wage"
 	},
 	{
 		"hanzi": "说谎",
@@ -627,7 +627,7 @@
 	{
 		"hanzi": "功能",
 		"pinyin": "",
-		"meaning": "function"
+		"meaning": "function; feature"
 	},
 	{
 		"hanzi": "厉害",
@@ -652,7 +652,7 @@
 	{
 		"hanzi": "着急",
 		"pinyin": "",
-		"meaning": "anxiety"
+		"meaning": "anxiety; to worry; worried; anxious; to be worried"
 	},
 	{
 		"hanzi": "浏览",
@@ -710,7 +710,7 @@
 		"meaning": "spirit"
 	},
 	{
-		"hanzi": "挺…的",
+		"hanzi": "挺...的",
 		"pinyin": "",
 		"meaning": "quite"
 	},
@@ -772,7 +772,7 @@
 	{
 		"hanzi": "以为",
 		"pinyin": "",
-		"meaning": "used to think"
+		"meaning": "used to think; to believe"
 	},
 	{
 		"hanzi": "比较",
@@ -782,7 +782,7 @@
 	{
 		"hanzi": "健康",
 		"pinyin": "",
-		"meaning": "health"
+		"meaning": "health; healthy"
 	},
 	{
 		"hanzi": "清淡",
@@ -882,7 +882,7 @@
 	{
 		"hanzi": "一定",
 		"pinyin": "",
-		"meaning": "certainly; surely; without doubt"
+		"meaning": "certainly; surely; without doubt; without a doubt"
 	},
 	{
 		"hanzi": "违法",
@@ -897,7 +897,7 @@
 	{
 		"hanzi": "影响",
 		"pinyin": "",
-		"meaning": "affect; to affect"
+		"meaning": "affect; to affect; to influence"
 	},
 	{
 		"hanzi": "别人",
@@ -915,7 +915,7 @@
 		"meaning": "power cut"
 	},
 	{
-		"hanzi": "…死了",
+		"hanzi": "...死了",
 		"pinyin": "",
 		"meaning": "extremely"
 	},
@@ -992,7 +992,7 @@
 	{
 		"hanzi": "如果...的话",
 		"pinyin": "",
-		"meaning": "if …"
+		"meaning": "if ..."
 	},
 	{
 		"hanzi": "顺利",
@@ -1047,7 +1047,7 @@
 	{
 		"hanzi": "规则",
 		"pinyin": "",
-		"meaning": "rule"
+		"meaning": "rule; the specific rule"
 	},
 	{
 		"hanzi": "计划",
@@ -1147,12 +1147,12 @@
 	{
 		"hanzi": "进步",
 		"pinyin": "",
-		"meaning": "progress"
+		"meaning": "progress; to progress"
 	},
 	{
 		"hanzi": "日常",
 		"pinyin": "",
-		"meaning": "daily"
+		"meaning": "daily; everyday"
 	},
 	{
 		"hanzi": "会话",
@@ -1162,7 +1162,7 @@
 	{
 		"hanzi": "尤其",
 		"pinyin": "",
-		"meaning": "especially"
+		"meaning": "especially; particularly"
 	},
 	{
 		"hanzi": "理解",
@@ -1305,7 +1305,7 @@
 	},
 	{
 		"hanzi": "习惯",
-		"meaning": "to be used to"
+		"meaning": "to be used to; get used to"
 	},
 	{
 		"hanzi": "我习惯右手汽车",
@@ -1313,7 +1313,7 @@
 	},
 	{
 		"hanzi": "偶尔",
-		"meaning": "occassionally; once in a while"
+		"meaning": "occassionally; once in a while; sometimes; occasionally"
 	},
 	{
 		"hanzi": "毕竟",
@@ -1365,7 +1365,7 @@
 	},
 	{
 		"hanzi": "各种",
-		"meaning": "all kinds (of something)"
+		"meaning": "all kinds (of something); various"
 	},
 	{
 		"hanzi": "各种运动",
@@ -1397,7 +1397,7 @@
 	},
 	{
 		"hanzi": "要不然",
-		"meaning": "otherwise"
+		"meaning": "otherwise; or else"
 	},
 	{
 		"hanzi": "速度",
@@ -1449,7 +1449,7 @@
 	},
 	{
 		"hanzi": "甚至",
-		"meaning": "even"
+		"meaning": "even; even worse"
 	},
 	{
 		"hanzi": "语法",
@@ -1465,7 +1465,7 @@
 	},
 	{
 		"hanzi": "互相",
-		"meaning": "mutual"
+		"meaning": "mutual; together; with each other"
 	},
 	{
 		"hanzi": "对于...来说",
@@ -1481,7 +1481,7 @@
 	},
 	{
 		"hanzi": "并且",
-		"meaning": "also; furthermore"
+		"meaning": "also; furthermore; besides"
 	},
 	{
 		"hanzi": "在...的过程中",
@@ -1501,7 +1501,7 @@
 	},
 	{
 		"hanzi": "表达",
-		"meaning": "expression"
+		"meaning": "expression; expression (formal/written language - use 话 or 句子 in spoken language)"
 	},
 	{
 		"hanzi": "渐渐的",
@@ -1521,7 +1521,7 @@
 	},
 	{
 		"hanzi": "看法",
-		"meaning": "opinion"
+		"meaning": "opinion; view; perspective"
 	},
 	{
 		"hanzi": "事物",
@@ -1533,7 +1533,7 @@
 	},
 	{
 		"hanzi": "练习",
-		"meaning": "practice"
+		"meaning": "practice; to exercise; to practice"
 	},
 	{
 		"hanzi": "...的同时...",
@@ -1541,7 +1541,7 @@
 	},
 	{
 		"hanzi": "稍微",
-		"meaning": "little bit; a little"
+		"meaning": "little bit; a little; a little bit"
 	},
 	{
 		"hanzi": "稍微复杂",
@@ -1609,15 +1609,15 @@
 	},
 	{
 		"hanzi": "整个",
-		"meaning": "whole; complete"
+		"meaning": "whole; complete; whole company"
 	},
 	{
 		"hanzi": "根本",
-		"meaning": "essentially; at all"
+		"meaning": "essentially; at all; root; base; foundation"
 	},
 	{
 		"hanzi": "办法",
-		"meaning": "choice"
+		"meaning": "choice; solution; method; measure; way"
 	},
 	{
 		"hanzi": "那么",
@@ -1629,7 +1629,7 @@
 	},
 	{
 		"hanzi": "之前",
-		"meaning": "before"
+		"meaning": "before; past; previously"
 	},
 	{
 		"hanzi": "严重",
@@ -1649,7 +1649,7 @@
 	},
 	{
 		"hanzi": "拍照",
-		"meaning": "license plate"
+		"meaning": "license plate; to take a photo"
 	},
 	{
 		"hanzi": "车牌号",
@@ -1713,7 +1713,7 @@
 	},
 	{
 		"hanzi": "猛烈",
-		"meaning": "violent"
+		"meaning": "violent; heavy; hefty"
 	},
 	{
 		"hanzi": "属于",
@@ -1933,7 +1933,7 @@
 	},
 	{
 		"hanzi": "能够",
-		"meaning": "can"
+		"meaning": "can; to be able"
 	},
 	{
 		"hanzi": "顺便",
@@ -1965,7 +1965,7 @@
 	},
 	{
 		"hanzi": "建议",
-		"meaning": "recommend; suggest; advise"
+		"meaning": "recommend; suggest; advise; advice"
 	},
 	{
 		"hanzi": "出发",
@@ -2105,7 +2105,7 @@
 	},
 	{
 		"hanzi": "投诉",
-		"meaning": "to complain"
+		"meaning": "to complain; complaint"
 	},
 	{
 		"hanzi": "按钮",
@@ -2137,7 +2137,7 @@
 	},
 	{
 		"hanzi": "申请",
-		"meaning": "to apply"
+		"meaning": "to apply; application"
 	},
 	{
 		"hanzi": "评价",
@@ -2173,7 +2173,7 @@
 	},
 	{
 		"hanzi": "购买",
-		"meaning": "purchase; buy"
+		"meaning": "purchase; buy; to purchase; to acquire"
 	},
 	{
 		"hanzi": "购物",
@@ -2353,7 +2353,7 @@
 	},
 	{
 		"hanzi": "季节",
-		"meaning": "season"
+		"meaning": "season; seasons"
 	},
 	{
 		"hanzi": "榴莲",
@@ -2393,7 +2393,7 @@
 	},
 	{
 		"hanzi": "数学",
-		"meaning": "math"
+		"meaning": "math; mathematics"
 	},
 	{
 		"hanzi": "推荐",
@@ -2517,7 +2517,7 @@
 	},
 	{
 		"hanzi": "处理",
-		"meaning": "to deal; to handle"
+		"meaning": "to deal; to handle; process; to deal with"
 	},
 	{
 		"hanzi": "处理掉",
@@ -2537,7 +2537,7 @@
 	},
 	{
 		"hanzi": "清理",
-		"meaning": "to clear up"
+		"meaning": "to clear up; clean"
 	},
 	{
 		"hanzi": "顾客",
@@ -2553,7 +2553,7 @@
 	},
 	{
 		"hanzi": "肯定",
-		"meaning": "definitely"
+		"meaning": "definitely; of course; sure"
 	},
 	{
 		"hanzi": "直接",
@@ -2617,7 +2617,7 @@
 	},
 	{
 		"hanzi": "地道",
-		"meaning": "authentic"
+		"meaning": "authentic; totally"
 	},
 	{
 		"hanzi": "真正",
@@ -2657,7 +2657,7 @@
 	},
 	{
 		"hanzi": "而已",
-		"meaning": "a little, nothing more, small"
+		"meaning": "a little, nothing more, small; that's all"
 	},
 	{
 		"hanzi": "利润",
@@ -2689,7 +2689,7 @@
 	},
 	{
 		"hanzi": "姑娘",
-		"meaning": "girl"
+		"meaning": "girl; woman"
 	},
 	{
 		"hanzi": "红薯",
@@ -2781,7 +2781,7 @@
 	},
 	{
 		"hanzi": "关键",
-		"meaning": "crucial"
+		"meaning": "crucial; key"
 	},
 	{
 		"hanzi": "初恋",
@@ -2789,7 +2789,7 @@
 	},
 	{
 		"hanzi": "尴尬",
-		"meaning": "awkward"
+		"meaning": "awkward; embarrassing"
 	},
 	{
 		"hanzi": "胡同",
@@ -2837,7 +2837,7 @@
 	},
 	{
 		"hanzi": "压力",
-		"meaning": "stress"
+		"meaning": "stress; pressure"
 	},
 	{
 		"hanzi": "墨尔本",
@@ -2869,7 +2869,7 @@
 	},
 	{
 		"hanzi": "期待",
-		"meaning": "to look forward"
+		"meaning": "to look forward; expectation; to look forward to"
 	},
 	{
 		"hanzi": "微博",
@@ -2965,7 +2965,7 @@
 	},
 	{
 		"hanzi": "客人",
-		"meaning": "guest"
+		"meaning": "guest; customer"
 	},
 	{
 		"hanzi": "主人",
@@ -3065,7 +3065,7 @@
 	},
 	{
 		"hanzi": "行业",
-		"meaning": "profession; industry"
+		"meaning": "profession; industry; business"
 	},
 	{
 		"hanzi": "带动",
@@ -3281,7 +3281,7 @@
 	},
 	{
 		"hanzi": "选择",
-		"meaning": "choice; to choose"
+		"meaning": "choice; to choose; select; options; alternatives"
 	},
 	{
 		"hanzi": "白跑",
@@ -3321,7 +3321,7 @@
 	},
 	{
 		"hanzi": "称呼",
-		"meaning": "call; form of address"
+		"meaning": "call; form of address; name"
 	},
 	{
 		"hanzi": "叔叔",
@@ -3413,7 +3413,7 @@
 	},
 	{
 		"hanzi": "吸引",
-		"meaning": "attract"
+		"meaning": "attract; to attract"
 	},
 	{
 		"hanzi": "字幕",
@@ -3489,7 +3489,7 @@
 	},
 	{
 		"hanzi": "删除",
-		"meaning": "delete; remove"
+		"meaning": "delete; remove; to delete"
 	},
 	{
 		"hanzi": "参观",
@@ -3614,5 +3614,3840 @@
 	{
 		"hanzi": "隐形衣",
 		"meaning": "invisible cape"
+	},
+	{
+		"hanzi": "其他",
+		"meaning": "other people",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "其它",
+		"meaning": "other things",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "数字",
+		"meaning": "numbers",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "愿望",
+		"meaning": "wish",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "希望",
+		"meaning": "expectation; to hope; to wish; to expect",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "期望",
+		"meaning": "expectation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "期盼",
+		"meaning": "expectation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "街头",
+		"meaning": "street; street (poet.)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "咋说",
+		"meaning": "to say what",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "说出",
+		"meaning": "speak out",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "心声",
+		"meaning": "heartfelt thoughts",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "存了",
+		"meaning": "saved (money)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "大概",
+		"meaning": "about",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "范围",
+		"meaning": "ballpark; range",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "花掉",
+		"meaning": "spend",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "科研",
+		"meaning": "science and research",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "生物",
+		"meaning": "living things; biology",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "想法",
+		"meaning": "thoughts; thinking",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "学历",
+		"meaning": "educational background",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "提升",
+		"meaning": "improve; raise; advance; promote",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "生产",
+		"meaning": "manufacturing",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "温饱",
+		"meaning": "saturated (have enough food and clothing)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "平稳",
+		"meaning": "smooth; steady; stable",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "保持",
+		"meaning": "maintain; keep; preserve",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "节奏",
+		"meaning": "rhythm of life",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "跳槽",
+		"meaning": "job hopping",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "公务员",
+		"meaning": "government official",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "体制",
+		"meaning": "system; organization 体制内 government",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "勤工俭学",
+		"meaning": "work-study program",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "外快",
+		"meaning": "extra income; windfall",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "奖学金",
+		"meaning": "scholarship",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "生活费",
+		"meaning": "living expenses",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "定居",
+		"meaning": "settle down",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "要看",
+		"meaning": "to depend on",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "一切",
+		"meaning": "everything; whole; entire",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "太平",
+		"meaning": "peace and tranquility",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "打仗",
+		"meaning": "war",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "国泰民安",
+		"meaning": "wellfare for the state and peace for the people",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "企业",
+		"meaning": "enterprise; company",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "白领",
+		"meaning": "white collar",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "位数",
+		"meaning": "digit number",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "挣钱",
+		"meaning": "earn money",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "过日子",
+		"meaning": "to pass the days",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "基础",
+		"meaning": "foundation; base",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "长寿",
+		"meaning": "longevity",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "起码",
+		"meaning": "at least; at the minimum 起码工作八个小时",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "具体",
+		"meaning": "concrete; specific",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "运气",
+		"meaning": "luck",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "护照",
+		"meaning": "passport",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "爱护",
+		"meaning": "cherish; take good care of",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "随处",
+		"meaning": "everywhere",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "爱惜",
+		"meaning": "value highly and use prudently; treasure",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "重要",
+		"meaning": "important",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "爱心",
+		"meaning": "love",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "指责",
+		"meaning": "criticize",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "安慰",
+		"meaning": "comfort",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "安装",
+		"meaning": "install; setup",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "按照",
+		"meaning": "follow; obey; according to",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "说明书",
+		"meaning": "manual",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "指示",
+		"meaning": "instructions",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "美丽",
+		"meaning": "pretty",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "极了",
+		"meaning": "quite; very; extremely",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "把握",
+		"meaning": "certainty; assurance",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "通过",
+		"meaning": "pass; through (exam/test)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "碗筷",
+		"meaning": "tableware",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "办理",
+		"meaning": "to handle",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "入学",
+		"meaning": "immatrikulation; inscription; acceptance",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "手续",
+		"meaning": "process; formalities; procedure",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "傍晚",
+		"meaning": "at dusk; towards the evening",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "邮局",
+		"meaning": "post office",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "包含",
+		"meaning": "to contain; to include",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "运费",
+		"meaning": "freight cost",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "包括",
+		"meaning": "to include",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "听力",
+		"meaning": "listening",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "口语",
+		"meaning": "speaking",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "千万",
+		"meaning": "in any case",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "宝贵",
+		"meaning": "precious; valuable",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "保存",
+		"meaning": "to preserve; to keep; to save",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "文件",
+		"meaning": "file; document",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "保留",
+		"meaning": "to retain; to preserve; to reserve",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "古老",
+		"meaning": "ancient",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "建筑",
+		"meaning": "building",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "报到",
+		"meaning": "to register; to report for duty",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "按时",
+		"meaning": "punctual; on time",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "报道",
+		"meaning": "news report",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "准确",
+		"meaning": "accuracy; correctness",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "存在",
+		"meaning": "to exist; existence",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "调查",
+		"meaning": "survey; investigation; research",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "反映",
+		"meaning": "reflect; show",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "群众",
+		"meaning": "public; crowd; masses",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "战争",
+		"meaning": "war",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "报社",
+		"meaning": "newspaper office; publisher",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "实习",
+		"meaning": "internship; to do an internship",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "抱怨",
+		"meaning": "to complain",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "要求",
+		"meaning": "to claim; to demand; claim; requirements; ask; expectations",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "化学",
+		"meaning": "chemistry",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "十字",
+		"meaning": "crossing; cross",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "变化",
+		"meaning": "to change; to transform",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "嘉宾",
+		"meaning": "show guest",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "第一集",
+		"meaning": "episode one",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "第一季",
+		"meaning": "season one",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "集体",
+		"meaning": "whole; together",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "例子",
+		"meaning": "example",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "栗子",
+		"meaning": "chestnut",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "歌手",
+		"meaning": "singer",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "云南省",
+		"meaning": "province",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "云龙县",
+		"meaning": "yunlong county",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "老街",
+		"meaning": "old street",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "街上走",
+		"meaning": "walk on the street",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "市集",
+		"meaning": "market",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "市场",
+		"meaning": "market; market place",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "超市",
+		"meaning": "super market; supermarket",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "叶问",
+		"meaning": "yipman",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "瓷器",
+		"meaning": "porcelain",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "大提琴",
+		"meaning": "cello",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "小提琴",
+		"meaning": "violin",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "旅馆",
+		"meaning": "hostel",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "民宿",
+		"meaning": "homestay; guesthouse",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "方向",
+		"meaning": "direction",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "方向盘",
+		"meaning": "steering wheel",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "白鹭",
+		"meaning": "reiher",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "猜猜",
+		"meaning": "guess",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "猜猜看",
+		"meaning": "guess",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "一直",
+		"meaning": "always",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "盖房子",
+		"meaning": "build house",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "盖子",
+		"meaning": "lid",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "盖浇饭",
+		"meaning": "something on top of rice",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "拘谨",
+		"meaning": "reserved",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "讲过了",
+		"meaning": "spoken",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "讲笑话",
+		"meaning": "to tell a joke",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "衣服",
+		"meaning": "clothes",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "说服",
+		"meaning": "convince",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "荣幸",
+		"meaning": "honored",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "害羞",
+		"meaning": "shy",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "害怕",
+		"meaning": "scared; to be afraid",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "冷静",
+		"meaning": "cool down",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "安静",
+		"meaning": "quiet",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "偶像",
+		"meaning": "idol",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "跟着我",
+		"meaning": "follow me",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "风铃",
+		"meaning": "wind chime",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "印尼",
+		"meaning": "indonesia (short)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "靠近",
+		"meaning": "nearby",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "木床",
+		"meaning": "bed",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "自然",
+		"meaning": "natural; naturally; nature",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "有机",
+		"meaning": "organic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "无机",
+		"meaning": "inorganic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "挖出来",
+		"meaning": "dig out; carve out",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "重启",
+		"meaning": "restart",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "重复",
+		"meaning": "repeat",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "重新启动",
+		"meaning": "restart",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "重新",
+		"meaning": "again",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "新鲜",
+		"meaning": "fresh",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "启动",
+		"meaning": "start",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "重启可以解决很多问题",
+		"meaning": "restarting can resolve many problems",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "好像",
+		"meaning": "looks like; seems like",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "多功能",
+		"meaning": "multi purpose",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "成功",
+		"meaning": "success; achieve",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "功夫",
+		"meaning": "kung fu",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "中央",
+		"meaning": "central",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "邮件",
+		"meaning": "email",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "邮轮",
+		"meaning": "cruise ship; cargo ship",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "游轮",
+		"meaning": "cruise ship",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "其它的",
+		"meaning": "other",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "其它的时间",
+		"meaning": "the other time",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "其他的人",
+		"meaning": "the other people",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "自助餐",
+		"meaning": "buffet",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "化妆品",
+		"meaning": "cosmetics",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "旅行团",
+		"meaning": "tourist group",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "动物园",
+		"meaning": "zoo",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "购物点",
+		"meaning": "shopping spot",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "跟团",
+		"meaning": "follow the group",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "自由行",
+		"meaning": "self/free walk",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "大坑",
+		"meaning": "trap",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "遇到",
+		"meaning": "run into",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "照相",
+		"meaning": "to take a photo",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "球鞋",
+		"meaning": "sneakers",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "高跟鞋",
+		"meaning": "high heels",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "平底鞋",
+		"meaning": "flat bottom shoes",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "火腿",
+		"meaning": "ham",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "进口",
+		"meaning": "imported",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "出口",
+		"meaning": "exported",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "德国进口的",
+		"meaning": "imported from Germany",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "橄榄油",
+		"meaning": "olive oil",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "水泥地",
+		"meaning": "cement floor",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "水泥",
+		"meaning": "cement",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "中国胃",
+		"meaning": "Chinese stomach",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吃货",
+		"meaning": "foodie",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "素菜",
+		"meaning": "plant food",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "蔬菜",
+		"meaning": "vegetables",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "荤菜",
+		"meaning": "meat food",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "跳绳",
+		"meaning": "rope skipping",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "绳子",
+		"meaning": "rope",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "疗愈",
+		"meaning": "cure (written)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "治疗",
+		"meaning": "to treat; to cure",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "愈合",
+		"meaning": "recovering; heal",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "大自然",
+		"meaning": "the (great) nature",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "勇敢",
+		"meaning": "brave; bravely; courageous",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "勇气",
+		"meaning": "courage",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "活在当下",
+		"meaning": "live for the moment",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "跆拳道",
+		"meaning": "taekwondo",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "暴力",
+		"meaning": "violence",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "打拳",
+		"meaning": "chinese boxing",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "女权",
+		"meaning": "women's right",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "合作",
+		"meaning": "cooperate; collaborate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "作业",
+		"meaning": "homework",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "空姐",
+		"meaning": "stewardess",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "乘务员",
+		"meaning": "crew",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "手表",
+		"meaning": "watch",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "经济舱",
+		"meaning": "economy class",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "头等舱",
+		"meaning": "first class",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "等级",
+		"meaning": "class; level",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "商务舱",
+		"meaning": "business class",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "角色",
+		"meaning": "character",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "预知",
+		"meaning": "foresee",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "窗框",
+		"meaning": "window frame",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "门框",
+		"meaning": "door frame",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "走廊",
+		"meaning": "corridor",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "素描",
+		"meaning": "sketch",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "蜡笔",
+		"meaning": "crayon",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "水彩",
+		"meaning": "water colors",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "坐不住",
+		"meaning": "active; cannot sit still",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "阁楼",
+		"meaning": "attic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "各人",
+		"meaning": "each one",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "隔热",
+		"meaning": "heat insulation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "隔音",
+		"meaning": "sound insulation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "声音",
+		"meaning": "sound",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "隔离",
+		"meaning": "separate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "壮汉",
+		"meaning": "strong man",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "控制",
+		"meaning": "control",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "制定",
+		"meaning": "establish; make",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "制定一个计划",
+		"meaning": "make a plan",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "嘴巴",
+		"meaning": "mouth",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "培养",
+		"meaning": "foster; develop; cultivate; train",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "脖子",
+		"meaning": "neck",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "鱿鱼",
+		"meaning": "squid",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "由于",
+		"meaning": "because",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "犹豫",
+		"meaning": "hesitate; to hesitate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "倾斜",
+		"meaning": "tilt; lean",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "斜线",
+		"meaning": "slash",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "左斜线",
+		"meaning": "forward slash",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "右斜线",
+		"meaning": "back slash",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "直线",
+		"meaning": "straight line",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "竖线",
+		"meaning": "pipe; vertical line",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "横线",
+		"meaning": "horizontal line",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "稍等",
+		"meaning": "wait a second",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "微软",
+		"meaning": "microsoft",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "硬件",
+		"meaning": "hardware",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "马鞍",
+		"meaning": "saddle",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "皮革",
+		"meaning": "leather",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "放松",
+		"meaning": "relaxed",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "烤火",
+		"meaning": "roast; barbecue",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "薯片",
+		"meaning": "potato chips",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "薯条",
+		"meaning": "french fries",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "番茄酱",
+		"meaning": "tomato sauce; ketchup",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "酱油",
+		"meaning": "soy sauce",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "成本",
+		"meaning": "cost",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "银河",
+		"meaning": "milky way (silver river)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "银行",
+		"meaning": "bank (silver shop/place)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "泡一泡",
+		"meaning": "soak",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "零下四十度",
+		"meaning": "minus 40 degrees",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "恋爱",
+		"meaning": "fall in love",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "自由恋爱",
+		"meaning": "unarranged falling in love",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "你怎么称呼",
+		"meaning": "how to address you?",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "游牧",
+		"meaning": "nomad",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "碰到",
+		"meaning": "run into",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "攻击",
+		"meaning": "attack",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "公鸡",
+		"meaning": "rooster",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "雾天",
+		"meaning": "foggy day",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "务必",
+		"meaning": "must",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "羡慕",
+		"meaning": "admire",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "嫉妒",
+		"meaning": "envy",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "巧合",
+		"meaning": "coincidence",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "无所谓",
+		"meaning": "it doesn’t matter; indifferent",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "慢慢来",
+		"meaning": "take it slow",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "果断",
+		"meaning": "decisive",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "发小",
+		"meaning": "childhood friend (and still friends)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "求婚",
+		"meaning": "propose",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "排练",
+		"meaning": "to rehearse; to practice",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "练舞",
+		"meaning": "practice dancing",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "漏嘴",
+		"meaning": "to blabber out; to leak",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "负责",
+		"meaning": "to be responsible; to take care of",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "专业的",
+		"meaning": "professional",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "刺激",
+		"meaning": "exciting",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吃货的天堂",
+		"meaning": "foodie’s heaven",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "供应商",
+		"meaning": "vendor",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "摆放",
+		"meaning": "visit; setup",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "总结",
+		"meaning": "summary",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "年终",
+		"meaning": "year end",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "假期",
+		"meaning": "vacation days",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "倒闭",
+		"meaning": "bankrupt",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "传说",
+		"meaning": "legend; story",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "笑话",
+		"meaning": "joke",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "智能",
+		"meaning": "intelligence",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "人工智能",
+		"meaning": "artificial intelligence; AI",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "提示语",
+		"meaning": "prompt",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "提示",
+		"meaning": "hint",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "表现",
+		"meaning": "behavior; performance",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "音频",
+		"meaning": "audio",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "进展",
+		"meaning": "progress; progression",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "系统集成",
+		"meaning": "system integration",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "系统",
+		"meaning": "system",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "集成",
+		"meaning": "integration",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "测试",
+		"meaning": "testing",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "进行",
+		"meaning": "conduct",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "模块",
+		"meaning": "module",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "需求",
+		"meaning": "requirements",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "项目管理",
+		"meaning": "project management",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "延期",
+		"meaning": "delayed",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "财务",
+		"meaning": "finance",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "人力资源",
+		"meaning": "HR",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "资源",
+		"meaning": "resource",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "客户服务",
+		"meaning": "customer service",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "供应",
+		"meaning": "supply",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "供应链",
+		"meaning": "supply chain",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "书生",
+		"meaning": "scholar",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "无家可归",
+		"meaning": "homeless",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "",
+		"meaning": "抽奖 lucky draw",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "高级",
+		"meaning": "high level",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "烤箱",
+		"meaning": "oven",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "厨师",
+		"meaning": "chef",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "必需",
+		"meaning": "must",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "时差",
+		"meaning": "time difference",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "拉黑",
+		"meaning": "to blacklist",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "黑名单",
+		"meaning": "blacklist",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "聊天记录",
+		"meaning": "chat history",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "拼命",
+		"meaning": "risk your life",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "接触",
+		"meaning": "keep in touch",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "打扰",
+		"meaning": "disturb; interrupt",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "免打扰",
+		"meaning": "mute",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "上瘾",
+		"meaning": "to be addicted",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "对...上瘾",
+		"meaning": "to be addicted to ...",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "论坛",
+		"meaning": "forum",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "评论",
+		"meaning": "leave a comment",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "效率",
+		"meaning": "efficiency",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "他的工作效率很高",
+		"meaning": "his work is very efficient",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "他的工作效率很低",
+		"meaning": "his work is very inefficient",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "提高",
+		"meaning": "to improve; to raise; to increase",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "信任",
+		"meaning": "to trust",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "刚毕业",
+		"meaning": "just graduated",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "内容",
+		"meaning": "content",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "简单的概括一下",
+		"meaning": "simply sum it up",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "模型",
+		"meaning": "module",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "优化",
+		"meaning": "improve; refactor",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "写程序",
+		"meaning": "write code; program",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "设计",
+		"meaning": "design",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "啥的",
+		"meaning": "what",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "正常",
+		"meaning": "normally",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "单双休",
+		"meaning": "alternating 1 and 2 days off on weekend",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "门槛",
+		"meaning": "doorsill; requirements",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "门槛高",
+		"meaning": "high requirements",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "一般来说",
+		"meaning": "generally speaking",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "学士",
+		"meaning": "bachelor",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "计算机专业",
+		"meaning": "computer science",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "数学专业",
+		"meaning": "mathematics",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "相关专业",
+		"meaning": "related major",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "校招",
+		"meaning": "recruiting at the school",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "招聘",
+		"meaning": "recruit",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "试用期",
+		"meaning": "approbation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "后来",
+		"meaning": "afterwards; later",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "腾讯",
+		"meaning": "tencent",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "沟通",
+		"meaning": "communication",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "各个",
+		"meaning": "every; each",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "互联网",
+		"meaning": "internet",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "就业",
+		"meaning": "employment",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "国企",
+		"meaning": "government company",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "尽力而为",
+		"meaning": "just do your best",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "罗技",
+		"meaning": "logitech",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "原因",
+		"meaning": "reason",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "园艺",
+		"meaning": "garden",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "祈祷",
+		"meaning": "pray",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "祖母祖父",
+		"meaning": "ancestors",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "整个世界",
+		"meaning": "whole world",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "全-整",
+		"meaning": "adverb - adjektiv",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "家庭成员",
+		"meaning": "family members",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "家人",
+		"meaning": "family members",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "家庭和睦",
+		"meaning": "happy family",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "和睦",
+		"meaning": "harmony",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "有用",
+		"meaning": "useful",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "没用",
+		"meaning": "useless",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "一部分",
+		"meaning": "part of (...的一部分是...)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "做客",
+		"meaning": "visit",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "中介",
+		"meaning": "agency (e.g. real estate agency)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "中奖",
+		"meaning": "jackpot",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "现代",
+		"meaning": "modern",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "公主",
+		"meaning": "princess",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "成年人",
+		"meaning": "adult",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "未成年",
+		"meaning": "children and teenagers",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吹泡泡机",
+		"meaning": "bubble device",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吹牛",
+		"meaning": "brag",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吹笛子",
+		"meaning": "flute",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "热梗",
+		"meaning": "hot word",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "不切实际",
+		"meaning": "impractical",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "高要求",
+		"meaning": "high demand",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "省去",
+		"meaning": "omitted",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "调侃",
+		"meaning": "make fun of",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "讽刺",
+		"meaning": "ironic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "安排",
+		"meaning": "arrangement",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "假如",
+		"meaning": "hypothetical",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "场景",
+		"meaning": "scenario; situation; scenario (as in a project)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "无法实现",
+		"meaning": "hard to become true",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "任务",
+		"meaning": "task",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "发布会",
+		"meaning": "launch event",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "夸张",
+		"meaning": "exaggerate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "C位",
+		"meaning": "center position",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "地地道道",
+		"meaning": "totally",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "念书",
+		"meaning": "read a book",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "联合",
+		"meaning": "co-",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "创始人",
+		"meaning": "founder",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "联合创始人",
+		"meaning": "co-founder",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "创始成员",
+		"meaning": "founding member",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "校友",
+		"meaning": "alumni",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "天足适合",
+		"meaning": "heaven made it fit",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "随机",
+		"meaning": "reservation; random",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "固定",
+		"meaning": "fixed",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "修复",
+		"meaning": "renovate/improve",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "污染",
+		"meaning": "pollution",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "经典",
+		"meaning": "classic; impressive",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "作品",
+		"meaning": "master piece; creation; product; result",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "小说",
+		"meaning": "novel",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "台词",
+		"meaning": "script",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "创业",
+		"meaning": "startup",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "创世记",
+		"meaning": "genesis",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "出埃及记",
+		"meaning": "exodus",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "人才",
+		"meaning": "talent",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "国家需要人才",
+		"meaning": "national talent",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "网站",
+		"meaning": "website",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "神话",
+		"meaning": "myth",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "五彩石",
+		"meaning": "gemstone",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "简称",
+		"meaning": "simple form",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "全称",
+		"meaning": "full form (of a word)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "洪水",
+		"meaning": "flood",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "治水",
+		"meaning": "tame the water",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "薪水",
+		"meaning": "salary",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "医治",
+		"meaning": "heal",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "愚公",
+		"meaning": "old fool",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "愚人节",
+		"meaning": "Fool’s day",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "复仇",
+		"meaning": "revenge",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "填满",
+		"meaning": "fill up",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "追赶",
+		"meaning": "to chase after",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "拜托",
+		"meaning": "please",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "超载",
+		"meaning": "overload删掉 delete",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "博主",
+		"meaning": "blogger",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "专心",
+		"meaning": "pay attention",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "爆发",
+		"meaning": "erupt",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "支持",
+		"meaning": "support",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "青春",
+		"meaning": "youth",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "夸奖",
+		"meaning": "praise",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "当地人",
+		"meaning": "local",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "蚕茧",
+		"meaning": "cocoon",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "蛋白",
+		"meaning": "eggwhite",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "杯水车薪",
+		"meaning": "cannot put out a fire with one glass of water (idiom)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "品尝",
+		"meaning": "to taste",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "平板",
+		"meaning": "iPad",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "打败",
+		"meaning": "to defeat",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "甘心",
+		"meaning": "happy",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "发动",
+		"meaning": "to start",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "奢华",
+		"meaning": "luxury",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "报仇",
+		"meaning": "revenge",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "放弃",
+		"meaning": "to give up",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "悬挂",
+		"meaning": "to hang",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吊起来",
+		"meaning": "(process of) hanging up",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "卧薪尝胆",
+		"meaning": "work even harder to get ready for another attempt (idiom)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "项目",
+		"meaning": "project",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "发明",
+		"meaning": "invention; to invent",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "创造",
+		"meaning": "to create",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "情景",
+		"meaning": "scenario",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "国际象棋",
+		"meaning": "chess",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "实现",
+		"meaning": "to achieve; to realize",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "目标",
+		"meaning": "goal",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "我尽了最大的努力",
+		"meaning": "I tried my best",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "边界感",
+		"meaning": "no sense of boundary",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "自媒体",
+		"meaning": "vlogger",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "绿化带",
+		"meaning": "green area",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "一带一路",
+		"meaning": "one belt, one road",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "窜出来",
+		"meaning": "pop up",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "麦克风",
+		"meaning": "microphone",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "顺序",
+		"meaning": "order",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "温柔",
+		"meaning": "tender",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "接受",
+		"meaning": "accept",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "抽签",
+		"meaning": "draw a lot; fate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "增减",
+		"meaning": "add or reduce; change amount",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "深刻",
+		"meaning": "deep",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "震撼",
+		"meaning": "big shock",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "昆虫",
+		"meaning": " insect",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "蜉蝣",
+		"meaning": "eintagsfliege",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "拼赢",
+		"meaning": "pinying",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "诗经",
+		"meaning": "shijing (book of poems)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "国风",
+		"meaning": "traditions of the country",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "风格",
+		"meaning": "style",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "衣裳彩彩",
+		"meaning": "beatiful cloth",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "天呐",
+		"meaning": "heavens",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "佛系",
+		"meaning": "meditate; to meditate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "成绩",
+		"meaning": "score; grades",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "满意",
+		"meaning": "satisfied",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "经理",
+		"meaning": "manager",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "电影院",
+		"meaning": "cinema",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "旅行",
+		"meaning": "travel",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "借钱",
+		"meaning": "to borrow money",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "旁边",
+		"meaning": "nearby",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "医院",
+		"meaning": "hospital",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "生活水平",
+		"meaning": "living standard",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "体育",
+		"meaning": "sports",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "衬衫",
+		"meaning": "shirt",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "电影",
+		"meaning": "movie",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "危险",
+		"meaning": "dangerous",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "终于",
+		"meaning": "at last; finally",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "决定",
+		"meaning": "decide; decision",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "心意",
+		"meaning": "intention",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "交往",
+		"meaning": "to associate with; to contact; to date",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "崇拜",
+		"meaning": "admire; idolize",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "锻炼",
+		"meaning": "to exercise; to work out; to train",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "休息",
+		"meaning": "to rest",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "便宜",
+		"meaning": "cheap",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "方便",
+		"meaning": "comfortable",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "复合",
+		"meaning": "complex; hybrid; composite",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "趋向",
+		"meaning": "tendency; direction",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "动词",
+		"meaning": "verb",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "瞬间",
+		"meaning": "instant",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "细节",
+		"meaning": "detail",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "啥玩意儿",
+		"meaning": "what the heck is this",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "薄荷",
+		"meaning": "mint",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "虽然",
+		"meaning": "although",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "词汇",
+		"meaning": "vocabulary",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "主意",
+		"meaning": "idea",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "方法",
+		"meaning": "method; measure; way",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "办卡",
+		"meaning": "issue a card",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "游戏",
+		"meaning": "game",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "电视",
+		"meaning": "TV",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "电梯",
+		"meaning": "elevator",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "历史",
+		"meaning": "history",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "通道",
+		"meaning": "passthrough; passage",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "年级",
+		"meaning": "grade; year",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "垃圾",
+		"meaning": "rubbish",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "认真",
+		"meaning": "serious; hard",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "学习",
+		"meaning": "to learn; to study",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "联系",
+		"meaning": "to connect; to contact; to network",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "认识",
+		"meaning": "to know; to recognize",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "提to",
+		"meaning": "lift",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "为了",
+		"meaning": "so that; in order to",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "认为",
+		"meaning": "to be of the opinion of; to consider",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "丈夫",
+		"meaning": "husband",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "行李箱",
+		"meaning": "suitcase",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "光临",
+		"meaning": "to visit; visitor",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "只有...才",
+		"meaning": "only if ..., then",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "疲惫",
+		"meaning": "tired",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "路途",
+		"meaning": "road; way",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "拖把",
+		"meaning": "to mop",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "导演",
+		"meaning": "movie director",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "纪录片",
+		"meaning": "documentary",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "传花粉",
+		"meaning": "distribute pollen",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吸引力",
+		"meaning": "magnetic force",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "重力",
+		"meaning": "gravitational force",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "规律",
+		"meaning": "rule",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "哲学",
+		"meaning": "philosophy",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "哲理",
+		"meaning": "philosophical",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "辈子",
+		"meaning": "life; generation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "招蜂引蝶",
+		"meaning": "to attract men",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "形容",
+		"meaning": "to describe",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "形容词",
+		"meaning": "adjective",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "交通",
+		"meaning": "transportation; traffic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "复习",
+		"meaning": "review; repeat",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "防晒霜",
+		"meaning": "sunscreen",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "腊月",
+		"meaning": "December in lunar calendar",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "酒酿",
+		"meaning": "fermented rice",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "酒酿圆子",
+		"meaning": "fermented rice sticky rice balls",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "海棠",
+		"meaning": "japanese quince; flowering quince",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "偏见",
+		"meaning": "stereotype; prejudice",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "提交",
+		"meaning": "to submit",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "压制",
+		"meaning": "press",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "起到",
+		"meaning": "to have",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "吸水",
+		"meaning": "soak",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "作用",
+		"meaning": "function",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "海绵",
+		"meaning": "sponge",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "衬纸",
+		"meaning": "paper sheet",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "以上",
+		"meaning": "previously",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "步骤",
+		"meaning": "procedure",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "防水",
+		"meaning": "water protection",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "防潮",
+		"meaning": "moist protection",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "尽头",
+		"meaning": "dead end",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "光与影",
+		"meaning": "light and shadow",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "描述",
+		"meaning": "to describe; to characterize",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "反而",
+		"meaning": "opposite; in contrast",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "也许",
+		"meaning": "in certain circumstances; probably; maybe",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "技术",
+		"meaning": "technology; technical",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "可行性",
+		"meaning": "feasibility check; proof-of-concept",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "原型",
+		"meaning": "prototype; archetype; model",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "代码",
+		"meaning": "code",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "展示",
+		"meaning": "to present; to demonstrate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "获得",
+		"meaning": "to get; to receive; to collect",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "反馈",
+		"meaning": "feedback",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "确定",
+		"meaning": "to fix; to determine",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "发布",
+		"meaning": "to release",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "诸如此类",
+		"meaning": "or similar; et cetera; and so forth",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "追求",
+		"meaning": "to pursuit",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "压力pressure;",
+		"meaning": "stress",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "不必",
+		"meaning": "not be needed",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "偷懒",
+		"meaning": "to slack; to be lazy; to be sloppy",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "借口",
+		"meaning": "excuse; to make excuses",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "没啥大不了的",
+		"meaning": "not a big deal",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "能跑就行",
+		"meaning": "works is good enough",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "功德圆满",
+		"meaning": "to get to a successful finish; mission accomplished",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "猝死",
+		"meaning": "sudden death",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "祖传",
+		"meaning": "legacy; heritage; to pass down",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "程序员",
+		"meaning": "programmer",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "完美无缺",
+		"meaning": "perfection",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "自己死磕",
+		"meaning": "self torture",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "下线",
+		"meaning": "to go offline",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "优雅",
+		"meaning": "elegance",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "预备役",
+		"meaning": "reserve",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "屎山",
+		"meaning": "legacy code; shitpile",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "放过",
+		"meaning": "to miss; to dodge; to put aside; to leave out; to spare",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "战友",
+		"meaning": "brothers in arms",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "救赎",
+		"meaning": "salvation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "指南",
+		"meaning": "guidebook",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "完美无",
+		"meaning": "perfect",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "水灵灵",
+		"meaning": "vibrant; sparkling",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "松弛",
+		"meaning": "chilled; relaxed; easy-going",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "硬控",
+		"meaning": "forced control; compulsive obsession",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "破防",
+		"meaning": "emotionally broken; deeply upset",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "年纪轻轻",
+		"meaning": "young age",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "当年",
+		"meaning": "back then",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "嘲笑",
+		"meaning": "make fun of someone; laugh at",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "考不上",
+		"meaning": "cannot pass the exam",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "服气",
+		"meaning": "to believe (in a sense of agreeing)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "暗暗",
+		"meaning": "secretly",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "暗自",
+		"meaning": "secretly",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "下定",
+		"meaning": "to come to something",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "决心",
+		"meaning": "determination",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "起早贪黑",
+		"meaning": "get up early and go to bed late",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "贪婪",
+		"meaning": "greedy",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "突飞猛进",
+		"meaning": "soaring up rapidly",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "管理系",
+		"meaning": "management system",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "证明",
+		"meaning": "to prove",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "命中注定",
+		"meaning": "destiny",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "任何",
+		"meaning": "no matter what",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "锯断",
+		"meaning": "saw through; break",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "怀疑",
+		"meaning": "to suspect",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "人与人之间",
+		"meaning": "among the people",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "建立",
+		"meaning": "to build",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "本身",
+		"meaning": "originally",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "过敏",
+		"meaning": "allergic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "见识",
+		"meaning": "to meet & know",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "睁起眼睛说瞎话",
+		"meaning": "you’re lying (what is seen does not match what is said); you’re lying (what is seen does not match what is said)委屈 to feel sorry",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "委屈",
+		"meaning": "to feel sorry",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "类比",
+		"meaning": "to compare with",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "人类",
+		"meaning": "human beings",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "稳健",
+		"meaning": "stable; static",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "动态",
+		"meaning": "dynamic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "变动",
+		"meaning": "dynamic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "变脸",
+		"meaning": "change face",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "动图",
+		"meaning": "animated pictures",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "按部就班",
+		"meaning": "completely static; no change at all",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "照常",
+		"meaning": "as usual",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "特性",
+		"meaning": "feature",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "性别",
+		"meaning": "gender",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "严格",
+		"meaning": "strict",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "表格",
+		"meaning": "form",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "规范",
+		"meaning": "rule; standard (strict)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "工程",
+		"meaning": "program",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "程序",
+		"meaning": "program",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "结构",
+		"meaning": "structure",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "常用于",
+		"meaning": "often used to",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "大型",
+		"meaning": "huge",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "型号",
+		"meaning": "version",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "企鹅",
+		"meaning": "penguin",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "大型企业",
+		"meaning": "corporation; enterprise; large enterprise",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "较为",
+		"meaning": "more",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "严谨",
+		"meaning": "serious",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "计算机",
+		"meaning": "computer",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "算了",
+		"meaning": "forget about it",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "终端",
+		"meaning": "end (physically)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "端午节",
+		"meaning": "dragon boat festival",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "制表键",
+		"meaning": "tab",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "缩进",
+		"meaning": "indent",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "缩小",
+		"meaning": "shrink; zoom out",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "缩水",
+		"meaning": "shrink",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "放缩",
+		"meaning": "zoom",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "放大",
+		"meaning": "enlarge; zoom in",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "回车",
+		"meaning": "return",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "快捷键",
+		"meaning": "shortcut",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "变量",
+		"meaning": "variable",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "冰箱贴",
+		"meaning": "fridge magnet",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "迷惑",
+		"meaning": "confusing",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "混乱",
+		"meaning": "confusing",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "调试",
+		"meaning": "to debug",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "调料",
+		"meaning": "spices",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "操作",
+		"meaning": "to operate",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "超链接",
+		"meaning": "hyperlink",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "要做",
+		"meaning": "TODO",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "括号",
+		"meaning": "parentheses",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "大括号",
+		"meaning": "curly brackets",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "中括号",
+		"meaning": "brackets",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "书名号",
+		"meaning": "angular brackets",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "器材",
+		"meaning": "equipment",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "体现出",
+		"meaning": "reflect",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "灵活性",
+		"meaning": "flexibility",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "强大的",
+		"meaning": "powerful; strong",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "操控",
+		"meaning": "ability",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "运作",
+		"meaning": "to operate; operation",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "动作",
+		"meaning": "action; movement",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "幅度",
+		"meaning": "range (physical)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "源泉",
+		"meaning": "fountain",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "底层",
+		"meaning": "ground floor; bottom",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "高处",
+		"meaning": "high place",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "风险",
+		"meaning": "risk",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "容易",
+		"meaning": "easy",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "出现",
+		"meaning": "appear",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "内存",
+		"meaning": "storage; memory",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "泄漏",
+		"meaning": "leak",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "漏水",
+		"meaning": "leaking",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "暗示",
+		"meaning": "to imply",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "黑暗",
+		"meaning": "darkness",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "显示",
+		"meaning": "to show",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "显示器",
+		"meaning": "computer screen; monitor",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "网页",
+		"meaning": "web page",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "网页开发",
+		"meaning": "web development",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "处于",
+		"meaning": "locating; to be in (e.g. a situation)",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "核心",
+		"meaning": "core",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "核桃",
+		"meaning": "walnut",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "位置",
+		"meaning": "position",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "嵌入",
+		"meaning": "embedded",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "实际",
+		"meaning": "practical",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "实际上",
+		"meaning": "in practice",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "交互",
+		"meaning": "interaction",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "效果",
+		"meaning": "result effect",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "画家",
+		"meaning": "painter",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "作家",
+		"meaning": "author",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "科学家",
+		"meaning": "scientist",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "数学家",
+		"meaning": "mathematician",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "生物学家",
+		"meaning": "biologist",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "侧边",
+		"meaning": "side way",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "简洁",
+		"meaning": "simple",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "简单",
+		"meaning": "simple",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "纯洁",
+		"meaning": "pure",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "灵活",
+		"meaning": "flexible",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "遵循",
+		"meaning": "to obey; to follow",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "常规",
+		"meaning": "regular",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "便捷",
+		"meaning": "convenient",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "以一种...方式",
+		"meaning": "in a way of",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "达成目标",
+		"meaning": "achieve the goal",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "快速",
+		"meaning": "速度 quickly",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "数据",
+		"meaning": "data",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "新兴",
+		"meaning": "newly; emerging",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "领域",
+		"meaning": "field",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "广泛",
+		"meaning": "widely",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "古北",
+		"meaning": "community",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "消失",
+		"meaning": "disappear",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "开关",
+		"meaning": "switch",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "表白",
+		"meaning": "to confess",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "情迷",
+		"meaning": "close",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "能像",
+		"meaning": "to be like",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "铭感",
+		"meaning": "sensitive",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "发展",
+		"meaning": "to develop",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "班级",
+		"meaning": "class",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "年龄",
+		"meaning": "age",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "矛盾",
+		"meaning": "contradiction",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "发生",
+		"meaning": "to happen",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "管住嘴",
+		"meaning": "control your mouth",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "迈开腿",
+		"meaning": "move your legs",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "天堂",
+		"meaning": "heaven",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "地狱",
+		"meaning": "hell",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "自动",
+		"meaning": "automatic",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "无限金钱",
+		"meaning": "create money from nothing",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "超能力",
+		"meaning": "superpower",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "钞票",
+		"meaning": "money",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "钞能力",
+		"meaning": "make money superpower",
+		"pinyin": ""
+	},
+	{
+		"hanzi": "罐头",
+		"meaning": "can food",
+		"pinyin": ""
 	}
 ]

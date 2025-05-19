@@ -9,9 +9,13 @@ export default function App() {
     const [currentCharacter, setCurrentCharacter] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
     const card = useRef()
 
-    useEffect(() => getChar(''), [])
+    useEffect(() => getRandomChar(), [])
 
-    const getSelectedChar = (e) => (e.key === 'Enter') ? getChar(e.target.value) : null
+    const getRandomChar = async () => {
+        const response = await fetch('/api/decks/characters')
+        const json = await response.json()
+        setCurrentCharacter(json)
+    }
 
     const getChar = async (hanzi) => {
         const response = await fetch(`/api/characters/${hanzi}`)
@@ -38,14 +42,14 @@ export default function App() {
         await getChar(currentCharacter.hanzi)
     }
 
-    // const submit = async (remembered) => {
-    //     const headers = { 'Content-Type': 'application/json' }
-    //     const body = JSON.stringify({ character: currentCharacter.hanzi, remembered })
-    //     await fetch('/api/submissions', { method: 'POST', headers, body })
-    //     infoVisible = false
-    //     await get('')
-    //     history.pushState(currentCharacter.hanzi, '', `/#/${currentCharacter.hanzi}`)
-    // }
+    const submit = async (remembered) => {
+        // const headers = { 'Content-Type': 'application/json' }
+        // const body = JSON.stringify({ character: currentCharacter.hanzi, remembered })
+        // await fetch('/api/submissions', { method: 'POST', headers, body })
+        // history.pushState(currentCharacter.hanzi, '', `/#/${currentCharacter.hanzi}`)
+        await getRandomChar()
+        setFlipped(false)
+    }
 
     return html`
         <div style='display: flex; flex-direction: column; margin-top: 8px; align-items: center; justify-content: center; height: calc(100vh - 4em);'>
@@ -59,9 +63,9 @@ export default function App() {
                 </div>
             </div>
             <div style='display: flex; position: fixed; bottom: 0; left: 0; width: 100%;'>
-                <button style='width: 33%; border: none; background-color: red; font-size: 2.5em;'>🤯</button>
-                <button style='width: 34%; border: none; background-color: orange; font-size: 2.5em;'>🤔</button>
-                <button style='width: 33%; border: none; background-color: green; font-size: 2.5em;'>🤓</button>
+                <button onclick=${submit} style='width: 33%; border: none; background-color: red; font-size: 2.5em;'>🤯</button>
+                <button onclick=${submit} style='width: 34%; border: none; background-color: orange; font-size: 2.5em;'>🤔</button>
+                <button onclick=${submit} style='width: 33%; border: none; background-color: green; font-size: 2.5em;'>🤓</button>
             </div>
             ${isChangingCharacter ? html`<${ChangeCharacter} onClose=${changeCharacter} />` : ''}
         </div>

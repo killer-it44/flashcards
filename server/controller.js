@@ -9,6 +9,11 @@ export default function Controller(repo) {
         return { ...character, radical, expressions }
     }
 
+    this.getNextCharacterForDeck = () => {
+        const nextItem = repo.decks.characters[Math.floor(Math.random() * repo.decks.characters.length)]
+        return this.getCharacter(nextItem)
+    }
+
     this.getNextCharacter = () => {
         // TODO new algorithm: hard, medium, easy - with weights, new cards should be in medium category
         // category_probabilities = {
