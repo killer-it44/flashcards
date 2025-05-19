@@ -55,8 +55,8 @@ content.split('\n').forEach((line, i) => {
     }
 })
 
-await fs.writeFile(`${dir}/characters.json`, JSON.stringify(characters, null, '\t'))
-await fs.writeFile(`${dir}/expressions.json`, JSON.stringify(expressions, null, '\t'))
+// await fs.writeFile(`${dir}/characters.json`, JSON.stringify(characters, null, '\t'))
+// await fs.writeFile(`${dir}/expressions.json`, JSON.stringify(expressions, null, '\t'))
 
 console.log(`${newExpressions} new expressions`)
 console.log(`${updatedMeanings} updated meanings`)
