@@ -1,6 +1,6 @@
 import { html, useState, useEffect } from './preact-htm-standalone.js'
 
-export default function AddExpressions(props) {
+export default function AddExpressions({ onClose, onSave }) {
     const [expressions, setExpressions] = useState([{ hanzi: '', meaning: '' }])
 
     useEffect(() => {
@@ -22,8 +22,14 @@ export default function AddExpressions(props) {
         }
     }
 
+    const handleKeyDown = (e) => {
+        if (e.key === 'Escape') {
+            onClose(null)
+        }
+    }
+
     return html`
-        <div class='modal-overlay' onclick=${(e) => {e.stopPropagation(); props.onClose();}}>
+        <div class='modal-overlay' onclick=${(e) => { e.stopPropagation(); onClose(); }}>
             <style>
                 .modal-overlay {
                     position: fixed;
@@ -31,7 +37,7 @@ export default function AddExpressions(props) {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background: rgba(0, 0, 0, 0.5);
+                    background: rgba(0, 0, 0, 0.3);
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -44,31 +50,22 @@ export default function AddExpressions(props) {
                     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
                     display: flex;
                     flex-direction: column;
-                }
-
-                .modal-content button {
-                    background: #4CAF50;
-                    color: white;
-                    border: none;
-                    padding: 10px 20px;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    font-weight: bold;
-                }
-
-                .modal-content button:hover {
-                    background: #45a049;
+                    justify-content: center;
+                    align-items: center;
                 }
             </style>
             <div class='modal-content' onclick=${(e) => e.stopPropagation()}>
                 <h3>Add Expressions</h3>
-                    ${expressions.map((entry, index) => html`
+                ${expressions.map((entry, index) => html`
                     <div style='display: flex; gap: 10px; margin-bottom: 10px;'>
-                        <input style='width: 50%; box-sizing: border-box;' type='text' placeholder='Hanzi' value=${entry.hanzi || ''} oninput=${(e) => handleInputChange(index, 'hanzi', e.target.value)} />
-                        <input style='width: 50%; box-sizing: border-box;' type='text' placeholder='Meaning' value=${entry.meaning || ''} oninput=${(e) => handleInputChange(index, 'meaning', e.target.value)} />
+                        <input style='width: 50%; box-sizing: border-box;' type='text' placeholder='Hanzi' value=${entry.hanzi || ''} oninput=${(e) => handleInputChange(index, 'hanzi', e.target.value)} onkeydown=${handleKeyDown} />
+                        <input style='width: 50%; box-sizing: border-box;' type='text' placeholder='Meaning' value=${entry.meaning || ''} oninput=${(e) => handleInputChange(index, 'meaning', e.target.value)} onkeydown=${handleKeyDown} />
                     </div>
-                    `)}
-                <button onclick=${(e) => {e.stopPropagation(); props.onSave(expressions.filter(e => e.hanzi && e.meaning))}}>Save</button>
+                `)}
+                <div style='margin-top: 10px;'>
+                    <button onclick=${(e) => { e.stopPropagation(); onSave(expressions.filter(e => e.hanzi && e.meaning)); }} style='margin-right: 10px;' >✅ OK</button>
+                    <button onclick=${(e) => { e.stopPropagation(); onClose(null); }}>❌ Cancel</button>
+                </div>
             </div>
         </div>
     `

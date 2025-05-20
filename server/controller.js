@@ -5,7 +5,7 @@ export default function Controller(repo) {
         const character = repo.characters.find(c => c.hanzi === hanzi)
         if (!character) throw new NotFound()
         const radical = repo.radicals.find(r => r.hanzi.includes(character.radical.substring(0, 1)))
-        const expressions = repo.expressions.filter(w => w.hanzi.includes(character.hanzi)).map(w => w.hanzi)
+        const expressions = repo.expressions.filter(w => w.hanzi.includes(character.hanzi)).map(e => ({ ...e, pinyin: getPinyinForExpression(e) }))
         return { ...character, radical, expressions }
     }
 
@@ -22,9 +22,9 @@ export default function Controller(repo) {
         //     3: 0.1   # 10% chance for Category 3
         // }
         // this could be called a "strategy" - other strategies could be based on "due date", "last seen", "how often forgotten", "number of strokes", "frequency rank", etc.
-        
+
         // TODO introduce a concept of named decks
-        
+
         const defaultChars = repo.characters.filter(c => c.frequencyRank && c.frequencyRank < 1000).map(c => c.hanzi)
         const charsNotRemembered = repo.submissions.filter(s => s.character && !s.remembered).map(s => s.character)
         const chars = [...defaultChars, ...charsNotRemembered]
@@ -35,6 +35,10 @@ export default function Controller(repo) {
     this.getExpression = (hanzi) => {
         const expression = repo.expressions.find(w => w.hanzi === hanzi)
         if (!expression) throw new NotFound()
+        return { ...expression, pinyin: getPinyinForExpression(expression) }
+    }
+
+    const getPinyinForExpression = (expression) => {
         let pinyin = expression.pinyin
         if (!expression.pinyin) {
             for (let i = 0; i < expression.hanzi.length; i++) {
@@ -42,8 +46,7 @@ export default function Controller(repo) {
                 pinyin += char ? char.pinyin : expression.hanzi.charAt(i)
             }
         }
-
-        return { ...expression, pinyin }
+        return pinyin
     }
 
     this.getNextExpression = () => {

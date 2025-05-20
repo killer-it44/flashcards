@@ -1,13 +1,23 @@
 import { html, useState, useRef } from './preact-htm-standalone.js'
 import AddExpressions from './add-expressions.js'
 import EditRelated from './edit-related.js'
+import ExpressionInfo from './expression-info.js'
 
 export default function CharacterInfo(props) {
     const [isAddingExpressions, setAddingExpressions] = useState(false)
     const [isEditingRelated, setEditingRelated] = useState(false)
+    const [selectedExpression, setSelectedExpression] = useState(false)
 
-    const expressionsLinks = props.currentCharacter.expressions.map(w => html`<a href=/expressions/#/${encodeURIComponent(w)}>${w}</a>`)
-    const expressionsLinksList = expressionsLinks.length > 0 ? expressionsLinks.map(link => html`<div>${link}</div>`) : html``;
+    // const expressionsLinksList = props.currentCharacter.expressions.length > 0
+    //     ? props.currentCharacter.expressions.map(e => html`
+    //         <div>
+    //             <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedExpression(e);}}>${e.hanzi}</a>
+    //             <span>(${e.pinyin})</span>
+    //         </div>
+    //     `)
+    //     : html``
+    // const expressionsLinks = props.currentCharacter.expressions.map(e => html`<a href=/expressions/#/${encodeURIComponent(e.hanzi)}>${e.hanzi}</a> <span>(${e.pinyin})</span>`)
+    // const expressionsLinksList = expressionsLinks.length > 0 ? expressionsLinks.map(link => html`<div>${link}</div>`) : html``;
 
     const closeEditRelated = async (newRelated) => {
         if (newRelated !== null) props.saveRelated(newRelated)
@@ -75,12 +85,20 @@ export default function CharacterInfo(props) {
             </section>
             <section class=character-section>
                 <div class=section-title>Expressions<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setAddingExpressions(true);}}>+</button></div>
-                <div class=section-content style='max-height: 4em; overflow: auto;'>${expressionsLinksList}</div>
+                <div class=section-content style='max-height: 4em; overflow: auto;'>
+                ${props.currentCharacter.expressions.map(e => html`
+                    <div>
+                        <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedExpression(e);}}>${e.hanzi}</a>
+                        <span>(${e.pinyin})</span>
+                    </div>
+                `)}
+                </div>
             </section>
             <section class=character-section>
                 <div class=section-title>Related${!isEditingRelated ?  html`<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setEditingRelated(true);}}>✎</button>` : ''}</div>
                 <div class=section-content>${props.currentCharacter.related.split(' ').map(w => html`<a href=/#/${encodeURIComponent(w)}>${w}</a>`)}</div>
             </section>
+            ${selectedExpression ? html`<${ExpressionInfo} expression=${selectedExpression} onClose=${() => setSelectedExpression(null)} />` : ''}
             ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
             ${isEditingRelated ? html`<${EditRelated} value=${props.currentCharacter.related} onClose=${closeEditRelated} />` : ''}
         </div>

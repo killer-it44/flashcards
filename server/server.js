@@ -99,7 +99,7 @@ export default function Server(controller) {
 
     this.start = (port) => {
         return new Promise((resolve, reject) => {
-            httpServer = app.listen(port, () => resolve(httpServer.address().port)).on('error', reject)
+            httpServer = app.listen(port, '0.0.0.0', () => resolve(httpServer.address().port)).on('error', reject)
         })
     }
 

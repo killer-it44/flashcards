@@ -14,8 +14,8 @@ export default function EditRelated({ value, onClose }) {
         }
     }
 
-    return html`
-        <div onclick=${e => {e.stopPropagation(); onClose(null);}} style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); display: flex; justify-content: center; align-items: center;'>
+    return html`                                              
+        <div onclick=${e => {e.stopPropagation(); onClose(null);}} style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3); display: flex; justify-content: center; align-items: center;'>
             <div onclick=${e => e.stopPropagation()} style='background: white; padding: 20px; border-radius: 8px; text-align: center;'>
                 <h3>Edit related characters</h3>
                 <input ref=${inputRef} type='text' value=${newRelated} oninput=${e => setNewRelated(e.target.value)} onkeydown=${handleKeyDown} style='font-size: 1.5em; margin-bottom: 10px;' />
