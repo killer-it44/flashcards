@@ -39,7 +39,15 @@ export default function Server(controller) {
     })
 
     app.get('/api/decks/:deck', (req, res) => {
-        res.json(controller.getNextCharacterForDeck('characters'))
+        try {
+            res.json(controller.getNextCharacterForDeck('characters'))
+        } catch (error) {
+            if (error instanceof NotFound) {
+                res.status(404).end()
+            } else {
+                throw error
+            }
+        }
     })
 
     app.get('/api/characters', (req, res) => {
