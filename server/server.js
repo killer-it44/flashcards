@@ -97,7 +97,7 @@ export default function Server(controller) {
     })
 
     app.get('/api/expressions', (req, res) => {
-        res.json(controller.getNextExpression())
+        res.json(controller.getExpressions())
     })
 
     app.post('/api/expressions', express.json(), async (req, res) => {

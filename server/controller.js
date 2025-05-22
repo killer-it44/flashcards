@@ -38,6 +38,10 @@ export default function Controller(repo) {
         return { ...expression, pinyin: getPinyinForExpression(expression) }
     }
 
+    this.getExpressions = () => {
+        return repo.expressions
+    }
+
     const getPinyinForExpression = (expression) => {
         let pinyin = expression.pinyin
         if (!expression.pinyin) {
@@ -82,7 +86,7 @@ export default function Controller(repo) {
     }
 
     this.addExpressions = async (expressions) => {
-        repo.expressions.push(...expressions.filter(expression => !repo.expressions.find(e => e.hanzi === expression.hanzi)))
+        repo.expressions.push(...expressions.filter(expression => !repo.expressions.find(e => e.hanzi === expression.hanzi)).map(e => ({ pinyin: '', ...e })))
         await repo.save()
     }
 
