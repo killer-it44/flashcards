@@ -26,9 +26,18 @@ export default function FsRepository(dataDir) {
             await fs.promises.writeFile(`${dataDir}/characters.json`, JSON.stringify(this.characters, null, '\t'))
             await fs.promises.writeFile(`${dataDir}/expressions.json`, JSON.stringify(this.expressions, null, '\t'))
             await fs.promises.writeFile(`${dataDir}/submissions.json`, JSON.stringify(this.submissions, null, '\t'))
+            await fs.promises.writeFile(`${dataDir}/decks.json`, JSON.stringify(this.decks, null, '\t'))
             savingInProgress = false
         }
     }
+
+    this.exportFiles = () => [
+        { name: 'characters.json', content: JSON.stringify(this.characters, null, '\t') },
+        { name: 'expressions.json', content: JSON.stringify(this.expressions, null, '\t') },
+        { name: 'decks.json', content: JSON.stringify(this.decks, null, '\t') },
+        { name: 'radicals.json', content: JSON.stringify(this.radicals, null, '\t') },
+        { name: 'submissions.json', content: JSON.stringify(this.submissions, null, '\t') }
+    ]
 
     init()
 }

@@ -106,5 +106,23 @@ export default function Controller(repo) {
         await repo.save()
     }
 
+    this.addDeck = async (deck) => {
+        if (!deck.name) throw new Error('Deck must have a name')
+        repo.decks[deck.name] = []
+        await repo.save()
+    }
+
+    this.updateDeck = async (deckName, deckData) => {
+        if (!repo.decks[deckName]) throw new NotFound()
+        if (deckData.name && deckData.name !== deckName) {
+            if (repo.decks[deckData.name]) throw new Error('A deck with the new name already exists')
+            delete repo.decks[deckName]
+        }
+        repo.decks[deckData.name] = deckData.items || repo.decks[deckName]
+        await repo.save()
+    }
+
+    this.getExportFiles = () => repo.exportFiles()
+
     this.stop = () => repo.save()
 }

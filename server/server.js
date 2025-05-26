@@ -1,12 +1,14 @@
 import express from 'express'
 import NotFound from './not-found.js'
 import Together from 'together-ai'
+import archiver from 'archiver'
+import fs from 'fs'
+import path from 'path'
+import { arch } from 'os'
 
 export default function Server(controller) {
     let httpServer
     const app = express()
-
-    app.disable('x-powered-by')
 
     app.use('/', express.static('server/web-content'))
 
@@ -22,15 +24,7 @@ export default function Server(controller) {
     })
 
     app.get('/api/characters/:hanzi', (req, res) => {
-        try {
-            res.json(controller.getCharacter(req.params.hanzi))
-        } catch (error) {
-            if (error instanceof NotFound) {
-                res.status(404).end()
-            } else {
-                throw error
-            }
-        }
+        res.json(controller.getCharacter(req.params.hanzi))
     })
 
     app.put('/api/characters/:hanzi', express.json(), async (req, res) => {
@@ -39,15 +33,17 @@ export default function Server(controller) {
     })
 
     app.get('/api/decks/:deck', (req, res) => {
-        try {
-            res.json(controller.getNextCharacterForDeck('characters'))
-        } catch (error) {
-            if (error instanceof NotFound) {
-                res.status(404).end()
-            } else {
-                throw error
-            }
-        }
+        res.json(controller.getNextCharacterForDeck('characters'))
+    })
+
+    app.post('/api/decks', express.json(), async (req, res) => {
+        await controller.addDeck(req.body)
+        res.status(201).end()
+    })
+
+    app.put('/api/decks/:deck', express.json(), async (req, res) => {
+        await controller.updateDeck(req.params.deck, req.body)
+        res.status(200).end()
     })
 
     app.get('/api/characters', (req, res) => {
@@ -104,6 +100,21 @@ export default function Server(controller) {
         await controller.addExpressions(req.body)
         res.status(204).end()
     })
+
+    app.get('/api/export', async (req, res) => {
+        const COMPRESSION_LEVEL_HIGHEST = 9
+        const archive = archiver('zip', { zlib: { level: COMPRESSION_LEVEL_HIGHEST } })
+        const timestamp = new Date().toISOString().replace(/[:-]/g, '').replace(/\.\d+Z$/, '').replace('T', '-')
+        res.attachment(`flashcards-export-${timestamp}.zip`)
+        archive.pipe(res)
+
+        controller.getExportFiles().forEach(f => archive.append(f.content, { name: f.name }))
+        await archive.finalize()
+    })
+
+    app.use((err, req, res, next) =>
+        err instanceof NotFound ? res.status(404).end() : next(err)
+    )
 
     this.start = (port) => {
         return new Promise((resolve, reject) => {
