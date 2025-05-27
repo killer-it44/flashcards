@@ -1,9 +1,9 @@
 import fs from 'fs'
 
 export default function FsRepository(dataDir) {
-    let savingInProgress = false
+    let savingInProgress = false, pendingSave = false
 
-    const init = () => {
+    this.init = () => {
         if (!fs.existsSync(dataDir)) {
             fs.mkdirSync(dataDir)
             fs.copyFileSync('server/init/radicals.json', `${dataDir}/radicals.json`)
@@ -20,15 +20,16 @@ export default function FsRepository(dataDir) {
     }
 
     this.save = async () => {
-        if (!savingInProgress) {
-            savingInProgress = true
-            await fs.promises.writeFile(`${dataDir}/radicals.json`, JSON.stringify(this.radicals, null, '\t'))
-            await fs.promises.writeFile(`${dataDir}/characters.json`, JSON.stringify(this.characters, null, '\t'))
-            await fs.promises.writeFile(`${dataDir}/expressions.json`, JSON.stringify(this.expressions, null, '\t'))
-            await fs.promises.writeFile(`${dataDir}/submissions.json`, JSON.stringify(this.submissions, null, '\t'))
-            await fs.promises.writeFile(`${dataDir}/decks.json`, JSON.stringify(this.decks, null, '\t'))
-            savingInProgress = false
+        if (savingInProgress) {
+            pendingSave = true
+            return
         }
+        savingInProgress = true
+        do {
+            pendingSave = false
+            await doSave()
+        } while (pendingSave)
+        savingInProgress = false
     }
 
     this.exportFiles = () => [
@@ -39,5 +40,15 @@ export default function FsRepository(dataDir) {
         { name: 'submissions.json', content: JSON.stringify(this.submissions, null, '\t') }
     ]
 
-    init()
+    const doSave = async () => {
+        if (!savingInProgress) {
+            savingInProgress = true
+            await fs.promises.writeFile(`${dataDir}/radicals.json`, JSON.stringify(this.radicals, null, '\t'))
+            await fs.promises.writeFile(`${dataDir}/characters.json`, JSON.stringify(this.characters, null, '\t'))
+            await fs.promises.writeFile(`${dataDir}/expressions.json`, JSON.stringify(this.expressions, null, '\t'))
+            await fs.promises.writeFile(`${dataDir}/submissions.json`, JSON.stringify(this.submissions, null, '\t'))
+            await fs.promises.writeFile(`${dataDir}/decks.json`, JSON.stringify(this.decks, null, '\t'))
+            savingInProgress = false
+        }
+    }
 }
