@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
 
-const dir = process.env.DATA_DIR || 'init'
+const dir = process.env.FLASHCARDS_DATA_DIR || 'init'
 
 const content = (await fs.readFile('init/new-items.txt')).toString()
 
