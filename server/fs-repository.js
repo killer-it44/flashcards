@@ -17,6 +17,7 @@ export default function FsRepository(dataDir) {
         this.expressions = JSON.parse(fs.readFileSync(`${dataDir}/expressions.json`).toString())
         this.submissions = JSON.parse(fs.readFileSync(`${dataDir}/submissions.json`).toString())
         this.decks = JSON.parse(fs.readFileSync(`${dataDir}/decks.json`).toString())
+        return this
     }
 
     this.save = async () => {
