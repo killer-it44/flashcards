@@ -1,7 +1,7 @@
 import { html, useState, useEffect } from './preact-htm-standalone.js'
 
 export default function AddExpressions({ onClose, onSave }) {
-    const [expressions, setExpressions] = useState([{ hanzi: '', meaning: '' }])
+    const [expressions, setExpressions] = useState([{ hanzi: '', pinyin: '', meaning: '' }])
 
     useEffect(() => {
         const firstInput = document.querySelector('.modal-content input[type="text"]')
@@ -17,7 +17,7 @@ export default function AddExpressions({ onClose, onSave }) {
         if (field === 'meaning' && value && updatedExpressions[index].hanzi) {
             const hasEmptyRow = updatedExpressions.some(e => !e.hanzi && !e.meaning)
             if (!hasEmptyRow) {
-                setExpressions([...updatedExpressions, { hanzi: '', meaning: '' }])
+                setExpressions([...updatedExpressions, { hanzi: '', pinyin: '', meaning: '' }])
             }
         }
     }

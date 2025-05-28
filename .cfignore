@@ -1,6 +1,0 @@
-.DS_Store
-coverage
-data
-node_modules
-server/init
-server/spec

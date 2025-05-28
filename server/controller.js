@@ -78,15 +78,8 @@ export default function Controller(repo) {
         await repo.save()
     }
 
-    this.addExpression = async (expression) => {
-        if (!repo.expressions.find(e => e.hanzi === expression.hanzi)) {
-            repo.expressions.push(expression)
-        }
-        await repo.save()
-    }
-
     this.addExpressions = async (expressions) => {
-        repo.expressions.push(...expressions.filter(expression => !repo.expressions.find(e => e.hanzi === expression.hanzi)).map(e => ({ pinyin: '', ...e })))
+        repo.expressions.push(...expressions.filter(expression => !repo.expressions.find(e => e.hanzi === expression.hanzi)))
         await repo.save()
     }
 

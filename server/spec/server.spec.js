@@ -54,11 +54,6 @@ describe('Server', () => {
         await client.get(`/api/expressions/does-not-exist}`).expect(404)
     })
 
-    it('returns some next expression', async () => {
-        const response = await client.get('/api/expressions').expect(200)
-        expect(response.body.hanzi).toBeInstanceOf(String)
-    })
-
     it('can submit expressions', async () => {
         const updatedData = { expression: '一二', remembered: true }
         await client.post('/api/submissions').send(updatedData).expect(201)

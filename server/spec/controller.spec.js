@@ -11,7 +11,7 @@ describe('Controller', () => {
 
     // TODO anything to consider the frequencyRank?
 
-    it('returns the details of a specific character including matching radicals and expressions', async () => {
+    it('returns the details of a specific character with matching radicals + expressions incl. pinyin', async () => {
         expect(controller.getCharacter('一')).toEqual({
             hanzi: '一',
             pinyin: 'yī',
@@ -30,7 +30,15 @@ describe('Controller', () => {
             standardRank: 1,
             frequencyRank: 2,
             related: '',
-            expressions: ['一二', '一...二']
+            expressions: [{
+                hanzi: '一二',
+                pinyin: 'yīèr',
+                meaning: 'one two'
+            }, {
+                hanzi: '一...二',
+                pinyin: 'yī...èr',
+                meaning: 'one...two'
+            }]
         })
     })
 
@@ -42,8 +50,9 @@ describe('Controller', () => {
         const character = controller.getNextCharacter()
         expect(['一', '二']).toContain(character.hanzi)
         expect(['yī', 'èr']).toContain(character.pinyin)
-        expect(character.expressions).toEqual(['一二', '一...二'])
         expect(character.radical.hanzi).not.toBe('')
+        expect(character.expressions[0].hanzi).toBe('一二')
+        expect(character.expressions[1].hanzi).toBe('一...二')
     })
 
     it('can submit characters', async () => {
@@ -59,9 +68,9 @@ describe('Controller', () => {
     })
 
     it('can add new expressions, which are also looked up', async () => {
-        await controller.addExpression({ hanzi: '一下', meaning: 'a little' })
+        await controller.addExpressions([{ hanzi: '一下', pinyin: '', meaning: 'a little' }])
         expect(controller.getExpression('一下').meaning).toBe('a little')
-        expect(controller.getCharacter('一').expressions).toContain('一下')
+        expect(controller.getCharacter('一').expressions).toContain(jasmine.objectContaining({ hanzi: '一下' }))
     })
 
     it('will return the characters that are least remembered with a higher probability', async () => {
