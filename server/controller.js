@@ -6,7 +6,8 @@ export default function Controller(repo) {
         if (!character) throw new NotFound()
         const radical = repo.radicals.find(r => r.hanzi.includes(character.radical.substring(0, 1)))
         const expressions = repo.expressions.filter(w => w.hanzi.includes(character.hanzi)).map(e => ({ ...e, pinyin: getPinyinForExpression(e) }))
-        return { ...character, radical, expressions }
+        const related = character.related ? character.related.split('').map(relatedChar => repo.characters.find(c => c.hanzi === relatedChar)) : []
+        return { ...character, radical, expressions, related }
     }
 
     this.getNextCharacterForDeck = () => {

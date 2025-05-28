@@ -1,23 +1,12 @@
-import { html, useState, useRef } from './preact-htm-standalone.js'
+import { html, useState } from './preact-htm-standalone.js'
 import AddExpressions from './add-expressions.js'
 import EditRelated from './edit-related.js'
-import ExpressionInfo from './expression-info.js'
+import ShortInfo from './short-info.js'
 
 export default function CharacterInfo(props) {
     const [isAddingExpressions, setAddingExpressions] = useState(false)
     const [isEditingRelated, setEditingRelated] = useState(false)
-    const [selectedExpression, setSelectedExpression] = useState(false)
-
-    // const expressionsLinksList = props.currentCharacter.expressions.length > 0
-    //     ? props.currentCharacter.expressions.map(e => html`
-    //         <div>
-    //             <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedExpression(e);}}>${e.hanzi}</a>
-    //             <span>(${e.pinyin})</span>
-    //         </div>
-    //     `)
-    //     : html``
-    // const expressionsLinks = props.currentCharacter.expressions.map(e => html`<a href=/expressions/#/${encodeURIComponent(e.hanzi)}>${e.hanzi}</a> <span>(${e.pinyin})</span>`)
-    // const expressionsLinksList = expressionsLinks.length > 0 ? expressionsLinks.map(link => html`<div>${link}</div>`) : html``;
+    const [selectedShortInfo, setSelectedShortInfo] = useState(null)
 
     const closeEditRelated = async (newRelated) => {
         if (newRelated !== null) props.saveRelated(newRelated)
@@ -69,27 +58,30 @@ export default function CharacterInfo(props) {
                 <div class=section-content>${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
             </section>
             <section>
-                <div class=section-title>Expressions<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setAddingExpressions(true);}}>+</button></div>
+                <div class=section-title>Expressions<button class=highlighted-button onclick=${(e) => { e.stopPropagation(); setAddingExpressions(true); }}>+</button></div>
                 <div class=section-content style='max-height: 4.3em; overflow: auto;'>
                 ${props.currentCharacter.expressions.map(e => html`
                     <div>
-                        <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedExpression(e);}}>${e.hanzi}</a>
+                        <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(e); }}>${e.hanzi}</a>
                         <span>(${e.pinyin})</span>
                     </div>
                 `)}
                 </div>
             </section>            
             <section>
-                <div class=section-title>Related / Don't confuse with ${!isEditingRelated ?  html`<button class=highlighted-button onclick=${(e) => {e.stopPropagation(); setEditingRelated(true);}}>✎</button>` : ''}</div>
-                <!-- TODO make it clickable -->
-                <div class=section-content>${props.currentCharacter.related ? props.currentCharacter.related.split('').map(c => html`<a href=/#/${encodeURIComponent(c)}>${c}</a>`) : '(blank)'}</div>
+                <div class=section-title>Don't confuse with ${!isEditingRelated ? html`<button class=highlighted-button onclick=${(e) => { e.stopPropagation(); setEditingRelated(true); }}>✎</button>` : ''}</div>
+                <div class=section-content>
+                ${props.currentCharacter.related ? props.currentCharacter.related.map(c => html`
+                    <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(c); }}>${c.hanzi}</a>
+                `) : '(blank)'}
+                </div>
             </section>
             <section>
                 <div class=section-title>Memorization hints</div>
                 <!-- TODO fill from AI -->
                 <div class=section-content style='max-height: 5em; overflow: auto;'>(TODO fill from AI) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</div>
             </section>
-            ${selectedExpression ? html`<${ExpressionInfo} expression=${selectedExpression} onClose=${() => setSelectedExpression(null)} />` : ''}
+            ${selectedShortInfo ? html`<${ShortInfo} onClose=${() => setSelectedShortInfo(null)} info=${selectedShortInfo} />` : ''}
             ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
             ${isEditingRelated ? html`<${EditRelated} value=${props.currentCharacter.related} onClose=${closeEditRelated} />` : ''}
         </div>
