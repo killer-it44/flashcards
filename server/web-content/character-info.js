@@ -60,20 +60,20 @@ export default function CharacterInfo(props) {
             <section>
                 <div class=section-title>Expressions<button class=highlighted-button onclick=${(e) => { e.stopPropagation(); setAddingExpressions(true); }}>+</button></div>
                 <div class=section-content style='max-height: 4.3em; overflow: auto;'>
-                ${props.currentCharacter.expressions.map(e => html`
+                ${props.currentCharacter.expressions.length > 0 ? props.currentCharacter.expressions.map(e => html`
                     <div>
                         <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(e); }}>${e.hanzi}</a>
                         <span>(${e.pinyin})</span>
                     </div>
-                `)}
+                `) : '(none yet)'}
                 </div>
-            </section>            
+            </section>
             <section>
                 <div class=section-title>Don't confuse with ${!isEditingRelated ? html`<button class=highlighted-button onclick=${(e) => { e.stopPropagation(); setEditingRelated(true); }}>✎</button>` : ''}</div>
                 <div class=section-content>
-                ${props.currentCharacter.related ? props.currentCharacter.related.map(c => html`
+                ${props.currentCharacter.related.length > 0 ? props.currentCharacter.related.map(c => html`
                     <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(c); }}>${c.hanzi}</a>
-                `) : '(blank)'}
+                `) : '(none yet)'}
                 </div>
             </section>
             <section>
