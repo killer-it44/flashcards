@@ -1,4 +1,4 @@
-import { html, useState } from './preact-htm-standalone.js'
+import { html, useState } from '/preact-htm-standalone.js'
 import AddExpressions from './add-expressions.js'
 import EditRelated from './edit-related.js'
 import ShortInfo from './short-info.js'

@@ -1,4 +1,4 @@
-import { html, useState, useEffect } from './preact-htm-standalone.js'
+import { html, useState, useEffect } from '/preact-htm-standalone.js'
 
 export default function AddExpressions({ onClose, onSave }) {
     const [expressions, setExpressions] = useState([{ hanzi: '', pinyin: '', meaning: '' }])

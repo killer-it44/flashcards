@@ -1,4 +1,4 @@
-import { html, useState, useEffect, useRef } from './preact-htm-standalone.js'
+import { html, useState, useEffect, useRef } from '/preact-htm-standalone.js'
 
 export default function ChangeCharacter({ onClose }) {
     const [newCharacter, setNewCharacter] = useState('')

@@ -1,4 +1,4 @@
-import { html } from './preact-htm-standalone.js'
+import { html } from '/preact-htm-standalone.js'
 
 export default function ShortInfo({ onClose, info }) {
     return html`

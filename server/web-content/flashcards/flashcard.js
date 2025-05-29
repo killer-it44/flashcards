@@ -1,4 +1,4 @@
-import { html, useState, useEffect, useRef } from './preact-htm-standalone.js'
+import { html, useState, useEffect, useRef } from '/preact-htm-standalone.js'
 import CharacterInfo from './character-info.js'
 import ChangeCharacter from './change-character.js'
 
