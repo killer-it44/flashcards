@@ -29,8 +29,8 @@ export default function Server(controller) {
         res.status(200).end()
     })
 
-    app.get('/api/decks/:deck', (req, res) => {
-        res.json(controller.getNextCharacterForDeck('characters'))
+    app.get('/api/decks', (req, res) => {
+        res.json(controller.findDecks(new RegExp(req.query.search || '', 'i')))
     })
 
     app.post('/api/decks', express.json(), async (req, res) => {
@@ -38,9 +38,17 @@ export default function Server(controller) {
         res.status(201).end()
     })
 
+    app.get('/api/decks/:deck', (req, res) => {
+        res.json(controller.getDeck(req.params.deck))
+    })
+
     app.put('/api/decks/:deck', express.json(), async (req, res) => {
         await controller.updateDeck(req.params.deck, req.body)
         res.status(200).end()
+    })
+
+    app.get('/api/flashcards/:deck', (req, res) => {
+        res.json(controller.getNextCharacterForDeck('characters'))
     })
 
     app.get('/api/characters', (req, res) => {

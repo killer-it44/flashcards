@@ -10,6 +10,16 @@ export default function Controller(repo) {
         return { ...character, radical, expressions, related }
     }
 
+    this.getDeck = (deckName) => {
+        return repo.decks[deckName]
+    }
+
+    this.findDecks = (filterRegExp) => {
+        //find decks that match the filterRegExp, and return a list of deck names and the size of the deck
+        const decks = Object.entries(repo.decks).filter(([name]) => filterRegExp.test(name))
+        return decks.map(([name, items]) => ({ name, size: items.length }))
+    }
+
     this.getNextCharacterForDeck = () => {
         const nextItem = repo.decks.characters[Math.floor(Math.random() * repo.decks.characters.length)]
         return this.getCharacter(nextItem)

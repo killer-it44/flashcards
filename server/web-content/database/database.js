@@ -22,21 +22,17 @@ export default function Database() {
         return () => window.removeEventListener('hashchange', onHashChange)
     }, [])
 
-    function selectCategory(key) {
-        window.location.hash = `#database/${key}`
-    }
-
     return html`
-        <div style='padding:2em; min-height:300px;'>
+        <div style='padding: 2em; min-height: 300px;'>
             <h2>Database</h2>
-            <div style='margin-bottom:2em;'>
+            <div style='margin-bottom: 2em;'>
                 <${category.Component} />
             </div>
-            <footer style='position:fixed; left:0; right:0; bottom:0; border-top:1px solid #ddd;display:flex;justify-content:space-around;'>
+            <footer style='position: fixed; bottom: 0; border-top: 1px solid #ddd; display: flex; justify-content: center; gap: 0.5em; left: 50%; transform: translateX(-50%);'>
             ${categories.map(cat => html`
-                <button key=${cat.key} style='background:${category.key===cat.key?'#e0e0e0':'transparent'};border:none;padding:1em 1em;font-size:0.6em;cursor:pointer;' onClick=${() => selectCategory(cat.key)}>
+                <a key=${cat.key} href='#database/${cat.key}' style='background: ${(category.key === cat.key) ? '#e0e0e0' : 'transparent'}; padding: 1em 1em; font-size: 0.6em; color: inherit;'>
                     <strong>${cat.label}</strong>
-                </button>
+                </a>
             `)}
             </footer>
         </div>

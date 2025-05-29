@@ -11,7 +11,7 @@ export default function Flashcard() {
     useEffect(() => { getRandomChar() }, [])
 
     const getRandomChar = async () => {
-        const response = await fetch('/api/decks/characters')
+        const response = await fetch('/api/flashcards/characters')
         const json = await response.json()
         setCurrentCharacter(json)
     }
