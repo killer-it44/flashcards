@@ -51,7 +51,7 @@ export default function CharacterInfo(props) {
                     background-color: #0056b3;
                 }
             </style>
-            <div style='font-size: 1.5em;'>${props.currentCharacter.hanzi} ${props.currentCharacter.pinyin}</div>
+            <div style='font-size: 1.5em;' onclick=${props.onChangeCharacter}>${props.currentCharacter.hanzi} ${props.currentCharacter.pinyin}</div>
             <div>${props.currentCharacter.meaning}</div>
             <section>
                 <div class=section-title>Radical</div>

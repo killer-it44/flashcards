@@ -51,13 +51,34 @@ export default function Flashcard() {
     }
 
     return html`
+        <style>
+            .card {
+                transform-style: preserve-3d;
+                transition: transform 0.5s;
+            }
+
+            .card.flipped {
+                transform: rotateY(180deg);
+            }
+
+            .card-front, .card-back {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                backface-visibility: hidden;
+            }
+
+            .card-back {
+                transform: rotateY(180deg);
+            }
+        </style>
         <div style='display: flex; flex-direction: column; align-items: center; justify-content: center;'>
             <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; align-items: center; height: min(80vh, 80vw * 1.5); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
                 <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
                     <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentCharacter.hanzi}</div>
                 </div>
                 <div class='card-back' style='display: flex; align-items: center; justify-content: center;'>
-                    <${CharacterInfo} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />
+                    <${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />
                 </div>
             </div>
             <div style='font-size: 2em; display: flex; justify-content: center; gap: 1.5em;'>
@@ -65,7 +86,6 @@ export default function Flashcard() {
                 <button onclick=${() => submit('unsure')} style='border: none;'>🤔</button>
                 <button onclick=${() => submit('remembered')} style='border: none;'>🤓</button>
             </div>
-            <button onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} style='font-size: 2em; position: absolute; right: 0; top: 0; margin: 6px;'>🔄</button>
             ${isChangingCharacter ? html`<${ChangeCharacter} onClose=${changeCharacter} />` : ''}
         </div>
     `
