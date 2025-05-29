@@ -52,22 +52,29 @@ export default function App() {
     }
 
     return html`
-        <div style='display: flex; flex-direction: column; margin-top: 8px; align-items: center; justify-content: center; height: calc(100vh - 5em);'>
-            <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; justify-content: center; align-items: center; height: min(85vh, 85vw * 1.5); aspect-ratio: 2 / 3; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
-                <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em; margin-bottom: 16px;'>
-                    <div>${currentCharacter.hanzi}</div>
+        <nav style='font-size: 2em; display: flex; justify-content: center; gap: .7em;'>
+            <button title='Flashcards'>⚡️</button>
+            <button title='Stories'>📖</button>
+            <button title='Database'>🗃️</button>
+            <button title='Statistics'>📈</button>
+            <button title='Profile'>👤</button>
+        </nav>
+        <div style='display: flex; flex-direction: column; align-items: center; justify-content: center;'>
+            <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; align-items: center; height: min(80vh, 80vw * 1.5); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
+                <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
+                    <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentCharacter.hanzi}</div>
                 </div>
-                <div class='card-back' style='display: flex; align-items: center; justify-content: center; margin-bottom: 16px;'>
+                <div class='card-back' style='display: flex; align-items: center; justify-content: center;'>
                     <${CharacterInfo} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />
                 </div>
             </div>
-            <div style='display: flex; position: fixed; bottom: 0; left: 0; width: 100%;'>
+            <div style='font-size: 2em; display: flex; justify-content: center; gap: 1.5em;'>
                 <!-- TODO implement actions -->
-                <button onclick=${submit} style='width: 33%; border: none; background-color: red; font-size: 1.5em;'>🤯</button>
-                <button onclick=${submit} style='width: 34%; border: none; background-color: orange; font-size: 1.5em;'>🤔</button>
-                <button onclick=${submit} style='width: 33%; border: none; background-color: green; font-size: 1.5em;'>🤓</button>
+                <button onclick=${submit} style='border: none;'>🤯</button>
+                <button onclick=${submit} style='border: none;'>🤔</button>
+                <button onclick=${submit} style='border: none;'>🤓</button>
             </div>
-            <button onclick=${(e) => {e.stopPropagation(); setChangingCharacter(true);}} style='font-size: 2em; position: absolute; right: 0; top: 0; margin: 6px;'>🔄</button>
+            <button onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} style='font-size: 2em; position: absolute; right: 0; top: 0; margin: 6px;'>🔄</button>
             ${isChangingCharacter ? html`<${ChangeCharacter} onClose=${changeCharacter} />` : ''}
         </div>
     `
