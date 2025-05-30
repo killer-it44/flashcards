@@ -54,9 +54,9 @@ export default function EditDeck({ name, onClose, onSaved }) {
     }
 
     return html`
-        <div style='max-width:500px;margin:2em auto;background:#fff;border-radius:8px;box-shadow:0 2px 8px #0001;padding:2em;position:relative;'>
+        <div style='background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 1em; position: relative;'>
             <div style='margin-bottom:1.5em;'>
-                <label style='font-weight:bold;'>Deck name:</label><br/>
+                <label style='font-weight:bold;'>Edit Deck</label><br/>
                 <input type='text' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width:100%;padding:0.5em;font-size:1em;margin-top:0.3em;border:1px solid #ccc;border-radius:4px;' />
             </div>
             <div style='margin-bottom:1.5em;'>
