@@ -23,11 +23,8 @@ export default function Database() {
     }, [])
 
     return html`
-        <div style='padding: 2em; min-height: 300px;'>
-            <h2>Database</h2>
-            <div style='margin-bottom: 2em;'>
-                <${category.Component} />
-            </div>
+        <div style='padding: .5em;'>
+            <${category.Component} />
             <footer style='position: fixed; bottom: 0; border-top: 1px solid #ddd; display: flex; justify-content: center; gap: 0.5em; left: 50%; transform: translateX(-50%);'>
             ${categories.map(cat => html`
                 <a key=${cat.key} href='#database/${cat.key}' style='background: ${(category.key === cat.key) ? '#e0e0e0' : 'transparent'}; padding: 1em 1em; font-size: 0.6em; color: inherit;'>

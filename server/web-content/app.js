@@ -26,9 +26,9 @@ export default function App() {
 
     return html`
         <div style='margin: 8px; display: flex; flex-direction: column; align-items: center; height: min(100dvh - 16px, (100vw - 16px) * 2); aspect-ratio: 0.5;'>
-            <nav style='font-size: 2em; display: flex; justify-content: center; gap: .7em;'>
+            <nav style='font-size: 2em; display: flex; justify-content: center; gap: .7em; margin-bottom: 0.2em;'>
             ${navMenu.map(n => html`
-                <button title=${n.title} onclick=${() => window.location.hash = n.hash} style=${current === n.hash ? 'font-weight:bold;' : ''}>${n.label}</button>
+                <button title=${n.title} onclick=${() => window.location.hash = n.hash} style=${current === n ? 'font-weight:bold; background: #e0e0e0; border-radius: 8px;' : ''}>${n.label}</button>
             `)}
             </nav>
             <div style='display: flex; justify-content: center; width: 100%;'>
