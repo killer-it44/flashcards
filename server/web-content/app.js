@@ -25,13 +25,15 @@ export default function App() {
     }, [])
 
     return html`
-        <nav style='font-size: 2em; display: flex; justify-content: center; gap: .7em;'>
-        ${navMenu.map(n => html`
-            <button title=${n.title} onclick=${() => window.location.hash = n.hash} style=${current === n.hash ? 'font-weight:bold;' : ''}>${n.label}</button>
-        `)}
-        </nav>
-        <div style='display: flex; justify-content: center; width: 100%;'>
-            <${current.Component} />
+        <div style='margin: 8px; display: flex; flex-direction: column; align-items: center; height: min(100dvh - 16px, (100vw - 16px) * 2); aspect-ratio: 0.5;'>
+            <nav style='font-size: 2em; display: flex; justify-content: center; gap: .7em;'>
+            ${navMenu.map(n => html`
+                <button title=${n.title} onclick=${() => window.location.hash = n.hash} style=${current === n.hash ? 'font-weight:bold;' : ''}>${n.label}</button>
+            `)}
+            </nav>
+            <div style='display: flex; justify-content: center; width: 100%;'>
+                <${current.Component} />
+            </div>
         </div>
     `
 }
