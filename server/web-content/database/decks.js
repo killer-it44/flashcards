@@ -32,54 +32,44 @@ export default function Decks() {
         setDecks(data)
     }
 
-    const handleAddDeck = async () => {
-        const name = prompt('Enter new deck name:')
-        if (!name) return
-        await fetch('/api/decks', {
+    const addDeck = async () => {
+        await fetch(`/api/decks`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name })
+            body: JSON.stringify({ name: search })
         })
-        fetchDecks(search)
+        editDeck(search)
     }
 
-    const handleEditDeck = (name) => {
-        window.location.hash = `#database/decks/${encodeURIComponent(name)}`
-        setEditingDeck(name)
-    }
+    const editDeck = (name) => window.location.hash = `#database/decks/${encodeURIComponent(name)}`
 
-    const handleCloseEdit = () => {
-        // Remove deck name from hash, keep just #database
-        window.location.hash = '#database/decks'
-    }
+    const onEditClose = () => window.location.hash = '#database/decks'
 
-    const handleSavedEdit = async (data) => {
-        await fetch(`/api/decks/${encodeURIComponent(editingDeck)}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        })
+    const onEditSave = async () => {
         setEditingDeck('')
         fetchDecks(search)
     }
 
     return html`
-    ${editingDeck ? html`<${EditDeck} name=${editingDeck} onClose=${handleCloseEdit} onSaved=${handleSavedEdit} />` : html`
-        <div style='display: flex; gap: 0.5em;'>
-            <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
-            <button onclick=${handleAddDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
+        <div style='width: 100%;'>
+            ${editingDeck ? html`<${EditDeck} name=${editingDeck} onClose=${onEditClose} onSave=${onEditSave} />` : html`
+            <div style='display: flex; gap: 0.5em;'>
+                <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
+                <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
+            </div>
+            <div>
+            ${decks.length === 0 ? html`<div class=minor>No decks found.</div>` : html`
+                <ul style='padding: 0;'>
+                ${decks.map(deck => html`
+                    <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
+                        <span>${deck.name} <span class=minor>(${deck.size})</span></span>
+                        <button onclick=${() => editDeck(deck.name)} style='padding: 0.3em 0.5em;'>✎</button>
+                    </li>
+                `)}
+                </ul>
+            `}
+            </div>
+            `}
         </div>
-        <div>
-        ${decks.length === 0 ? html`<div class=minor>No decks found.</div>` : html`
-            <ul style='padding: 0;'>
-            ${decks.map(deck => html`
-                <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
-                    <span>${deck.name} <span class=minor>(${deck.size})</span></span>
-                    <button onclick=${() => handleEditDeck(deck.name)} style='padding: 0.3em 0.5em;'>✎</button>
-                </li>
-            `)}
-            </ul>
-        `}
-        </div>
-    `}`
+    `
 }

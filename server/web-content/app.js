@@ -25,15 +25,13 @@ export default function App() {
     }, [])
 
     return html`
-        <div style='margin: 8px; display: flex; flex-direction: column; align-items: center; height: min(100dvh - 16px, (100vw - 16px) * 2); aspect-ratio: 0.5;'>
+        <div style='margin: 8px; display: flex; flex-direction: column; height: min(100dvh - 16px, (100vw - 16px) * 2); aspect-ratio: 0.5;'>
             <nav style='font-size: 2em; display: flex; justify-content: center; gap: 0.5em; margin-bottom: 0.2em;'>
             ${navMenu.map(n => html`
                 <a title=${n.title} href=${n.hash} style='padding: 0 0.1em' class=${current === n ? 'selected-nav' : ''}>${n.label}</a>
             `)}
             </nav>
-            <div style='display: flex; justify-content: center; width: 100%; height: 100%;'>
-                <${current.Component} />
-            </div>
+            <${current.Component} />
         </div>
     `
 }

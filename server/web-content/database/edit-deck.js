@@ -1,23 +1,15 @@
 import { html, useState, useEffect } from '/preact-htm-standalone.js'
 
-export default function EditDeck({ name, onClose, onSaved }) {
+export default function EditDeck({ name, onClose }) {
     const [deckName, setDeckName] = useState(name)
     const [entries, setEntries] = useState([])
     const [search, setSearch] = useState('')
     const [filtered, setFiltered] = useState([])
-    const [loading, setLoading] = useState(true)
-    const [saving, setSaving] = useState(false)
-    const [error, setError] = useState('')
 
-    useEffect(() => {
-        setLoading(true)
-        fetch(`/api/decks/${encodeURIComponent(name)}`)
-            .then(res => res.json())
-            .then(data => {
-                setEntries(data)
-                setLoading(false)
-            })
-            .catch(() => setLoading(false))
+    useEffect(async () => {
+        const res = await fetch(`/api/decks/${encodeURIComponent(name)}`)
+        const data = await res.json()
+        setEntries(data)
     }, [name])
 
     useEffect(() => {
@@ -25,66 +17,47 @@ export default function EditDeck({ name, onClose, onSaved }) {
         setFiltered(s ? entries.filter(e => e.includes(s)) : entries)
     }, [search, entries])
 
-    const handleDelete = (entry) => {
-        setEntries(entries.filter(e => e !== entry))
-    }
+    const deleteEntry = (entry) => setEntries(entries.filter(e => e !== entry))
 
-    const handleAdd = () => {
+    const addEntry = () => {
         if (!search.trim() || entries.includes(search.trim())) return
         setEntries([...entries, search.trim()])
         setSearch('')
     }
 
-    const handleSave = async () => {
-        setSaving(true)
-        setError('')
-        try {
-            const res = await fetch(`/api/decks/${encodeURIComponent(name)}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: deckName, items: entries })
-            })
-            if (!res.ok) throw new Error('Failed to save')
-            onSaved && onSaved(deckName)
-        } catch (e) {
-            setError('Failed to save changes')
-        } finally {
-            setSaving(false)
-        }
+    const save = async () => {
+        await fetch(`/api/decks/${encodeURIComponent(name)}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: deckName, items: entries })
+        })
+        onClose({ oldName: name, newName: deckName, entries })
     }
 
     return html`
-        <div style='background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 1em; position: relative;'>
-            <div style='margin-bottom:1.5em;'>
-                <label style='font-weight:bold;'>Edit Deck</label><br/>
-                <input type='text' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width:100%; padding: 0.5em; margin-top: 0.3em; border: 1px solid #ccc;' />
-            </div>
-            <div style='margin-bottom: 1.5em;'>
-                <div style='display: flex; gap:0.5em; align-items: center; margin-bottom: 0.7em;'>
-                    <input type='text' placeholder='Search or add entry...' value=${search} onInput=${e => setSearch(e.target.value)} style='flex:1; padding: 0.5em; border: 1px solid #ccc;' />
-                    <button style='padding: 0.5em 1em; background: ${search && !entries.includes(search.trim()) ? '#007bff' : '#ccc'}; color: white; ${search && entries.includes(search.trim()) ? 'cursor: not-allowed' : ''}' disabled=${!search || entries.includes(search.trim())} onclick=${handleAdd}>
-                        Add
-                    </button>
-                </div>
-                <div style='max-height: 200px; overflow: auto; border: 1px solid #eee; border-radius: 8px;'>
-                    ${loading ? html`<div style='padding:1em;color:#888;'>Loading...</div>` :
-                        filtered.length === 0 ? html`<div style='padding:1em;color:#888;'>No entries found.</div>` :
-                        html`<ul style='list-style:none;padding:0;margin:0;'>
-                            ${filtered.map(entry => html`
-                                <li style='display:flex;align-items:center;justify-content:space-between;padding:0.5em 1em;border-bottom:1px solid #f3f3f3;'>
-                                    <span>${entry}</span>
-                                    <button onclick=${() => handleDelete(entry)} style='background:#ff4d4f;color:white;padding:0.3em 0.8em;'>Delete</button>
-                                </li>
-                            `)}
-                        </ul>`
-                    }
-                </div>
-            </div>
-            <div style='display: flex; justify-content: space-between; align-items: center; margin-top: 2em;'>
-                <button onclick=${onClose} style='padding:0.6em 2em; background: #eee;'>Cancel</button>
-                <button onclick=${handleSave} disabled=${saving} style='padding: 0.6em 2em; background: #007bff; color: white;'>${saving ? 'Saving...' : 'Save'}</button>
-            </div>
-            ${error && html`<div style='color: ß#c00; margin-top: 1em;'>${error}</div>`}
+        <div><strong>Edit Deck</strong></div>
+        <div style='display: flex; margin-bottom: 1em;'>
+            <input type='text' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width: 100%; padding: 0.5em; margin-top: 0.3em; border: 1px solid #ccc;' />
+        </div>
+        <div style='display: flex; gap: 0.5em; margin-bottom: 0.7em;'>
+            <input type='text' placeholder='Search or add entry...' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%; padding: 0.5em;'/>
+            <button class=primary style='padding: 0.5em 1em;' disabled=${!search || entries.includes(search.trim())} onclick=${addEntry}>+</button>
+        </div>
+        <div style='max-height: 200px; overflow: auto; border: 1px solid #eee; border-radius: 8px;'>
+        ${filtered.length === 0 ? html`<div style='padding: 1em; color: #888;'>No entries found.</div>` : html`
+            <ul style='list-style:none; padding: 0; margin: 0;'>
+            ${filtered.map(entry => html`
+                <li style='display: flex; justify-content: space-between; padding:0.5em 1em; border-bottom: 1px solid #f3f3f3;'>
+                    <span>${entry}</span>
+                    <button onclick=${() => deleteEntry(entry)}>❌</button>
+                </li>
+            `)}
+            </ul>`
+        }
+        </div>
+        <div style='display: flex; justify-content: center; gap: 1em;'>
+            <button onclick=${save}>✅ OK</button>
+            <button onclick=${() => onClose(null)}>❌ Cancel</button>
         </div>
     `
 }
