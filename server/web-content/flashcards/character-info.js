@@ -19,7 +19,7 @@ export default function CharacterInfo(props) {
     }
 
     return html`
-        <div class='character-info' style='font-size: 1em;'>
+        <div class=character-info>
             <style>
                 .character-info {
                     margin: 1em 1em;
@@ -36,20 +36,6 @@ export default function CharacterInfo(props) {
                 .character-info .section-content {
                     color: #555;
                 }
-
-                .character-info .highlighted-button {
-                    margin-left: 8px;
-                    padding: 4px 8px;
-                    border: none;
-                    border-radius: 4px;
-                    background-color: #007bff;
-                    color: white;
-                    cursor: pointer;
-                }
-
-                .character-info .highlighted-button:hover {
-                    background-color: #0056b3;
-                }
             </style>
             <div style='font-size: 1.5em;' onclick=${props.onChangeCharacter}>${props.currentCharacter.hanzi} ${props.currentCharacter.pinyin}</div>
             <div>${props.currentCharacter.meaning}</div>
@@ -58,7 +44,7 @@ export default function CharacterInfo(props) {
                 <div class=section-content>${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
             </section>
             <section>
-                <div class=section-title>Expressions<button class=highlighted-button onclick=${(e) => { e.stopPropagation(); setAddingExpressions(true); }}>+</button></div>
+                <div class=section-title>Expressions <button class=primary onclick=${(e) => { e.stopPropagation(); setAddingExpressions(true); }}>+</button></div>
                 <div class=section-content style='max-height: 4.3em; overflow: auto;'>
                 ${props.currentCharacter.expressions.length > 0 ? props.currentCharacter.expressions.map(e => html`
                     <div>
@@ -69,7 +55,7 @@ export default function CharacterInfo(props) {
                 </div>
             </section>
             <section>
-                <div class=section-title>Don't confuse with ${!isEditingRelated ? html`<button class=highlighted-button onclick=${(e) => { e.stopPropagation(); setEditingRelated(true); }}>✎</button>` : ''}</div>
+                <div class=section-title>Don't confuse with ${!isEditingRelated ? html`<button class=primary onclick=${(e) => { e.stopPropagation(); setEditingRelated(true); }}>✎</button>` : ''}</div>
                 <div class=section-content>
                 ${props.currentCharacter.related.length > 0 ? props.currentCharacter.related.map(c => html`
                     <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(c); }}>${c.hanzi}</a>

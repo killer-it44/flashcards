@@ -72,8 +72,8 @@ export default function Flashcard() {
                 transform: rotateY(180deg);
             }
         </style>
-        <div style='display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;'>
-            <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; align-items: center; width: 95%; aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
+        <div style='display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; height: 100%;'>
+            <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; align-items: center; height: min(100%, 100vw * 3 / 2); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
                 <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
                     <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentCharacter.hanzi}</div>
                 </div>
@@ -82,9 +82,9 @@ export default function Flashcard() {
                 </div>
             </div>
             <div style='font-size: 2em; display: flex; justify-content: center; gap: 1.5em;'>
-                <button onclick=${() => submit('forgot')} style='border: none;'>🤯</button>
-                <button onclick=${() => submit('unsure')} style='border: none;'>🤔</button>
-                <button onclick=${() => submit('remembered')} style='border: none;'>🤓</button>
+                <button onclick=${() => submit('forgot')}>🤯</button>
+                <button onclick=${() => submit('unsure')}>🤔</button>
+                <button onclick=${() => submit('remembered')}>🤓</button>
             </div>
             ${isChangingCharacter ? html`<${ChangeCharacter} onClose=${changeCharacter} />` : ''}
         </div>

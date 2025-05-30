@@ -57,34 +57,34 @@ export default function EditDeck({ name, onClose, onSaved }) {
         <div style='background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #0001; padding: 1em; position: relative;'>
             <div style='margin-bottom:1.5em;'>
                 <label style='font-weight:bold;'>Edit Deck</label><br/>
-                <input type='text' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width:100%;padding:0.5em;font-size:1em;margin-top:0.3em;border:1px solid #ccc;border-radius:4px;' />
+                <input type='text' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width:100%; padding: 0.5em; margin-top: 0.3em; border: 1px solid #ccc;' />
             </div>
-            <div style='margin-bottom:1.5em;'>
-                <div style='display:flex;gap:0.5em;align-items:center;margin-bottom:0.7em;'>
-                    <input type='text' placeholder='Search or add entry...' value=${search} onInput=${e => setSearch(e.target.value)} style='flex:1;padding:0.5em;font-size:1em;border:1px solid #ccc;border-radius:4px;' />
-                    <button style='padding:0.5em 1em;font-size:1em;background:${search && !entries.includes(search.trim()) ? '#007bff' : '#ccc'};color:white;border:none;border-radius:4px;cursor:${search && !entries.includes(search.trim()) ? 'pointer' : 'not-allowed'};' disabled=${!search || entries.includes(search.trim())} onclick=${handleAdd}>
+            <div style='margin-bottom: 1.5em;'>
+                <div style='display: flex; gap:0.5em; align-items: center; margin-bottom: 0.7em;'>
+                    <input type='text' placeholder='Search or add entry...' value=${search} onInput=${e => setSearch(e.target.value)} style='flex:1; padding: 0.5em; border: 1px solid #ccc;' />
+                    <button style='padding: 0.5em 1em; background: ${search && !entries.includes(search.trim()) ? '#007bff' : '#ccc'}; color: white; ${search && entries.includes(search.trim()) ? 'cursor: not-allowed' : ''}' disabled=${!search || entries.includes(search.trim())} onclick=${handleAdd}>
                         Add
                     </button>
                 </div>
-                <div style='max-height:200px;overflow:auto;border:1px solid #eee;border-radius:4px;'>
+                <div style='max-height: 200px; overflow: auto; border: 1px solid #eee; border-radius: 8px;'>
                     ${loading ? html`<div style='padding:1em;color:#888;'>Loading...</div>` :
                         filtered.length === 0 ? html`<div style='padding:1em;color:#888;'>No entries found.</div>` :
                         html`<ul style='list-style:none;padding:0;margin:0;'>
                             ${filtered.map(entry => html`
                                 <li style='display:flex;align-items:center;justify-content:space-between;padding:0.5em 1em;border-bottom:1px solid #f3f3f3;'>
                                     <span>${entry}</span>
-                                    <button onclick=${() => handleDelete(entry)} style='background:#ff4d4f;color:white;border:none;padding:0.3em 0.8em;border-radius:4px;cursor:pointer;'>Delete</button>
+                                    <button onclick=${() => handleDelete(entry)} style='background:#ff4d4f;color:white;padding:0.3em 0.8em;'>Delete</button>
                                 </li>
                             `)}
                         </ul>`
                     }
                 </div>
             </div>
-            <div style='display:flex;justify-content:space-between;align-items:center;margin-top:2em;'>
-                <button onclick=${onClose} style='padding:0.6em 2em;font-size:1em;background:#eee;border:none;border-radius:4px;cursor:pointer;'>Cancel</button>
-                <button onclick=${handleSave} disabled=${saving} style='padding:0.6em 2em;font-size:1em;background:#007bff;color:white;border:none;border-radius:4px;cursor:pointer;'>${saving ? 'Saving...' : 'Save'}</button>
+            <div style='display: flex; justify-content: space-between; align-items: center; margin-top: 2em;'>
+                <button onclick=${onClose} style='padding:0.6em 2em; background: #eee;'>Cancel</button>
+                <button onclick=${handleSave} disabled=${saving} style='padding: 0.6em 2em; background: #007bff; color: white;'>${saving ? 'Saving...' : 'Save'}</button>
             </div>
-            ${error && html`<div style='color:#c00;margin-top:1em;'>${error}</div>`}
+            ${error && html`<div style='color: ß#c00; margin-top: 1em;'>${error}</div>`}
         </div>
     `
 }
