@@ -51,25 +51,22 @@ export default function Decks() {
     }
 
     return html`
-        <div style='width: 100%;'>
-            ${editingDeck ? html`<${EditDeck} name=${editingDeck} onClose=${onEditClose} onSave=${onEditSave} />` : html`
-            <div style='display: flex; gap: 0.5em;'>
-                <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
-                <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
-            </div>
-            <div>
-            ${decks.length === 0 ? html`<div class=minor>No decks found.</div>` : html`
-                <ul style='padding: 0;'>
-                ${decks.map(deck => html`
-                    <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
-                        <span>${deck.name} <span class=minor>(${deck.size})</span></span>
-                        <button onclick=${() => editDeck(deck.name)} style='padding: 0.3em 0.5em;'>✎</button>
-                    </li>
-                `)}
-                </ul>
-            `}
-            </div>
-            `}
+    ${editingDeck ? html`<${EditDeck} name=${editingDeck} onClose=${onEditClose} onSave=${onEditSave} />` : html`
+        <div style='display: flex; gap: 0.5em;'>
+            <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
+            <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
         </div>
-    `
+        <div>
+        ${decks.length === 0 ? html`<div class=minor>No decks found.</div>` : html`
+            <ul style='padding: 0;'>
+            ${decks.map(deck => html`
+                <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
+                    <span>${deck.name} <span class=minor>(${deck.size})</span></span>
+                    <button onclick=${() => editDeck(deck.name)} style='padding: 0.3em 0.5em;'>✎</button>
+                </li>
+            `)}
+            </ul>
+        `}
+        </div>
+    `}`
 }

@@ -23,8 +23,10 @@ export default function Database() {
     }, [])
 
     return html`
-        <${category.Component} />
-        <footer style='position: fixed; bottom: 0; border-top: 1px solid #ddd; display: flex; justify-content: center; gap: 0.5em;'>
+        <div style='flex: 1; min-height: 0; display: flex; flex-direction: column;'>
+            <${category.Component} />
+        </div>
+        <footer style='width: 100%; border-top: 1px solid #ddd; display: flex; justify-content: center; gap: 0.5em; background: white;'>
         ${categories.map(cat => html`
             <a key=${cat.key} href='#database/${cat.key}' class=${category.key === cat.key ? 'selected-nav' : ''} style='padding: 1em 1em; font-size: 0.6em; color: inherit;'>
                 <strong>${cat.label}</strong>

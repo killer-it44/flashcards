@@ -43,7 +43,7 @@ export default function EditDeck({ name, onClose }) {
             <input type='text' placeholder='Search or add entry...' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%; padding: 0.5em;'/>
             <button class=primary style='padding: 0.5em 1em;' disabled=${!search || entries.includes(search.trim())} onclick=${addEntry}>+</button>
         </div>
-        <div style='max-height: 200px; overflow: auto; border: 1px solid #eee; border-radius: 8px;'>
+        <div style='overflow: auto; border: 1px solid #eee; border-radius: 8px; min-height: 0;'>
         ${filtered.length === 0 ? html`<div style='padding: 1em; color: #888;'>No entries found.</div>` : html`
             <ul style='list-style:none; padding: 0; margin: 0;'>
             ${filtered.map(entry => html`
@@ -55,7 +55,7 @@ export default function EditDeck({ name, onClose }) {
             </ul>`
         }
         </div>
-        <div style='display: flex; justify-content: center; gap: 1em;'>
+        <div style='display: flex; justify-content: center; gap: 1em; margin-top: 1em;'>
             <button onclick=${save}>✅ OK</button>
             <button onclick=${() => onClose(null)}>❌ Cancel</button>
         </div>
