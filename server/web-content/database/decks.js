@@ -27,7 +27,8 @@ export default function Decks() {
     const handleAddDeck = async () => {
         const name = prompt('Enter new deck name:')
         if (!name) return
-        await fetch('/api/decks', { method: 'POST',
+        await fetch('/api/decks', {
+            method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name })
         })
@@ -37,7 +38,12 @@ export default function Decks() {
     const handleEditDeck = (name) => setEditingDeck(name)
 
     const handleCloseEdit = () => setEditingDeck(null)
-    const handleSavedEdit = (newName) => {
+    const handleSavedEdit = async (data) => {
+        await fetch(`/api/decks/${encodeURIComponent(editingDeck)}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
         setEditingDeck(null)
         fetchDecks(search)
     }
