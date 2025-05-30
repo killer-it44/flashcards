@@ -1,10 +1,12 @@
 import { html, useState, useEffect, useRef } from '/preact-htm-standalone.js'
 import EditDeck from './edit-deck.js'
 
+const findEditingDeckFromHash = () => window.location.hash.split('#database/decks/')[1] || ''
+
 export default function Decks() {
     const [search, setSearch] = useState('')
     const [decks, setDecks] = useState([])
-    const [editingDeck, setEditingDeck] = useState(null)
+    const [editingDeck, setEditingDeck] = useState(findEditingDeckFromHash())
     const searchRef = useRef(null)
 
     useEffect(() => fetchDecks(''), [])
@@ -12,9 +14,15 @@ export default function Decks() {
     useEffect(() => !editingDeck ? searchRef.current.focus() : null, [editingDeck])
 
     useEffect(() => {
-        const debounceCandler = setTimeout(() => fetchDecks(search), 300)
-        return () => clearTimeout(debounceCandler)
+        const debounceHandler = setTimeout(() => fetchDecks(search), 300)
+        return () => clearTimeout(debounceHandler)
     }, [search])
+
+    useEffect(() => {
+        const onHashChange = () => setEditingDeck(findEditingDeckFromHash())
+        window.addEventListener('hashchange', onHashChange)
+        return () => window.removeEventListener('hashchange', onHashChange)
+    }, [])
 
     const canAddDeck = search.trim() && !decks.some(deck => deck.name.toLowerCase() === search.trim().toLowerCase())
 
@@ -35,16 +43,23 @@ export default function Decks() {
         fetchDecks(search)
     }
 
-    const handleEditDeck = (name) => setEditingDeck(name)
+    const handleEditDeck = (name) => {
+        window.location.hash = `#database/decks/${encodeURIComponent(name)}`
+        setEditingDeck(name)
+    }
 
-    const handleCloseEdit = () => setEditingDeck(null)
+    const handleCloseEdit = () => {
+        // Remove deck name from hash, keep just #database
+        window.location.hash = '#database/decks'
+    }
+
     const handleSavedEdit = async (data) => {
         await fetch(`/api/decks/${encodeURIComponent(editingDeck)}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
-        setEditingDeck(null)
+        setEditingDeck('')
         fetchDecks(search)
     }
 
