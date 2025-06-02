@@ -47,6 +47,11 @@ export default function Server(controller) {
         res.status(200).end()
     })
 
+    app.delete('/api/decks/:deck', express.json(), async (req, res) => {
+        await controller.deleteDeck(req.params.deck)
+        res.status(200).end()
+    })
+
     app.get('/api/flashcards/:deck', (req, res) => {
         res.json(controller.getNextCharacterForDeck('characters'))
     })

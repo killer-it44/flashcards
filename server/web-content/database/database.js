@@ -30,8 +30,6 @@ export default function Database() {
             </a>
         `)}
         </nav>
-        <div style='flex: 1; min-height: 0; display: flex; flex-direction: column;'>
-            <${category.Component} />
-        </div>
+        <${category.Component} />
     `
 }

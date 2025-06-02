@@ -24,6 +24,20 @@ button.primary {
     background: #007bff;
 }
 
+button.secondary {
+    padding: .3em .3em;
+    border-radius: 4px;
+    color: white;
+    background: #6c757d;
+}
+
+button.warning {
+    padding: .3em .3em;
+    border-radius: 4px;
+    color: white;
+    background: #dc3545;
+}
+
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;

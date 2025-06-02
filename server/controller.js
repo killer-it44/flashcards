@@ -25,6 +25,28 @@ export default function Controller(repo) {
         return this.getCharacter(nextItem)
     }
 
+        this.addDeck = async (deck) => {
+        if (!deck.name) throw new Error('Deck must have a name')
+        repo.decks[deck.name] = []
+        await repo.save()
+    }
+
+    this.updateDeck = async (deckName, deckData) => {
+        if (!repo.decks[deckName]) throw new NotFound()
+        if (deckData.name && deckData.name !== deckName) {
+            if (repo.decks[deckData.name]) throw new Error('A deck with the new name already exists')
+            delete repo.decks[deckName]
+        }
+        repo.decks[deckData.name] = deckData.items || repo.decks[deckName]
+        await repo.save()
+    }
+
+    this.deleteDeck = async (deckName) => {
+        if (!repo.decks[deckName]) throw new NotFound()
+        delete repo.decks[deckName]
+        await repo.save()
+    }
+
     this.getNextCharacter = () => {
         // TODO new algorithm: hard, medium, easy - with weights, new cards should be in medium category
         // category_probabilities = {
@@ -107,22 +129,6 @@ export default function Controller(repo) {
         const expression = repo.expressions.find(e => e.hanzi === data.expression)
         expression.pinyin = data.pinyin
         expression.meaning = data.meaning
-        await repo.save()
-    }
-
-    this.addDeck = async (deck) => {
-        if (!deck.name) throw new Error('Deck must have a name')
-        repo.decks[deck.name] = []
-        await repo.save()
-    }
-
-    this.updateDeck = async (deckName, deckData) => {
-        if (!repo.decks[deckName]) throw new NotFound()
-        if (deckData.name && deckData.name !== deckName) {
-            if (repo.decks[deckData.name]) throw new Error('A deck with the new name already exists')
-            delete repo.decks[deckName]
-        }
-        repo.decks[deckData.name] = deckData.items || repo.decks[deckName]
         await repo.save()
     }
 
