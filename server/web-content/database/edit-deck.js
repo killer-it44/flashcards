@@ -35,7 +35,7 @@ export default function EditDeck({ name, onClose }) {
     }
 
     return html`
-        <div><strong>Edit Deck ${name}</strong></div>
+        <div><strong>Edit Deck "${name}"</strong></div>
         <div style='display: flex; margin-bottom: 1em;'>
             <input type='text' placeholder='Enter deck name...' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width: 100%; padding: 0.5em; margin-top: 0.3em; border: 1px solid #ccc;' />
         </div>

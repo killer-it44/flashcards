@@ -43,22 +43,19 @@ export default function Decks() {
 
     const editDeck = (name) => window.location.hash = `#database/decks/${encodeURIComponent(name)}`
 
-    const onEditClose = () => window.location.hash = '#database/decks'
-
-    const onEditSave = async () => {
-        setEditingDeck('')
+    const onEditFinished = () => {
+        window.location.hash = `#database/decks/${encodeURIComponent(name)}`
         fetchDecks(search)
     }
 
     return html`
-    ${editingDeck ? html`<${EditDeck} name=${editingDeck} onClose=${onEditClose} onSave=${onEditSave} />` : html`
-        <div style='display: flex; gap: 0.5em;'>
+    ${editingDeck ? html`<${EditDeck} name=${editingDeck} onClose=${onEditFinished} />` : html`
+        <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
             <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
             <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
         </div>
-        <div>
-        ${decks.length === 0 ? html`<div class=minor>No decks found.</div>` : html`
-            <ul style='padding: 0;'>
+        ${decks.length === 0 ? html`<div class=minor>No decks found with name ${search}.</div>` : html`
+            <ul style='padding: 0; margin: 0;'>
             ${decks.map(deck => html`
                 <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
                     <span>${deck.name} <span class=minor>(${deck.size})</span></span>
@@ -67,6 +64,5 @@ export default function Decks() {
             `)}
             </ul>
         `}
-        </div>
     `}`
 }
