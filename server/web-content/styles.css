@@ -1,6 +1,6 @@
 body {
     font: calc(min(5vw, 5vh * 2 / 3)) sans-serif;
-    margin: 0;
+    margin: 8px;
     padding: 0;
     display: flex;
     justify-content: center;

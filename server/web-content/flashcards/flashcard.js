@@ -61,7 +61,8 @@ export default function Flashcard() {
                 transform: rotateY(180deg);
             }
 
-            .card-front, .card-back {
+            .card-front,
+            .card-back {
                 width: 100%;
                 height: 100%;
                 position: absolute;
@@ -72,21 +73,19 @@ export default function Flashcard() {
                 transform: rotateY(180deg);
             }
         </style>
-        <div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;'>
-            <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; align-items: center; height: min(100%, 100vw * 3 / 2); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
-                <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
-                    <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentCharacter.hanzi}</div>
-                </div>
-                <div class='card-back' style='display: flex; align-items: center; justify-content: center;'>
-                    <${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />
-                </div>
+        <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: calc(100% - 2px); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
+            <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
+                <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentCharacter.hanzi}</div>
             </div>
-            <div style='font-size: 2em; display: flex; justify-content: center; gap: 1.5em;'>
-                <button onclick=${() => submit('forgot')}>🤯</button>
-                <button onclick=${() => submit('unsure')}>🤔</button>
-                <button onclick=${() => submit('remembered')}>🤓</button>
+            <div class='card-back' style='display: flex; flex-direction: column; height: 100%;'>
+                <${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />
             </div>
-            ${isChangingCharacter ? html`<${ChangeCharacter} onClose=${changeCharacter} />` : ''}
         </div>
+        <div style='font-size: 2em; display: flex; justify-content: space-evenly; width: 100%;'>
+            <button onclick=${() => submit('forgot')}>🤯</button>
+            <button onclick=${() => submit('unsure')}>🤔</button>
+            <button onclick=${() => submit('remembered')}>🤓</button>
+        </div>
+        ${isChangingCharacter ? html`<${ChangeCharacter} onClose=${changeCharacter} />` : ''}
     `
 }

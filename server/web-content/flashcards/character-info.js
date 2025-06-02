@@ -19,57 +19,54 @@ export default function CharacterInfo(props) {
     }
 
     return html`
-        <div class=character-info>
-            <style>
-                .character-info {
-                    margin: 1em 1em;
-                    display: flex;
-                    flex-direction: column;
-                    gap: .4em;
-                }
+        <style>
+            .section-title,
+            .section-content {
+                margin: 0 0.5em;
+            }
 
-                .character-info .section-title {
-                    font-weight: bold;
-                    color: #333;
-                }
+            .section-title {
+                margin-top: 0.4em;
+                font-weight: bold;
+                color: #333;
+            }
 
-                .character-info .section-content {
-                    color: #555;
-                }
-            </style>
-            <div style='font-size: 1.5em;' onclick=${props.onChangeCharacter}>${props.currentCharacter.hanzi} ${props.currentCharacter.pinyin}</div>
-            <div>${props.currentCharacter.meaning}</div>
-            <section>
-                <div class=section-title>Radical</div>
-                <div class=section-content>${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
-            </section>
-            <section>
-                <div class=section-title>Expressions <button class=primary onclick=${(e) => { e.stopPropagation(); setAddingExpressions(true); }}>+</button></div>
-                <div class=section-content style='max-height: 4.3em; overflow: auto;'>
-                ${props.currentCharacter.expressions.length > 0 ? props.currentCharacter.expressions.map(e => html`
-                    <div>
-                        <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(e); }}>${e.hanzi}</a>
-                        <span>(${e.pinyin})</span>
-                    </div>
-                `) : '(none yet)'}
-                </div>
-            </section>
-            <section>
-                <div class=section-title>Don't confuse with ${!isEditingRelated ? html`<button class=primary onclick=${(e) => { e.stopPropagation(); setEditingRelated(true); }}>✎</button>` : ''}</div>
-                <div class=section-content>
-                ${props.currentCharacter.related.length > 0 ? props.currentCharacter.related.map(c => html`
-                    <a href="#" onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(c); }}>${c.hanzi}</a>
-                `) : '(none yet)'}
-                </div>
-            </section>
-            <section>
-                <div class=section-title>Memorization hints</div>
-                <!-- TODO fill from AI -->
-                <div class=section-content style='max-height: 5em; overflow: auto;'>(TODO fill from AI) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</div>
-            </section>
-            ${selectedShortInfo ? html`<${ShortInfo} onClose=${() => setSelectedShortInfo(null)} info=${selectedShortInfo} />` : ''}
-            ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
-            ${isEditingRelated ? html`<${EditRelated} value=${props.currentCharacter.related} onClose=${closeEditRelated} />` : ''}
+            .section-content {
+                color: #555;
+            }
+
+            .section-content.expandable {
+                flex: 0 1 auto;
+                overflow: auto;
+                min-height: 1.4em;
+            }
+        </style>
+        <div style='width: 100%; text-align: center; font-size: 1.5em;' onclick=${props.onChangeCharacter}>${props.currentCharacter.hanzi} ${props.currentCharacter.pinyin}</div>
+        <div style='width: 100%; text-align: center;'>${props.currentCharacter.meaning}</div>
+        <div class=section-title>Radical</div>
+        <div class=section-content>${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
+        <div class=section-title>Expressions <button class=primary onclick=${(e) => { e.stopPropagation(); setAddingExpressions(true); }}>+</button></div>
+        <div class='section-content expandable'>
+        ${props.currentCharacter.expressions.length > 0 ? props.currentCharacter.expressions.map(e => html`
+            <div>
+                <a href='#' onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(e); }}>${e.hanzi}</a>
+                <span>(${e.pinyin})</span>
+            </div>
+        `) : '(none yet)'}
         </div>
+        <div class=section-title>Don't confuse with ${!isEditingRelated ? html`<button class=primary onclick=${(e) => { e.stopPropagation(); setEditingRelated(true); }}>✎</button>` : ''}</div>
+        <div class=section-content>
+        ${props.currentCharacter.related.length > 0 ? props.currentCharacter.related.map(c => html`
+            <a href='#' onclick=${ev => { ev.preventDefault(); setSelectedShortInfo(c); }}>${c.hanzi}</a>
+        `) : '(none yet)'}
+        </div>
+        <div class=section-title>Memorization hints</div>
+        <!-- TODO fill from AI -->
+        <div class='section-content expandable' style='margin-bottom: 0.5em;'>
+            (TODO fill from AI) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        </div>
+        ${selectedShortInfo ? html`<${ShortInfo} onClose=${() => setSelectedShortInfo(null)} info=${selectedShortInfo} />` : ''}
+        ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
+        ${isEditingRelated ? html`<${EditRelated} value=${props.currentCharacter.related} onClose=${closeEditRelated} />` : ''}
     `
 }

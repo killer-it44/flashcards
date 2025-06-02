@@ -25,8 +25,8 @@ export default function App() {
     }, [])
 
     return html`
-        <div style='margin: 8px; display: flex; flex-direction: column; height: min(100dvh - 16px, (100vw - 16px) * 2); aspect-ratio: 0.5;'>
-            <nav style='font-size: 2em; display: flex; justify-content: center; gap: 0.5em; margin-bottom: 0.2em;'>
+        <div style='height: min(100dvh - 16px, (100vw - 16px) * 2); aspect-ratio: 0.5; display: flex; flex-direction: column;'>
+            <nav style='font-size: 2em; display: flex; width: 100%; justify-content: space-evenly; margin-bottom: 0.2em;'>
             ${navMenu.map(n => html`
                 <a title=${n.title} href=${n.hash} style='padding: 0 0.1em' class=${current === n ? 'selected-nav' : ''}>${n.label}</a>
             `)}

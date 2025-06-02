@@ -35,9 +35,9 @@ export default function EditDeck({ name, onClose }) {
     }
 
     return html`
-        <div><strong>Edit Deck</strong></div>
+        <div><strong>Edit Deck ${name}</strong></div>
         <div style='display: flex; margin-bottom: 1em;'>
-            <input type='text' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width: 100%; padding: 0.5em; margin-top: 0.3em; border: 1px solid #ccc;' />
+            <input type='text' placeholder='Enter deck name...' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='width: 100%; padding: 0.5em; margin-top: 0.3em; border: 1px solid #ccc;' />
         </div>
         <div style='display: flex; gap: 0.5em; margin-bottom: 0.7em;'>
             <input type='text' placeholder='Search or add entry...' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%; padding: 0.5em;'/>
@@ -55,7 +55,7 @@ export default function EditDeck({ name, onClose }) {
             </ul>`
         }
         </div>
-        <div style='display: flex; justify-content: center; gap: 1em; margin-top: 1em;'>
+        <div style='width: 100%; display: flex; justify-content: space-evenly; margin-top: 1em;'>
             <button onclick=${save}>✅ OK</button>
             <button onclick=${() => onClose(null)}>❌ Cancel</button>
         </div>
