@@ -9,15 +9,8 @@ export default function Server(controller) {
 
     app.use('/', express.static('server/web-content'))
 
-    // REVISE ought to be called submissions (plural)
-    app.post('/api/submissions', express.json(), async (req, res) => {
-        // REVISE weird and inconsistent API design (the GET APIs work differently)
-        if (req.body.character) {
-            await controller.submitCharacter(req.body)
-        } else {
-            await controller.submitExpression(req.body)
-        }
-        res.status(201).end()
+    app.get('/api/characters', (req, res) => {
+        res.json(controller.getNextCharacter())
     })
 
     app.get('/api/characters/:hanzi', (req, res) => {
@@ -27,6 +20,27 @@ export default function Server(controller) {
     app.put('/api/characters/:hanzi', express.json(), async (req, res) => {
         await controller.updateCharacter({ character: req.params.hanzi, ...req.body })
         res.status(200).end()
+    })
+
+    app.get('/api/expressions', (req, res) => {
+        res.json(controller.findExpressions(req.query.search))
+    })
+
+    app.get('/api/expressions/:expression', (req, res) => {
+        try {
+            res.json(controller.getExpression(req.params.expression))
+        } catch (error) {
+            if (error instanceof NotFound) {
+                res.status(404).end()
+            } else {
+                throw error
+            }
+        }
+    })
+
+    app.post('/api/expressions', express.json(), async (req, res) => {
+        await controller.addExpressions(req.body)
+        res.status(204).end()
     })
 
     app.get('/api/decks', (req, res) => {
@@ -54,10 +68,6 @@ export default function Server(controller) {
 
     app.get('/api/flashcards/:deck', (req, res) => {
         res.json(controller.getNextCharacterForDeck('characters'))
-    })
-
-    app.get('/api/characters', (req, res) => {
-        res.json(controller.getNextCharacter())
     })
 
     app.get('/api/hint/:hanzi', async (req, res) => {
@@ -90,21 +100,14 @@ export default function Server(controller) {
         res.json(JSON.parse(response.choices[0].message.content))
     })
 
-    app.get('/api/expressions/:expression', (req, res) => {
-        try {
-            res.json(controller.getExpression(req.params.expression))
-        } catch (error) {
-            if (error instanceof NotFound) {
-                res.status(404).end()
-            } else {
-                throw error
-            }
+    app.post('/api/submissions', express.json(), async (req, res) => {
+        // REVISE weird and inconsistent API design (the GET APIs work differently)
+        if (req.body.character) {
+            await controller.submitCharacter(req.body)
+        } else {
+            await controller.submitExpression(req.body)
         }
-    })
-
-    app.post('/api/expressions', express.json(), async (req, res) => {
-        await controller.addExpressions(req.body)
-        res.status(204).end()
+        res.status(201).end()
     })
 
     app.get('/api/export', async (req, res) => {

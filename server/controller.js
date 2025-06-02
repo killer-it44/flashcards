@@ -15,7 +15,6 @@ export default function Controller(repo) {
     }
 
     this.findDecks = (filterRegExp) => {
-        //find decks that match the filterRegExp, and return a list of deck names and the size of the deck
         const decks = Object.entries(repo.decks).filter(([name]) => filterRegExp.test(name))
         return decks.map(([name, items]) => ({ name, size: items.length }))
     }
@@ -25,7 +24,7 @@ export default function Controller(repo) {
         return this.getCharacter(nextItem)
     }
 
-        this.addDeck = async (deck) => {
+    this.addDeck = async (deck) => {
         if (!deck.name) throw new Error('Deck must have a name')
         repo.decks[deck.name] = []
         await repo.save()
@@ -71,8 +70,16 @@ export default function Controller(repo) {
         return { ...expression, pinyin: getPinyinForExpression(expression) }
     }
 
+    this.findExpressions = (searchString) => {
+        // REVISE store the search-friendly pinyin on save
+        const normalizedSearch = removePinyinTones(searchString.toLowerCase());
+        return this.getExpressions().filter(e =>
+            e.hanzi.includes(searchString) || removePinyinTones(e.pinyin.toLowerCase()).includes(normalizedSearch)
+        )
+    }
+
     this.getExpressions = () => {
-        return repo.expressions
+        return [...repo.expressions].map(e => ({ ...e, pinyin: getPinyinForExpression(e) }))
     }
 
     const getPinyinForExpression = (expression) => {
@@ -85,6 +92,8 @@ export default function Controller(repo) {
         }
         return pinyin
     }
+
+    const removePinyinTones = (pinyin) => pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[1-5]/g, '')
 
     this.getNextExpression = () => {
         const defaultExpressions = repo.expressions.map(w => w.hanzi)
