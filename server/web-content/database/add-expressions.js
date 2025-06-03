@@ -8,21 +8,21 @@ export default function AddExpressions({ onClose }) {
 
     const handleInputChange = (row, field, value) => {
         const currentExpression = expressions[row]
-        currentExpression[field] = value.trim()
-        const allExpressionsFilled = expressions.every(e => e.hanzi && e.meaning)
-        const hasEmptyExpression = expressions.some(e => !e.hanzi && !e.pinyin && !e.meaning)
-        const hasIncompleteNonEmptyExpression = expressions.some(e => (e.hanzi || e.pinyin || e.meaning) && (!e.hanzi || !e.meaning))
-        
+        currentExpression[field] = value
+        const allExpressionsFilled = expressions.every(e => e.hanzi.trim() && e.meaning.trim())
+        const hasEmptyExpression = expressions.some(e => !e.hanzi.trim() && !e.pinyin.trim() && !e.meaning.trim())
+        const hasIncompleteNonEmptyExpression = expressions.some(e => (e.hanzi.trim() || e.pinyin.trim() || e.meaning.trim()) && (!e.hanzi.trim() || !e.meaning.trim()))
+
         if (allExpressionsFilled) {
             setExpressions([...expressions, { hanzi: '', pinyin: '', meaning: '' }])
         } else if (hasEmptyExpression && hasIncompleteNonEmptyExpression) {
-            setExpressions(expressions.filter(e => e.hanzi || e.pinyin || e.meaning))
+            setExpressions(expressions.filter(e => e.hanzi.trim() || e.pinyin.trim() || e.meaning.trim()))
         } else {
             setExpressions([...expressions])
         }
     }
 
-    const validExpressions = () => expressions.filter(e => e.hanzi && e.meaning)
+    const validExpressions = () => expressions.map(e => ({ hanzi: e.hanzi.trim(), pinyin: e.pinyin.trim(), meaning: e.meaning.trim() })).filter(e => e.hanzi && e.meaning)
     const colorFor = (value) => value ? '#ccc' : '#dc3545'
 
     const save = async e => {

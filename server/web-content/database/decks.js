@@ -1,7 +1,7 @@
 import { html, useState, useEffect, useRef } from '/preact-htm-standalone.js'
 import EditDeck from './edit-deck.js'
 
-const findEditingDeckFromHash = () => window.location.hash.split('#database/decks/')[1] || ''
+const findEditingDeckFromHash = () => decodeURIComponent(window.location.hash.split('#database/decks/')[1] || '')
 
 export default function Decks() {
     const [search, setSearch] = useState('')
