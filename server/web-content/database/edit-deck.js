@@ -42,9 +42,9 @@ export default function EditDeck({ name, onClose }) {
 
     return html`
         <div style='margin-bottom: 0.5em;'><strong>Edit Deck "${name}"</strong></div>
-        <input type='text' placeholder='Enter deck name...' value=${deckName} onInput=${e => setDeckName(e.target.value)} style='margin-bottom: 0.5em; width: calc(100% - 0.6em); padding: 0.3em; border: 1px solid #ccc;' />
+        <input type='text' placeholder='Enter deck name...' value=${deckName} oninput=${e => setDeckName(e.target.value)} style='margin-bottom: 0.5em; width: calc(100% - 0.6em); padding: 0.3em; border: 1px solid #ccc;' />
         <div style='display: flex; gap: 0.5em;'>
-            <input type='text' placeholder='Search or add entry...' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%; padding: 0.3em;'/>
+            <input type='text' placeholder='Search or add entry...' value=${search} oninput=${e => setSearch(e.target.value)} style='width: 100%; padding: 0.3em;'/>
             <button class=primary style='padding: 0.3em 1em;' disabled=${!search || entries.includes(search.trim())} onclick=${addEntry}>+</button>
         </div>
         <div style='overflow: auto; border: 1px solid #eee; border-radius: 8px;'>

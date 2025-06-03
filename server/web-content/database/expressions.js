@@ -44,7 +44,7 @@ export default function Expressions() {
 
     return html`
         <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
-            <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
+            <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${search} oninput=${e => setSearch(e.target.value)} style='width: 100%;' />
             <button onclick=${addExpression} class=primary style='padding: 0 0.5em;'>+</button>
         </div>
         ${expressions.length === 0 ? html`<div class=minor>No expressions found with name ${search}.</div>` : html`

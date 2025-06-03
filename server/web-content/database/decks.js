@@ -52,7 +52,7 @@ export default function Decks() {
         `
         : html`
             <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
-                <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
+                <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} oninput=${e => setSearch(e.target.value)} style='width: 100%;' />
                 <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
             </div>
             ${decks.length === 0 ? html`<div class=minor>No decks found with name ${search}.</div>` : html`
