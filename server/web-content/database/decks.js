@@ -9,8 +9,6 @@ export default function Decks() {
     const [editingDeck, setEditingDeck] = useState(findEditingDeckFromHash())
     const searchRef = useRef(null)
 
-    useEffect(() => fetchDecks(''), [])
-
     useEffect(() => !editingDeck ? searchRef.current.focus() : null, [editingDeck])
 
     useEffect(() => {
@@ -44,25 +42,28 @@ export default function Decks() {
     const editDeck = (name) => window.location.hash = `#database/decks/${encodeURIComponent(name)}`
 
     const onEditFinished = () => {
-        window.location.hash = `#database/decks/${encodeURIComponent(name)}`
+        window.location.hash = `#database/decks`
         fetchDecks(search)
     }
 
-    return html`
-    ${editingDeck ? html`<${EditDeck} name=${editingDeck} onClose=${onEditFinished} />` : html`
-        <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
-            <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
-            <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
-        </div>
-        ${decks.length === 0 ? html`<div class=minor>No decks found with name ${search}.</div>` : html`
+    return html`${editingDeck 
+        ? html`
+            <${EditDeck} name=${editingDeck} onClose=${onEditFinished} />
+        `
+        : html`
+            <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
+                <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} onInput=${e => setSearch(e.target.value)} style='width: 100%;' />
+                <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
+            </div>
+            ${decks.length === 0 ? html`<div class=minor>No decks found with name ${search}.</div>` : html`
             <ul style='padding: 0; margin: 0;'>
-            ${decks.map(deck => html`
+                ${decks.map(deck => html`
                 <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
-                    <span>${deck.name} <span class=minor>(${deck.size})</span></span>
-                    <button onclick=${() => editDeck(deck.name)} style='padding: 0.3em 0.5em;'>✎</button>
+                    <button onclick=${() => editDeck(deck.name)}>${deck.name} <span class=minor>(${deck.size})</span></button>
                 </li>
-            `)}
+                `)}
             </ul>
-        `}
-    `}`
+            `}
+        `
+    }`
 }

@@ -10,42 +10,6 @@ export default function Controller(repo) {
         return { ...character, radical, expressions, related }
     }
 
-    this.getDeck = (deckName) => {
-        return repo.decks[deckName]
-    }
-
-    this.findDecks = (filterRegExp) => {
-        const decks = Object.entries(repo.decks).filter(([name]) => filterRegExp.test(name))
-        return decks.map(([name, items]) => ({ name, size: items.length }))
-    }
-
-    this.getNextCharacterForDeck = () => {
-        const nextItem = repo.decks.characters[Math.floor(Math.random() * repo.decks.characters.length)]
-        return this.getCharacter(nextItem)
-    }
-
-    this.addDeck = async (deck) => {
-        if (!deck.name) throw new Error('Deck must have a name')
-        repo.decks[deck.name] = []
-        await repo.save()
-    }
-
-    this.updateDeck = async (deckName, deckData) => {
-        if (!repo.decks[deckName]) throw new NotFound()
-        if (deckData.name && deckData.name !== deckName) {
-            if (repo.decks[deckData.name]) throw new Error('A deck with the new name already exists')
-            delete repo.decks[deckName]
-        }
-        repo.decks[deckData.name] = deckData.items || repo.decks[deckName]
-        await repo.save()
-    }
-
-    this.deleteDeck = async (deckName) => {
-        if (!repo.decks[deckName]) throw new NotFound()
-        delete repo.decks[deckName]
-        await repo.save()
-    }
-
     this.getNextCharacter = () => {
         // TODO new algorithm: hard, medium, easy - with weights, new cards should be in medium category
         // category_probabilities = {
@@ -62,6 +26,23 @@ export default function Controller(repo) {
         const chars = [...defaultChars, ...charsNotRemembered]
         const nextCharacter = chars[Math.floor(Math.random() * chars.length)]
         return this.getCharacter(nextCharacter)
+    }
+
+        // REVISE new submission structure should better contain a type field, so the entire structure should be
+    // { user: string,  type: 'radical' | 'character' | 'expression', hanzi: string, remembered: boolean, timestamp: Date }
+    this.submitCharacter = async (data) => {
+        // TODO user handling
+        const user = '野色'
+        repo.submissions.push({ user, character: data.character, remembered: data.remembered, timestamp: Date.now() })
+        await repo.save()
+    }
+
+    // TODO should we make it an "upsert"?
+    this.updateCharacter = async (data) => {
+        const character = repo.characters.find(c => c.hanzi === data.character)
+        character.meaning = data.meaning
+        character.related = data.related
+        await repo.save()
     }
 
     this.getExpression = (hanzi) => {
@@ -95,34 +76,17 @@ export default function Controller(repo) {
 
     const removePinyinTones = (pinyin) => pinyin.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[1-5]/g, '')
 
+    this.addExpressions = async (expressions) => {
+        repo.expressions.push(...expressions.filter(expression => !repo.expressions.find(e => e.hanzi === expression.hanzi)))
+        await repo.save()
+    }
+
     this.getNextExpression = () => {
         const defaultExpressions = repo.expressions.map(w => w.hanzi)
         const expressionsNotRemembered = repo.submissions.filter(s => s.expression && !s.remembered).map(s => s.expression)
         const expressions = [...defaultExpressions, ...expressionsNotRemembered]
         const nextExpression = expressions[Math.floor(Math.random() * expressions.length)]
         return this.getExpression(nextExpression)
-    }
-
-    // REVISE new submission structure should better contain a type field, so the entire structure should be
-    // { user: string,  type: 'radical' | 'character' | 'expression', hanzi: string, remembered: boolean, timestamp: Date }
-    this.submitCharacter = async (data) => {
-        // TODO user handling
-        const user = '野色'
-        repo.submissions.push({ user, character: data.character, remembered: data.remembered, timestamp: Date.now() })
-        await repo.save()
-    }
-
-    // TODO should we make it an "upsert"?
-    this.updateCharacter = async (data) => {
-        const character = repo.characters.find(c => c.hanzi === data.character)
-        character.meaning = data.meaning
-        character.related = data.related
-        await repo.save()
-    }
-
-    this.addExpressions = async (expressions) => {
-        repo.expressions.push(...expressions.filter(expression => !repo.expressions.find(e => e.hanzi === expression.hanzi)))
-        await repo.save()
     }
 
     // REVISE new submission structure should better contain a type field, so the entire structure should be
@@ -134,10 +98,46 @@ export default function Controller(repo) {
         await repo.save()
     }
 
-    this.updateExpression = async (data) => {
-        const expression = repo.expressions.find(e => e.hanzi === data.expression)
-        expression.pinyin = data.pinyin
-        expression.meaning = data.meaning
+    this.updateExpression = async (expression) => {
+        const expr = repo.expressions.find(e => e.hanzi === expression.hanzi)
+        expr.pinyin = expression.pinyin
+        expr.meaning = expression.meaning
+        await repo.save()
+    }
+
+    this.getDeck = (deckName) => {
+        return repo.decks[deckName]
+    }
+
+    this.findDecks = (filterRegExp) => {
+        const decks = Object.entries(repo.decks).filter(([name]) => filterRegExp.test(name))
+        return decks.map(([name, items]) => ({ name, size: items.length }))
+    }
+
+    this.getNextCharacterForDeck = () => {
+        const nextItem = repo.decks.characters[Math.floor(Math.random() * repo.decks.characters.length)]
+        return this.getCharacter(nextItem)
+    }
+
+    this.addDeck = async (deck) => {
+        if (!deck.name) throw new Error('Deck must have a name')
+        repo.decks[deck.name] = []
+        await repo.save()
+    }
+
+    this.updateDeck = async (deckName, deckData) => {
+        if (!repo.decks[deckName]) throw new NotFound()
+        if (deckData.name && deckData.name !== deckName) {
+            if (repo.decks[deckData.name]) throw new Error('A deck with the new name already exists')
+            delete repo.decks[deckName]
+        }
+        repo.decks[deckData.name] = deckData.items || repo.decks[deckName]
+        await repo.save()
+    }
+
+    this.deleteDeck = async (deckName) => {
+        if (!repo.decks[deckName]) throw new NotFound()
+        delete repo.decks[deckName]
         await repo.save()
     }
 

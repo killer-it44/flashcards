@@ -24,11 +24,11 @@ export default function Database() {
 
     return html`
         <nav style='margin-bottom: 1em; width: 100%; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; display: flex; justify-content: space-evenly;'>
-        ${categories.map(cat => html`
+            ${categories.map(cat => html`
             <a key=${cat.key} href='#database/${cat.key}' class=${category.key === cat.key ? 'selected-nav' : ''} style='padding: 1em 1em; font-size: 0.6em; color: inherit;'>
                 <strong>${cat.label}</strong>
             </a>
-        `)}
+            `)}
         </nav>
         <${category.Component} />
     `

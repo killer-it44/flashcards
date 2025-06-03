@@ -43,6 +43,11 @@ export default function Server(controller) {
         res.status(204).end()
     })
 
+    app.put('/api/expressions/:expression', express.json(), async (req, res) => {
+        await controller.updateExpression(req.body)
+        res.status(204).end()
+    })
+
     app.get('/api/decks', (req, res) => {
         res.json(controller.findDecks(new RegExp(req.query.search || '', 'i')))
     })

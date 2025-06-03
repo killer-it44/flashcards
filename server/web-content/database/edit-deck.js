@@ -48,16 +48,16 @@ export default function EditDeck({ name, onClose }) {
             <button class=primary style='padding: 0.3em 1em;' disabled=${!search || entries.includes(search.trim())} onclick=${addEntry}>+</button>
         </div>
         <div style='overflow: auto; border: 1px solid #eee; border-radius: 8px;'>
-        ${filtered.length === 0 ? html`<div style='padding: 1em; color: #888;'>No entries found.</div>` : html`
+            ${filtered.length === 0 ? html`<div style='padding: 1em; color: #888;'>No entries found.</div>` : html`
             <ul style='list-style:none; padding: 0; margin: 0;'>
-            ${filtered.map(entry => html`
+                ${filtered.map(entry => html`
                 <li style='display: flex; justify-content: space-between; padding:0.3em 1em; border-bottom: 1px solid #f3f3f3;'>
                     <span>${entry}</span>
                     <button onclick=${() => deleteEntry(entry)}>❌</button>
                 </li>
-            `)}
+                `)}
             </ul>`
-        }
+            }
         </div>
         <div style='width: 100%; display: flex; justify-content: space-evenly; margin-top: 1em;'>
             <button class=primary onclick=${saveDeck}>Save</button>

@@ -1,69 +1,33 @@
 import { html, useState, useEffect, useRef } from '/preact-htm-standalone.js'
 
-export default function EditExpression({ name, onClose }) {
-    const [expression, setExpression] = useState(null)
-    const [newName, setNewName] = useState(name)
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState('')
-    const inputRef = useRef(null)
+const getUrl = (hanzi) => `/api/expressions/${encodeURIComponent(hanzi)}`
 
-    useEffect(() => {
-        setLoading(true)
-        fetch(`/api/expressions/${encodeURIComponent(name)}`)
-            .then(res => res.json())
-            .then(data => {
-                setExpression(data)
-                setNewName(data.name)
-                setLoading(false)
-            })
-            .catch(() => {
-                setError('Failed to load expression.')
-                setLoading(false)
-            })
-    }, [name])
+export default function EditExpression({ hanzi, onClose }) {
+    const [expression, setExpression] = useState({ meaning: '', pinyin: '' })
 
-    useEffect(() => {
-        if (!loading && inputRef.current) inputRef.current.focus()
-    }, [loading])
+    useEffect(() => fetch(getUrl(hanzi)).then(resp => resp.json()).then(setExpression), [hanzi])
 
     const save = async e => {
-        e.preventDefault()
-        setError('')
-        setLoading(true)
-        try {
-            const res = await fetch(`/api/expressions/${encodeURIComponent(name)}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name: newName })
-            })
-            if (!res.ok) throw new Error('Failed to save')
-            onClose && onClose(newName)
-        } catch (err) {
-            setError('Failed to save changes.')
-            setLoading(false)
-        }
+        await fetch(getUrl(hanzi), {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(expression)
+        })
+        onClose()
     }
-
-    const cancel = e => {
-        e.preventDefault()
-        onClose && onClose()
-    }
-
-    if (loading) return html`<div>Loading...</div>`
-    if (error) return html`<div class="error">${error}</div>`
-    if (!expression) return html`<div>Expression not found.</div>`
 
     return html`
-        <form onSubmit=${save} style="background: #fff; border: 1px solid #ccc; padding: 1em; max-width: 400px; margin: 2em auto; border-radius: 6px;">
-            <h2>Edit Expression</h2>
-            <div style="margin-bottom: 1em;">
-                <label>Name:<br/>
-                    <input ref=${inputRef} type="text" value=${newName} onInput=${e => setNewName(e.target.value)} style="width: 100%;" required />
-                </label>
-            </div>
-            <div style="display: flex; gap: 0.5em;">
-                <button type="submit" class="primary" disabled=${loading || !newName.trim()}>Save</button>
-                <button type="button" onClick=${cancel} disabled=${loading}>Cancel</button>
+        <form onSubmit=${save} style='display: flex; flex-direction: column;'>
+            <div class=section-title>Edit Expression: ${hanzi}</div>
+            <label style='margin-top: 0.5em;'>Pinyin<br/>
+                <input value=${expression.pinyin} placeholder='Pinyin (or leave empty)' onInput=${e => setExpression({...expression, pinyin: e.target.value})} />
+            </label>
+            <label style='margin-top: 0.5em;'>Meaning<span style="color: red">*</span><br/>
+                <input value=${expression.meaning} placeholder='Meaning' onInput=${e => setExpression({...expression, meaning: e.target.value})} />
+            </label>
+            <div style='margin-top: 1em; display: flex; width: 100%; justify-content: space-around;'>
+                <button type=submit class=primary disabled=${!expression.meaning.trim()}>Save</button>
+                <button class=secondary onClick=${onClose}>Cancel</button>
             </div>
         </form>
     `

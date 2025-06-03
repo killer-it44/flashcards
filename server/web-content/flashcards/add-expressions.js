@@ -33,12 +33,12 @@ export default function AddExpressions({ onClose, onSave }) {
             <div class=modal-content onclick=${(e) => e.stopPropagation()}>
                 <h3>Add Expressions</h3>
                 <div>
-                ${expressions.map((entry, index) => html`
+                    ${expressions.map((entry, index) => html`
                     <div style='display: flex; gap: .4em; margin: 0.3em 0;'>
                         <input style='width: 50%;' type=text placeholder='Hanzi' value=${entry.hanzi || ''} oninput=${(e) => handleInputChange(index, 'hanzi', e.target.value)} onkeydown=${handleKeyDown} />
                         <input style='width: 50%;' type=text placeholder='Meaning' value=${entry.meaning || ''} oninput=${(e) => handleInputChange(index, 'meaning', e.target.value)} onkeydown=${handleKeyDown} />
                     </div>
-                `)}
+                    `)}
                 </div>
                 <div>
                     <button onclick=${(e) => { e.stopPropagation(); onSave(expressions.filter(e => e.hanzi && e.meaning)); }}>✅ OK</button>

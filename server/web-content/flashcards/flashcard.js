@@ -72,6 +72,10 @@ export default function Flashcard() {
             .card-back {
                 transform: rotateY(180deg);
             }
+
+            .card-back div {
+                margin-left: 0.5em;
+            }
         </style>
         <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: calc(100% - 2px); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
             <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
