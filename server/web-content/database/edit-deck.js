@@ -44,21 +44,19 @@ export default function EditDeck({ name, onClose }) {
         <div style='margin-bottom: 0.5em;'><strong>Edit Deck "${name}"</strong></div>
         <input type='text' placeholder='Enter deck name...' value=${deckName} oninput=${e => setDeckName(e.target.value)} style='margin-bottom: 0.5em; width: calc(100% - 0.6em); padding: 0.3em; border: 1px solid #ccc;' />
         <div style='display: flex; gap: 0.5em;'>
-            <input type='text' placeholder='Search or add entry...' value=${search} oninput=${e => setSearch(e.target.value)} style='width: 100%; padding: 0.3em;'/>
+            <input type='text' placeholder='Search or add entry...' value=${search} oninput=${e => setSearch(e.target.value)} />
             <button class=primary style='padding: 0.3em 1em;' disabled=${!search || entries.includes(search.trim())} onclick=${addEntry}>+</button>
         </div>
-        <div style='overflow: auto; border: 1px solid #eee; border-radius: 8px;'>
-            ${filtered.length === 0 ? html`<div style='padding: 1em; color: #888;'>No entries found.</div>` : html`
-            <ul style='list-style:none; padding: 0; margin: 0;'>
-                ${filtered.map(entry => html`
-                <li style='display: flex; justify-content: space-between; padding:0.3em 1em; border-bottom: 1px solid #f3f3f3;'>
-                    <span>${entry}</span>
-                    <button onclick=${() => deleteEntry(entry)}>❌</button>
-                </li>
-                `)}
-            </ul>`
-            }
-        </div>
+        ${filtered.length === 0 ? html`<div style='padding: 1em; color: #888;'>No entries found.</div>` : html`
+        <ul style='overflow: auto; border: 1px solid #eee; border-radius: 8px; padding: 0; margin: 0;'>
+            ${filtered.map(entry => html`
+            <li style='display: flex; justify-content: space-between; padding:0.3em 1em; border-bottom: 1px solid #f3f3f3;'>
+                <span>${entry}</span>
+                <button onclick=${() => deleteEntry(entry)}>❌</button>
+            </li>
+            `)}
+        </ul>`
+        }
         <div style='width: 100%; display: flex; justify-content: space-evenly; margin-top: 1em;'>
             <button class=primary onclick=${saveDeck}>Save</button>
             <button class=secondary onclick=${() => onClose(null)}>Cancel</button>

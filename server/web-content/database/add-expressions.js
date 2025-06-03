@@ -1,12 +1,10 @@
 import { html, useState, useRef, useEffect } from '/preact-htm-standalone.js'
 
-export default function AddExpressions({ onClose, onSave }) {
+export default function AddExpressions({ onClose }) {
     const [expressions, setExpressions] = useState([{ hanzi: '', pinyin: '', meaning: '' }])
     const firstInputRef = useRef(null)
 
-    useEffect(() => {
-        if (firstInputRef.current) firstInputRef.current.focus()
-    }, [])
+    useEffect(() => (firstInputRef.current) ? firstInputRef.current.focus() : null, [])
 
     const handleInputChange = (row, field, value) => {
         const currentExpression = expressions[row]
@@ -47,7 +45,7 @@ export default function AddExpressions({ onClose, onSave }) {
             </div>
             `)}
         </div>
-        <div style='display: flex; justify-content: space-around; margin-top: 1em; width: 100%;'>
+        <div style='display: flex; justify-content: space-evenly; margin-top: 1em; width: 100%;'>
             <button class=primary disabled=${validExpressions().length === 0} onclick=${save}>Add</button>
             <button class=secondary onclick=${onClose}>Cancel</button>
         </div>

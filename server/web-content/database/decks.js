@@ -39,8 +39,6 @@ export default function Decks() {
         editDeck(search)
     }
 
-    const editDeck = (name) => window.location.hash = `#database/decks/${encodeURIComponent(name)}`
-
     const onEditFinished = () => {
         window.location.hash = `#database/decks`
         fetchDecks(search)
@@ -52,14 +50,14 @@ export default function Decks() {
         `
         : html`
             <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
-                <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} oninput=${e => setSearch(e.target.value)} style='width: 100%;' />
+                <input ref=${searchRef} type='text' placeholder='Search or enter new name' value=${search} oninput=${e => setSearch(e.target.value)} />
                 <button onclick=${addDeck} class=primary style='padding: 0 0.5em;' disabled=${!canAddDeck}>+</button>
             </div>
             ${decks.length === 0 ? html`<div class=minor>No decks found with name ${search}.</div>` : html`
             <ul style='padding: 0; margin: 0;'>
                 ${decks.map(deck => html`
                 <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
-                    <button onclick=${() => editDeck(deck.name)}>${deck.name} <span class=minor>(${deck.size})</span></button>
+                    <a href='#database/decks/${deck.name}'>${deck.name} <span class=minor>(${deck.size})</span></a>
                 </li>
                 `)}
             </ul>

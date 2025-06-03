@@ -29,10 +29,10 @@ export default function Expressions() {
         setExpressions(data)
     }
 
+    // REVISE use hyperlink nav
     const addExpression = () => window.location.hash = `#database/expressions/add`
 
-    const editExpression = (name) => window.location.hash = `#database/expressions/edit/${encodeURIComponent(name)}`
-
+    // REVISE check if hyperlink nav can be used from AddExpressions and EditExpression
     const onEditFinished = () => {
         window.location.hash = `#database/expressions`
         // REVISE check if needed or if it happens automatically
@@ -44,14 +44,14 @@ export default function Expressions() {
 
     return html`
         <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
-            <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${search} oninput=${e => setSearch(e.target.value)} style='width: 100%;' />
+            <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${search} oninput=${e => setSearch(e.target.value)} />
             <button onclick=${addExpression} class=primary style='padding: 0 0.5em;'>+</button>
         </div>
         ${expressions.length === 0 ? html`<div class=minor>No expressions found with name ${search}.</div>` : html`
         <ul style='overflow: auto; padding: 0; margin: 0;'>
             ${expressions.map(expression => html`
-            <li style='display: flex; align-items: center; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
-                <button onclick=${() => editExpression(expression.hanzi)}>${expression.hanzi} <span class=minor>(${expression.pinyin})</span></button>
+            <li style='display: flex; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
+                <a href='#database/expressions/edit/${expression.hanzi}'>${expression.hanzi} <span class=minor>(${expression.pinyin})</span></a>
             </li>
             `)}
         </ul>
