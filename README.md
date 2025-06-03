@@ -12,6 +12,11 @@ To run tests:
 
 - Selection of Decks for flashcards
 - Persisting current flashcard deck in local storage
+- Flipping cards back to front
+- Flipping card will preserve history
+- Navigate from flashcard to expressions
+- Animations for switching to next flash card
+- Submitting for flashcards
 - Character database
 - Radicals database
 - Profile management
