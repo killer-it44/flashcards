@@ -17,21 +17,21 @@ button {
     background: transparent;
 }
 
-button.primary {
+.primary {
     padding: .3em .3em;
     border-radius: 4px;
     color: white;
     background: #007bff;
 }
 
-button.secondary {
+.secondary {
     padding: .3em .3em;
     border-radius: 4px;
     color: white;
     background: #6c757d;
 }
 
-button.warning {
+.warning {
     padding: .3em .3em;
     border-radius: 4px;
     color: white;

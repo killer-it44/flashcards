@@ -5,7 +5,7 @@ import ChangeCharacter from './change-character.js'
 export default function Flashcard() {
     const [isFlipped, setFlipped] = useState(false)
     const [isChangingCharacter, setChangingCharacter] = useState(false)
-    const [currentCharacter, setCurrentCharacter] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
+    const [currentItem, setCurrentItem] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
     const [decks, setDecks] = useState([])
     const [selectedDeck, setSelectedDeck] = useState('')
 
@@ -15,48 +15,49 @@ export default function Flashcard() {
         setSelectedDeck(decksResp[0].name)
     }, [])
 
-    useEffect(() => getNext(), [selectedDeck])
+    useEffect(() => getNextItem(), [selectedDeck])
 
-    const getNext = async () => {
+    const getNextItem = async () => {
         const response = await fetch(`/api/flashcards/characters`)
         // const response = await fetch(`/api/flashcards/${encodeURIComponent(selectedDeck)}`)
         const json = await response.json()
-        setCurrentCharacter(json)
+        setCurrentItem(json)
     }
 
     // TODO need to be able to deal with characters and expressions
     // TODO need to be able to handle items that are not in the deck
-    const getChar = async (hanzi) => {
-        const response = await fetch(`/api/characters/${hanzi}`)
+    const getItem = async (hanzi) => {
+        const urlPath = (hanze.length === 1) ? 'characters' : 'expressions'
+        const response = await fetch(`/api/${urlPath}/${hanzi}`)
         const json = await response.json()
-        setCurrentCharacter(json)
+        setCurrentItem(json)
     }
 
     const changeCharacter = async (newCharacter) => {
-        newCharacter ? await getChar(newCharacter) : null
+        newCharacter ? await getItem(newCharacter) : null
         setChangingCharacter(false)
     }
 
     const saveRelated = async (newRelated) => {
         const headers = { 'Content-Type': 'application/json' }
-        const body = JSON.stringify({ ...currentCharacter, related: newRelated })
-        await fetch(`/api/characters/${currentCharacter.hanzi}`, { method: 'PUT', headers, body })
-        await getChar(currentCharacter.hanzi)
+        const body = JSON.stringify({ ...currentItem, related: newRelated })
+        await fetch(`/api/characters/${currentItem.hanzi}`, { method: 'PUT', headers, body })
+        await getItem(currentItem.hanzi)
     }
 
     const saveExpressions = async (newExpressions) => {
         const headers = { 'Content-Type': 'application/json' }
         const body = JSON.stringify(newExpressions)
         await fetch(`/api/expressions`, { method: 'POST', headers, body })
-        await getChar(currentCharacter.hanzi)
+        await getItem(currentItem.hanzi)
     }
 
     const submit = async (remembered) => {
         // const headers = { 'Content-Type': 'application/json' }
-        // const body = JSON.stringify({ character: currentCharacter.hanzi, remembered })
+        // const body = JSON.stringify({ character: currentItem.hanzi, remembered })
         // await fetch('/api/submissions', { method: 'POST', headers, body })
-        // history.pushState(currentCharacter.hanzi, '', `/#/${currentCharacter.hanzi}`)
-        await getNext()
+        // history.pushState(currentItem.hanzi, '', `/#/${currentItem.hanzi}`)
+        await getNextItem()
         setFlipped(false)
     }
 
@@ -96,10 +97,10 @@ export default function Flashcard() {
         </div>
         <div class='card ${isFlipped ? 'flipped' : ''}' onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: calc(100% - 2px); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
             <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
-                <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentCharacter.hanzi}</div>
+                <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentItem.hanzi}</div>
             </div>
             <div class='card-back' style='display: flex; flex-direction: column; height: 100%;'>
-                <${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentCharacter} />
+                <${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentItem} />
             </div>
         </div>
         <div style='font-size: 2em; display: flex; justify-content: space-evenly; width: 100%;'>

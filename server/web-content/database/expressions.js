@@ -29,13 +29,8 @@ export default function Expressions() {
         setExpressions(data)
     }
 
-    // REVISE use hyperlink nav
-    const addExpression = () => window.location.hash = `#database/expressions/add`
-
-    // REVISE check if hyperlink nav can be used from AddExpressions and EditExpression
     const onEditFinished = () => {
         window.location.hash = `#database/expressions`
-        // REVISE check if needed or if it happens automatically
         fetchExpressions(search)
     }
 
@@ -45,7 +40,7 @@ export default function Expressions() {
     return html`
         <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
             <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${search} oninput=${e => setSearch(e.target.value)} />
-            <button onclick=${addExpression} class=primary style='padding: 0 0.5em;'>+</button>
+            <a href='#database/expressions/add' class=primary style='padding: 0 0.5em; display: flex; align-items: center;'>+</a>
         </div>
         ${expressions.length === 0 ? html`<div class=minor>No expressions found with name ${search}.</div>` : html`
         <ul style='overflow: auto; padding: 0; margin: 0;'>
