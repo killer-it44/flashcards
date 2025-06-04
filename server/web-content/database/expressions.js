@@ -55,8 +55,8 @@ export default function Expressions() {
         ${expressions.length === 0 ? html`<div class=minor>No expressions found with name ${search}.</div>` : html`
         <ul style='overflow: auto; padding: 0; margin: 0;'>
             ${expressions.map(expression => html`
-            <li style='display: flex; justify-content: space-between; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
-                <a href='#database/expressions/edit/${expression.hanzi}'>${expression.hanzi} <span class=minor>(${expression.pinyin})</span></a>
+            <li style='display: flex; gap: 0.2em; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
+                <a href='#database/expressions/edit/${expression.hanzi}' style='white-space: nowrap;'>${expression.hanzi}</a><span style='white-space: nowrap; text-overflow: ellipsis; overflow: hidden;' class=minor>(${expression.pinyin})</span>
             </li>
             `)}
         </ul>

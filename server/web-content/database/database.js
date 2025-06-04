@@ -8,7 +8,7 @@ const categories = [
     { key: 'radicals', label: 'Radicals', Component: Radicals },
     { key: 'characters', label: 'Characters', Component: Characters },
     { key: 'expressions', label: 'Expressions', Component: Expressions },
-    { key: 'decks', label: 'Decks', Component: Decks },
+    { key: 'decks', label: 'Decks', Component: Decks }
 ]
 
 const findCategoryFromHash = () => categories.find(c => c.key === window.location.hash.split('/')[1]) || categories[0]
