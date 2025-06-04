@@ -71,7 +71,8 @@ button:disabled {
     color: #888;
 }
 
-input {
+input,
+select {
     font: inherit;
     font-weight: normal;
     border-radius: 4px;

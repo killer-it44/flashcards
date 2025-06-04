@@ -6,16 +6,26 @@ export default function Flashcard() {
     const [isFlipped, setFlipped] = useState(false)
     const [isChangingCharacter, setChangingCharacter] = useState(false)
     const [currentCharacter, setCurrentCharacter] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
-    const card = useRef()
+    const [decks, setDecks] = useState([])
+    const [selectedDeck, setSelectedDeck] = useState('')
 
-    useEffect(() => { getRandomChar() }, [])
+    useEffect(async () => {
+        const decksResp = await (await fetch('/api/decks')).json()
+        setDecks(decksResp)
+        setSelectedDeck(decksResp[0].name)
+    }, [])
 
-    const getRandomChar = async () => {
-        const response = await fetch('/api/flashcards/characters')
+    useEffect(() => getNext(), [selectedDeck])
+
+    const getNext = async () => {
+        const response = await fetch(`/api/flashcards/characters`)
+        // const response = await fetch(`/api/flashcards/${encodeURIComponent(selectedDeck)}`)
         const json = await response.json()
         setCurrentCharacter(json)
     }
 
+    // TODO need to be able to deal with characters and expressions
+    // TODO need to be able to handle items that are not in the deck
     const getChar = async (hanzi) => {
         const response = await fetch(`/api/characters/${hanzi}`)
         const json = await response.json()
@@ -46,7 +56,7 @@ export default function Flashcard() {
         // const body = JSON.stringify({ character: currentCharacter.hanzi, remembered })
         // await fetch('/api/submissions', { method: 'POST', headers, body })
         // history.pushState(currentCharacter.hanzi, '', `/#/${currentCharacter.hanzi}`)
-        await getRandomChar()
+        await getNext()
         setFlipped(false)
     }
 
@@ -78,7 +88,13 @@ export default function Flashcard() {
                 margin-right: 0.5em;
             }
         </style>
-        <div class='card ${isFlipped ? 'flipped' : ''}' ref=${card} onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: calc(100% - 2px); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
+        <div style='display: flex; align-items: center; gap: 1em; margin-bottom: 0.2em;'>
+            <label><b>Deck:</b></label>
+            <select value=${selectedDeck} onInput=${e => setSelectedDeck(e.target.value)}>
+                ${decks.map(deck => html`<option value=${deck.name}>${deck.name}</option>`)}
+            </select>
+        </div>
+        <div class='card ${isFlipped ? 'flipped' : ''}' onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: calc(100% - 2px); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
             <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
                 <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentCharacter.hanzi}</div>
             </div>
