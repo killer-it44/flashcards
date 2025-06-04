@@ -3,9 +3,10 @@ import AddExpressions from './add-expressions.js'
 import EditExpression from './edit-expression.js'
 
 const findNavTargetFromHash = () => window.location.hash.split('#database/expressions/')[1] || ''
+const getSearchTermFromHash = () => window.location.hash.split('#database/expressions/?')[1] || ''
 
 export default function Expressions() {
-    const [search, setSearch] = useState('')
+    const [searchTerm, setSearchTerm] = useState(getSearchTermFromHash())
     const [expressions, setExpressions] = useState([])
     const [nav, setNav] = useState(findNavTargetFromHash())
     const searchRef = useRef(null)
@@ -13,12 +14,15 @@ export default function Expressions() {
     useEffect(() => !nav ? searchRef.current.focus() : null, [nav])
 
     useEffect(() => {
-        const debounceHandler = setTimeout(() => fetchExpressions(search), 300)
+        const debounceHandler = setTimeout(() => fetchExpressions(searchTerm), 300)
         return () => clearTimeout(debounceHandler)
-    }, [search])
+    }, [searchTerm])
 
     useEffect(() => {
-        const onHashChange = () => setNav(findNavTargetFromHash())
+        const onHashChange = () => {
+            setNav(findNavTargetFromHash())
+            setSearchTerm(getSearchTermFromHash())
+        }
         window.addEventListener('hashchange', onHashChange)
         return () => window.removeEventListener('hashchange', onHashChange)
     }, [])
@@ -29,9 +33,15 @@ export default function Expressions() {
         setExpressions(data)
     }
 
+    const search = (newSearchTerm) => {
+        setSearchTerm(newSearchTerm)
+        const searchHash = newSearchTerm ? `/?${encodeURIComponent(newSearchTerm)}` : ''
+        history.replaceState(null, '', `#database/expressions${searchHash}`)
+    }
+
     const onEditFinished = () => {
         window.location.hash = `#database/expressions`
-        fetchExpressions(search)
+        fetchExpressions(searchTerm)
     }
 
     if (nav.split('/')[0] === 'add') return html`<${AddExpressions} onClose=${onEditFinished} />`
@@ -39,7 +49,7 @@ export default function Expressions() {
 
     return html`
         <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
-            <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${search} oninput=${e => setSearch(e.target.value)} />
+            <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${searchTerm} oninput=${e => search(e.target.value)} />
             <a href='#database/expressions/add' class=primary style='padding: 0 0.5em; display: flex; align-items: center;'>+</a>
         </div>
         ${expressions.length === 0 ? html`<div class=minor>No expressions found with name ${search}.</div>` : html`
