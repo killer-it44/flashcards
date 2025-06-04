@@ -1,6 +1,6 @@
-import { html, useState, useEffect, useRef } from '/preact-htm-standalone.js'
+import { html, useState, useEffect } from '/preact-htm-standalone.js'
 
-const getUrl = (hanzi) => `/api/expressions/${encodeURIComponent(hanzi)}`
+const getUrl = (hanzi) => `/api/expressions/${hanzi}`
 
 export default function EditExpression({ hanzi, onClose }) {
     const [expression, setExpression] = useState({ meaning: '', pinyin: '' })

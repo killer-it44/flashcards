@@ -7,7 +7,7 @@ export default function EditDeck({ name, onClose }) {
     const [filtered, setFiltered] = useState([])
 
     useEffect(async () => {
-        const res = await fetch(`/api/decks/${encodeURIComponent(name)}`)
+        const res = await fetch(`/api/decks/${name}`)
         const data = await res.json()
         setEntries(data)
     }, [name])
@@ -26,7 +26,7 @@ export default function EditDeck({ name, onClose }) {
     }
 
     const saveDeck = async () => {
-        await fetch(`/api/decks/${encodeURIComponent(name)}`, {
+        await fetch(`/api/decks/${name}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: deckName, items: entries })
@@ -36,7 +36,7 @@ export default function EditDeck({ name, onClose }) {
 
     const deleteDeck = async () => {
         if (!confirm(`Are you sure you want to delete the deck "${name}"? This action cannot be undone.`)) return
-        await fetch(`/api/decks/${encodeURIComponent(name)}`, { method: 'DELETE' })
+        await fetch(`/api/decks/${name}`, { method: 'DELETE' })
         onClose(null)
     }
 

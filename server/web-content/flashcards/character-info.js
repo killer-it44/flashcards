@@ -30,8 +30,7 @@ export default function CharacterInfo(props) {
         <div style='text-align: center;'>${props.currentCharacter.meaning}</div>
         <div class=section-title>Radical</div>
         <div class=section-content>${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
-        <!-- <div class=section-title><a href='#database/expressions/'>Expressions</a></div> -->
-        <div class=section-title>Expressions <button class=primary onclick=${(e) => { e.stopPropagation(); setAddingExpressions(true); }}>+</button></div>
+        <div class=section-title><a href='#database/expressions/?${props.currentCharacter.hanzi}'>Expressions</a></div>
         <div class='section-content expandable'>
             ${props.currentCharacter.expressions.length > 0 ? props.currentCharacter.expressions.map(e => html`
             <div>

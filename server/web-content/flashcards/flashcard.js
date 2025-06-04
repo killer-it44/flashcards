@@ -19,7 +19,7 @@ export default function Flashcard() {
 
     const getNextItem = async () => {
         const response = await fetch(`/api/flashcards/characters`)
-        // const response = await fetch(`/api/flashcards/${encodeURIComponent(selectedDeck)}`)
+        // const response = await fetch(`/api/flashcards/${selectedDeck}`)
         const json = await response.json()
         setCurrentItem(json)
     }

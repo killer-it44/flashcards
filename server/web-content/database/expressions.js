@@ -3,7 +3,7 @@ import AddExpressions from './add-expressions.js'
 import EditExpression from './edit-expression.js'
 
 const findNavTargetFromHash = () => window.location.hash.split('#database/expressions/')[1] || ''
-const getSearchTermFromHash = () => window.location.hash.split('#database/expressions/?')[1] || ''
+const getSearchTermFromHash = () => decodeURIComponent(window.location.hash.split('#database/expressions/?')[1] || '')
 
 export default function Expressions() {
     const [searchTerm, setSearchTerm] = useState(getSearchTermFromHash())
@@ -28,14 +28,14 @@ export default function Expressions() {
     }, [])
 
     const fetchExpressions = async (searchTerm) => {
-        const res = await fetch(`/api/expressions?search=${encodeURIComponent(searchTerm)}`)
+        const res = await fetch(`/api/expressions?search=${searchTerm}`)
         const data = await res.json()
         setExpressions(data)
     }
 
     const search = (newSearchTerm) => {
         setSearchTerm(newSearchTerm)
-        const searchHash = newSearchTerm ? `/?${encodeURIComponent(newSearchTerm)}` : ''
+        const searchHash = newSearchTerm ? `/?${newSearchTerm}` : ''
         history.replaceState(null, '', `#database/expressions${searchHash}`)
     }
 

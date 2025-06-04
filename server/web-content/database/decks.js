@@ -25,7 +25,7 @@ export default function Decks() {
     const canAddDeck = search.trim() && !decks.some(deck => deck.name.toLowerCase() === search.trim().toLowerCase())
 
     const fetchDecks = async (searchTerm) => {
-        const res = await fetch(`/api/decks?search=${encodeURIComponent(searchTerm)}`)
+        const res = await fetch(`/api/decks?search=${searchTerm}`)
         const data = await res.json()
         setDecks(data)
     }
@@ -36,7 +36,7 @@ export default function Decks() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name: search })
         })
-        editDeck(search)
+        window.location.hash = `#database/decks/${search}`
     }
 
     const onEditFinished = () => {
