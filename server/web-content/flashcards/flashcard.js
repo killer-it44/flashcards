@@ -27,7 +27,7 @@ export default function Flashcard() {
     // TODO need to be able to deal with characters and expressions
     // TODO need to be able to handle items that are not in the deck
     const getItem = async (hanzi) => {
-        const urlPath = (hanze.length === 1) ? 'characters' : 'expressions'
+        const urlPath = (hanzi.length === 1) ? 'characters' : 'expressions'
         const response = await fetch(`/api/${urlPath}/${hanzi}`)
         const json = await response.json()
         setCurrentItem(json)
@@ -84,13 +84,14 @@ export default function Flashcard() {
                 transform: rotateY(180deg);
             }
 
-            .card-back div {
+            .card-back > * {
                 margin-left: 0.5em;
                 margin-right: 0.5em;
             }
         </style>
-        <div style='display: flex; align-items: center; gap: 1em; margin-bottom: 0.2em;'>
-            <label><b>Deck:</b></label>
+
+        <div style='display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.2em;'>
+            <div>Deck:</div>
             <select value=${selectedDeck} onInput=${e => setSelectedDeck(e.target.value)}>
                 ${decks.map(deck => html`<option value=${deck.name}>${deck.name}</option>`)}
             </select>
@@ -103,7 +104,7 @@ export default function Flashcard() {
                 <${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentItem} />
             </div>
         </div>
-        <div style='font-size: 2em; display: flex; justify-content: space-evenly; width: 100%;'>
+        <div style='font-size: 1.5em; display: flex; justify-content: space-evenly; width: 100%;'>
             <button onclick=${() => submit('forgot')}>🤯</button>
             <button onclick=${() => submit('unsure')}>🤔</button>
             <button onclick=${() => submit('remembered')}>🤓</button>

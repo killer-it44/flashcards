@@ -94,3 +94,9 @@ select {
 .section-content {
     color: #555;
 }
+
+.elipsible {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

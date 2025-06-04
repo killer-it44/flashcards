@@ -56,7 +56,7 @@ export default function Expressions() {
         <ul style='overflow: auto; padding: 0; margin: 0;'>
             ${expressions.map(expression => html`
             <li style='display: flex; gap: 0.2em; padding: 0.2em 0; border-bottom: 1px solid #eee;'>
-                <a href='#database/expressions/edit/${expression.hanzi}' style='white-space: nowrap;'>${expression.hanzi}</a><span style='white-space: nowrap; text-overflow: ellipsis; overflow: hidden;' class=minor>(${expression.pinyin})</span>
+                <a href='#database/expressions/edit/${expression.hanzi}' style='white-space: nowrap;'>${expression.hanzi}</a><span class='minor elipsible'>(${expression.pinyin})</span>
             </li>
             `)}
         </ul>
