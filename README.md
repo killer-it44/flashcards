@@ -10,17 +10,19 @@ To run tests:
 
 ## Coming Features
 
-- Selection of Decks for flashcards
 - Persisting current flashcard deck in local storage
-- Flipping cards back to front
-- Flipping card will preserve history
-- Navigate from flashcard to expressions
-- Animations for switching to next flash card
 - Submitting for flashcards
-- Character database
-- Radicals database
+
 - Profile management
 - Role management
+
+- Flipping cards back to front
+- Flipping card will preserve history
+- Animations for switching to next flash card
+
 - AI-based memorization hints
 - AI-based Deck creation
+- AI-based Expression creation
 - Story-based learning
+- Bit more colorful UI
+- Navigate from Deck entries to characters/expressions
