@@ -45,7 +45,7 @@ export default function Flashcard() {
     }
 
     const submit = async (remembered) => {
-        const nextHanzi = await fetchNextHanziFromDeck()
+        const nextHanzi = await fetchNextHanziFromDeck(selectedDeck)
         setFlipped(false)
         setCurrentItem(await fetchItemDetails(nextHanzi))
     }
