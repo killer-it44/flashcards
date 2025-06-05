@@ -5,8 +5,8 @@ import ExpressionInfo from './expression-info.js'
 const updateHash = (deck, hanzi) => window.location.hash = `#flashcards/${deck}/${hanzi}`
 
 const parseHash = () => {
-    const match = window.location.hash.match(/^#flashcards\/([^/]+)\/(.+)$/)
-    return match ? { deck: decodeURIComponent(match[1]), hanzi: decodeURIComponent(match[2]) } : {}
+    const match = window.location.hash.match(/^#flashcards\/([^/]+)(?:\/(.+))?$/)
+    return match ? { deck: decodeURIComponent(match[1]), hanzi: match[2] ? decodeURIComponent(match[2]) : undefined } : {}
 }
 
 export default function Flashcard() {
