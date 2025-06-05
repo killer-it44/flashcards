@@ -1,11 +1,9 @@
 import { html, useEffect, useState } from '/preact-htm-standalone.js'
-import Radicals from './radicals.js'
 import Characters from './characters.js'
 import Expressions from './expressions.js'
 import Decks from './decks.js'
 
 const categories = [
-    { key: 'radicals', label: 'Radicals', Component: Radicals },
     { key: 'characters', label: 'Characters', Component: Characters },
     { key: 'expressions', label: 'Expressions', Component: Expressions },
     { key: 'decks', label: 'Decks', Component: Decks }
