@@ -49,7 +49,7 @@ export default function Expressions() {
 
     return html`
         <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
-            <input ref=${searchRef} type='text' placeholder='Search or enter new expression' value=${searchTerm} oninput=${e => search(e.target.value)} />
+            <input ref=${searchRef} type='text' placeholder='Type to search...' value=${searchTerm} oninput=${e => search(e.target.value)} />
             <a href='#database/expressions/add' class=primary style='padding: 0 0.5em; display: flex; align-items: center;'>+</a>
         </div>
         ${expressions.length === 0 ? html`<div class=minor>No expressions found with name ${search}.</div>` : html`
