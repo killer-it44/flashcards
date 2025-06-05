@@ -1,21 +1,14 @@
 import { html, useState } from '/preact-htm-standalone.js'
-import AddExpressions from './add-expressions.js'
 import EditRelated from './edit-related.js'
 import ShortInfo from './short-info.js'
 
 export default function CharacterInfo(props) {
-    const [isAddingExpressions, setAddingExpressions] = useState(false)
     const [isEditingRelated, setEditingRelated] = useState(false)
     const [selectedShortInfo, setSelectedShortInfo] = useState(null)
 
     const closeEditRelated = async (newRelated) => {
         if (newRelated !== null) props.saveRelated(newRelated)
         setEditingRelated(false)
-    }
-
-    const saveExpressions = async (expressions) => {
-        await props.saveExpressions(expressions)
-        setAddingExpressions(false)
     }
 
     return html`
@@ -26,7 +19,7 @@ export default function CharacterInfo(props) {
                 min-height: 1.4em;
             }
         </style>
-        <div style='text-align: center; font-size: 1.5em;' onclick=${props.onChangeCharacter}>${props.currentCharacter.hanzi} ${props.currentCharacter.pinyin}</div>
+        <div style='text-align: center; font-size: 1.5em;'>${props.currentCharacter.hanzi} ${props.currentCharacter.pinyin}</div>
         <div style='text-align: center;'>${props.currentCharacter.meaning}</div>
         <div class=section-title>Radical</div>
         <div class=section-content>${props.currentCharacter.radical.hanzi} (${props.currentCharacter.radical.meaning})</div>
@@ -52,7 +45,6 @@ export default function CharacterInfo(props) {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
         </div>
         ${selectedShortInfo ? html`<${ShortInfo} onClose=${() => setSelectedShortInfo(null)} info=${selectedShortInfo} />` : ''}
-        ${isAddingExpressions ? html`<${AddExpressions} onClose=${() => setAddingExpressions(false)} onSave=${saveExpressions} />` : ''}
         ${isEditingRelated ? html`<${EditRelated} value=${props.currentCharacter.related} onClose=${closeEditRelated} />` : ''}
     `
 }
