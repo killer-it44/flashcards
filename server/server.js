@@ -9,6 +9,21 @@ export default function Server(controller) {
 
     app.use('/', express.static('server/web-content'))
 
+    app.get('/api/list-characters', (req, res) => {
+        const page = parseInt(req.query.page) || 1
+        const pageSize = parseInt(req.query.pageSize) || 20
+        const search = req.query.search ? req.query.search.trim() : ''
+        const searchField = req.query.searchField || ''
+
+        const allCharacters = controller.findCharacters({search, searchField})
+        const total = allCharacters.length
+        const start = (page - 1) * pageSize
+        const end = start + pageSize
+        const characters = allCharacters.slice(start, end)
+
+        res.json({ characters, page, pageSize, total })
+    })
+
     app.get('/api/characters', (req, res) => {
         res.json(controller.getNextCharacter())
     })
