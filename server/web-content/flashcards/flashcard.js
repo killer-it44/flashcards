@@ -3,33 +3,51 @@ import CharacterInfo from './character-info.js'
 import ChangeCharacter from './change-character.js'
 import ExpressionInfo from './expression-info.js'
 
-const findSelectedDeckFromHash = () => decodeURIComponent(window.location.hash.split('#flashcards/')[1] || '')
+const findDeckFromHash = () => decodeURIComponent(window.location.hash.split('#flashcards/')[1] || '').split('/')[0] || ''
+const findHanziFromHash = () => decodeURIComponent(window.location.hash.split('#flashcards/')[1] || '').split('/')[1] || ''
+const findIsFlippedFromHash = () => /^#flashcards\/[^/]+\/[^/]+\/details$/.test(window.location.hash)
 
 export default function Flashcard() {
-    const [isFlipped, setFlipped] = useState(false)
+    const [isFlipped, setFlipped] = useState(findIsFlippedFromHash())
+    const [selectedDeck, setSelectedDeck] = useState(findDeckFromHash())
     const [isChangingCharacter, setChangingCharacter] = useState(false)
     const [currentItem, setCurrentItem] = useState({ hanzi: '', pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
     const [decks, setDecks] = useState([])
-    const [selectedDeck, setSelectedDeck] = useState(findSelectedDeckFromHash())
 
     useEffect(async () => {
         const decksResp = await (await fetch('/api/decks')).json()
         setDecks(decksResp)
-        const deckName = findSelectedDeckFromHash()
-        if (!deckName) window.location.hash = `#flashcards/${decksResp[0].name}`
+        const deckName = findDeckFromHash() || decksResp[0].name
+        const hanzi = findHanziFromHash() || await getNextItem(deckName)
+        window.location.hash = `#flashcards/${deckName}/${hanzi}`
+        fetchAndSetItem(hanzi)
     }, [])
 
     useEffect(() => {
-        const onHashChange = () => setSelectedDeck(findSelectedDeckFromHash())
+        const onHashChange = () => {
+            // REVISE not sure if this is the best way to handle the hash change, we're triggering a fetch on every hash change
+            setSelectedDeck(findDeckFromHash())
+            fetchAndSetItem(findHanziFromHash())
+            setFlipped(findIsFlippedFromHash())
+        }
         window.addEventListener('hashchange', onHashChange)
         return () => window.removeEventListener('hashchange', onHashChange)
     }, [])
 
-    useEffect(() => selectedDeck ? getNextItem() : null, [selectedDeck])
+    // useEffect(() => getNextItem(), [selectedDeck])
 
-    const getNextItem = async () => {
-        const response = await fetch(`/api/flashcards/${selectedDeck}`)
-        setCurrentItem(await response.json())
+    const getNextItem = async (deck) => {
+        const response = await fetch(`/api/flashcards/${deck}`)
+        return await response.json()
+        // history.pushState(newItem.hanzi, '', `/#flashcards/${selectedDeck}/${newItem.hanzi}`)        
+        // setCurrentItem(await response.json())
+    }
+
+    const fetchAndSetItem = async (hanzi) => {
+        const type = (hanzi.length === 1) ? 'characters' : 'expressions'
+        const response = await fetch(`/api/${type}/${hanzi}`)
+        const item = await response.json()
+        setCurrentItem(item)
     }
 
     const switchDeck = (newDeckName) => window.location.hash = `#flashcards/${newDeckName}`
@@ -111,9 +129,9 @@ export default function Flashcard() {
             </div>
             <div class='card-back' style='display: flex; flex-direction: column; height: 100%;'>
                 ${currentItem.hanzi.length === 1
-                ? html`<${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentItem} />`
-                : html`<${ExpressionInfo} savePinyin=${() => null} expression=${currentItem} />`
-                }
+            ? html`<${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentItem} />`
+            : html`<${ExpressionInfo} savePinyin=${() => null} expression=${currentItem} />`
+        }
             </div>
         </div>
         <div style='font-size: 1.5em; display: flex; justify-content: space-evenly; width: 100%;'>

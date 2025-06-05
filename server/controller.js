@@ -126,8 +126,7 @@ export default function Controller(repo) {
 
     this.getFlashcardItem = (deckName) => {
         const deck = repo.decks[deckName]
-        const item = deck[Math.floor(Math.random() * deck.length)]
-        return item.length === 1 ? this.getCharacter(item) : this.getExpression(item)
+        return deck[Math.floor(Math.random() * deck.length)]
         // const defaultExpressions = repo.expressions.map(w => w.hanzi)
         // const expressionsNotRemembered = repo.submissions.filter(s => s.expression && !s.remembered).map(s => s.expression)
         // const expressions = [...defaultExpressions, ...expressionsNotRemembered]

@@ -38,7 +38,7 @@ export default function Server(controller) {
     })
 
     app.get('/api/expressions', (req, res) => {
-        res.json(controller.findExpressions(req.query.search))
+        res.json(controller.findExpressions(req.query.search || ''))
     })
 
     app.get('/api/expressions/:expression', (req, res) => {
