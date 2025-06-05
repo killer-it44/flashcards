@@ -3,6 +3,13 @@ import CharacterInfo from './character-info.js'
 import ChangeCharacter from './change-character.js'
 import ExpressionInfo from './expression-info.js'
 
+const updateHash = (deck, hanzi) => window.location.hash = `#flashcards/${deck}/${hanzi}`
+
+const parseHash = () => {
+    const match = window.location.hash.match(/^#flashcards\/([^/]+)\/(.+)$/)
+    return match ? { deck: decodeURIComponent(match[1]), hanzi: decodeURIComponent(match[2]) } : {}
+}
+
 export default function Flashcard() {
     const [isFlipped, setFlipped] = useState(false)
     const [selectedDeck, setSelectedDeck] = useState('')
@@ -10,23 +17,49 @@ export default function Flashcard() {
     const [currentItem, setCurrentItem] = useState({ hanzi: '', pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
     const [decks, setDecks] = useState([])
 
-    useEffect(async () => {
-        const resp = await fetch('/api/decks')
-        const data = await resp.json()
-        setDecks(data)
-        setSelectedDeck(data[0].name)
-        const hanzi = await fetchNextHanziFromDeck(data[0].name)
-        setCurrentItem(await fetchItemDetails(hanzi))
-    }, [])
-
     const fetchNextHanziFromDeck = (deck) => fetch(`/api/flashcards/${deck}`).then(res => res.json())
-
     const itemUrlPath = (hanzi) => (hanzi.length === 1) ? 'characters' : 'expressions'
-
     const fetchItemDetails = (hanzi) => fetch(`/api/${itemUrlPath(hanzi)}/${hanzi}`).then(res => res.json())
 
+    useEffect(async () => {
+        const resp = await fetch('/api/decks')
+        const availableDecks = await resp.json()
+        setDecks(availableDecks)
+        const hash = parseHash()
+        const deck = hash.deck || availableDecks[0]?.name
+        const hanzi = hash.hanzi || await fetchNextHanziFromDeck(deck)
+        setSelectedDeck(deck)
+        setCurrentItem(await fetchItemDetails(hanzi))
+        updateHash(deck, hanzi)
+    }, [])
+
+    useEffect(() => {
+        const onHashChange = async () => {
+            const hash = parseHash()
+            if (hash.deck) setSelectedDeck(hash.deck)
+            if (hash.hanzi) setCurrentItem(await fetchItemDetails(hash.hanzi))
+            setFlipped(false)
+        }
+        window.addEventListener('hashchange', onHashChange)
+        return () => window.removeEventListener('hashchange', onHashChange)
+    }, [])
+
+    const onDeckChange = async (deck) => {
+        setSelectedDeck(deck)
+        const hanzi = await fetchNextHanziFromDeck(deck)
+        setCurrentItem(await fetchItemDetails(hanzi))
+        setFlipped(false)
+        updateHash(deck, hanzi)
+    }
+
+    const getItem = async (hanzi) => {
+        setCurrentItem(await fetchItemDetails(hanzi))
+        setFlipped(false)
+        updateHash(selectedDeck, hanzi)
+    }
+
     const changeCharacter = async (newCharacter) => {
-        newCharacter ? await getItem(newCharacter) : null
+        if (newCharacter) await getItem(newCharacter)
         setChangingCharacter(false)
     }
 
@@ -48,6 +81,7 @@ export default function Flashcard() {
         const nextHanzi = await fetchNextHanziFromDeck(selectedDeck)
         setFlipped(false)
         setCurrentItem(await fetchItemDetails(nextHanzi))
+        updateHash(selectedDeck, nextHanzi)
     }
 
     return html`
@@ -81,7 +115,7 @@ export default function Flashcard() {
 
         <div style='display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.2em;'>
             <div>Deck:</div>
-            <select value=${selectedDeck} onInput=${e => setSelectedDeck(e.target.value)}>
+            <select value=${selectedDeck} onInput=${e => onDeckChange(e.target.value)}>
                 ${decks.map(deck => html`<option value=${deck.name}>${deck.name}</option>`)}
             </select>
         </div>

@@ -1,46 +1,44 @@
 import NotFound from './not-found.js'
 
 export default function Controller(repo) {
-    function stripDiacritics(str) {
-        return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    }
+    const stripDiacritics = (str) => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 
     this.findCharacters = ({ search, searchField }) => {
-        let allCharacters = this.getAllCharacters();
-        if (!search) return allCharacters;
-        const searchLower = search.toLowerCase();
+        let allCharacters = repo.characters
+        if (!search) return allCharacters
+        const searchLower = search.toLowerCase()
         if (searchField === 'hanzi') {
-            return allCharacters.filter(c => c.hanzi.includes(search));
+            return allCharacters.filter(c => c.hanzi.includes(search))
         } else if (searchField === 'pinyin') {
-            const searchNoDiacritics = stripDiacritics(searchLower);
+            const searchNoDiacritics = stripDiacritics(searchLower)
             // Rank: 2 = exact match, 1 = diacritic-insensitive match, 0 = no match
             return allCharacters
                 .map(c => {
-                    if (!c.pinyin) return { c, rank: 0 };
-                    const pinyinLower = c.pinyin.toLowerCase();
-                    if (pinyinLower.includes(searchLower)) return { c, rank: 2 };
-                    if (stripDiacritics(pinyinLower).includes(searchNoDiacritics)) return { c, rank: 1 };
-                    return { c, rank: 0 };
+                    if (!c.pinyin) return { c, rank: 0 }
+                    const pinyinLower = c.pinyin.toLowerCase()
+                    if (pinyinLower.includes(searchLower)) return { c, rank: 2 }
+                    if (stripDiacritics(pinyinLower).includes(searchNoDiacritics)) return { c, rank: 1 }
+                    return { c, rank: 0 }
                 })
                 .filter(x => x.rank > 0)
                 .sort((a, b) => b.rank - a.rank)
-                .map(x => x.c);
+                .map(x => x.c)
         } else if (searchField === 'meaning') {
-            return allCharacters.filter(c => c.meaning && c.meaning.toLowerCase().includes(searchLower));
+            return allCharacters.filter(c => c.meaning && c.meaning.toLowerCase().includes(searchLower))
         } else {
-            const searchNoDiacritics = stripDiacritics(searchLower);
+            const searchNoDiacritics = stripDiacritics(searchLower)
             // Rank: 2 = hanzi or exact pinyin or meaning, 1 = diacritic-insensitive pinyin, 0 = no match
             return allCharacters
                 .map(c => {
-                    if (c.hanzi.includes(search)) return { c, rank: 2 };
-                    if (c.pinyin && c.pinyin.toLowerCase().includes(searchLower)) return { c, rank: 2 };
-                    if (c.meaning && c.meaning.toLowerCase().includes(searchLower)) return { c, rank: 2 };
-                    if (c.pinyin && stripDiacritics(c.pinyin.toLowerCase()).includes(searchNoDiacritics)) return { c, rank: 1 };
-                    return { c, rank: 0 };
+                    if (c.hanzi.includes(search)) return { c, rank: 2 }
+                    if (c.pinyin && c.pinyin.toLowerCase().includes(searchLower)) return { c, rank: 2 }
+                    if (c.meaning && c.meaning.toLowerCase().includes(searchLower)) return { c, rank: 2 }
+                    if (c.pinyin && stripDiacritics(c.pinyin.toLowerCase()).includes(searchNoDiacritics)) return { c, rank: 1 }
+                    return { c, rank: 0 }
                 })
                 .filter(x => x.rank > 0)
                 .sort((a, b) => b.rank - a.rank)
-                .map(x => x.c);
+                .map(x => x.c)
         }
     }
 
@@ -96,7 +94,7 @@ export default function Controller(repo) {
 
     this.findExpressions = (searchString) => {
         // REVISE store the search-friendly pinyin on save
-        const normalizedSearch = removePinyinTones(searchString.toLowerCase());
+        const normalizedSearch = removePinyinTones(searchString.toLowerCase())
         return this.getExpressions().filter(e =>
             e.hanzi.includes(searchString) || removePinyinTones(e.pinyin.toLowerCase()).includes(normalizedSearch)
         )
