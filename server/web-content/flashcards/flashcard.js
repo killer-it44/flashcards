@@ -1,31 +1,40 @@
 import { html, useState, useEffect, useRef } from '/preact-htm-standalone.js'
 import CharacterInfo from './character-info.js'
 import ChangeCharacter from './change-character.js'
+import ExpressionInfo from './expression-info.js'
+
+const findSelectedDeckFromHash = () => decodeURIComponent(window.location.hash.split('#flashcards/')[1] || '')
 
 export default function Flashcard() {
     const [isFlipped, setFlipped] = useState(false)
     const [isChangingCharacter, setChangingCharacter] = useState(false)
-    const [currentItem, setCurrentItem] = useState({ pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
+    const [currentItem, setCurrentItem] = useState({ hanzi: '', pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
     const [decks, setDecks] = useState([])
-    const [selectedDeck, setSelectedDeck] = useState('')
+    const [selectedDeck, setSelectedDeck] = useState(findSelectedDeckFromHash())
 
     useEffect(async () => {
         const decksResp = await (await fetch('/api/decks')).json()
         setDecks(decksResp)
-        setSelectedDeck(decksResp[0].name)
+        const deckName = findSelectedDeckFromHash()
+        if (!deckName) window.location.hash = `#flashcards/${decksResp[0].name}`
     }, [])
 
-    useEffect(() => getNextItem(), [selectedDeck])
+    useEffect(() => {
+        const onHashChange = () => setSelectedDeck(findSelectedDeckFromHash())
+        window.addEventListener('hashchange', onHashChange)
+        return () => window.removeEventListener('hashchange', onHashChange)
+    }, [])
+
+    useEffect(() => selectedDeck ? getNextItem() : null, [selectedDeck])
 
     const getNextItem = async () => {
-        const response = await fetch(`/api/flashcards/characters`)
-        // const response = await fetch(`/api/flashcards/${selectedDeck}`)
-        const json = await response.json()
-        setCurrentItem(json)
+        const response = await fetch(`/api/flashcards/${selectedDeck}`)
+        setCurrentItem(await response.json())
     }
 
-    // TODO need to be able to deal with characters and expressions
-    // TODO need to be able to handle items that are not in the deck
+    const switchDeck = (newDeckName) => window.location.hash = `#flashcards/${newDeckName}`
+
+    // TODO disallow change character or need to be able to handle items that are not in the deck
     const getItem = async (hanzi) => {
         const urlPath = (hanzi.length === 1) ? 'characters' : 'expressions'
         const response = await fetch(`/api/${urlPath}/${hanzi}`)
@@ -92,16 +101,19 @@ export default function Flashcard() {
 
         <div style='display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.2em;'>
             <div>Deck:</div>
-            <select value=${selectedDeck} onInput=${e => setSelectedDeck(e.target.value)}>
+            <select value=${selectedDeck} onInput=${e => switchDeck(e.target.value)}>
                 ${decks.map(deck => html`<option value=${deck.name}>${deck.name}</option>`)}
             </select>
         </div>
         <div class='card ${isFlipped ? 'flipped' : ''}' onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: calc(100% - 2px); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
-            <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: 8em;'>
+            <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: ${8 / currentItem.hanzi.length}em;'>
                 <div onclick=${(e) => { e.stopPropagation(); setChangingCharacter(true); }}>${currentItem.hanzi}</div>
             </div>
             <div class='card-back' style='display: flex; flex-direction: column; height: 100%;'>
-                <${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentItem} />
+                ${currentItem.hanzi.length === 1
+                ? html`<${CharacterInfo} onChangeCharacter=${(e) => { e.stopPropagation(); setChangingCharacter(true); }} saveRelated=${saveRelated} saveExpressions=${saveExpressions} currentCharacter=${currentItem} />`
+                : html`<${ExpressionInfo} savePinyin=${() => null} expression=${currentItem} />`
+                }
             </div>
         </div>
         <div style='font-size: 1.5em; display: flex; justify-content: space-evenly; width: 100%;'>

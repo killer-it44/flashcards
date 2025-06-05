@@ -124,12 +124,20 @@ export default function Controller(repo) {
         await repo.save()
     }
 
-    this.getNextExpression = () => {
-        const defaultExpressions = repo.expressions.map(w => w.hanzi)
-        const expressionsNotRemembered = repo.submissions.filter(s => s.expression && !s.remembered).map(s => s.expression)
-        const expressions = [...defaultExpressions, ...expressionsNotRemembered]
-        const nextExpression = expressions[Math.floor(Math.random() * expressions.length)]
-        return this.getExpression(nextExpression)
+    this.getFlashcardItem = (deckName) => {
+        const deck = repo.decks[deckName]
+        const item = deck[Math.floor(Math.random() * deck.length)]
+        return item.length === 1 ? this.getCharacter(item) : this.getExpression(item)
+        // const defaultExpressions = repo.expressions.map(w => w.hanzi)
+        // const expressionsNotRemembered = repo.submissions.filter(s => s.expression && !s.remembered).map(s => s.expression)
+        // const expressions = [...defaultExpressions, ...expressionsNotRemembered]
+        // const nextExpression = expressions[Math.floor(Math.random() * expressions.length)]
+        // return this.getExpression(nextExpression)
+    }
+
+    this.getNextCharacterForDeck = () => {
+        const nextItem = repo.decks.characters[Math.floor(Math.random() * repo.decks.characters.length)]
+        return this.getCharacter(nextItem)
     }
 
     // REVISE new submission structure should better contain a type field, so the entire structure should be
@@ -155,11 +163,6 @@ export default function Controller(repo) {
     this.findDecks = (filterRegExp) => {
         const decks = Object.entries(repo.decks).filter(([name]) => filterRegExp.test(name))
         return decks.map(([name, items]) => ({ name, size: items.length }))
-    }
-
-    this.getNextCharacterForDeck = () => {
-        const nextItem = repo.decks.characters[Math.floor(Math.random() * repo.decks.characters.length)]
-        return this.getCharacter(nextItem)
     }
 
     this.addDeck = async (deck) => {

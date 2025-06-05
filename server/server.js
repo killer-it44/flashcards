@@ -87,7 +87,7 @@ export default function Server(controller) {
     })
 
     app.get('/api/flashcards/:deck', (req, res) => {
-        res.json(controller.getNextCharacterForDeck('characters'))
+        res.json(controller.getFlashcardItem(req.params.deck))
     })
 
     app.get('/api/hint/:hanzi', async (req, res) => {
