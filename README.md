@@ -10,7 +10,6 @@ To run tests:
 
 ## Coming Features
 
-- Persisting current flashcard deck in local storage
 - Submitting for flashcards
 
 - Profile management
@@ -26,3 +25,8 @@ To run tests:
 - Story-based learning
 - Bit more colorful UI
 - Navigate from Deck entries to characters/expressions
+
+- AI based add expressions
+- Adding deck entries should check if expression existing
+- From expression(s) or character(s) page, add to deck
+- Mass add to deck not needed, AI can do it better…

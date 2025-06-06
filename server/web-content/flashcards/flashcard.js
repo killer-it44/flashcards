@@ -26,7 +26,7 @@ export default function Flashcard() {
         const resp = await fetch('/api/decks')
         const availableDecks = await resp.json()
         const hash = parseHash()
-        const deck = hash.deck || availableDecks[0]?.name
+        const deck = hash.deck || localStorage.getItem('selectedDeck') || availableDecks[0]?.name
         const hanzi = hash.hanzi || await fetchNextHanziFromDeck(deck)
         setDecks(availableDecks)
         setSelectedDeck(deck)
@@ -45,7 +45,8 @@ export default function Flashcard() {
         return () => window.removeEventListener('hashchange', onHashChange)
     }, [])
 
-    const onDeckChange = async (deck) => {
+    const switchDeck = async (deck) => {
+        localStorage.setItem('selectedDeck', deck)
         const hanzi = await fetchNextHanziFromDeck(deck)
         setSelectedDeck(deck)
         setHanzi(hanzi)
@@ -67,7 +68,9 @@ export default function Flashcard() {
     }
 
     const submit = async (remembered) => {
-        const nextHanzi = await fetchNextHanziFromDeck(selectedDeck)
+        const headers = { 'Content-Type': 'application/json' }
+        const body = JSON.stringify({ hanzi, remembered })
+        const nextHanzi = await fetch(`/api/flashcards/${deck}`, { method: 'POST', headers, body })
         setFlipped(false)
         setCurrentItem(await fetchItemDetails(nextHanzi))
         updateHash(selectedDeck, nextHanzi)
@@ -104,7 +107,7 @@ export default function Flashcard() {
 
         <div style='display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.2em;'>
             <div>Deck:</div>
-            <select value=${selectedDeck} onInput=${e => onDeckChange(e.target.value)}>
+            <select value=${selectedDeck} onInput=${e => switchDeck(e.target.value)}>
                 ${decks.map(deck => html`<option value=${deck.name}>${deck.name}</option>`)}
             </select>
         </div>
