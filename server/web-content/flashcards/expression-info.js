@@ -13,7 +13,7 @@ export default function ExpressionInfo({expression, savePinyin}) {
         <div style='text-align: center; font-size: 1.5em;'>${expression.hanzi}</div>
         <div style='text-align: center;'>${expression.meaning}</div>
 
-        <div class=section-title>Pinyin ${!isEditingPinyin ? html`<button class=primary onclick=${(e) => { e.stopPropagation(); setEditingPinyin(true); }}>✎</button>` : ''}</div>
+        <div class=section-title>Pinyin ${!isEditingPinyin ? html`<button onclick=${(e) => { e.stopPropagation(); setEditingPinyin(true); }}>✎</button>` : ''}</div>
         <div class=section-content>${expression.pinyin}</div>
 
         <div class=section-title>Memorization hints</div>

@@ -1,9 +1,16 @@
 body {
-    font: calc(min(5vw, 5vh * 2 / 3)) sans-serif;
+    background: linear-gradient(to bottom right, #fef2f2 0%, #fefce8 100%);
+    background-color: floralwhite;
+    font: min(5vw, 5vh * 2 / 3) sans-serif;
     margin: 8px;
     padding: 0;
     display: flex;
     justify-content: center;
+    color: #2d2d2d;
+}
+
+ul {
+    background-color: #fcfcfa; 
 }
 
 a {
@@ -11,6 +18,7 @@ a {
 }
 
 button {
+    color: inherit;
     font: inherit;
     border: none;
     cursor: pointer;
@@ -88,11 +96,10 @@ select {
 .section-title {
     margin-top: 0.4em;
     font-weight: bold;
-    color: #333;
 }
 
 .section-content {
-    color: #555;
+    color: #7a7a7a;
 }
 
 .elipsible {

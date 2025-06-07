@@ -15,7 +15,7 @@ export default function EditPinyin({ value, onClose }) {
     }
 
     return html`
-        <div onclick=${e => { e.stopPropagation(); onClose(null); }} class=modal-overlay>
+        <div style='color: black;' onclick=${e => { e.stopPropagation(); onClose(null); }} class=modal-overlay>
             <div onclick=${e => e.stopPropagation()} class=modal-content>
                 <h3>Edit pinyin</h3>
                 <input ref=${inputRef} type='text' value=${newPinyin} oninput=${e => setNewPinyin(e.target.value)} onkeydown=${handleKeyDown} />

@@ -20,7 +20,7 @@ export default function EditRelated({ value, onClose }) {
     }
 
     return html`
-        <div onclick=${e => { e.stopPropagation(); onClose(null); }} class=modal-overlay>
+        <div style='color: black;' onclick=${e => { e.stopPropagation(); onClose(null); }} class=modal-overlay>
             <div onclick=${e => e.stopPropagation()} class=modal-content>
                 <h3>Edit related characters</h3>
                 <input ref=${inputRef} type='text' value=${newRelated} oninput=${handleInput} onkeydown=${handleKeyDown} />

@@ -93,10 +93,15 @@ export default function Flashcard({ user }) {
 
             .card-front,
             .card-back {
+                color: white;
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 backface-visibility: hidden;
+            }
+
+            .card-back .section-content {
+                color: #FEE2E2;
             }
 
             .card-back {
@@ -115,9 +120,9 @@ export default function Flashcard({ user }) {
                 ${decks.map(deck => html`<option value=${deck.name}>${deck.name}</option>`)}
             </select>
         </div>
-        <div class='card ${isFlipped ? 'flipped' : ''}' onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: calc(100% - 2px); aspect-ratio: 2 / 3; border: 2px solid #ccc; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); background-color: #fff;'>
+        <div class='card ${isFlipped ? 'flipped' : ''}' onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: 100%; aspect-ratio: 2 / 3; border-radius: .4em; box-shadow: 0 25px 50px -12px rgb(0 0 0 / .25); background: linear-gradient(to bottom right, #ef4444 30%, #ea580c 100%);'>
             <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: ${8 / currentItem.hanzi.length}em;'>
-                <div style='user-select: none;'>${currentItem.hanzi}</div>
+                <div style='user-select: none; color: white;'><strong>${currentItem.hanzi}</strong></div>
             </div>
             <div class='card-back' style='display: flex; flex-direction: column; height: 100%;'>
                 ${(currentItem.hanzi.length === 1) ? html`
