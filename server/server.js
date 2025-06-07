@@ -2,12 +2,33 @@ import express from 'express'
 import NotFound from './not-found.js'
 import Together from 'together-ai'
 import archiver from 'archiver'
+import session from 'express-session'
 
 export default function Server(controller) {
     let httpServer
     const app = express()
 
-    app.use('/', express.static('server/web-content'))
+    app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: false }))
+
+    app.use(express.static('server/web-content'))
+
+    app.post('/api/login', express.json(), (req, res) => {
+        if (!controller.findUser(req.body.username, req.body.password)) return res.status(401).end()
+
+        req.session.user = req.body.username
+        res.status(200).end()
+    })
+
+    app.post('/api/signup', express.json(), async (req, res) => {
+        if (!req.body.username || !req.body.password) return res.status(400).end()
+
+        await controller.addUser(req.body.username, req.body.password)
+        res.status(201).end()
+    })
+
+    app.post('/api/logout', (req, res) => req.session.destroy(() => res.status(200).end()))
+
+    app.use('/api', (req, res, next) => (req.session.user) ? next() : res.status(401).end())
 
     app.get('/api/list-characters', (req, res) => {
         const page = parseInt(req.query.page) || 1
@@ -15,7 +36,7 @@ export default function Server(controller) {
         const search = req.query.search ? req.query.search.trim() : ''
         const searchField = req.query.searchField || ''
 
-        const allCharacters = controller.findCharacters({search, searchField})
+        const allCharacters = controller.findCharacters({ search, searchField })
         const total = allCharacters.length
         const start = (page - 1) * pageSize
         const end = start + pageSize
@@ -77,7 +98,7 @@ export default function Server(controller) {
         res.status(200).end()
     })
 
-    app.delete('/api/decks/:deck', express.json(), async (req, res) => {
+    app.delete('/api/decks/:deck', async (req, res) => {
         await controller.deleteDeck(req.params.deck)
         res.status(200).end()
     })

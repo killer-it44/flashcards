@@ -1,4 +1,5 @@
 import NotFound from './not-found.js'
+import { scryptSync, randomBytes, timingSafeEqual } from 'crypto'
 
 export default function Controller(repo) {
     const stripDiacritics = (str) => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -111,7 +112,7 @@ export default function Controller(repo) {
 
         const items = repo.decks[deckName].map(hanzi => lastSubmission(hanzi))
         items.sort((a, b) => a.timestamp - b.timestamp)
-        
+
         for (let category of categories) {
             const item = items.find(item => item.result === category)
             if (item) return item.hanzi
@@ -164,4 +165,17 @@ export default function Controller(repo) {
     this.getExportFiles = () => repo.exportFiles()
 
     this.stop = () => repo.save()
+
+    this.addUser = async (username, password) => {
+        if (repo.users.find(u => u.username === username)) throw new Error('User already exists')
+        const salt = randomBytes(16).toString('hex')
+        const hash = scryptSync(password, salt, 64).toString('hex')
+        repo.users.push({ username, hash, salt })
+        await repo.save()
+    }
+
+    this.findUser = (username, password) => {
+        const user = repo.users.find(u => u.username === username) || { salt: '', hash: '' }
+        return timingSafeEqual(Buffer.from(user.hash, 'hex'), scryptSync(password, user.salt, 64))
+    }
 }
