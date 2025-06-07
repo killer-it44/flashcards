@@ -18,7 +18,6 @@ To run tests:
 - Story-based learning
 - Navigate from deck entries to characters/expressions
 
-- Bit more colorful UI
 - Flipping cards back to front
 - Flipping card will preserve history
 - Animations for switching to next flash card
