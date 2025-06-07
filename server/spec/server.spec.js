@@ -32,12 +32,6 @@ describe('Server', () => {
         expect(response.body.hanzi).toBeInstanceOf(String)
     })
 
-    it('can submit characters', async () => {
-        const updatedData = { character: '一', remembered: true }
-        await client.post('/api/submissions').send(updatedData).expect(201)
-        // TODO what's the test now? or is expecting HTTP 201 sufficient?
-    })
-
     it('can update data', async () => {
         await client.put(`/api/characters/${encodeURIComponent('一')}`).send({ meaning: 'updated meaning' }).expect(200)
         const response = await client.get(`/api/characters/${encodeURIComponent('一')}`)
@@ -52,11 +46,5 @@ describe('Server', () => {
 
     it('responds with 404 if expression does not exist', async () => {
         await client.get(`/api/expressions/does-not-exist}`).expect(404)
-    })
-
-    it('can submit expressions', async () => {
-        const updatedData = { expression: '一二', remembered: true }
-        await client.post('/api/submissions').send(updatedData).expect(201)
-        // TODO what's the test now? or is expecting HTTP 201 sufficient?
     })
 })

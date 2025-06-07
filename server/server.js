@@ -24,10 +24,6 @@ export default function Server(controller) {
         res.json({ characters, page, pageSize, total })
     })
 
-    app.get('/api/characters', (req, res) => {
-        res.json(controller.getNextCharacter())
-    })
-
     app.get('/api/characters/:hanzi', (req, res) => {
         res.json(controller.getCharacter(req.params.hanzi))
     })
@@ -118,16 +114,6 @@ export default function Server(controller) {
 
         console.log(response.choices[0].message.content)
         res.json(JSON.parse(response.choices[0].message.content))
-    })
-
-    app.post('/api/submissions', express.json(), async (req, res) => {
-        // REVISE weird and inconsistent API design (the GET APIs work differently)
-        if (req.body.character) {
-            await controller.submitCharacter(req.body)
-        } else {
-            await controller.submitExpression(req.body)
-        }
-        res.status(201).end()
     })
 
     app.get('/api/export', async (req, res) => {

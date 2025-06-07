@@ -46,6 +46,5 @@ export default function FakeRepository() {
         pinyin: '',
         meaning: 'one...two'
     }]
-    this.submissions = []
     this.save = () => null
 }
