@@ -9,7 +9,7 @@ const parseHash = () => {
     return match ? { deck: decodeURIComponent(match[1]), hanzi: match[2] ? decodeURIComponent(match[2]) : undefined } : {}
 }
 
-export default function Flashcard() {
+export default function Flashcard({ user }) {
     const [isFlipped, setFlipped] = useState(false)
     const [selectedDeck, setSelectedDeck] = useState('')
     const [currentItem, setCurrentItem] = useState({ hanzi: '', pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
@@ -61,6 +61,8 @@ export default function Flashcard() {
     }
 
     const saveRelated = async (newRelated) => {
+        if (!user.username) return alert('You must be logged in to make changes.')
+
         const headers = { 'Content-Type': 'application/json' }
         const body = JSON.stringify({ ...currentItem, related: newRelated })
         await fetch(`/api/characters/${currentItem.hanzi}`, { method: 'PUT', headers, body })
@@ -68,6 +70,8 @@ export default function Flashcard() {
     }
 
     const submit = async (result) => {
+        if (!user.username) return alert('You must be logged in to submit.')
+
         const headers = { 'Content-Type': 'application/json' }
         const body = JSON.stringify({ hanzi, result })
         const nextHanzi = await (await fetch(`/api/flashcards/${selectedDeck}`, { method: 'POST', headers, body })).json()

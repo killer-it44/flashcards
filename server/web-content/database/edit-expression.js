@@ -2,12 +2,14 @@ import { html, useState, useEffect } from '/preact-htm-standalone.js'
 
 const getUrl = (hanzi) => `/api/expressions/${hanzi}`
 
-export default function EditExpression({ hanzi, onClose }) {
+export default function EditExpression({ user, hanzi, onClose }) {
     const [expression, setExpression] = useState({ meaning: '', pinyin: '' })
 
     useEffect(() => fetch(getUrl(hanzi)).then(resp => resp.json()).then(setExpression), [hanzi])
 
     const save = async () => {
+        if (!user.username) return alert('You must be logged in to edit expressions.')
+
         await fetch(getUrl(hanzi), {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },

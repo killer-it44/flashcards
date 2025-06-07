@@ -5,7 +5,7 @@ import EditExpression from './edit-expression.js'
 const findNavTargetFromHash = () => window.location.hash.split('#database/expressions/')[1] || ''
 const getSearchTermFromHash = () => decodeURIComponent(window.location.hash.split('#database/expressions/?')[1] || '')
 
-export default function Expressions() {
+export default function Expressions({ user }) {
     const [searchTerm, setSearchTerm] = useState(getSearchTermFromHash())
     const [expressions, setExpressions] = useState([])
     const [nav, setNav] = useState(findNavTargetFromHash())
@@ -44,8 +44,8 @@ export default function Expressions() {
         fetchExpressions(searchTerm)
     }
 
-    if (nav.split('/')[0] === 'add') return html`<${AddExpressions} onClose=${onEditFinished} />`
-    if (nav.split('/')[0] === 'edit') return html`<${EditExpression} hanzi=${decodeURIComponent(nav.split('/')[1])} onClose=${onEditFinished} />`
+    if (nav.split('/')[0] === 'add') return html`<${AddExpressions} user=${user} onClose=${onEditFinished} />`
+    if (nav.split('/')[0] === 'edit') return html`<${EditExpression} user=${user} hanzi=${decodeURIComponent(nav.split('/')[1])} onClose=${onEditFinished} />`
 
     return html`
         <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>

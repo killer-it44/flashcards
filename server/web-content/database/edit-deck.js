@@ -1,6 +1,6 @@
 import { html, useState, useEffect } from '/preact-htm-standalone.js'
 
-export default function EditDeck({ name, onClose }) {
+export default function EditDeck({ user, name, onClose }) {
     const [deckName, setDeckName] = useState(name)
     const [entries, setEntries] = useState([])
     const [search, setSearch] = useState('')
@@ -26,6 +26,8 @@ export default function EditDeck({ name, onClose }) {
     }
 
     const saveDeck = async () => {
+        if (!user.username) return alert('You must be logged in to save a deck.')
+
         await fetch(`/api/decks/${name}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
@@ -35,6 +37,8 @@ export default function EditDeck({ name, onClose }) {
     }
 
     const deleteDeck = async () => {
+        if (!user.username) return alert('You must be logged in to delete decks.')
+
         if (!confirm(`Are you sure you want to delete the deck "${name}"? This action cannot be undone.`)) return
         await fetch(`/api/decks/${name}`, { method: 'DELETE' })
         onClose(null)

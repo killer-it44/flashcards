@@ -1,6 +1,6 @@
 import { html, useState, useRef, useEffect } from '/preact-htm-standalone.js'
 
-export default function AddExpressions({ onClose }) {
+export default function AddExpressions({ user, onClose }) {
     const [expressions, setExpressions] = useState([{ hanzi: '', pinyin: '', meaning: '' }])
     const firstInputRef = useRef(null)
 
@@ -25,7 +25,9 @@ export default function AddExpressions({ onClose }) {
     const validExpressions = () => expressions.map(e => ({ hanzi: e.hanzi.trim(), pinyin: e.pinyin.trim(), meaning: e.meaning.trim() })).filter(e => e.hanzi && e.meaning)
     const colorFor = (value) => value ? '#ccc' : '#dc3545'
 
-    const save = async e => {
+    const save = async () => {
+        if (!user.username) return alert('You must be logged in to edit expressions.')
+
         await fetch('/api/expressions', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

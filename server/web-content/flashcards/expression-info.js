@@ -1,11 +1,11 @@
 import { html, useState } from '/preact-htm-standalone.js'
 import EditPinyin from './edit-pinyin.js'
 
-export default function ExpressionInfo({expression}) {
+export default function ExpressionInfo({expression, savePinyin}) {
     const [isEditingPinyin, setEditingPinyin] = useState(false)
 
     const closeEditPinyin = async (newPinyin) => {
-        if (newPinyin !== null) props.savePinyin(newPinyin)
+        if (newPinyin !== null) savePinyin(newPinyin)
         setEditingPinyin(false)
     }
 

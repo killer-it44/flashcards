@@ -1,34 +1,41 @@
 import express from 'express'
 import NotFound from './not-found.js'
+import InvalidInput from './invalid-input.js'
 import Together from 'together-ai'
 import archiver from 'archiver'
 import session from 'express-session'
+import sessionFileStore from 'session-file-store'
 
 export default function Server(controller) {
     let httpServer
     const app = express()
 
-    app.use(session({ secret: 'your-secret-key', resave: false, saveUninitialized: false }))
+    const FileStore = sessionFileStore(session)
+
+    app.use(session({
+        store: new FileStore({ path: `${process.env.FLASHCARDS_DATA_DIR}/sessions` }),
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false
+    }))
 
     app.use(express.static('server/web-content'))
 
     app.post('/api/login', express.json(), (req, res) => {
-        if (!controller.findUser(req.body.username, req.body.password)) return res.status(401).end()
-
-        req.session.user = req.body.username
-        res.status(200).end()
+        req.session.user = controller.findUser(req.body.username, req.body.password)
+        return req.session.user ? res.status(200).json(req.session.user) : res.status(401).end()
     })
 
     app.post('/api/signup', express.json(), async (req, res) => {
-        if (!req.body.username || !req.body.password) return res.status(400).end()
-
-        await controller.addUser(req.body.username, req.body.password)
-        res.status(201).end()
+        req.session.user = await controller.addUser(req.body.username, req.body.password)
+        res.status(201).json(req.session.user)
     })
 
-    app.post('/api/logout', (req, res) => req.session.destroy(() => res.status(200).end()))
+    app.post('/api/logout', (req, res) => req.session.destroy(() => res.clearCookie('connect.sid').status(200).end()))
 
-    app.use('/api', (req, res, next) => (req.session.user) ? next() : res.status(401).end())
+    app.get('/api/user', (req, res) => res.json(req.session.user || {}))
+
+    app.use((req, res, next) => (req.method === 'GET' || req.session.user) ? next() : res.status(401).end())
 
     app.get('/api/list-characters', (req, res) => {
         const page = parseInt(req.query.page) || 1
@@ -153,9 +160,11 @@ export default function Server(controller) {
         await archive.finalize()
     })
 
-    app.use((err, req, res, next) =>
-        err instanceof NotFound ? res.status(404).end() : next(err)
-    )
+    app.use((err, req, res, next) => {
+        if (err instanceof NotFound) return res.status(404).end()
+        else if (err instanceof InvalidInput) return res.status(400).send(err.message)
+        else next(err)
+    })
 
     this.start = (port) => {
         return new Promise((resolve, reject) => {

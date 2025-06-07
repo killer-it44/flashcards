@@ -1,4 +1,5 @@
 import NotFound from './not-found.js'
+import InvalidInput from './invalid-input.js'
 import { scryptSync, randomBytes, timingSafeEqual } from 'crypto'
 
 export default function Controller(repo) {
@@ -167,15 +168,21 @@ export default function Controller(repo) {
     this.stop = () => repo.save()
 
     this.addUser = async (username, password) => {
-        if (repo.users.find(u => u.username === username)) throw new Error('User already exists')
+        if (!username || !password) throw new InvalidInput('Username and password are required')
+        if (username.length < 3 || username.length > 20) throw new InvalidInput('Username must be between 3 and 20 characters')
+        if (password.length < 6 || password.length > 16) throw new InvalidInput('Password must be between 6 and 16 characters')
+        if (repo.users.find(u => u.username === username)) throw new InvalidInput('User already exists')
         const salt = randomBytes(16).toString('hex')
         const hash = scryptSync(password, salt, 64).toString('hex')
-        repo.users.push({ username, hash, salt })
+        repo.users.push({ username, hash, salt, createdAt: Date.now(), role: 'regular' })
         await repo.save()
+        return this.findUser(username, password)
     }
 
     this.findUser = (username, password) => {
         const user = repo.users.find(u => u.username === username) || { salt: '', hash: '' }
-        return timingSafeEqual(Buffer.from(user.hash, 'hex'), scryptSync(password, user.salt, 64))
+        if (timingSafeEqual(Buffer.from(user.hash, 'hex'), scryptSync(password, user.salt, 64))) {
+            return { username: user.username, role: user.role, createdAt: user.createdAt }
+        }
     }
 }

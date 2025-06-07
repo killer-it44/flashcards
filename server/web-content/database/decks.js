@@ -3,7 +3,7 @@ import EditDeck from './edit-deck.js'
 
 const findEditingDeckFromHash = () => decodeURIComponent(window.location.hash.split('#database/decks/')[1] || '')
 
-export default function Decks() {
+export default function Decks({ user }) {
     const [search, setSearch] = useState('')
     const [decks, setDecks] = useState([])
     const [editingDeck, setEditingDeck] = useState(findEditingDeckFromHash())
@@ -31,6 +31,8 @@ export default function Decks() {
     }
 
     const addDeck = async () => {
+        if (!user.username) return alert('You must be logged in to create a deck.')
+
         await fetch(`/api/decks`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -44,9 +46,9 @@ export default function Decks() {
         fetchDecks(search)
     }
 
-    return html`${editingDeck 
+    return html`${editingDeck
         ? html`
-            <${EditDeck} name=${editingDeck} onClose=${onEditFinished} />
+            <${EditDeck} user=${user} name=${editingDeck} onClose=${onEditFinished}/>
         `
         : html`
             <div style='display: flex; gap: 0.5em; margin-bottom: 0.5em;'>
@@ -63,5 +65,5 @@ export default function Decks() {
             </ul>
             `}
         `
-    }`
+        }`
 }

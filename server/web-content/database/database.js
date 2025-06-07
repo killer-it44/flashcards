@@ -11,7 +11,7 @@ const categories = [
 
 const findCategoryFromHash = () => categories.find(c => c.key === window.location.hash.split('/')[1]) || categories[0]
 
-export default function Database() {
+export default function Database({ user }) {
     const [category, setCategory] = useState(findCategoryFromHash())
 
     useEffect(() => {
@@ -28,6 +28,6 @@ export default function Database() {
             </a>
             `)}
         </nav>
-        <${category.Component} />
+        <${category.Component} user=${user} />
     `
 }
