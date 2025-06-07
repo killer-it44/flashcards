@@ -10,8 +10,6 @@ To run tests:
 
 ## Coming Features
 
-- Submitting for flashcards
-
 - Profile management
 - Role management
 
