@@ -146,4 +146,9 @@ export default function Controller(repo) {
     this.getExportFiles = () => repo.exportFiles()
 
     this.stop = () => repo.save()
+
+    this.saveSubmission = async ({ hanzi, result, deck }) => {
+        repo.submissions.push({ timestamp: new Date().toISOString(), hanzi, result, deck })
+        await repo.save()
+    }
 }

@@ -9,6 +9,7 @@ export default function FsRepository(dataDir) {
     this.characters = loadOrInit(`${dataDir}/characters.json`)
     this.expressions = loadOrInit(`${dataDir}/expressions.json`)
     this.decks = loadOrInit(`${dataDir}/decks.json`)
+    this.submissions = loadOrInit(`${dataDir}/submissions.json`)
 
     this.save = async () => {
         pendingSave = savingInProgress
@@ -28,7 +29,8 @@ export default function FsRepository(dataDir) {
         { name: 'radicals.json', content: JSON.stringify(this.radicals, null, '\t') },
         { name: 'characters.json', content: JSON.stringify(this.characters, null, '\t') },
         { name: 'expressions.json', content: JSON.stringify(this.expressions, null, '\t') },
-        { name: 'decks.json', content: JSON.stringify(this.decks, null, '\t') }
+        { name: 'decks.json', content: JSON.stringify(this.decks, null, '\t') },
+        { name: 'submissions.json', content: JSON.stringify(this.submissions, null, '\t') }
     ]
 
     const doSave = async () => {
@@ -36,5 +38,6 @@ export default function FsRepository(dataDir) {
         await fs.promises.writeFile(`${dataDir}/characters.json`, JSON.stringify(this.characters, null, '\t'))
         await fs.promises.writeFile(`${dataDir}/expressions.json`, JSON.stringify(this.expressions, null, '\t'))
         await fs.promises.writeFile(`${dataDir}/decks.json`, JSON.stringify(this.decks, null, '\t'))
+        await fs.promises.writeFile(`${dataDir}/submissions.json`, JSON.stringify(this.submissions, null, '\t'))
     }
 }

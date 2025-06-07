@@ -86,6 +86,11 @@ export default function Server(controller) {
         res.json(controller.getFlashcardItem(req.params.deck))
     })
 
+    app.post('/api/flashcards/:deck', express.json(), async (req, res) => {
+        await controller.saveSubmission({ hanzi: req.body.hanzi, result: req.body.result, deck: req.params.deck })
+        res.json(controller.getFlashcardItem(req.params.deck))
+    })
+
     app.get('/api/hint/:hanzi', async (req, res) => {
         const together = new Together({ apiKey: process.env.TOGETHER_API_KEY })
 

@@ -67,10 +67,10 @@ export default function Flashcard() {
         await getItem(currentItem.hanzi)
     }
 
-    const submit = async (remembered) => {
+    const submit = async (result) => {
         const headers = { 'Content-Type': 'application/json' }
-        const body = JSON.stringify({ hanzi, remembered })
-        const nextHanzi = await fetch(`/api/flashcards/${deck}`, { method: 'POST', headers, body })
+        const body = JSON.stringify({ hanzi, result })
+        const nextHanzi = await (await fetch(`/api/flashcards/${selectedDeck}`, { method: 'POST', headers, body })).json()
         setFlipped(false)
         setCurrentItem(await fetchItemDetails(nextHanzi))
         updateHash(selectedDeck, nextHanzi)
@@ -124,7 +124,7 @@ export default function Flashcard() {
         </div>
         <div style='font-size: 1.5em; display: flex; justify-content: space-evenly; width: 100%;'>
             <button onclick=${() => submit('forgot')}>🤯</button>
-            <button onclick=${() => submit('unsure')}>🤔</button>
+            <button onclick=${() => submit('struggled')}>🤔</button>
             <button onclick=${() => submit('remembered')}>🤓</button>
         </div>
     `
