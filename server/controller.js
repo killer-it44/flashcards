@@ -95,14 +95,32 @@ export default function Controller(repo) {
         await repo.save()
     }
 
-    this.getFlashcardItem = (deckName) => {
-        const deck = repo.decks[deckName]
-        return deck[Math.floor(Math.random() * deck.length)]
+    const lastSubmission = (hanzi) => {
+        const initial = { hanzi, timestamp: 0, result: 'forgot' }
+        return repo.submissions.filter(s => s.hanzi === hanzi).reduce((max, s) => s.timestamp > max.timestamp ? s : max, initial)
     }
 
-    this.getNextCharacterForDeck = () => {
-        const nextItem = repo.decks.characters[Math.floor(Math.random() * repo.decks.characters.length)]
-        return this.getCharacter(nextItem)
+    this.getFlashcardItem = (deckName) => {
+        const r = Math.random()
+        let categoryOrder = (r < 0.1) ? 'remembered' : (r < 0.3) ? 'struggled' : 'forgot'
+        const categories = {
+            remembered: ['remembered', 'struggled', 'forgot'],
+            struggled: ['struggled', 'forgot', 'remembered'],
+            forgot: ['forgot', 'struggled', 'remembered']
+        }[categoryOrder]
+
+        const items = repo.decks[deckName].map(hanzi => lastSubmission(hanzi))
+        items.sort((a, b) => a.timestamp - b.timestamp)
+        
+        for (let category of categories) {
+            const item = items.find(item => item.result === category)
+            if (item) return item.hanzi
+        }
+    }
+
+    this.saveSubmission = async ({ hanzi, result, deck }) => {
+        repo.submissions.push({ timestamp: Date.now(), hanzi, result, deck })
+        await repo.save()
     }
 
     this.updateExpression = async (expression) => {
@@ -146,9 +164,4 @@ export default function Controller(repo) {
     this.getExportFiles = () => repo.exportFiles()
 
     this.stop = () => repo.save()
-
-    this.saveSubmission = async ({ hanzi, result, deck }) => {
-        repo.submissions.push({ timestamp: new Date().toISOString(), hanzi, result, deck })
-        await repo.save()
-    }
 }
