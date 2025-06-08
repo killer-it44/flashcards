@@ -7,8 +7,8 @@ export default function EditRelated({ value, onClose }) {
     useEffect(() => inputRef.current.focus(), [])
 
     const handleKeyDown = (e) => {
-        if (e.key === 'Enter' && newRelated.trim()) {
-            onClose(newRelated)
+        if (e.key === 'Enter') {
+            onClose(newRelated.trim())
         } else if (e.key === 'Escape') {
             onClose(null)
         }
@@ -25,7 +25,7 @@ export default function EditRelated({ value, onClose }) {
                 <h3>Edit related characters</h3>
                 <input ref=${inputRef} type='text' value=${newRelated} oninput=${handleInput} onkeydown=${handleKeyDown} />
                 <div>
-                    <button onclick=${(e) => { e.stopPropagation(); onClose(newRelated); }} disabled=${!newRelated.trim()}>✅ OK</button>
+                    <button onclick=${(e) => { e.stopPropagation(); onClose(newRelated.trim()); }}>✅ OK</button>
                     <button onclick=${(e) => { e.stopPropagation(); onClose(null); }}>❌ Cancel</button>
                 </div>
             </div>

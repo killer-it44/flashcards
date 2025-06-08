@@ -2,7 +2,7 @@ import { html } from '/preact-htm-standalone.js'
 
 export default function ShortInfo({ onClose, info }) {
     return html`
-        <div onclick=${(e) => { e.stopPropagation(); onClose(); }} class=modal-overlay>
+        <div style='color: black;' onclick=${(e) => { e.stopPropagation(); onClose(); }} class=modal-overlay>
             <div onclick=${(e) => e.stopPropagation()} class=modal-content>
                 <h2>${info.hanzi}</h2>
                 <div><b>Pinyin:</b> ${info.pinyin}</div>
