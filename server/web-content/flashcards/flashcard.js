@@ -24,6 +24,8 @@ export default function Flashcard({ user }) {
     const [swipe, setSwipe] = useState({ x: 0, y: 0, animating: false })
     const [swipeEmoji, setSwipeEmoji] = useState('')
 
+    const cardBackRef = useRef(null)
+
     const setStateFromHash = async (availableDecks) => {
         const hash = parseHash()
         const deck = hash.deck || localStorage.getItem('selectedDeck') || (availableDecks || [])[0]?.name || ''
@@ -84,14 +86,13 @@ export default function Flashcard({ user }) {
     }
 
     const pointerStart = useRef({ x: null, y: null, active: false })
-    // Prevent click/flip when swiping
     const pointerMoved = useRef(false)
     const handlePointerDown = e => {
         // Suppress drag if on back and selecting text
         if (flipped && window.getSelection && window.getSelection().toString()) {
-            pointerMoved.current = false;
-            pointerStart.current.active = false;
-            return;
+            pointerMoved.current = false
+            pointerStart.current.active = false
+            return
         }
         pointerMoved.current = false
         pointerStart.current.x = e.clientX
@@ -105,6 +106,10 @@ export default function Flashcard({ user }) {
         const dx = e.clientX - pointerStart.current.x
         const dy = e.clientY - pointerStart.current.y
         if (Math.abs(dx) > 5 || Math.abs(dy) > 5) pointerMoved.current = true
+
+        if (flipped && cardBackRef.current) {
+            cardBackRef.current.style.userSelect = 'none'
+        }
         setSwipe({ x: dx, y: dy, animating: false })
         setSwipeEmoji(getSwipeEmoji(dx, dy))
     }
@@ -136,6 +141,9 @@ export default function Flashcard({ user }) {
             }, 200)
         }
         pointerStart.current.active = false
+        // Restore text selection on back after drag
+        if (flipped && cardBackRef.current) cardBackRef.current.style.userSelect = ''
+
         e.target.releasePointerCapture && e.target.releasePointerCapture(e.pointerId)
     }
 
@@ -185,11 +193,10 @@ export default function Flashcard({ user }) {
                 <div style='user-select: none; color: white;'><strong>${hanzi}</strong></div>
             </div>
             ${currentItem ? html`
-            <div class='card-back' style='display: flex; flex-direction: column; height: 100%;'>
+            <div class='card-back' ref=${cardBackRef} style='display: flex; flex-direction: column; height: 100%;'>
                 ${(hanzi.length === 1)
                 ? html`<${CharacterInfo} saveRelated=${saveRelated} currentCharacter=${currentItem} />`
-                : html`<${ExpressionInfo} savePinyin=${() => null} expression=${currentItem} />
-                `}
+                : html`<${ExpressionInfo} savePinyin=${() => null} expression=${currentItem} />`}
             </div>
             ` : ''}
         </div>
