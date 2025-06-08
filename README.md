@@ -18,7 +18,6 @@ To run tests:
 - Story-based learning
 - Navigate from deck entries to characters/expressions
 
-- Flipping card will preserve history
 - Animations for switching to next flash card
 - Swipe gesture for flashcard
 - Manually adding deck entries should check if expression existing
