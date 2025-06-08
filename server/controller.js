@@ -62,9 +62,8 @@ export default function Controller(repo) {
     }
 
     this.getExpression = (hanzi) => {
-        const expression = repo.expressions.find(w => w.hanzi === hanzi)
-        if (!expression) throw new NotFound()
-        return { ...expression, pinyin: getPinyinForExpression(expression) }
+        const expression = repo.expressions.find(w => w.hanzi === hanzi) || { hanzi, pinyin: '', meaning: '' }
+        return { ...expression, pinyin: expression.pinyin || getPinyinForExpression(expression) }
     }
 
     this.findExpressions = (searchString) => {

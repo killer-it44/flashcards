@@ -12,15 +12,13 @@ const parseHash = () => {
 export default function Flashcard({ user }) {
     const [isFlipped, setFlipped] = useState(false)
     const [selectedDeck, setSelectedDeck] = useState('')
-    const [currentItem, setCurrentItem] = useState({ hanzi: '', pinyin: '', radical: { hanzi: '', meaning: '' }, meaning: '', expressions: [], related: '' })
+    const [currentItem, setCurrentItem] = useState(null)
     const [decks, setDecks] = useState([])
     const [hanzi, setHanzi] = useState('')
 
     const fetchNextHanziFromDeck = (deck) => fetch(`/api/flashcards/${deck}`).then(res => res.json())
     const itemUrlPath = (hanzi) => (hanzi.length === 1) ? 'characters' : 'expressions'
     const fetchItemDetails = (hanzi) => fetch(`/api/${itemUrlPath(hanzi)}/${hanzi}`).then(res => res.json())
-
-    useEffect(() => hanzi ? fetchItemDetails(hanzi).then(setCurrentItem) : null, [hanzi])
 
     useEffect(async () => {
         const resp = await fetch('/api/decks')
@@ -37,8 +35,11 @@ export default function Flashcard({ user }) {
     useEffect(() => {
         const onHashChange = async () => {
             const hash = parseHash()
-            setSelectedDeck(hash.deck)
-            setHanzi(hash.hanzi)
+            const deck = hash.deck || localStorage.getItem('selectedDeck') || availableDecks[0]?.name
+            const hanzi = hash.hanzi || await fetchNextHanziFromDeck(deck)
+            setSelectedDeck(deck)
+            setHanzi(hanzi)
+            setCurrentItem(null)
             setFlipped(false)
         }
         window.addEventListener('hashchange', onHashChange)
@@ -75,9 +76,14 @@ export default function Flashcard({ user }) {
         const headers = { 'Content-Type': 'application/json' }
         const body = JSON.stringify({ hanzi, result })
         const nextHanzi = await (await fetch(`/api/flashcards/${selectedDeck}`, { method: 'POST', headers, body })).json()
-        setFlipped(false)
-        setCurrentItem(await fetchItemDetails(nextHanzi))
         updateHash(selectedDeck, nextHanzi)
+    }
+
+    const flip = async () => {
+        if (!isFlipped && !currentItem) {
+            setCurrentItem(await fetchItemDetails(hanzi))
+        }
+        setFlipped(!isFlipped)
     }
 
     return html`
@@ -120,16 +126,18 @@ export default function Flashcard({ user }) {
                 ${decks.map(deck => html`<option value=${deck.name}>${deck.name}</option>`)}
             </select>
         </div>
-        <div class='card ${isFlipped ? 'flipped' : ''}' onclick=${() => setFlipped(true)} style='display: flex; flex-direction: column; width: 100%; aspect-ratio: 2 / 3; border-radius: .4em; box-shadow: 0 25px 50px -12px rgb(0 0 0 / .25); background: linear-gradient(to bottom right, #ef4444 30%, #ea580c 100%);'>
-            <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: ${8 / currentItem.hanzi.length}em;'>
-                <div style='user-select: none; color: white;'><strong>${currentItem.hanzi}</strong></div>
+        <div class='card ${isFlipped ? 'flipped' : ''}' onclick=${flip} style='display: flex; flex-direction: column; width: 100%; aspect-ratio: 2 / 3; border-radius: .4em; box-shadow: 0 25px 50px -12px rgb(0 0 0 / .25); background: linear-gradient(to bottom right, #7EA5C5 30%, #486A8D 100%);'>
+            <div class='card-front' style='display: flex; align-items: center; justify-content: center; font-size: ${8 / hanzi.length}em;'>
+                <div style='user-select: none; color: white;'><strong>${hanzi}</strong></div>
             </div>
+            ${currentItem ? html`
             <div class='card-back' style='display: flex; flex-direction: column; height: 100%;'>
-                ${(currentItem.hanzi.length === 1) ? html`
+                ${(hanzi.length === 1) ? html`
                 <${CharacterInfo} saveRelated=${saveRelated} currentCharacter=${currentItem} />` : html`
                 <${ExpressionInfo} savePinyin=${() => null} expression=${currentItem} />
                 `}
             </div>
+            ` : ''}
         </div>
         <div style='font-size: 1.5em; display: flex; justify-content: space-evenly; width: 100%;'>
             <button onclick=${() => submit('forgot')}>🤯</button>
