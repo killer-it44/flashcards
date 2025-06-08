@@ -5,8 +5,9 @@ import Together from 'together-ai'
 import archiver from 'archiver'
 import session from 'express-session'
 import sessionFileStore from 'session-file-store'
+import fs from 'fs'
 
-export default function Server(controller) {
+export default function Server(controller, sessionSecret) {
     let httpServer
     const app = express()
 
@@ -14,7 +15,7 @@ export default function Server(controller) {
 
     app.use(session({
         store: new FileStore({ path: `${process.env.FLASHCARDS_DATA_DIR}/sessions` }),
-        secret: process.env.SESSION_SECRET,
+        secret: fs.readFileSync(`${process.env.FLASHCARDS_DATA_DIR}/sessions/secret`),
         resave: false,
         saveUninitialized: false
     }))
