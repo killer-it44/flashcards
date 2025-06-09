@@ -110,8 +110,9 @@ export default function Server(controller, sessionSecret) {
         res.status(204).end()
     })
 
-    app.get('/api/decks', (req, res) => {
-        res.json(controller.findDecks(new RegExp(req.query.search || '', 'i')))
+    app.get('/api/decks', async (req, res) => {
+        const decks = await controller.findDecks(new RegExp(req.query.search || '', 'i'), req.session.user || {})
+        res.json(decks)
     })
 
     app.post('/api/decks', express.json(), async (req, res) => {
@@ -119,8 +120,8 @@ export default function Server(controller, sessionSecret) {
         res.status(201).end()
     })
 
-    app.get('/api/decks/:deck', (req, res) => {
-        res.json(controller.getDeck(req.params.deck))
+    app.get('/api/decks/:deck', async (req, res) => {
+        res.json(await controller.getDeck(req.params.deck))
     })
 
     app.put('/api/decks/:deck', express.json(), async (req, res) => {
@@ -133,13 +134,13 @@ export default function Server(controller, sessionSecret) {
         res.status(200).end()
     })
 
-    app.get('/api/flashcards/:deck', (req, res) => {
-        res.json(controller.getFlashcardItem(req.params.deck))
+    app.get('/api/flashcards/:deck', async (req, res) => {
+        res.json(await controller.getFlashcardItem(req.params.deck))
     })
 
     app.post('/api/flashcards/:deck', express.json(), async (req, res) => {
         await controller.saveSubmission({ hanzi: req.body.hanzi, result: req.body.result, deck: req.params.deck })
-        res.json(controller.getFlashcardItem(req.params.deck))
+        res.json(await controller.getFlashcardItem(req.params.deck))
     })
 
     app.get('/api/hint/:hanzi', async (req, res) => {
@@ -172,25 +173,36 @@ export default function Server(controller, sessionSecret) {
         res.json(JSON.parse(response.choices[0].message.content))
     })
 
+    // REVISE streaming might be better here
     app.get('/api/export', async (req, res) => {
+        if (!req.session.user || req.session.user.roles !== 'admin') {
+            return res.status(403).send('Forbidden')
+        }
         const COMPRESSION_LEVEL_HIGHEST = 9
         const archive = archiver('zip', { zlib: { level: COMPRESSION_LEVEL_HIGHEST } })
         const timestamp = new Date().toISOString().replace(/[:-]/g, '').replace(/\.\d+Z$/, '').replace('T', '-')
         res.attachment(`flashcards-export-${timestamp}.zip`)
         archive.pipe(res)
 
-        controller.getExportFiles().forEach(f => archive.append(f.content, { name: f.name }))
+        const exportFiles = await controller.getExportFiles()
+        exportFiles.forEach(f => archive.append(f.content, { name: f.name }))
         await archive.finalize()
     })
 
     app.use((err, req, res, next) => {
-        if (err instanceof NotFound) return res.status(404).end()
-        else next(err)
+        if (err instanceof NotFound) {
+            return res.status(404).end()
+        } else {
+            console.error('Unhandled error: ', err)
+            next(err)
+        }
     })
 
     this.start = (port) => {
         return new Promise((resolve, reject) => {
-            httpServer = app.listen(port, '0.0.0.0', (err) => err ? reject(err) : resolve(httpServer.address().port))
+            httpServer = app.listen(port, '0.0.0.0', (err) => {
+                return err ? reject(err) : resolve(httpServer.address().port)
+            })
         })
     }
 

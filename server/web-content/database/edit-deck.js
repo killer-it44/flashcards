@@ -9,7 +9,7 @@ export default function EditDeck({ user, name, onClose }) {
     useEffect(async () => {
         const res = await fetch(`/api/decks/${name}`)
         const data = await res.json()
-        setEntries(data)
+        setEntries(data.items)
     }, [name])
 
     useEffect(() => {

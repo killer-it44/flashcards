@@ -1,6 +1,7 @@
 import NotFound from './not-found.js'
 import { scryptSync, randomBytes, timingSafeEqual } from 'crypto'
-import { UserNotFoundError, UserAlreadyExistsError } from './fs-user-repository.js'
+import { UserNotFoundError } from './fs-user-repository.js'
+import { DeckNotFoundError } from './fs-deck-repository.js'
 
 class LoginError extends Error { }
 class SignupRequirementsNotMetError extends Error { }
@@ -106,7 +107,7 @@ export default function Controller(repo) {
         return repo.submissions.filter(s => s.hanzi === hanzi).reduce((max, s) => s.timestamp > max.timestamp ? s : max, initial)
     }
 
-    this.getFlashcardItem = (deckName) => {
+    this.getFlashcardItem = async (deckName) => {
         const r = Math.random()
         let categoryOrder = (r < 0.1) ? 'remembered' : (r < 0.3) ? 'struggled' : 'forgot'
         const categories = {
@@ -115,7 +116,8 @@ export default function Controller(repo) {
             forgot: ['forgot', 'struggled', 'remembered']
         }[categoryOrder]
 
-        const items = repo.decks[deckName].map(hanzi => lastSubmission(hanzi))
+        const deck = await repo.decks.get(deckName)
+        const items = deck.items.map(hanzi => lastSubmission(hanzi))
         items.sort((a, b) => a.timestamp - b.timestamp)
 
         for (let category of categories) {
@@ -136,35 +138,39 @@ export default function Controller(repo) {
         await repo.save()
     }
 
-    this.getDeck = (deckName) => {
-        return repo.decks[deckName]
-    }
-
-    this.findDecks = (filterRegExp) => {
-        const decks = Object.entries(repo.decks).filter(([name]) => filterRegExp.test(name))
-        return decks.map(([name, items]) => ({ name, size: items.length }))
-    }
-
-    this.addDeck = async (deck) => {
-        if (!deck.name) throw new Error('Deck must have a name')
-        repo.decks[deck.name] = []
-        await repo.save()
-    }
-
-    this.updateDeck = async (deckName, deckData) => {
-        if (!repo.decks[deckName]) throw new NotFound()
-        if (deckData.name && deckData.name !== deckName) {
-            if (repo.decks[deckData.name]) throw new Error('A deck with the new name already exists')
-            delete repo.decks[deckName]
+    this.getDeck = async (deckName) => {
+        try {
+            return await repo.decks.get(deckName)
+        } catch (err) {
+            if (err instanceof DeckNotFoundError) {
+                throw new NotFound()
+            } else {
+                throw err
+            }
         }
-        repo.decks[deckData.name] = deckData.items || repo.decks[deckName]
-        await repo.save()
+    }
+
+    this.findDecks = async (filterRegExp, user) => {
+        const decks = await repo.decks.list(filterRegExp)
+        return decks
+            .filter(deck => !deck.isPrivate || (deck.createdBy === user.username))
+            .map(deck => {
+                const { name, createdAt, createdBy, description, tags, items } = deck
+                return { name, createdAt, createdBy, description, tags, size: items.length }
+            })
+    }
+
+    this.addDeck = async (deck, user) => {
+        await repo.decks.add(deck.name, { ...deck, createdAt: Date.now(), createdBy: user.username, description: '', isPrivate: false, tags: [] })
+    }
+
+    this.updateDeck = async (deckName, newData) => {
+        const deck = await repo.decks.get(deckName)
+        await repo.decks.update(deckName, { ...newData, createdAt: deck.createdAt, createdBy: deck.createdBy, description: '', isPrivate: false, tags: [] })
     }
 
     this.deleteDeck = async (deckName) => {
-        if (!repo.decks[deckName]) throw new NotFound()
-        delete repo.decks[deckName]
-        await repo.save()
+        await repo.decks.delete(deckName)
     }
 
     this.signupUser = async (username, password) => {
@@ -177,7 +183,7 @@ export default function Controller(repo) {
         } else if (password.length < 6 || password.length > 16) {
             throw new SignupRequirementsNotMetError('Password must be between 6 and 16 characters')
         }
-        
+
         const salt = randomBytes(16).toString('hex')
         const hash = scryptSync(password, salt, 64).toString('hex')
         await repo.users.add(username, { username, hash, salt, createdAt: Date.now(), role: 'regular' })

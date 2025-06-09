@@ -22,7 +22,11 @@ export default function FsUserRepository(dataDir) {
             const data = await fs.promises.readFile(file, 'utf-8')
             return JSON.parse(data)
         } catch (err) {
-            throw err.code === 'ENOENT' ? new UserNotFoundError() : err
+            if (err.code === 'ENOENT') {
+                throw new UserNotFoundError()
+             } else {
+                throw err
+             }
         }
     }
 
@@ -33,7 +37,11 @@ export default function FsUserRepository(dataDir) {
             handle = await fs.promises.open(file, 'wx')
             await handle.writeFile(JSON.stringify(data, null, '\t'))
         } catch (err) {
-            throw err.code === 'EEXIST' ? new UserAlreadyExistsError() : err
+            if (err.code === 'EEXIST') {
+                throw new UserAlreadyExistsError()
+            } else {
+                throw err
+            }
         } finally {
             await handle?.close()
         }
