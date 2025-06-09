@@ -1,6 +1,11 @@
 import NotFound from './not-found.js'
-import InvalidInput from './invalid-input.js'
 import { scryptSync, randomBytes, timingSafeEqual } from 'crypto'
+import { UserNotFoundError, UserAlreadyExistsError } from './fs-user-repository.js'
+
+class LoginError extends Error { }
+class SignupRequirementsNotMetError extends Error { }
+
+export { LoginError, SignupRequirementsNotMetError }
 
 export default function Controller(repo) {
     const stripDiacritics = (str) => str.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
@@ -162,26 +167,37 @@ export default function Controller(repo) {
         await repo.save()
     }
 
+    this.signupUser = async (username, password) => {
+        if (!username || !password) {
+            throw new SignupRequirementsNotMetError('Name and password are required')
+        } else if (username.length < 3 || username.length > 20) {
+            throw new SignupRequirementsNotMetError('Name must be between 3 and 20 characters')
+        } else if (!/^[A-Za-z0-9_-]+$/.test(username)) {
+            throw new SignupRequirementsNotMetError('Name can only contain letters, numbers, underscores, and hyphens')
+        } else if (password.length < 6 || password.length > 16) {
+            throw new SignupRequirementsNotMetError('Password must be between 6 and 16 characters')
+        }
+        
+        const salt = randomBytes(16).toString('hex')
+        const hash = scryptSync(password, salt, 64).toString('hex')
+        await repo.users.add(username, { username, hash, salt, createdAt: Date.now(), role: 'regular' })
+        return this.findUserForLogin(username, password)
+    }
+
+    this.findUserForLogin = async (username, password) => {
+        try {
+            const user = await repo.users.get(username)
+            if (timingSafeEqual(Buffer.from(user.hash, 'hex'), scryptSync(password, user.salt, 64))) {
+                return { username: user.username, role: user.role, createdAt: user.createdAt }
+            } else {
+                throw new LoginError('Invalid username or password')
+            }
+        } catch (err) {
+            throw err instanceof UserNotFoundError ? new LoginError('Invalid username or password') : err
+        }
+    }
+
     this.getExportFiles = () => repo.exportFiles()
 
     this.stop = () => repo.save()
-
-    this.addUser = async (username, password) => {
-        if (!username || !password) throw new InvalidInput('Username and password are required')
-        if (username.length < 3 || username.length > 20) throw new InvalidInput('Username must be between 3 and 20 characters')
-        if (password.length < 6 || password.length > 16) throw new InvalidInput('Password must be between 6 and 16 characters')
-        if (repo.users.find(u => u.username === username)) throw new InvalidInput('User already exists')
-        const salt = randomBytes(16).toString('hex')
-        const hash = scryptSync(password, salt, 64).toString('hex')
-        repo.users.push({ username, hash, salt, createdAt: Date.now(), role: 'regular' })
-        await repo.save()
-        return this.findUser(username, password)
-    }
-
-    this.findUser = (username, password) => {
-        const user = repo.users.find(u => u.username === username) || { salt: '', hash: '' }
-        if (timingSafeEqual(Buffer.from(user.hash, 'hex'), scryptSync(password, user.salt, 64))) {
-            return { username: user.username, role: user.role, createdAt: user.createdAt }
-        }
-    }
 }

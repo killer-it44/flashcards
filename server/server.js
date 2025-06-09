@@ -1,11 +1,12 @@
 import express from 'express'
 import NotFound from './not-found.js'
-import InvalidInput from './invalid-input.js'
 import Together from 'together-ai'
 import archiver from 'archiver'
 import session from 'express-session'
 import sessionFileStore from 'session-file-store'
 import fs from 'fs'
+import { LoginError, SignupRequirementsNotMetError } from './controller.js'
+import { UserAlreadyExistsError } from './fs-user-repository.js'
 
 export default function Server(controller, sessionSecret) {
     let httpServer
@@ -14,7 +15,10 @@ export default function Server(controller, sessionSecret) {
     const FileStore = sessionFileStore(session)
 
     app.use(session({
-        store: new FileStore({ path: `${process.env.FLASHCARDS_DATA_DIR}/sessions` }),
+        store: new FileStore({
+            path: `${process.env.FLASHCARDS_DATA_DIR}/sessions`,
+            logFn: (msg) => msg?.includes('ENOENT') ? logger.warn(msg) : logger.error(msg)
+        }),
         secret: fs.readFileSync(`${process.env.FLASHCARDS_DATA_DIR}/sessions/secret`),
         resave: false,
         saveUninitialized: false
@@ -22,14 +26,32 @@ export default function Server(controller, sessionSecret) {
 
     app.use(express.static('server/web-content'))
 
-    app.post('/api/login', express.json(), (req, res) => {
-        req.session.user = controller.findUser(req.body.username, req.body.password)
-        return req.session.user ? res.status(200).json(req.session.user) : res.status(401).end()
+    app.post('/api/login', express.json(), async (req, res) => {
+        try {
+            req.session.user = await controller.findUserForLogin(req.body.username, req.body.password)
+            res.status(200).json(req.session.user)
+        } catch (error) {
+            if (error instanceof LoginError) {
+                res.status(401).send(error.message)
+            } else {
+                throw error
+            }
+        }
     })
 
     app.post('/api/signup', express.json(), async (req, res) => {
-        req.session.user = await controller.addUser(req.body.username, req.body.password)
-        res.status(201).json(req.session.user)
+        try {
+            req.session.user = await controller.signupUser(req.body.username, req.body.password)
+            res.status(201).json(req.session.user)
+        } catch (error) {
+            if (error instanceof SignupRequirementsNotMetError) {
+                res.status(400).send(error.message)
+            } else if (error instanceof UserAlreadyExistsError) {
+                res.status(409).send(error.message)
+            } else {
+                throw error
+            }
+        }
     })
 
     app.post('/api/logout', (req, res) => req.session.destroy(() => res.clearCookie('connect.sid').status(200).end()))
@@ -163,7 +185,6 @@ export default function Server(controller, sessionSecret) {
 
     app.use((err, req, res, next) => {
         if (err instanceof NotFound) return res.status(404).end()
-        else if (err instanceof InvalidInput) return res.status(400).send(err.message)
         else next(err)
     })
 
