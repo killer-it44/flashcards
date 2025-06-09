@@ -116,7 +116,7 @@ export default function Server(controller, sessionSecret) {
     })
 
     app.post('/api/decks', express.json(), async (req, res) => {
-        await controller.addDeck(req.body)
+        await controller.addDeck(req.body, req.session.user)
         res.status(201).end()
     })
 

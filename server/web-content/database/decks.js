@@ -36,7 +36,7 @@ export default function Decks({ user }) {
         await fetch(`/api/decks`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: search })
+            body: JSON.stringify({ name: search, items: [] })
         })
         window.location.hash = `#database/decks/${search}`
     }
